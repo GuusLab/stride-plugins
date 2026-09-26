@@ -1,0 +1,122 @@
+{
+  "manifest": {
+    "description": "Adds your own code to the head or body of every page: analytics, a verification tag, a chat widget or a font. Choose which pages get it. No theme edits needed.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "custom-code",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Custom Code",
+    "panels": [
+      {
+        "description": "Code added to the published pages of this site, exactly as you paste it. Only paste code from people you trust: it runs for every visitor. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered, without losing your code.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Add the code to pages"
+          },
+          {
+            "description": "For analytics, verification meta tags, fonts and stylesheets. Placed just before </head>.",
+            "kind": {
+              "maxLength": 8192,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "head",
+            "title": "In the head"
+          },
+          {
+            "description": "For code a service asks to place \"right after <body>\", such as a tag manager's noscript part.",
+            "kind": {
+              "maxLength": 8192,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "body-start",
+            "title": "At the start of the body"
+          },
+          {
+            "description": "For chat widgets and scripts that should load after the page. Placed just before </body>.",
+            "kind": {
+              "maxLength": 8192,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "body-end",
+            "title": "At the end of the body"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Every page",
+                  "value": "all"
+                },
+                {
+                  "title": "Only the pages listed below",
+                  "value": "only"
+                },
+                {
+                  "title": "Every page except those listed below",
+                  "value": "except"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "pages",
+            "title": "Pages"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: home, contact, blog/*. A * at the end means every page under it.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "page-list",
+            "title": "Page list"
+          }
+        ],
+        "id": "custom-code",
+        "placement": "site-settings",
+        "title": "Custom code"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Add analytics, verification tags and widgets to every page. No theme edits.",
+    "longDescription": "Custom Code puts your own snippets into the published pages of your site: in the head, right after the opening body tag, or at the end of the body. It is the easy way to add a privacy-friendly analytics script, a search engine verification tag, a web font, a tag manager or a chat widget.\n\nChoose which pages get the code: every page, only the pages you list, or every page except those. A * at the end of an address covers every page under it, so blog/* means all your posts under blog.\n\nYour code is inserted exactly as you paste it, and each snippet is labelled in the page source, so you always know where it came from. Before saving, the plugin checks for the mistakes that break a page: an unclosed script tag, a whole page pasted in by accident, or code that is too long.\n\nOnly paste code from people you trust: it runs for every visitor. The plugin asks for one permission, storage, to keep your snippets. Changes apply to a page the next time it is published.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Snippets land exactly where they belong, and each one is labelled in the page source."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "The settings: code for the head and the body, and which pages get it."
+      }
+    ],
+    "categories": [
+      "developer",
+      "analytics"
+    ],
+    "accent": "#4F46E5"
+  }
+}
