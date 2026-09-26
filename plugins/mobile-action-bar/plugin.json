@@ -1,0 +1,176 @@
+{
+  "manifest": {
+    "description": "A bar at the bottom of the screen on phones with Call, Email, Directions and your own button, like Book a table. One tap for visitors, no JavaScript.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "mobile-action-bar",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Mobile Action Bar",
+    "panels": [
+      {
+        "description": "Buttons fixed to the bottom of the screen for visitors on a phone. Only the buttons you fill in are shown. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to hide it without losing your details.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show the action bar"
+          },
+          {
+            "description": "Shows a Call button, for example +31 20 123 4567.",
+            "kind": {
+              "maxLength": 40,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "phone",
+            "title": "Phone number"
+          },
+          {
+            "description": "Shows an Email button.",
+            "kind": {
+              "maxLength": 120,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "email",
+            "title": "Email address"
+          },
+          {
+            "description": "Shows a Directions button that opens the address in Google Maps, for example NDSM-plein 28, Amsterdam.",
+            "kind": {
+              "maxLength": 200,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "address",
+            "title": "Address"
+          },
+          {
+            "description": "The main button, for example Book a table or Order now.",
+            "kind": {
+              "maxLength": 30,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "button-text",
+            "title": "Your own button"
+          },
+          {
+            "description": "A page on your site such as /book, or a full address.",
+            "kind": {
+              "maxLength": 500,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "button-url",
+            "title": "Link of your own button"
+          },
+          {
+            "description": "For the words Call, Email and Directions.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "English",
+                  "value": "en"
+                },
+                {
+                  "title": "Nederlands",
+                  "value": "nl"
+                },
+                {
+                  "title": "Deutsch",
+                  "value": "de"
+                },
+                {
+                  "title": "Français",
+                  "value": "fr"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "language",
+            "title": "Language of the buttons"
+          },
+          {
+            "description": "Used for the icons and your own button. Its text colour is chosen for you.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Colour"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Phones and small tablets only",
+                  "value": "phones"
+                },
+                {
+                  "title": "Every screen (floating on computers)",
+                  "value": "all"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "screens",
+            "title": "Show it on"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: checkout, blog/*. A * at the end means every page under it.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-pages",
+            "title": "Skip these pages"
+          }
+        ],
+        "id": "mobile-action-bar",
+        "placement": "site-settings",
+        "title": "Mobile action bar"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Call, email, directions and booking, one tap away on phones.",
+    "longDescription": "Mobile Action Bar adds a bar to the bottom of the screen for visitors on a phone, with the buttons a local business needs most: Call, Email, Directions and a main button of your own, such as Book a table or Order now.\n\nFill in only what you want to show. Your phone number becomes a tap-to-call button, your address opens in Google Maps, and your own button can point to any page. The labels come in English, Dutch, German and French, and your colour is used for the icons and the main button.\n\nIt is plain links and icons, with no JavaScript. The page gets a little space at the bottom so the bar never covers your content, and the bar respects the rounded corners and home indicator of modern phones. You can also show it on every screen, where it floats at the bottom like a small dock.\n\nThe plugin asks for one permission, storage, to keep your details. You can skip pages, such as your checkout.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "On a phone: call, email, directions and your own button, always within reach."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Shown on every screen, it floats at the bottom like a small dock. Here in Dutch."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "The settings: phone, email, address, your own button, language, colour and screens."
+      }
+    ],
+    "categories": [
+      "marketing",
+      "commerce"
+    ],
+    "accent": "#0D9488"
+  }
+}

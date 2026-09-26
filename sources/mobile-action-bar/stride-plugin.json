@@ -1,0 +1,145 @@
+{
+  "manifestVersion": 1,
+  "id": "mobile-action-bar",
+  "name": "Mobile Action Bar",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A bar at the bottom of the screen on phones with Call, Email, Directions and your own button, like Book a table. One tap for visitors, no JavaScript.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "mobile-action-bar",
+      "title": "Mobile action bar",
+      "description": "Buttons fixed to the bottom of the screen for visitors on a phone. Only the buttons you fill in are shown. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show the action bar",
+          "description": "Turn this off to hide it without losing your details.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "phone",
+          "title": "Phone number",
+          "description": "Shows a Call button, for example +31 20 123 4567.",
+          "kind": {
+            "type": "text",
+            "maxLength": 40,
+            "multiline": false
+          }
+        },
+        {
+          "name": "email",
+          "title": "Email address",
+          "description": "Shows an Email button.",
+          "kind": {
+            "type": "text",
+            "maxLength": 120,
+            "multiline": false
+          }
+        },
+        {
+          "name": "address",
+          "title": "Address",
+          "description": "Shows a Directions button that opens the address in Google Maps, for example NDSM-plein 28, Amsterdam.",
+          "kind": {
+            "type": "text",
+            "maxLength": 200,
+            "multiline": false
+          }
+        },
+        {
+          "name": "button-text",
+          "title": "Your own button",
+          "description": "The main button, for example Book a table or Order now.",
+          "kind": {
+            "type": "text",
+            "maxLength": 30,
+            "multiline": false
+          }
+        },
+        {
+          "name": "button-url",
+          "title": "Link of your own button",
+          "description": "A page on your site such as /book, or a full address.",
+          "kind": {
+            "type": "text",
+            "maxLength": 500,
+            "multiline": false
+          }
+        },
+        {
+          "name": "language",
+          "title": "Language of the buttons",
+          "description": "For the words Call, Email and Directions.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "en",
+                "title": "English"
+              },
+              {
+                "value": "nl",
+                "title": "Nederlands"
+              },
+              {
+                "value": "de",
+                "title": "Deutsch"
+              },
+              {
+                "value": "fr",
+                "title": "Français"
+              }
+            ]
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Colour",
+          "description": "Used for the icons and your own button. Its text colour is chosen for you.",
+          "kind": {
+            "type": "color"
+          }
+        },
+        {
+          "name": "screens",
+          "title": "Show it on",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "phones",
+                "title": "Phones and small tablets only"
+              },
+              {
+                "value": "all",
+                "title": "Every screen (floating on computers)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "skip-pages",
+          "title": "Skip these pages",
+          "description": "Page addresses separated by commas, for example: checkout, blog/*. A * at the end means every page under it.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}
