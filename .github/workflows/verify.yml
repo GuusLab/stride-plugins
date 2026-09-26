@@ -1,0 +1,28 @@
+name: verify
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Rust toolchain (pinned per plugin by rust-toolchain.toml)
+        run: |
+          rustup --version
+          channel=$(sed -n 's/^channel *= *"\(.*\)"/\1/p' tools/rust-toolchain.toml)
+          rustup toolchain install "$channel" --profile minimal --target wasm32-unknown-unknown
+
+      - name: Rebuild every plugin, compare hashes, check store images
+        run: node tools/verify.mjs
