@@ -1,0 +1,235 @@
+{
+  "manifest": {
+    "description": "Shows your opening hours as a neat table and a live \"Open now · closes at 17:00\" badge. Type [opening-hours] or [open-now] on any page.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "opening-hours",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Opening Hours",
+    "panels": [
+      {
+        "description": "Type [opening-hours] on a page for the table, or [open-now] for the badge. \"Open now\" is worked out when a visitor looks, in your time zone. Other changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show opening hours"
+          },
+          {
+            "description": "Like 09:00-17:00. Two ranges: 09:00-12:30, 13:30-18:00. Write closed for a day off.",
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "monday",
+            "title": "Monday"
+          },
+          {
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "tuesday",
+            "title": "Tuesday"
+          },
+          {
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "wednesday",
+            "title": "Wednesday"
+          },
+          {
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "thursday",
+            "title": "Thursday"
+          },
+          {
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "friday",
+            "title": "Friday"
+          },
+          {
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "saturday",
+            "title": "Saturday"
+          },
+          {
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "sunday",
+            "title": "Sunday"
+          },
+          {
+            "description": "For example: Closed on public holidays.",
+            "kind": {
+              "maxLength": 200,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "note",
+            "title": "Note under the hours"
+          },
+          {
+            "description": "Where your business is, so \"open now\" is right for visitors abroad too.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Amsterdam, Brussels, Berlin, Paris",
+                  "value": "europe-amsterdam"
+                },
+                {
+                  "title": "London, Dublin, Lisbon",
+                  "value": "europe-london"
+                },
+                {
+                  "title": "Helsinki, Athens, Kyiv",
+                  "value": "europe-helsinki"
+                },
+                {
+                  "title": "UTC",
+                  "value": "utc"
+                },
+                {
+                  "title": "New York, Toronto",
+                  "value": "america-new-york"
+                },
+                {
+                  "title": "Chicago, Mexico City",
+                  "value": "america-chicago"
+                },
+                {
+                  "title": "Los Angeles, Vancouver",
+                  "value": "america-los-angeles"
+                },
+                {
+                  "title": "Sydney, Melbourne",
+                  "value": "australia-sydney"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "timezone",
+            "title": "Your time zone"
+          },
+          {
+            "description": "For the day names and \"Open now\".",
+            "kind": {
+              "choices": [
+                {
+                  "title": "English",
+                  "value": "en"
+                },
+                {
+                  "title": "Nederlands",
+                  "value": "nl"
+                },
+                {
+                  "title": "Deutsch",
+                  "value": "de"
+                },
+                {
+                  "title": "Français",
+                  "value": "fr"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "language",
+            "title": "Language"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "No, only where I type it",
+                  "value": "none"
+                },
+                {
+                  "title": "The Open now badge",
+                  "value": "badge"
+                },
+                {
+                  "title": "The full table",
+                  "value": "table"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "footer",
+            "title": "Also show in the footer of every page"
+          },
+          {
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Colour for Open now"
+          }
+        ],
+        "id": "opening-hours",
+        "placement": "site-settings",
+        "title": "Opening hours"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Your opening hours as a neat table, with a live Open now badge.",
+    "longDescription": "Opening Hours shows when you are open, the way visitors want to know it: a clear table for the week, today highlighted, and a badge that says Open now · closes at 17:00, or Closed now · opens tomorrow at 09:00.\n\nType [opening-hours] on any page for the table, or [open-now] for the badge alone, and publish. You can also show the badge or the table in the footer of every page.\n\nEnter each day like 09:00-17:00, add a lunch break with a second range, or write closed. Choose your time zone, so the badge is right for visitors abroad too, and a language for the day names: English, Dutch, German or French. A short note, such as Closed on public holidays, goes under the table.\n\nThe table is plain HTML and works without JavaScript. Whether you are open right now is worked out when a visitor looks, not when the page was published, by a few hundred bytes of script. The plugin asks for one permission, storage, to keep your hours.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A visit page with the week's hours, today highlighted, and the Open now badge."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "In Dutch on a phone, on a Sunday evening: closed, and when you open again."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "The settings: hours for each day, a note, your time zone, language and footer."
+      }
+    ],
+    "categories": [
+      "content",
+      "marketing"
+    ],
+    "accent": "#16A34A"
+  }
+}

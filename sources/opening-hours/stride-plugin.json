@@ -1,0 +1,204 @@
+{
+  "manifestVersion": 1,
+  "id": "opening-hours",
+  "name": "Opening Hours",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Shows your opening hours as a neat table and a live \"Open now · closes at 17:00\" badge. Type [opening-hours] or [open-now] on any page.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "opening-hours",
+      "title": "Opening hours",
+      "description": "Type [opening-hours] on a page for the table, or [open-now] for the badge. \"Open now\" is worked out when a visitor looks, in your time zone. Other changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show opening hours",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "monday",
+          "title": "Monday",
+          "kind": {
+            "type": "text",
+            "maxLength": 60,
+            "multiline": false
+          },
+          "description": "Like 09:00-17:00. Two ranges: 09:00-12:30, 13:30-18:00. Write closed for a day off."
+        },
+        {
+          "name": "tuesday",
+          "title": "Tuesday",
+          "kind": {
+            "type": "text",
+            "maxLength": 60,
+            "multiline": false
+          }
+        },
+        {
+          "name": "wednesday",
+          "title": "Wednesday",
+          "kind": {
+            "type": "text",
+            "maxLength": 60,
+            "multiline": false
+          }
+        },
+        {
+          "name": "thursday",
+          "title": "Thursday",
+          "kind": {
+            "type": "text",
+            "maxLength": 60,
+            "multiline": false
+          }
+        },
+        {
+          "name": "friday",
+          "title": "Friday",
+          "kind": {
+            "type": "text",
+            "maxLength": 60,
+            "multiline": false
+          }
+        },
+        {
+          "name": "saturday",
+          "title": "Saturday",
+          "kind": {
+            "type": "text",
+            "maxLength": 60,
+            "multiline": false
+          }
+        },
+        {
+          "name": "sunday",
+          "title": "Sunday",
+          "kind": {
+            "type": "text",
+            "maxLength": 60,
+            "multiline": false
+          }
+        },
+        {
+          "name": "note",
+          "title": "Note under the hours",
+          "description": "For example: Closed on public holidays.",
+          "kind": {
+            "type": "text",
+            "maxLength": 200,
+            "multiline": false
+          }
+        },
+        {
+          "name": "timezone",
+          "title": "Your time zone",
+          "description": "Where your business is, so \"open now\" is right for visitors abroad too.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "europe-amsterdam",
+                "title": "Amsterdam, Brussels, Berlin, Paris"
+              },
+              {
+                "value": "europe-london",
+                "title": "London, Dublin, Lisbon"
+              },
+              {
+                "value": "europe-helsinki",
+                "title": "Helsinki, Athens, Kyiv"
+              },
+              {
+                "value": "utc",
+                "title": "UTC"
+              },
+              {
+                "value": "america-new-york",
+                "title": "New York, Toronto"
+              },
+              {
+                "value": "america-chicago",
+                "title": "Chicago, Mexico City"
+              },
+              {
+                "value": "america-los-angeles",
+                "title": "Los Angeles, Vancouver"
+              },
+              {
+                "value": "australia-sydney",
+                "title": "Sydney, Melbourne"
+              }
+            ]
+          }
+        },
+        {
+          "name": "language",
+          "title": "Language",
+          "description": "For the day names and \"Open now\".",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "en",
+                "title": "English"
+              },
+              {
+                "value": "nl",
+                "title": "Nederlands"
+              },
+              {
+                "value": "de",
+                "title": "Deutsch"
+              },
+              {
+                "value": "fr",
+                "title": "Français"
+              }
+            ]
+          }
+        },
+        {
+          "name": "footer",
+          "title": "Also show in the footer of every page",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "none",
+                "title": "No, only where I type it"
+              },
+              {
+                "value": "badge",
+                "title": "The Open now badge"
+              },
+              {
+                "value": "table",
+                "title": "The full table"
+              }
+            ]
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Colour for Open now",
+          "kind": {
+            "type": "color"
+          }
+        }
+      ]
+    }
+  ]
+}
