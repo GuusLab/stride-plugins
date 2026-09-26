@@ -1,0 +1,250 @@
+{
+  "manifest": {
+    "description": "A bar that counts down the days, hours and minutes to your sale, launch or order deadline, with a button, and hides itself when the time is up.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "countdown-banner",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Countdown Banner",
+    "panels": [
+      {
+        "description": "A countdown shown on every page of this site. The clock runs in the visitor's browser, so it stays right without publishing again. Other changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to hide it without losing your settings.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show the countdown"
+          },
+          {
+            "description": "For example: Summer sale ends in. Leave it empty to show nothing.",
+            "kind": {
+              "maxLength": 120,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "message",
+            "title": "Message"
+          },
+          {
+            "description": "Year-month-day and time, for example 2026-12-24 18:00. A date alone ends at 23:59.",
+            "kind": {
+              "maxLength": 16,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "ends",
+            "title": "Ends at"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Amsterdam, Brussels, Berlin, Paris",
+                  "value": "europe-amsterdam"
+                },
+                {
+                  "title": "London, Dublin, Lisbon",
+                  "value": "europe-london"
+                },
+                {
+                  "title": "Helsinki, Athens, Kyiv",
+                  "value": "europe-helsinki"
+                },
+                {
+                  "title": "Istanbul",
+                  "value": "europe-istanbul"
+                },
+                {
+                  "title": "UTC",
+                  "value": "utc"
+                },
+                {
+                  "title": "New York, Toronto",
+                  "value": "america-new-york"
+                },
+                {
+                  "title": "Chicago, Mexico City",
+                  "value": "america-chicago"
+                },
+                {
+                  "title": "Denver",
+                  "value": "america-denver"
+                },
+                {
+                  "title": "Los Angeles, Vancouver",
+                  "value": "america-los-angeles"
+                },
+                {
+                  "title": "Dubai",
+                  "value": "asia-dubai"
+                },
+                {
+                  "title": "Singapore, Hong Kong",
+                  "value": "asia-singapore"
+                },
+                {
+                  "title": "Sydney, Melbourne",
+                  "value": "australia-sydney"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "timezone",
+            "title": "Time zone of that time"
+          },
+          {
+            "description": "For example: Shop the sale. Leave empty for no button.",
+            "kind": {
+              "maxLength": 40,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "link-text",
+            "title": "Button text"
+          },
+          {
+            "description": "A page on your site such as /shop, or a full address.",
+            "kind": {
+              "maxLength": 500,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "link-url",
+            "title": "Button link"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Hide the bar",
+                  "value": "hide"
+                },
+                {
+                  "title": "Show the message below",
+                  "value": "message"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "after",
+            "title": "When the time is up"
+          },
+          {
+            "description": "For example: The sale has ended. Thanks for shopping with us.",
+            "kind": {
+              "maxLength": 120,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "ended-message",
+            "title": "Message after the end"
+          },
+          {
+            "description": "For the words days, hours and the end date.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "English",
+                  "value": "en"
+                },
+                {
+                  "title": "Nederlands",
+                  "value": "nl"
+                },
+                {
+                  "title": "Deutsch",
+                  "value": "de"
+                },
+                {
+                  "title": "Français",
+                  "value": "fr"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "language",
+            "title": "Language of the clock"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "A bar at the top of the page",
+                  "value": "top"
+                },
+                {
+                  "title": "Floating at the bottom of the screen",
+                  "value": "bottom"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "position",
+            "title": "Position"
+          },
+          {
+            "description": "The text colour is chosen for you so it stays readable.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Colour"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: checkout, blog/*. A * at the end means every page under it.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-pages",
+            "title": "Skip these pages"
+          }
+        ],
+        "id": "countdown-banner",
+        "placement": "site-settings",
+        "title": "Countdown banner"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Count down to your sale, launch or order deadline, then step aside.",
+    "longDescription": "Countdown Banner shows a bar that counts down the days, hours, minutes and seconds to a moment you choose: the end of a sale, a product launch, the last day to order before the holidays. Add a button, such as Shop the sale, and pick a colour; the text colour is chosen for you so it stays readable.\n\nPut it at the top of every page, or let it float at the bottom of the screen. The words are available in English, Dutch, German and French. Set the time in your own time zone, and every visitor sees the right countdown wherever they are, summer time included.\n\nWhen the time is up the bar hides itself, or shows a closing message such as The sale has ended. The clock runs in the visitor's browser, so it stays right without publishing again. Without JavaScript, visitors still see the message and the date it ends.\n\nThe plugin asks for one permission, storage, to keep the countdown. You can skip pages, such as your checkout.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A countdown bar at the top of every page, with a button to the sale."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Floating at the bottom of the screen, here in Dutch on a phone."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "The settings: message, end time, time zone, button, language, position and colour."
+      }
+    ],
+    "categories": [
+      "marketing",
+      "commerce"
+    ],
+    "accent": "#E11D48"
+  }
+}
