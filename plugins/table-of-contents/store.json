@@ -1,0 +1,13 @@
+{
+  "tagline": "A linked table of contents for long pages, built from your headings.",
+  "longDescription": "Table of Contents reads the h2 and h3 headings of a page, gives each one a clean anchor id and puts a linked, nested list of them at the top of the article, in the same column as your text. Readers can see what a long page covers and jump straight to the part they came for. Every heading also gets a shareable link, like /guide#what-a-drawing-is-for.\n\nIt needs no setup. Pages with at least three headings get a quiet box titled \"On this page\" in your site's own fonts and colours. Short pages, the header and the footer are left alone. Headings that already have an id keep it, and duplicate headings get unique anchors.\n\nPrefer it out of the way? Switch to the sticky sidebar style. On wide screens the list stays in the left margin while the reader scrolls, and on smaller screens it falls back to the box. You can also number the sections, list only h2 headings, change the title, pick an accent colour, set the minimum number of headings and skip pages by slug.\n\nThe published page gets no JavaScript and makes no third-party requests. The links are plain anchors, the styling is about 1.5 KB of inline CSS, and smooth scrolling only happens for visitors who have not asked for reduced motion. The markup is an accessible nav landmark with a label and visible focus styles.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",
+  "icon": "icon.png",
+  "screenshots": [
+    { "file": "screenshots/01.png", "caption": "Zero configuration: an \"On this page\" box at the top of the article, in the site's own type." },
+    { "file": "screenshots/02.png", "caption": "Sections and subsections, nested, each one a plain anchor link. No JavaScript." },
+    { "file": "screenshots/03.png", "caption": "Sidebar style: numbered, with a custom accent, and sticky in the margin while you read." },
+    { "file": "screenshots/04.png", "caption": "Every option in Settings: headings, minimum count, title, style, numbering, accent and skipped pages." }
+  ],
+  "categories": ["content", "seo"],
+  "accent": "#8B5CF6"
+}
