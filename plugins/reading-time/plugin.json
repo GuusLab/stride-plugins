@@ -95,7 +95,7 @@
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
   "release": {
-    "contentHash": "24296b2ee8af73bf50b01327aebfa1bd024c25621b1cbd64b3113525d79f2d0f",
+    "contentHash": "5d27544e8d7952f30d53e856b20856c5a84f17a4203463deb8404594b91654ca",
     "hooks": [
       "on_page_render"
     ],
@@ -105,8 +105,8 @@
       "storage"
     ],
     "publishedAt": "",
-    "signature": "f45f85d7feebb67e1aa8cceb44589a5adfdefe467c19c303f48917541455fd9b518eb19639184c37a7b005669c4dd0e8a7dc593be99b916c8be6676a86baf100",
-    "size": 186378,
+    "signature": "2a467c14a7d192aa0ae07bc9c36d57a3c4b473f2ff5df55ebdfa0e666621e2fb0faa915c1559ba9045fffc1964cb3c2fb93fca6ca9224bf78ae257845bf5980e",
+    "size": 186004,
     "sourceCommit": "f11ca743e0f8f80dac992311193b53608d5877a3",
     "sourceRepository": "https://github.com/GuusLab/stride-plugins",
     "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/1.0.0/plugin.wasm",

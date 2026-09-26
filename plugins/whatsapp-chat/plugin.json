@@ -153,7 +153,7 @@
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
   "release": {
-    "contentHash": "387159e973626203f12a509b820a1ffe0d7ff8b6058afd9722823544fefc4a57",
+    "contentHash": "c3048d9b52b3b13f8c83fde93a9e8ac398a506718171969b40adf705e32b7d8d",
     "hooks": [
       "on_page_render"
     ],
@@ -163,8 +163,8 @@
       "storage"
     ],
     "publishedAt": "",
-    "signature": "bff866e1189ef78337682090783e27de2fd7e01f11eb65075cae897b87700da00d3b7ca8301fe04c147387618cb2875b2bd9b52aa223d8ca03a6f5a8cff3fd0a",
-    "size": 181173,
+    "signature": "273e31d49532317ea1665ad2327edeef67328c6e066f6ba749a0086d8bfef2c4b1b626ba619099322f7bb2ac450a32503474be9a0d88fab08654bffe6a509c0c",
+    "size": 181127,
     "sourceCommit": "93f4e25c78f228e79102ef9b150403d5e952c0cf",
     "sourceRepository": "https://github.com/GuusLab/stride-plugins",
     "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/plugin.wasm",

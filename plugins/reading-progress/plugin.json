@@ -103,7 +103,7 @@
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
   "release": {
-    "contentHash": "4ebfaeb2c42cb757738bed11994a4abc55cb8d31cd5cd143e035d6466346398e",
+    "contentHash": "67ad7f11359b1ee12a5514ddf42edee5628830b6ae2dabce58bfb233cca010c2",
     "hooks": [
       "on_page_render"
     ],
@@ -113,8 +113,8 @@
       "storage"
     ],
     "publishedAt": "",
-    "signature": "2a2970db9672396507f0c0a3dc4ae79e594dabc44a957fa9b73340f28c05f4a6eff02828e2928e13c1e99731d927cec7211b5a3bef6fe0365c2be8f26da3c604",
-    "size": 178093,
+    "signature": "d4ab4332baee8255b3ceaf52bb8850df83c3f9409968aa81a536c17a48f73073da65124c806507b377caa074420b01c765d473ca708c060a2e5b02acdb1e4803",
+    "size": 178118,
     "sourceCommit": "42c2679b79ecfe19942df9590db93228c8de3c5a",
     "sourceRepository": "https://github.com/GuusLab/stride-plugins",
     "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/1.0.0/plugin.wasm",

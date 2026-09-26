@@ -139,7 +139,7 @@
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
   "release": {
-    "contentHash": "09b9f2dd2febc4c6a08bcd6194e865f51f85ab1e533d76c7f396fd5398cb04dd",
+    "contentHash": "6cc3971b08529cf289d32ebc453f65746db624198fdd83d097aa5f53daf70fc9",
     "hooks": [
       "on_page_render"
     ],
@@ -149,8 +149,8 @@
       "storage"
     ],
     "publishedAt": "",
-    "signature": "f011b6b2b320f548669a82ac6c6941dae76d4b6de5ee2cf4dbeeb45d775d993abee4ae6a7da19dd6d7fb5ba951c675d9286a51bb6876a7c41ef6dafbb9634b01",
-    "size": 184396,
+    "signature": "9e789fa48ae83ae5117d853e2d37e73be5c1966024ce1fd2a4cccafa427d3c941697242fb7f7298aed4f68f8945df925eb6217db5801b0664ca997c577bcc103",
+    "size": 184266,
     "sourceCommit": "0c61860d869e633b7704bdbca62641987bdd4116",
     "sourceRepository": "https://github.com/GuusLab/stride-plugins",
     "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/1.0.0/plugin.wasm",

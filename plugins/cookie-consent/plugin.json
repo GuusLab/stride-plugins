@@ -116,7 +116,7 @@
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
   "release": {
-    "contentHash": "449274676a10017ba689b0d34cc869e8ca891cb93d4094a54a321d23200f6a1f",
+    "contentHash": "6ac14c5f08b35ab8164be66b4b8f25d06c25cf3bf925bae19d28200e261fd0e7",
     "hooks": [
       "on_page_render"
     ],
@@ -126,8 +126,8 @@
       "storage"
     ],
     "publishedAt": "",
-    "signature": "33e4054027dfbf76ca589cf577052f603605c5d37f68dfb662e0806c53ced706c657da06ecaf74ee33fc7eedbb6a51dc37bc8a0f71bb3ddc56a8e1da8cfdff03",
-    "size": 180357,
+    "signature": "cd693108b463afdfb61270d37a328d29cc894e9cc484de94d848a92deb09b082ed2b3a2abe6f1bb056e8b1bf313622aa265e9247b4389846abf969f89d566509",
+    "size": 180323,
     "sourceCommit": "0302c03b015a91bf039f562c2af40ffc5e865fcd",
     "sourceRepository": "https://github.com/GuusLab/stride-plugins",
     "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/1.0.0/plugin.wasm",

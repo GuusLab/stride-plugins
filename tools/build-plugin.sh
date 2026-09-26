@@ -12,6 +12,12 @@
 #   * Cargo.lock is committed and the build runs with --locked;
 #   * --remap-path-prefix erases the source dir, the vendored PDK, CARGO_HOME
 #     and the rustup sysroot from the module.
+#
+# The reference build is x86_64-unknown-linux-gnu, as on GitHub's ubuntu
+# runners: Cargo mixes the host triple into its crate metadata, so a build on
+# another host (say aarch64-apple-darwin) can differ by a few bytes. The
+# verify workflow uploads its rebuilt modules as the "rebuilt-modules"
+# artifact; those are the bytes to publish.
 set -eu
 [ $# -eq 1 ] || { echo "usage: $0 <id>" >&2; exit 2; }
 id=$1
@@ -37,6 +43,11 @@ RUSTFLAGS="--remap-path-prefix=$src=/build"
 RUSTFLAGS="$RUSTFLAGS --remap-path-prefix=$pdk=/pdk"
 RUSTFLAGS="$RUSTFLAGS --remap-path-prefix=$CARGO_HOME=/cargo"
 RUSTFLAGS="$RUSTFLAGS --remap-path-prefix=$sysroot=/rustup"
+# With the rust-src component installed, std's panic locations point into it;
+# without it they read /rustc/<commit>. Map the first onto the second so both
+# kinds of machine build the same bytes (the last matching remap wins).
+commit=$(rustc -vV | sed -n 's/^commit-hash: //p')
+RUSTFLAGS="$RUSTFLAGS --remap-path-prefix=$sysroot/lib/rustlib/src/rust=/rustc/$commit"
 export RUSTFLAGS
 export CARGO_BUILD_JOBS=${CARGO_BUILD_JOBS:-3}
 unset CARGO_TARGET_DIR
@@ -52,6 +63,8 @@ else
   hash=$(shasum -a 256 plugin.wasm | cut -d' ' -f1)
 fi
 size=$(wc -c < plugin.wasm | tr -d ' ')
+host=$(rustc -vV | sed -n 's/^host: //p')
+[ "$host" = x86_64-unknown-linux-gnu ] || echo "note: built on $host; the registry's reference host is x86_64-unknown-linux-gnu" >&2
 echo "sources/$id/plugin.wasm"
 echo "sha256 $hash"
 echo "size   $size"

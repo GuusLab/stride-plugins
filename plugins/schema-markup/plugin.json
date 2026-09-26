@@ -209,7 +209,7 @@
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
   "release": {
-    "contentHash": "a0d6dbff389d49c52261f4adf7d456ed0d40265a88eb0c117dd422b6d924bb6d",
+    "contentHash": "23da4b596e1c979b0d116887529af7b808b70833ccd3ec01088726426b3396f2",
     "hooks": [
       "on_page_render"
     ],
@@ -219,8 +219,8 @@
       "storage"
     ],
     "publishedAt": "",
-    "signature": "e8c4ebb9186473a6cb612f810ebe16664b450f1b157704d0c3d84eacdad73c7ca8ab08c289f58b32efb65c431805d079721cdc49958eb6b6a130834de176e40b",
-    "size": 199520,
+    "signature": "a241c64130a2650ea2299c28f4aed7be907e3bfd433fd61fc1d6bbe4ddc82715fb44a5f1bdc3381c3a50193a76a609ba45d3eabcbcc740dab8711e21e424320e",
+    "size": 199718,
     "sourceCommit": "0f20355bae4f500995d81b27b56d6a2a49468a5e",
     "sourceRepository": "https://github.com/GuusLab/stride-plugins",
     "url": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/1.0.0/plugin.wasm",

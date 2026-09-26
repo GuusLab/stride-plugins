@@ -72,7 +72,7 @@
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
   "release": {
-    "contentHash": "7d37eebe353d23f0c59d3685051eeba911806ab0fae98eb147d72d21e6facb3b",
+    "contentHash": "06ac298ad67b1803f848c1807d142434551c673cc65e5594f0cb3c4a2c219180",
     "hooks": [
       "on_document_save"
     ],
@@ -83,8 +83,8 @@
       "write-pages"
     ],
     "publishedAt": "",
-    "signature": "0d908c8d31eec5f9abe53455fab005e4e81230f44ad182da34f353c34d50f284abb629bd0911cfe6c2ef434ee493f8ab77d21b9e4fd7adddd77fba1f37a74106",
-    "size": 186376,
+    "signature": "2e27ce8c1ef42cabbc06096b1da5c48c8baf58d1b08fcd9395ee41a89c0ac83f1a4df2c4be3590d261284e225597f720548bb29042319df658bd4df3b8362b04",
+    "size": 186074,
     "sourceCommit": "6b8e088fb9c78fc0d5875dcb5f2dc8b736d73442",
     "sourceRepository": "https://github.com/GuusLab/stride-plugins",
     "url": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/1.0.0/plugin.wasm",

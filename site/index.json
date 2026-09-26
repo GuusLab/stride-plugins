@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "registry": "https://guuslab.github.io/stride-plugins",
-  "generatedAt": "2026-09-26T09:40:43Z",
+  "generatedAt": "2026-09-26T09:48:47Z",
   "plugins": [
     {
       "id": "announcement",
@@ -26,12 +26,12 @@
           "hooks": [
             "on_page_render"
           ],
-          "contentHash": "537ce0e9a8ac40d76a2608343f5e38be28934dabbc61e4b9a8bd3c8c0978a18f",
+          "contentHash": "513451d0631ef24aea5579c70602805958a0d3194966422ea827e86deaf0dd93",
           "manifestHash": "8fee1786cd08fddd57f806767f209e5bdb5538e4683cb4030fa567303ae63dce",
-          "size": 185362,
+          "size": 185316,
           "url": "https://guuslab.github.io/stride-plugins/plugins/announcement/1.0.0/plugin.wasm",
-          "signature": "bfe9c870b8f2af46fa97744ed026f44fa93499a21f59cdf576eee8134b8d24924379070daa990f415082e698df6fe6966c90995ceb7f1354b4a835c0f453b003",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "4800b0bbb97dce767badfcca23be156e55e50676c15b2c04457246443ecff71775207dccab574359980324f27b2ff0827028f34649ed93089a2e84092f63f400",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "63b0b4f5404204069d976a723aceb2429d035d02",
           "yanked": false,
@@ -91,12 +91,12 @@
           "hooks": [
             "on_page_render"
           ],
-          "contentHash": "449274676a10017ba689b0d34cc869e8ca891cb93d4094a54a321d23200f6a1f",
+          "contentHash": "6ac14c5f08b35ab8164be66b4b8f25d06c25cf3bf925bae19d28200e261fd0e7",
           "manifestHash": "d26ace259fa294923f4da32c98f64a1b5952bb5478a37c7a19f84925e86ca097",
-          "size": 180357,
+          "size": 180323,
           "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/1.0.0/plugin.wasm",
-          "signature": "33e4054027dfbf76ca589cf577052f603605c5d37f68dfb662e0806c53ced706c657da06ecaf74ee33fc7eedbb6a51dc37bc8a0f71bb3ddc56a8e1da8cfdff03",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "cd693108b463afdfb61270d37a328d29cc894e9cc484de94d848a92deb09b082ed2b3a2abe6f1bb056e8b1bf313622aa265e9247b4389846abf969f89d566509",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "0302c03b015a91bf039f562c2af40ffc5e865fcd",
           "yanked": false,
@@ -162,12 +162,12 @@
           "hooks": [
             "on_page_render"
           ],
-          "contentHash": "09b9f2dd2febc4c6a08bcd6194e865f51f85ab1e533d76c7f396fd5398cb04dd",
+          "contentHash": "6cc3971b08529cf289d32ebc453f65746db624198fdd83d097aa5f53daf70fc9",
           "manifestHash": "db33061307358aa7f816f57677aae05166e8ba479c28c7bf032375e0231595f8",
-          "size": 184396,
+          "size": 184266,
           "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/1.0.0/plugin.wasm",
-          "signature": "f011b6b2b320f548669a82ac6c6941dae76d4b6de5ee2cf4dbeeb45d775d993abee4ae6a7da19dd6d7fb5ba951c675d9286a51bb6876a7c41ef6dafbb9634b01",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "9e789fa48ae83ae5117d853e2d37e73be5c1966024ce1fd2a4cccafa427d3c941697242fb7f7298aed4f68f8945df925eb6217db5801b0664ca997c577bcc103",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "0c61860d869e633b7704bdbca62641987bdd4116",
           "yanked": false,
@@ -233,12 +233,12 @@
           "hooks": [
             "on_page_render"
           ],
-          "contentHash": "4ebfaeb2c42cb757738bed11994a4abc55cb8d31cd5cd143e035d6466346398e",
+          "contentHash": "67ad7f11359b1ee12a5514ddf42edee5628830b6ae2dabce58bfb233cca010c2",
           "manifestHash": "b679c47213791f3ec0a24336ebfccc1f129976a5563e11559fd3dbc5317a51b6",
-          "size": 178093,
+          "size": 178118,
           "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/1.0.0/plugin.wasm",
-          "signature": "2a2970db9672396507f0c0a3dc4ae79e594dabc44a957fa9b73340f28c05f4a6eff02828e2928e13c1e99731d927cec7211b5a3bef6fe0365c2be8f26da3c604",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "d4ab4332baee8255b3ceaf52bb8850df83c3f9409968aa81a536c17a48f73073da65124c806507b377caa074420b01c765d473ca708c060a2e5b02acdb1e4803",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "42c2679b79ecfe19942df9590db93228c8de3c5a",
           "yanked": false,
@@ -304,12 +304,12 @@
           "hooks": [
             "on_page_render"
           ],
-          "contentHash": "24296b2ee8af73bf50b01327aebfa1bd024c25621b1cbd64b3113525d79f2d0f",
+          "contentHash": "5d27544e8d7952f30d53e856b20856c5a84f17a4203463deb8404594b91654ca",
           "manifestHash": "9eaf9f61ae03c59534550f65b4b61e2a9f06bc2a6ffb65a04a42a674fadee5e4",
-          "size": 186378,
+          "size": 186004,
           "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/1.0.0/plugin.wasm",
-          "signature": "f45f85d7feebb67e1aa8cceb44589a5adfdefe467c19c303f48917541455fd9b518eb19639184c37a7b005669c4dd0e8a7dc593be99b916c8be6676a86baf100",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "2a467c14a7d192aa0ae07bc9c36d57a3c4b473f2ff5df55ebdfa0e666621e2fb0faa915c1559ba9045fffc1964cb3c2fb93fca6ca9224bf78ae257845bf5980e",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "f11ca743e0f8f80dac992311193b53608d5877a3",
           "yanked": false,
@@ -369,12 +369,12 @@
           "hooks": [
             "on_page_render"
           ],
-          "contentHash": "a0d6dbff389d49c52261f4adf7d456ed0d40265a88eb0c117dd422b6d924bb6d",
+          "contentHash": "23da4b596e1c979b0d116887529af7b808b70833ccd3ec01088726426b3396f2",
           "manifestHash": "f44d9f6c9e0b9a56a739b5183d0d829bb9ea7099b1b9602bc034f4c4355123c4",
-          "size": 199520,
+          "size": 199718,
           "url": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/1.0.0/plugin.wasm",
-          "signature": "e8c4ebb9186473a6cb612f810ebe16664b450f1b157704d0c3d84eacdad73c7ca8ab08c289f58b32efb65c431805d079721cdc49958eb6b6a130834de176e40b",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "a241c64130a2650ea2299c28f4aed7be907e3bfd433fd61fc1d6bbe4ddc82715fb44a5f1bdc3381c3a50193a76a609ba45d3eabcbcc740dab8711e21e424320e",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "0f20355bae4f500995d81b27b56d6a2a49468a5e",
           "yanked": false,
@@ -430,12 +430,12 @@
           "hooks": [
             "on_document_save"
           ],
-          "contentHash": "7d37eebe353d23f0c59d3685051eeba911806ab0fae98eb147d72d21e6facb3b",
+          "contentHash": "06ac298ad67b1803f848c1807d142434551c673cc65e5594f0cb3c4a2c219180",
           "manifestHash": "86641408f09874d6b41e66a2618444edb73f05aeeb7d4075416c2abaea06d473",
-          "size": 186376,
+          "size": 186074,
           "url": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/1.0.0/plugin.wasm",
-          "signature": "0d908c8d31eec5f9abe53455fab005e4e81230f44ad182da34f353c34d50f284abb629bd0911cfe6c2ef434ee493f8ab77d21b9e4fd7adddd77fba1f37a74106",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "2e27ce8c1ef42cabbc06096b1da5c48c8baf58d1b08fcd9395ee41a89c0ac83f1a4df2c4be3590d261284e225597f720548bb29042319df658bd4df3b8362b04",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "6b8e088fb9c78fc0d5875dcb5f2dc8b736d73442",
           "yanked": false,
@@ -491,12 +491,12 @@
             "on_page_render",
             "on_publish"
           ],
-          "contentHash": "76e113b8788035924e7bb11b6f33c0f7012fbb01056cb584a09d6be9344270c3",
+          "contentHash": "8507e41efd34dd4668b986b8edd9ffc7be0a264c4217cbc76b1397357e26cbbd",
           "manifestHash": "4f9e26633d832e5e97fb3e72ba852961bb420563b23e9ed52ba3d2be738e2f78",
-          "size": 193068,
+          "size": 192872,
           "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/1.0.0/plugin.wasm",
-          "signature": "4dc05a1e6d2c86ebfdd38d767bff2b139a36346ed19b39a1b8935e750fc8e68a9b23d67bdeca15cfbad11df2ba33efbc5c051cc6e93e4e1af830fa2aaf57730e",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "9f643e14e1779fb5ca74f016a5637de75c17b85b05cb07c1878578689ce5f66847ad85d152c3137d338aafcc4fe6185772aca7d66a994902d218aab12b59580f",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "7c33d54acb2c2fb35739eabd5d595f45999cf425",
           "yanked": false,
@@ -563,12 +563,12 @@
           "hooks": [
             "on_page_render"
           ],
-          "contentHash": "7d102b960a41cee730f07bdcbb198865dc9d260f52e52bbc74c2cbda183f0e2d",
+          "contentHash": "3b06c8857082d38808996b73a2c20c6860ea2f52df075c7496784080469e0210",
           "manifestHash": "4aa55643fd0434e68747938605b0877146c30f1ceef08ad6d87b2af27ea96cfc",
-          "size": 195267,
+          "size": 194994,
           "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/1.0.0/plugin.wasm",
-          "signature": "9867da25f076ef2dcbfda4203d6961735ff8fa66148d4b8cd826046b31aba67439c21f1b737df6cc03ce145540363e725857376d97b4152f6f76b97c116a360b",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "83e15a75e1a776caa243e10da381850a051b48165afbb6aab64866eff1ceea4bd92de4834b9f5fc1eff46daaacb3599699309228f459c5f37e0e4dc8a16c540b",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "78361c4e2cf1f81090e8eb07a251d5db92d82a5e",
           "yanked": false,
@@ -634,12 +634,12 @@
           "hooks": [
             "on_page_render"
           ],
-          "contentHash": "387159e973626203f12a509b820a1ffe0d7ff8b6058afd9722823544fefc4a57",
+          "contentHash": "c3048d9b52b3b13f8c83fde93a9e8ac398a506718171969b40adf705e32b7d8d",
           "manifestHash": "89bdc5ab5b1f84ef0a0c53916fc331c9627426ff287319cc534fdb615224e2ad",
-          "size": 181173,
+          "size": 181127,
           "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/plugin.wasm",
-          "signature": "bff866e1189ef78337682090783e27de2fd7e01f11eb65075cae897b87700da00d3b7ca8301fe04c147387618cb2875b2bd9b52aa223d8ca03a6f5a8cff3fd0a",
-          "publishedAt": "2026-09-26T09:40:43Z",
+          "signature": "273e31d49532317ea1665ad2327edeef67328c6e066f6ba749a0086d8bfef2c4b1b626ba619099322f7bb2ac450a32503474be9a0d88fab08654bffe6a509c0c",
+          "publishedAt": "2026-09-26T09:48:47Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "93f4e25c78f228e79102ef9b150403d5e952c0cf",
           "yanked": false,
@@ -677,5 +677,5 @@
       ]
     }
   ],
-  "signature": "14301339cf2a48ceb63d5fe50ec2e5b78bbcc91528bb8a43219ae2e043dcce18861dadb9bd5a98d1baa536914fdaa3050e9c26a7807feec80c2c25eaa4832d00"
+  "signature": "c79e9e57883d61098b066044559ee340af0445210e473ce568a7cebe4a20fb83a59bf7b1cffbba83ba15ba41e7710329ac6c35647bca12a37d67bbd982771c08"
 }

@@ -180,7 +180,7 @@
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
   "release": {
-    "contentHash": "76e113b8788035924e7bb11b6f33c0f7012fbb01056cb584a09d6be9344270c3",
+    "contentHash": "8507e41efd34dd4668b986b8edd9ffc7be0a264c4217cbc76b1397357e26cbbd",
     "hooks": [
       "on_page_render",
       "on_publish"
@@ -191,8 +191,8 @@
       "storage"
     ],
     "publishedAt": "",
-    "signature": "4dc05a1e6d2c86ebfdd38d767bff2b139a36346ed19b39a1b8935e750fc8e68a9b23d67bdeca15cfbad11df2ba33efbc5c051cc6e93e4e1af830fa2aaf57730e",
-    "size": 193068,
+    "signature": "9f643e14e1779fb5ca74f016a5637de75c17b85b05cb07c1878578689ce5f66847ad85d152c3137d338aafcc4fe6185772aca7d66a994902d218aab12b59580f",
+    "size": 192872,
     "sourceCommit": "7c33d54acb2c2fb35739eabd5d595f45999cf425",
     "sourceRepository": "https://github.com/GuusLab/stride-plugins",
     "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/1.0.0/plugin.wasm",
