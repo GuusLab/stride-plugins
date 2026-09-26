@@ -1,0 +1,13 @@
+{
+  "tagline": "An accessible GDPR cookie banner in Dutch or English, with no third parties",
+  "longDescription": "Cookie Consent adds a clean, accessible cookie banner to every published page. Visitors can accept everything, reject everything with one equally prominent click, or open the settings and choose per category: necessary, analytics and marketing.\n\nThe banner speaks the page's language: Dutch pages get Dutch text, all others English. Write your own text for either language, link your privacy policy, pick a floating card or a full-width bar, and set the background, text and button colours. Button text stays readable on any colour you choose.\n\nThe choice is remembered for 180 days in a first-party cookie, so returning visitors never see the banner flash. A small Cookie settings button, or any element with data-cookie-settings, lets visitors change their mind.\n\nOther scripts can wait for consent: the html element carries data-cookie-consent (for example \"necessary analytics\"), a stride:consent event fires on document with the choice, and window.StrideConsent offers get() and open().\n\nEverything is inline and about 4 KB. No external requests, no tracking of its own. It needs only the storage permission for its settings, and still shows its default banner if that permission is refused.",
+  "icon": "icon.png",
+  "screenshots": [
+    { "file": "screenshots/01.png", "caption": "A floating card on a live page, with Accept all and Reject all given equal weight" },
+    { "file": "screenshots/02.png", "caption": "Settings lets visitors choose analytics and marketing cookies one by one" },
+    { "file": "screenshots/03.png", "caption": "Text, privacy link, layout and colours are set from the site settings" },
+    { "file": "screenshots/04.png", "caption": "On a Dutch page the banner speaks Dutch; here as a light full-width bar" }
+  ],
+  "categories": ["privacy"],
+  "accent": "#0EA5E9"
+}

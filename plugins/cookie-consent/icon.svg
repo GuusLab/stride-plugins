@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+    <mask id="cookie">
+      <rect width="512" height="512" fill="#000"/>
+      <circle cx="256" cy="264" r="150" fill="#fff"/>
+      <!-- bites -->
+      <circle cx="392" cy="150" r="58" fill="#000"/>
+      <circle cx="400" cy="222" r="36" fill="#000"/>
+      <!-- chips -->
+      <circle cx="196" cy="210" r="22" fill="#000"/>
+      <circle cx="286" cy="262" r="19" fill="#000"/>
+      <circle cx="190" cy="318" r="18" fill="#000"/>
+      <circle cx="286" cy="358" r="22" fill="#000"/>
+      <circle cx="342" cy="316" r="13" fill="#000"/>
+      <circle cx="252" cy="176" r="12" fill="#000"/>
+    </mask>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="#fff" mask="url(#cookie)"/>
+</svg>

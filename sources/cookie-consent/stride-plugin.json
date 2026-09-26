@@ -1,0 +1,79 @@
+{
+  "manifestVersion": 1,
+  "id": "cookie-consent",
+  "name": "Cookie Consent",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "An accessible GDPR cookie banner in Dutch or English, with accept, reject and per-category settings. It remembers the choice and tells other scripts through a data attribute and a DOM event.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/cookie-consent",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "cookie-consent",
+      "title": "Cookie consent",
+      "description": "The cookie banner shown to visitors who have not made a choice yet. Dutch pages get the Dutch text, every other page the English one.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show the cookie banner",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "layout",
+          "title": "Layout",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "card", "title": "Floating card" },
+              { "value": "bar", "title": "Full-width bar" }
+            ]
+          }
+        },
+        {
+          "name": "message-en",
+          "title": "Text (English)",
+          "description": "Leave it empty for the default text.",
+          "kind": { "type": "text", "maxLength": 600, "multiline": true }
+        },
+        {
+          "name": "message-nl",
+          "title": "Text (Dutch)",
+          "description": "Shown on pages whose language is Dutch. Leave it empty for the default text.",
+          "kind": { "type": "text", "maxLength": 600, "multiline": true }
+        },
+        {
+          "name": "policy-url",
+          "title": "Privacy policy link",
+          "description": "A path such as /privacy or a full https:// address. Leave it empty to show no link.",
+          "kind": { "type": "text", "maxLength": 300, "multiline": false }
+        },
+        {
+          "name": "background",
+          "title": "Background colour",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "foreground",
+          "title": "Text colour",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "accent",
+          "title": "Button colour",
+          "description": "The button text turns dark or light by itself to stay readable.",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "reopen",
+          "title": "Show a small \"Cookies\" button after a choice",
+          "description": "Lets visitors change their mind. You can also add data-cookie-settings to any link or button of your own.",
+          "kind": { "type": "boolean" }
+        }
+      ]
+    }
+  ]
+}
