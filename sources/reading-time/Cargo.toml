@@ -1,0 +1,23 @@
+# An empty [workspace] table keeps this crate out of the workspace it
+# happens to sit inside. docs/plugins.md does not mention it; cargo asks for it.
+[workspace]
+
+[package]
+name = "reading-time"
+version = "1.0.0"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+extism-pdk = "1.4.1"                              # the plugin_fn macro
+stride-pdk = { path = "../../pdk-rust" }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true

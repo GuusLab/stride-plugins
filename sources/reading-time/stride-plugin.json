@@ -1,0 +1,64 @@
+{
+  "manifestVersion": 1,
+  "id": "reading-time",
+  "name": "Reading Time",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Shows an estimated reading time, like \"4 min read\", under the first heading of every page, and keeps a per-page word count an editor can see in the site settings.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "reading-time",
+      "title": "Reading time",
+      "description": "The line shown under the first heading of every page on this site. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show a reading time",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "words-per-minute",
+          "title": "Words a minute",
+          "description": "How fast a reader is assumed to be. 200 is the usual figure for prose; 238 is the average adult.",
+          "kind": { "type": "integer", "minimum": 60, "maximum": 600 }
+        },
+        {
+          "name": "label",
+          "title": "Label",
+          "description": "The words after the number. \"min read\" by default.",
+          "kind": { "type": "text", "maxLength": 40, "multiline": false }
+        },
+        {
+          "name": "style",
+          "title": "Style",
+          "description": "A small pill with a clock, or plain text your theme styles itself.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "badge", "title": "Badge with clock" },
+              { "value": "plain", "title": "Plain text" }
+            ]
+          }
+        },
+        {
+          "name": "accent",
+          "title": "Accent colour",
+          "description": "Colour of the badge. Leave empty to use the text colour of the page.",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "skip-pages",
+          "title": "Skip these pages",
+          "description": "Slugs separated by commas, for example: home, contact. These pages get no reading time.",
+          "kind": { "type": "text", "maxLength": 400, "multiline": false }
+        }
+      ]
+    }
+  ]
+}
