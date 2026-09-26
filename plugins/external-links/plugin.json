@@ -1,0 +1,123 @@
+{
+  "manifest": {
+    "description": "Opens links to other sites in a new tab, adds a small arrow so readers know they are leaving, and sets noopener and optional nofollow for you. No JavaScript.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render",
+      "on_publish"
+    ],
+    "id": "external-links",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "External Links",
+    "panels": [
+      {
+        "description": "How links to other websites behave on this site. Links to your own pages never change. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every link exactly as it was.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Handle links to other sites"
+          },
+          {
+            "description": "A link you already set to open in a certain way keeps that. Screen readers hear \"opens in a new tab\".",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "new-tab",
+            "title": "Open them in a new tab"
+          },
+          {
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "icon",
+            "title": "Show a small arrow after the link"
+          },
+          {
+            "description": "Nofollow asks search engines not to pass your ranking on to the sites you link to.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Let them follow the links",
+                  "value": "none"
+                },
+                {
+                  "title": "Ask them not to follow (nofollow)",
+                  "value": "nofollow"
+                },
+                {
+                  "title": "Mark them as paid or affiliate links (sponsored)",
+                  "value": "sponsored"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "nofollow",
+            "title": "Search engines"
+          },
+          {
+            "description": "Domains that also count as your own, separated by commas, for example: shop.example.com, example.nl. Your site's own domain is picked up when you publish.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "own-domains",
+            "title": "Your other domains"
+          },
+          {
+            "description": "Links to these domains are never changed, for example: youtube.com.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-domains",
+            "title": "Leave these domains alone"
+          }
+        ],
+        "id": "external-links",
+        "placement": "site-settings",
+        "title": "External links"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Links to other sites open in a new tab, safely, with a small arrow.",
+    "longDescription": "External Links takes care of every link on your site that points to another website. It opens them in a new tab, so visitors do not lose your page, and adds rel=\"noopener noreferrer\" so the other site cannot reach back into yours.\n\nA small arrow after the link shows readers they are about to leave, and screen readers hear \"opens in a new tab\". You can also ask search engines not to follow the links (nofollow), or mark them as paid or affiliate links (sponsored).\n\nYour own pages are never touched: links within your site are left as they are, and the plugin picks up your site's domain when you publish. You can also list your other domains, such as a separate shop, so they count as your own. Links you already set to open in a certain way keep that, and domains you name, such as youtube.com, are left completely alone.\n\nEverything happens once, when a page is published: there is no JavaScript on your pages. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A reading list where every outside link gets a small arrow and opens in a new tab."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "What changes in the page: new tab, noopener, nofollow and a hidden note for screen readers."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "The settings: new tab, arrow, nofollow or sponsored, and your other domains."
+      }
+    ],
+    "categories": [
+      "seo",
+      "utilities"
+    ],
+    "accent": "#0284C7"
+  }
+}
