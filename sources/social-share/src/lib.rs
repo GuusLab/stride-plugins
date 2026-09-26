@@ -62,7 +62,7 @@ impl Network {
 
     fn aria(self) -> &'static str {
         match self {
-            Network::X => "Share on X (opens in a new tab)",
+            Network::X => "Post on X (opens in a new tab)",
             Network::LinkedIn => "Share on LinkedIn (opens in a new tab)",
             Network::Facebook => "Share on Facebook (opens in a new tab)",
             Network::WhatsApp => "Share on WhatsApp (opens in a new tab)",
@@ -106,8 +106,8 @@ impl Network {
         match self {
             Network::X => "#000000",
             Network::LinkedIn => "#0A66C2",
-            Network::Facebook => "#1877F2",
-            Network::WhatsApp => "#128C4A",
+            Network::Facebook => "#0866FF",
+            Network::WhatsApp => "#0F7B3F",
             Network::Email => "#475569",
         }
     }
@@ -292,7 +292,19 @@ pub fn render(html: &str, slug: &str, settings: &Settings, origin: Option<&str>)
         }
     });
     let block = share_block(settings, &title, url.as_deref());
-    inject(html, &block)
+    let style = format!("<style>{CSS}</style>");
+    // The stylesheet belongs in <head>; only a page without one gets it inline.
+    match find_ci(html.as_bytes(), b"</head>") {
+        Some(head) => {
+            let body = inject(html, &block)?;
+            let mut out = String::with_capacity(body.len() + style.len());
+            out.push_str(&body[..head]);
+            out.push_str(&style);
+            out.push_str(&body[head..]);
+            Some(out)
+        }
+        None => inject(html, &format!("{style}{block}")),
+    }
 }
 
 /// Whether a page with this slug gets buttons.
@@ -358,9 +370,6 @@ pub fn share_block(settings: &Settings, title: &str, url: Option<&str>) -> Strin
     let labels = matches!(settings.style.as_str(), "brand" | "outline");
     let encoded_title = percent_encode(title);
     let mut out = String::with_capacity(4096);
-    out.push_str("<style>");
-    out.push_str(CSS);
-    out.push_str("</style>");
     out.push_str(&format!(
         "<aside class=\"ss-share ss-{} ss-{}\" style=\"--ss-a:{}\" aria-label=\"Share this page\"",
         settings.style, settings.align, settings.accent
@@ -687,7 +696,9 @@ mod tests {
     fn injects_before_body_end_with_absolute_links() {
         let out = render(PAGE, "tom", &Settings::default(), Some("https://ex.com")).unwrap();
         assert!(out.contains("</aside><script>"));
-        assert!(out.contains("<p>Text.</p><style>"));
+        assert!(out.contains("<p>Text.</p><aside"));
+        assert!(out.contains("</style></head>"));
+        assert_eq!(out.matches("<style>").count(), 1);
         assert!(out.contains("</script></div></body>"));
         assert!(out.contains("https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fex.com%2Ftom\""));
         assert!(out.contains("x.com/intent/post?url=https%3A%2F%2Fex.com%2Ftom&amp;text=Tom%20%26%20Jerry"));
@@ -700,6 +711,12 @@ mod tests {
         let out = render(PAGE, "tom", &Settings::default(), None).unwrap();
         assert!(out.contains("data-ss-t=\"https://www.linkedin.com/sharing/share-offsite/?url={u}\""));
         assert!(out.contains("<script>"));
+    }
+
+    #[test]
+    fn style_goes_inline_without_a_head() {
+        let out = render("<body><div><p>x</p></div></body>", "a", &Settings::default(), None).unwrap();
+        assert!(out.contains("<p>x</p><style>"));
     }
 
     #[test]
