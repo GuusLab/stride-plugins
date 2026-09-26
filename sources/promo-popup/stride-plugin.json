@@ -1,0 +1,219 @@
+{
+  "manifestVersion": 1,
+  "id": "promo-popup",
+  "name": "Promo Popup",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "One friendly popup for a sale, a newsletter or an event. Show it after a few seconds, on scroll or when someone is about to leave, and not again for days.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "promo-popup",
+      "title": "Promo popup",
+      "description": "A popup shown to visitors of this site. It remembers who has seen it in their own browser; nothing is tracked. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show the popup",
+          "description": "Turn this off to hide it without losing your text.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "title",
+          "title": "Title",
+          "description": "For example: 10% off your first order. Leave it empty to show nothing.",
+          "kind": {
+            "type": "text",
+            "maxLength": 80,
+            "multiline": false
+          }
+        },
+        {
+          "name": "text",
+          "title": "Text",
+          "description": "A sentence or two. An empty line starts a new paragraph.",
+          "kind": {
+            "type": "text",
+            "maxLength": 600,
+            "multiline": true
+          }
+        },
+        {
+          "name": "button-text",
+          "title": "Button text",
+          "description": "For example: Get the code.",
+          "kind": {
+            "type": "text",
+            "maxLength": 40,
+            "multiline": false
+          }
+        },
+        {
+          "name": "button-url",
+          "title": "Button link",
+          "description": "A page on your site such as /newsletter, or a full address.",
+          "kind": {
+            "type": "text",
+            "maxLength": 500,
+            "multiline": false
+          }
+        },
+        {
+          "name": "image-url",
+          "title": "Image",
+          "description": "Optional. The address of an image, for example one from your media library.",
+          "kind": {
+            "type": "text",
+            "maxLength": 500,
+            "multiline": false
+          }
+        },
+        {
+          "name": "trigger",
+          "title": "When to show it",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "delay",
+                "title": "After a few seconds"
+              },
+              {
+                "value": "scroll",
+                "title": "After scrolling down the page"
+              },
+              {
+                "value": "exit",
+                "title": "When the visitor is about to leave"
+              }
+            ]
+          }
+        },
+        {
+          "name": "delay",
+          "title": "Seconds to wait",
+          "kind": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 300
+          }
+        },
+        {
+          "name": "scroll",
+          "title": "Scrolled this far (percent)",
+          "kind": {
+            "type": "integer",
+            "minimum": 10,
+            "maximum": 100
+          }
+        },
+        {
+          "name": "frequency",
+          "title": "How often",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "days",
+                "title": "Once, then again after the days below"
+              },
+              {
+                "value": "session",
+                "title": "Once per visit"
+              },
+              {
+                "value": "once",
+                "title": "Only once per visitor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "days",
+          "title": "Days before showing it again",
+          "kind": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 365
+          }
+        },
+        {
+          "name": "look",
+          "title": "Look",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "modal",
+                "title": "In the middle of the screen"
+              },
+              {
+                "value": "corner",
+                "title": "Small, in the bottom corner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Button colour",
+          "description": "The text colour is chosen for you so it stays readable.",
+          "kind": {
+            "type": "color"
+          }
+        },
+        {
+          "name": "close-text",
+          "title": "Close text",
+          "description": "\"No thanks\" by default, for example \"Nee, bedankt\".",
+          "kind": {
+            "type": "text",
+            "maxLength": 30,
+            "multiline": false
+          }
+        },
+        {
+          "name": "pages",
+          "title": "Pages",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "all",
+                "title": "Every page"
+              },
+              {
+                "value": "only",
+                "title": "Only the pages listed below"
+              },
+              {
+                "value": "except",
+                "title": "Every page except those listed below"
+              }
+            ]
+          }
+        },
+        {
+          "name": "page-list",
+          "title": "Page list",
+          "description": "Page addresses separated by commas, for example: home, shop/*. A * at the end means every page under it.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}

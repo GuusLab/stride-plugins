@@ -1,0 +1,249 @@
+{
+  "manifest": {
+    "description": "One friendly popup for a sale, a newsletter or an event. Show it after a few seconds, on scroll or when someone is about to leave, and not again for days.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "promo-popup",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Promo Popup",
+    "panels": [
+      {
+        "description": "A popup shown to visitors of this site. It remembers who has seen it in their own browser; nothing is tracked. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to hide it without losing your text.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show the popup"
+          },
+          {
+            "description": "For example: 10% off your first order. Leave it empty to show nothing.",
+            "kind": {
+              "maxLength": 80,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "title",
+            "title": "Title"
+          },
+          {
+            "description": "A sentence or two. An empty line starts a new paragraph.",
+            "kind": {
+              "maxLength": 600,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "text",
+            "title": "Text"
+          },
+          {
+            "description": "For example: Get the code.",
+            "kind": {
+              "maxLength": 40,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "button-text",
+            "title": "Button text"
+          },
+          {
+            "description": "A page on your site such as /newsletter, or a full address.",
+            "kind": {
+              "maxLength": 500,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "button-url",
+            "title": "Button link"
+          },
+          {
+            "description": "Optional. The address of an image, for example one from your media library.",
+            "kind": {
+              "maxLength": 500,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "image-url",
+            "title": "Image"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "After a few seconds",
+                  "value": "delay"
+                },
+                {
+                  "title": "After scrolling down the page",
+                  "value": "scroll"
+                },
+                {
+                  "title": "When the visitor is about to leave",
+                  "value": "exit"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "trigger",
+            "title": "When to show it"
+          },
+          {
+            "kind": {
+              "maximum": 300,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "name": "delay",
+            "title": "Seconds to wait"
+          },
+          {
+            "kind": {
+              "maximum": 100,
+              "minimum": 10,
+              "type": "integer"
+            },
+            "name": "scroll",
+            "title": "Scrolled this far (percent)"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Once, then again after the days below",
+                  "value": "days"
+                },
+                {
+                  "title": "Once per visit",
+                  "value": "session"
+                },
+                {
+                  "title": "Only once per visitor",
+                  "value": "once"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "frequency",
+            "title": "How often"
+          },
+          {
+            "kind": {
+              "maximum": 365,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "name": "days",
+            "title": "Days before showing it again"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "In the middle of the screen",
+                  "value": "modal"
+                },
+                {
+                  "title": "Small, in the bottom corner",
+                  "value": "corner"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "look",
+            "title": "Look"
+          },
+          {
+            "description": "The text colour is chosen for you so it stays readable.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Button colour"
+          },
+          {
+            "description": "\"No thanks\" by default, for example \"Nee, bedankt\".",
+            "kind": {
+              "maxLength": 30,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "close-text",
+            "title": "Close text"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Every page",
+                  "value": "all"
+                },
+                {
+                  "title": "Only the pages listed below",
+                  "value": "only"
+                },
+                {
+                  "title": "Every page except those listed below",
+                  "value": "except"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "pages",
+            "title": "Pages"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: home, shop/*. A * at the end means every page under it.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "page-list",
+            "title": "Page list"
+          }
+        ],
+        "id": "promo-popup",
+        "placement": "site-settings",
+        "title": "Promo popup"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "One friendly popup for a sale or newsletter. Never pushy.",
+    "longDescription": "Promo Popup shows one popup to your visitors: a sale, a newsletter, a workshop, a new product. Give it a title, a short text, an optional image and a button, and choose when it appears: after a few seconds, after scrolling down the page, or when a visitor is about to leave.\n\nIt is polite by design. Each visitor sees it once, and then not again for as many days as you choose, or only once per visit, or only ever once. Change the text and it counts as a new popup, shown again. It can sit in the middle of the screen or slide in small in a corner, and you can keep it off pages such as your checkout.\n\nIt uses the browser's own dialog, so Escape, the close button and screen readers all work, and animations are left out for visitors who prefer less motion. Whether a visitor has seen it is remembered in their own browser; nothing is sent anywhere and nobody is tracked.\n\nThe plugin asks for one permission, storage, to keep the popup.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A workshop invitation with an image and a button, in the middle of the screen."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Or small in the corner, where it does not get in the way of reading."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "The settings: text, image, button, when to show it, how often, look and pages."
+      }
+    ],
+    "categories": [
+      "marketing"
+    ],
+    "accent": "#7C3AED"
+  }
+}
