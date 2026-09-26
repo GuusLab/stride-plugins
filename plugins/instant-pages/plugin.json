@@ -1,0 +1,128 @@
+{
+  "manifest": {
+    "description": "Makes clicking around your site feel instant: pages start loading while a visitor points at a link, and fade smoothly into each other. No scripts.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "instant-pages",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Instant Pages",
+    "panels": [
+      {
+        "description": "Loads the next page early and smooths the change between pages, using features built into modern browsers. Other browsers work exactly as before. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Make pages feel instant"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "When the pointer rests on a link (fastest)",
+                  "value": "moderate"
+                },
+                {
+                  "title": "When a link is pressed (uses the least data)",
+                  "value": "conservative"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "eagerness",
+            "title": "Start loading a page"
+          },
+          {
+            "description": "Preparing the whole page makes it appear at once; downloading only saves the wait for the network.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Prepare the whole page",
+                  "value": "prerender"
+                },
+                {
+                  "title": "Only download it",
+                  "value": "prefetch"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "mode",
+            "title": "How much to load ahead"
+          },
+          {
+            "description": "Visitors who ask their device for less motion always get a plain change.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Cross-fade",
+                  "value": "fade"
+                },
+                {
+                  "title": "Fade and slide",
+                  "value": "slide"
+                },
+                {
+                  "title": "No animation",
+                  "value": "none"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "transition",
+            "title": "Change between pages"
+          },
+          {
+            "description": "Addresses separated by commas, for example /shop/cart, /downloads/*. Sign-in, checkout, admin and similar addresses are always skipped.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-links",
+            "title": "Never load these ahead"
+          }
+        ],
+        "id": "instant-pages",
+        "placement": "site-settings",
+        "title": "Instant pages"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Pages load while visitors point at a link, and fade in smoothly.",
+    "longDescription": "Instant Pages makes moving around your site feel instant. When a visitor rests the pointer on a link, the browser quietly prepares that page; when they click, it is already there. Pages then fade into each other instead of flashing white.\n\nIt uses two features built into modern browsers, Speculation Rules and View Transitions, declared in two small tags. No script of ours runs and nothing is sent to anyone. Browsers without these features simply work as before.\n\nIt is careful. Addresses that do something when visited, such as signing out, checkout, the admin and the API, are never loaded early, and neither are links that open in a new tab, download a file or carry a search query. You can add your own addresses to that list, and choose to start loading only when a link is pressed, to save data.\n\nVisitors who ask their device for less motion get a plain change between pages. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Point, prepare, click: the next page is ready before the visitor clicks."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "The settings: when to load, how much, the change between pages and what to skip."
+      }
+    ],
+    "categories": [
+      "utilities",
+      "design"
+    ],
+    "accent": "#EA580C"
+  }
+}
