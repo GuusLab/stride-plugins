@@ -8,14 +8,17 @@
 # Owner login: demo@stride.test / stride-demo-password-2026
 # Log: <workdir>/stride.log
 #
-# Override the binary with STRIDE_BIN=..., the Stride checkout with STRIDE_REPO=...
+# Override the binary with STRIDE_BIN=... (default: stride on PATH, else
+# $STRIDE_REPO/target/debug/stride) and the Stride checkout with STRIDE_REPO=...
+# (default: ../Stride next to this repository).
 set -eu
 [ $# -eq 2 ] || { echo "usage: $0 <port> <workdir>" >&2; exit 2; }
 port=$1
 mkdir -p "$2"
 work=$(cd "$2" && pwd)
-STRIDE_REPO=${STRIDE_REPO:-/Users/guuskaashoek/guuslab/Stride}
-STRIDE_BIN=${STRIDE_BIN:-/private/tmp/claude-501/-Users-guuskaashoek-guuslab-Stride/3fbaa311-0e43-44d1-8465-6d9940f35c84/scratchpad/stride-plugins-bin}
+root=$(cd "$(dirname "$0")/.." && pwd)
+STRIDE_REPO=${STRIDE_REPO:-$root/../Stride}
+STRIDE_BIN=${STRIDE_BIN:-$(command -v stride || echo "$STRIDE_REPO/target/debug/stride")}
 [ -x "$STRIDE_BIN" ] || { echo "no stride binary at $STRIDE_BIN" >&2; exit 1; }
 
 if [ ! -f "$STRIDE_REPO/apps/editor/dist/index.html" ]; then
