@@ -1,0 +1,12 @@
+{
+  "tagline": "One clear announcement bar at the top of every page",
+  "longDescription": "Announcement Bar puts one short message at the very top of every published page: a sale, a holiday closing, a new product or an event. Type it in the site settings and it is live; empty the message and the bar is gone.\n\nAdd an optional link, such as \"Shop the roast\", to a page on your site or any https address. Pick a style that suits your theme: Quiet (dark), Loud (blue), Warm (orange) or your own colour, with text that switches between light and dark by itself to stay readable.\n\nLet visitors close it if you like. A closed bar stays closed in that visitor's browser until you change the message, so a new announcement always gets seen.\n\nIt is small and respectful: a few lines of CSS, a tiny script only when closing is enabled, no fonts, images, tracking or third-party requests. The bar is a labelled region with a real, keyboard-focusable close button and escaped text.\n\nIt needs only the storage permission, for its settings. Without it, pages are served unchanged.",
+  "icon": "icon.png",
+  "screenshots": [
+    { "file": "screenshots/01.png", "caption": "A warm announcement bar with a link above a live page" },
+    { "file": "screenshots/02.png", "caption": "Close-up: message, link and a close button visitors can use" },
+    { "file": "screenshots/03.png", "caption": "Message, link, style, colour and close option in the site settings" }
+  ],
+  "categories": ["marketing"],
+  "accent": "#F97316"
+}
