@@ -1,0 +1,15 @@
+{
+  "store": {
+    "tagline": "Privacy-friendly share buttons under every article. No trackers.",
+    "longDescription": "Social Share adds a tidy row of share buttons under your articles: X, LinkedIn, Facebook, WhatsApp, e-mail and copy link.\n\nEvery button is a plain link with an inline icon. Nothing loads from Facebook, X or anyone else, so there are no third-party scripts, no cookies and no tracking. A reader's browser only talks to a network when the reader clicks its button.\n\nIt looks good straight away. Pick from four styles in the site settings: brand colours with labels, outlined, round brand icons, or minimal icons in your own accent colour. You can also change the heading, centre the row, switch off any network, and choose which pages show it, for example only pages under blog or news.\n\nIt is built to be accessible: descriptive labels for screen readers, a visible keyboard focus ring, a spoken \"Link copied\" confirmation, and no motion for readers who prefer reduced motion.\n\nIt asks for one permission, storage, to keep its settings. Refuse it and the plugin still shows the default buttons.",
+    "icon": "icon.png",
+    "screenshots": [
+      { "file": "screenshots/01.png", "caption": "Share buttons under a journal article, in the default brand-colour style." },
+      { "file": "screenshots/02.png", "caption": "Close-up: X, LinkedIn, Facebook, WhatsApp, e-mail and copy link, all plain links with inline icons." },
+      { "file": "screenshots/03.png", "caption": "All options in the site settings: heading, style, accent colour, alignment and networks." },
+      { "file": "screenshots/04.png", "caption": "The round-icon style, centred, with a custom heading." }
+    ],
+    "categories": ["social", "privacy"],
+    "accent": "#EC4899"
+  }
+}

@@ -1,0 +1,22 @@
+# An empty [workspace] table keeps this crate out of any workspace above it.
+[workspace]
+
+[package]
+name = "social-share"
+version = "1.0.0"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+extism-pdk = "1.4.1"
+stride-pdk = { path = "../../pdk-rust" }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
