@@ -26,3 +26,11 @@ jobs:
 
       - name: Rebuild every plugin, compare hashes, check store images
         run: node tools/verify.mjs
+
+      - name: Keep the rebuilt modules for comparison
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rebuilt-modules
+          path: sources/*/plugin.wasm
+          retention-days: 14
