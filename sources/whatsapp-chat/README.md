@@ -23,8 +23,9 @@ thing is about 3 KB of inline HTML and CSS.
   lift on hover. Both are off for visitors with `prefers-reduced-motion`.
 - Accessible: a real link with a visible focus ring, an accessible name that
   contains the visible label (or "Chat with us on WhatsApp" when there is no
-  label), the icon hidden from screen readers, and an icon colour picked for
-  at least 3:1 contrast against the button. Hidden when printing.
+  label), the icon hidden from screen readers. The default button is WhatsApp's
+  own white-on-green logo; with your own colour the logo turns dark or light
+  for at least 3:1 contrast. Hidden when printing.
 
 ## Settings
 
@@ -36,7 +37,7 @@ thing is about 3 KB of inline HTML and CSS.
 | Preset message | "Hi! I have a question." / "Hallo! Ik heb een vraag." |
 | Label next to the button | none (round button only) |
 | Position | bottom right |
-| Button colour | `#1DA851` (WhatsApp green, a shade deeper for contrast) |
+| Button colour | `#25D366` (WhatsApp green, always with the white WhatsApp logo) |
 | Gentle pulse animation | on |
 | Only show during opening hours | off |
 | Open on / Opens at / Closes at | Monday to Friday, 09:00 to 17:00 |
@@ -66,3 +67,10 @@ stride plugin test .
 
 The toolchain is pinned in `rust-toolchain.toml` and `Cargo.lock` is
 committed, so the module is reproducible byte for byte.
+
+## Trademark
+
+WhatsApp and the WhatsApp logo are trademarks of Meta Platforms, Inc. This
+plugin is not affiliated with, endorsed or sponsored by Meta or WhatsApp. It
+uses the WhatsApp logo (the simple-icons glyph, CC0) only to link to WhatsApp,
+as Meta's brand guidelines allow.

@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "whatsapp-chat",
   "name": "WhatsApp Chat",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "guuslab",
   "description": "A floating WhatsApp chat button with a preset message, left or right placement, your own colour and optional opening hours. Accessible, CSS-only animation, no third-party scripts.",
   "license": "MIT",
