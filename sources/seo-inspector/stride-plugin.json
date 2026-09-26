@@ -1,0 +1,46 @@
+{
+  "manifestVersion": 1,
+  "id": "seo-inspector",
+  "name": "SEO Inspector",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Checks every page when it is saved: title length, meta description, image alt text, headings, thin content and long URLs. Shows a 0-100 score and the warnings per page in the site settings.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/seo-inspector",
+  "permissions": ["storage", "write-pages"],
+  "hooks": ["on_document_save"],
+  "panels": [
+    {
+      "id": "seo-inspector",
+      "title": "SEO Inspector",
+      "description": "A score from 0 to 100 and a list of warnings for every page, updated each time a page is saved.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "report",
+          "title": "Page reports",
+          "description": "Worst score first. Save a page to refresh its report. Editing this text changes nothing.",
+          "kind": { "type": "text", "maxLength": 8192, "multiline": true }
+        },
+        {
+          "name": "min-words",
+          "title": "Thin content below",
+          "description": "Pages with fewer words than this are flagged as thin. 300 is a common rule of thumb.",
+          "kind": { "type": "integer", "minimum": 0, "maximum": 5000 }
+        },
+        {
+          "name": "max-title",
+          "title": "Longest title",
+          "description": "Characters before search results cut a title off. Around 60.",
+          "kind": { "type": "integer", "minimum": 30, "maximum": 120 }
+        },
+        {
+          "name": "max-url",
+          "title": "Longest URL",
+          "description": "Characters in the page path before it counts as long.",
+          "kind": { "type": "integer", "minimum": 20, "maximum": 200 }
+        }
+      ]
+    }
+  ]
+}
