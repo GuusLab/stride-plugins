@@ -1,0 +1,115 @@
+{
+  "manifest": {
+    "description": "Checks every page when it is saved: title length, meta description, image alt text, headings, thin content and long URLs. Shows a 0-100 score and the warnings per page in the site settings.",
+    "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/seo-inspector",
+    "hooks": [
+      "on_document_save"
+    ],
+    "id": "seo-inspector",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "SEO Inspector",
+    "panels": [
+      {
+        "description": "A score from 0 to 100 and a list of warnings for every page, updated each time a page is saved.",
+        "fields": [
+          {
+            "description": "Worst score first. Save a page to refresh its report. Editing this text changes nothing.",
+            "kind": {
+              "maxLength": 8192,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "report",
+            "title": "Page reports"
+          },
+          {
+            "description": "Pages with fewer words than this are flagged as thin. 300 is a common rule of thumb.",
+            "kind": {
+              "maximum": 5000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "name": "min-words",
+            "title": "Thin content below"
+          },
+          {
+            "description": "Characters before search results cut a title off. Around 60.",
+            "kind": {
+              "maximum": 120,
+              "minimum": 30,
+              "type": "integer"
+            },
+            "name": "max-title",
+            "title": "Longest title"
+          },
+          {
+            "description": "Characters in the page path before it counts as long.",
+            "kind": {
+              "maximum": 200,
+              "minimum": 20,
+              "type": "integer"
+            },
+            "name": "max-url",
+            "title": "Longest URL"
+          }
+        ],
+        "id": "seo-inspector",
+        "placement": "site-settings",
+        "title": "SEO Inspector"
+      }
+    ],
+    "permissions": [
+      "storage",
+      "write-pages"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "7d37eebe353d23f0c59d3685051eeba911806ab0fae98eb147d72d21e6facb3b",
+    "hooks": [
+      "on_document_save"
+    ],
+    "manifestHash": "86641408f09874d6b41e66a2618444edb73f05aeeb7d4075416c2abaea06d473",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage",
+      "write-pages"
+    ],
+    "publishedAt": "",
+    "signature": "0d908c8d31eec5f9abe53455fab005e4e81230f44ad182da34f353c34d50f284abb629bd0911cfe6c2ef434ee493f8ab77d21b9e4fd7adddd77fba1f37a74106",
+    "size": 186376,
+    "sourceCommit": "6b8e088fb9c78fc0d5875dcb5f2dc8b736d73442",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
+  "store": {
+    "tagline": "A 0-100 SEO score and clear warnings for every page, checked on save.",
+    "longDescription": "SEO Inspector checks each page the moment it is saved and gives it a score from 0 to 100, with a plain list of what to fix.\n\nIt looks at what search engines and screen readers notice first: a missing or too short meta description, an SEO title that is too short or will be cut off in search results, images without alt text, pages with no h1 or more than one, skipped heading levels such as h2 followed by h4, thin content and long URLs.\n\nAll reports live in Site settings under SEO Inspector, worst page first, so you always know which page to fix next. The limits for thin content, title length and URL length are adjustable, and the defaults follow the usual rules of thumb.\n\nIt never changes a page and adds nothing to your published site: no scripts, no styles, no requests to anyone.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Every page with its score and warnings, worst first."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "The panel in Site settings, with the thresholds you can adjust."
+      }
+    ],
+    "categories": [
+      "seo",
+      "content"
+    ],
+    "accent": "#22C55E"
+  }
+}

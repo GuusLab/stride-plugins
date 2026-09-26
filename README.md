@@ -32,14 +32,23 @@ For self-hosted installations, point Stride at this registry:
 
 ```sh
 STRIDE_PLUGIN_REGISTRY_URL=https://guuslab.github.io/stride-plugins/index.json
-STRIDE_PLUGIN_REGISTRY_KEY=<the registry's Ed25519 public key, 64 hex chars>
+STRIDE_PLUGIN_REGISTRY_KEY=eb8b920592e7f58a9a76ab0e357e13e6492ddb37f7aff42a3d8416c9a087f8a2
 ```
 
 ## Plugins
 
 | | Plugin | What it does | Permissions |
 |---|---|---|---|
-| | *The first plugins are on their way.* | | |
+| <img src="plugins/announcement/icon.png" width="40" alt=""> | [**Announcement Bar**](sources/announcement) | One clear announcement bar at the top of every page | `storage` |
+| <img src="plugins/cookie-consent/icon.png" width="40" alt=""> | [**Cookie Consent**](sources/cookie-consent) | An accessible GDPR cookie banner in Dutch or English, with no third parties | `storage` |
+| <img src="plugins/maintenance-mode/icon.png" width="40" alt=""> | [**Maintenance Mode**](sources/maintenance-mode) | A polished coming-soon page for visitors while editors see the real site | `storage` |
+| <img src="plugins/reading-progress/icon.png" width="40" alt=""> | [**Reading Progress**](sources/reading-progress) | A slim reading progress bar and a back-to-top button for long pages. | `storage` |
+| <img src="plugins/reading-time/icon.png" width="40" alt=""> | [**Reading Time**](sources/reading-time) | Shows readers how long a page takes, like "4 min read", under the title. | `storage` |
+| <img src="plugins/schema-markup/icon.png" width="40" alt=""> | [**Schema Markup**](sources/schema-markup) | JSON-LD for your business, website and blog posts, ready for Google rich results | `storage` |
+| <img src="plugins/seo-inspector/icon.png" width="40" alt=""> | [**SEO Inspector**](sources/seo-inspector) | A 0-100 SEO score and clear warnings for every page, checked on save. | `storage`, `write-pages` |
+| <img src="plugins/social-share/icon.png" width="40" alt=""> | [**Social Share**](sources/social-share) | Privacy-friendly share buttons under every article. No trackers. | `storage` |
+| <img src="plugins/table-of-contents/icon.png" width="40" alt=""> | [**Table of Contents**](sources/table-of-contents) | A linked table of contents for long pages, built from your headings. | `storage` |
+| <img src="plugins/whatsapp-chat/icon.png" width="40" alt=""> | [**WhatsApp Chat**](sources/whatsapp-chat) | A floating WhatsApp button with a preset message and opening hours | `storage` |
 
 ## Submitting a plugin
 
@@ -91,9 +100,16 @@ tools/               build, render, demo and verification scripts
 | `node tools/icon.mjs <in.svg> <out.png> [w h]` | render an SVG to PNG (512x512 by default; `1600 1000` for screenshots) |
 | `tools/demo-server.sh <port> <workdir>` | start a throwaway Stride with a fresh database |
 | `node tools/install-local.mjs <port> <sourceDir>` | sideload, grant and enable a plugin on that server |
-| `node tools/verify.mjs` | what CI runs: rebuild and compare hashes, check images |
+| `node tools/verify.mjs` | what CI runs: rebuild and compare hashes, check images and the published copies under `site/` |
+| `node tools/gallery.mjs` | render `site/index.html` and this README's plugin table from `site/index.json` |
 
 Run `npm install` once for the Node tools.
+
+Publishing (maintainers): after merging a submission, copy the module and
+manifest to `site/plugins/<id>/<version>/` and the images to `site/plugins/<id>/`,
+then run `stride plugin index . --key ~/.stride/stride-registry.key --base-url
+https://guuslab.github.io/stride-plugins` and `node tools/gallery.mjs`, and push.
+The registry key never enters this repository.
 
 ## Licence
 

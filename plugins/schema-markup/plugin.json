@@ -1,0 +1,250 @@
+{
+  "manifest": {
+    "description": "Adds JSON-LD structured data to every published page: your Organization or LocalBusiness (address, opening hours, phone), the WebSite, and a BlogPosting for posts, so Google can show rich results.",
+    "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/schema-markup",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "schema-markup",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Schema Markup",
+    "panels": [
+      {
+        "description": "Structured data for search engines. It is added to the head of every published page and is invisible to visitors.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Add structured data"
+          },
+          {
+            "description": "A local business adds address, opening hours and a map-ready listing.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Organization",
+                  "value": "organization"
+                },
+                {
+                  "title": "Local business",
+                  "value": "local-business"
+                },
+                {
+                  "title": "Shop",
+                  "value": "store"
+                },
+                {
+                  "title": "Restaurant or cafe",
+                  "value": "restaurant"
+                },
+                {
+                  "title": "Professional service",
+                  "value": "professional-service"
+                },
+                {
+                  "title": "Person (personal site)",
+                  "value": "person"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "type",
+            "title": "What you are"
+          },
+          {
+            "description": "Leave empty to use the name in your home page title.",
+            "kind": {
+              "maxLength": 120,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "name",
+            "title": "Name"
+          },
+          {
+            "description": "For example https://example.com. Leave empty to use each page's canonical address.",
+            "kind": {
+              "maxLength": 200,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "site-url",
+            "title": "Site address"
+          },
+          {
+            "description": "A square or wide image, at least 112 pixels. A path like /media/logo.png works when the site address is set.",
+            "kind": {
+              "maxLength": 300,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "logo",
+            "title": "Logo URL"
+          },
+          {
+            "description": "With country code, for example +31 20 123 4567.",
+            "kind": {
+              "maxLength": 40,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "phone",
+            "title": "Phone"
+          },
+          {
+            "kind": {
+              "maxLength": 120,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "email",
+            "title": "Email"
+          },
+          {
+            "kind": {
+              "maxLength": 120,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "street",
+            "title": "Street and number"
+          },
+          {
+            "kind": {
+              "maxLength": 20,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "postal-code",
+            "title": "Postal code"
+          },
+          {
+            "kind": {
+              "maxLength": 80,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "city",
+            "title": "City"
+          },
+          {
+            "description": "Two-letter code, for example NL or US.",
+            "kind": {
+              "maxLength": 2,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "country",
+            "title": "Country"
+          },
+          {
+            "description": "One line per range, for example \"Mo-Fr 09:00-17:30\" or \"Sa 10:00-16:00\". Days: Mo Tu We Th Fr Sa Su.",
+            "kind": {
+              "maxLength": 400,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "hours",
+            "title": "Opening hours"
+          },
+          {
+            "description": "For example €€. Only used for local businesses.",
+            "kind": {
+              "maxLength": 10,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "price-range",
+            "title": "Price range"
+          },
+          {
+            "description": "One address per line: your LinkedIn, Instagram, Facebook or other official pages.",
+            "kind": {
+              "maxLength": 1200,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "same-as",
+            "title": "Social profiles"
+          },
+          {
+            "description": "Pages whose address starts with one of these, comma-separated, are marked up as blog posts. \"blog\" matches blog-my-first-post; the page called blog itself is not a post.",
+            "kind": {
+              "maxLength": 200,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "post-paths",
+            "title": "Posts live under"
+          },
+          {
+            "description": "Named as the author of posts. Leave empty to credit the organization.",
+            "kind": {
+              "maxLength": 120,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "author",
+            "title": "Default author"
+          }
+        ],
+        "id": "schema-markup",
+        "placement": "site-settings",
+        "title": "Schema Markup"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "a0d6dbff389d49c52261f4adf7d456ed0d40265a88eb0c117dd422b6d924bb6d",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "f44d9f6c9e0b9a56a739b5183d0d829bb9ea7099b1b9602bc034f4c4355123c4",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "e8c4ebb9186473a6cb612f810ebe16664b450f1b157704d0c3d84eacdad73c7ca8ab08c289f58b32efb65c431805d079721cdc49958eb6b6a130834de176e40b",
+    "size": 199520,
+    "sourceCommit": "0f20355bae4f500995d81b27b56d6a2a49468a5e",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
+  "store": {
+    "tagline": "JSON-LD for your business, website and blog posts, ready for Google rich results",
+    "longDescription": "Schema Markup adds structured data to every published page, in the JSON-LD format Google, Bing and other search engines read. Visitors see nothing; search engines get a clear description of who you are and what each page is.\n\nDescribe your organization once in the site settings: name, logo, phone, email, address and social profiles. Choose Local business, Shop, Restaurant or Professional service to add opening hours such as \"Mo-Fr 09:00-17:30\" and a price range, which is what makes you eligible for local business results.\n\nEvery page also gets a WebSite entry. Blog posts, the pages whose address starts with blog or news, get a BlogPosting with the headline, description, social image, language, word count, author and publisher. The plugin takes these from the page itself, so there is nothing to fill in per post.\n\nIt works with no setup: the site name comes from your page titles and the site address from the canonical link. Every value is escaped, so nothing you type can break out of the script. It makes no external requests, adds no visible markup, and needs only the storage permission for its settings. If that permission is refused, it keeps working with the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A published blog post and the WebSite and BlogPosting data the plugin added to its head"
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "A shop with address, opening hours, phone and social profiles, on every page"
+      }
+    ],
+    "categories": [
+      "seo"
+    ],
+    "accent": "#F59E0B"
+  }
+}

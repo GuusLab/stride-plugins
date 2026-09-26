@@ -1,0 +1,198 @@
+{
+  "manifest": {
+    "description": "A floating WhatsApp chat button with a preset message, left or right placement, your own colour and optional opening hours. Accessible, CSS-only animation, no third-party scripts.",
+    "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/whatsapp-chat",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "whatsapp-chat",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "WhatsApp Chat",
+    "panels": [
+      {
+        "description": "A round WhatsApp button in the corner of every page. It opens a chat with your number, with a message already typed.",
+        "fields": [
+          {
+            "description": "In international format, such as +31 6 12345678. The button is hidden until you enter one.",
+            "kind": {
+              "maxLength": 32,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "phone",
+            "title": "WhatsApp number"
+          },
+          {
+            "description": "Typed into the chat for the visitor; they can still change it. Leave it empty for a friendly default.",
+            "kind": {
+              "maxLength": 300,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "message",
+            "title": "Preset message"
+          },
+          {
+            "description": "A short line such as \"Chat with us\". Leave it empty for a round button only.",
+            "kind": {
+              "maxLength": 40,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "label",
+            "title": "Label next to the button"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Bottom right",
+                  "value": "right"
+                },
+                {
+                  "title": "Bottom left",
+                  "value": "left"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "position",
+            "title": "Position"
+          },
+          {
+            "description": "The icon turns dark or light by itself to stay readable.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Button colour"
+          },
+          {
+            "description": "A soft ring that draws the eye. Always off for visitors who ask for reduced motion.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "pulse",
+            "title": "Gentle pulse animation"
+          },
+          {
+            "description": "Only show the button during the opening hours below, in your time zone. Visitors outside those hours see no button.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "hours",
+            "title": "Only show during opening hours"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Monday to Friday",
+                  "value": "weekdays"
+                },
+                {
+                  "title": "Monday to Saturday",
+                  "value": "mon-sat"
+                },
+                {
+                  "title": "Every day",
+                  "value": "all"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "days",
+            "title": "Open on"
+          },
+          {
+            "description": "24-hour time, such as 09:00.",
+            "kind": {
+              "maxLength": 5,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "open",
+            "title": "Opens at"
+          },
+          {
+            "description": "24-hour time, such as 17:30.",
+            "kind": {
+              "maxLength": 5,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "close",
+            "title": "Closes at"
+          },
+          {
+            "description": "The zone your opening hours are in, such as Europe/Amsterdam.",
+            "kind": {
+              "maxLength": 48,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "timezone",
+            "title": "Time zone"
+          }
+        ],
+        "id": "whatsapp-chat",
+        "placement": "site-settings",
+        "title": "WhatsApp chat"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "387159e973626203f12a509b820a1ffe0d7ff8b6058afd9722823544fefc4a57",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "89bdc5ab5b1f84ef0a0c53916fc331c9627426ff287319cc534fdb615224e2ad",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "bff866e1189ef78337682090783e27de2fd7e01f11eb65075cae897b87700da00d3b7ca8301fe04c147387618cb2875b2bd9b52aa223d8ca03a6f5a8cff3fd0a",
+    "size": 181173,
+    "sourceCommit": "93f4e25c78f228e79102ef9b150403d5e952c0cf",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
+  "store": {
+    "tagline": "A floating WhatsApp button with a preset message and opening hours",
+    "longDescription": "WhatsApp Chat adds a round WhatsApp button to the corner of every published page. One tap opens a chat with your number, with a message already typed that the visitor can still change.\n\nPlace it bottom right or bottom left, keep WhatsApp green or use your own colour, and add a short label such as \"Questions? Chat with us\". On phones the label hides itself so the button never covers your content.\n\nOptionally show the button only during opening hours: choose the days, the times and your time zone, and visitors outside those hours simply see no button.\n\nIt is built to be light and respectful: a plain link to wa.me, no WhatsApp scripts, no tracking and no third-party requests. The pulse and hover animations are pure CSS and switch off for visitors who prefer reduced motion. The button is a real, keyboard-focusable link with a clear accessible name and a contrast-checked icon.\n\nIt needs only the storage permission, for its settings.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A WhatsApp button with a short label in the corner of a live page"
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "On a phone the label steps aside and only the round button remains"
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Number, preset message, label, position, colour and hours in the site settings"
+      }
+    ],
+    "categories": [
+      "marketing"
+    ],
+    "accent": "#25D366"
+  }
+}

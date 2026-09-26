@@ -1,0 +1,140 @@
+{
+  "manifest": {
+    "description": "Shows an estimated reading time, like \"4 min read\", under the first heading of every page, and keeps a per-page word count an editor can see in the site settings.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "reading-time",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Reading Time",
+    "panels": [
+      {
+        "description": "The line shown under the first heading of every page on this site. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show a reading time"
+          },
+          {
+            "description": "How fast a reader is assumed to be. 200 is the usual figure for prose; 238 is the average adult.",
+            "kind": {
+              "maximum": 600,
+              "minimum": 60,
+              "type": "integer"
+            },
+            "name": "words-per-minute",
+            "title": "Words a minute"
+          },
+          {
+            "description": "The words after the number. \"min read\" by default.",
+            "kind": {
+              "maxLength": 40,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "label",
+            "title": "Label"
+          },
+          {
+            "description": "A small pill with a clock, or plain text your theme styles itself.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Badge with clock",
+                  "value": "badge"
+                },
+                {
+                  "title": "Plain text",
+                  "value": "plain"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "style",
+            "title": "Style"
+          },
+          {
+            "description": "Colour of the badge. Leave empty to use the text colour of the page.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "accent",
+            "title": "Accent colour"
+          },
+          {
+            "description": "Slugs separated by commas, for example: home, contact. These pages get no reading time.",
+            "kind": {
+              "maxLength": 400,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-pages",
+            "title": "Skip these pages"
+          }
+        ],
+        "id": "reading-time",
+        "placement": "site-settings",
+        "title": "Reading time"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "24296b2ee8af73bf50b01327aebfa1bd024c25621b1cbd64b3113525d79f2d0f",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "9eaf9f61ae03c59534550f65b4b61e2a9f06bc2a6ffb65a04a42a674fadee5e4",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/reading-time/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "f45f85d7feebb67e1aa8cceb44589a5adfdefe467c19c303f48917541455fd9b518eb19639184c37a7b005669c4dd0e8a7dc593be99b916c8be6676a86baf100",
+    "size": 186378,
+    "sourceCommit": "f11ca743e0f8f80dac992311193b53608d5877a3",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
+  "store": {
+    "tagline": "Shows readers how long a page takes, like \"4 min read\", under the title.",
+    "longDescription": "Reading Time counts the words on each page and shows an estimate like \"4 min read\" right under the first heading. Readers see at a glance how long a guide, article or case study will take before they start.\n\nThere is nothing to set up. With the default settings you get a small pill with a clock icon. It uses the page's own text colour, so it suits any theme. Only the prose in the article is counted: scripts, styles, navigation, footers and asides are skipped. The estimate is rounded up to whole minutes and is never less than one.\n\nIn Site settings you can set the reading speed (200 words a minute by default), change the label (for example to \"minuten leestijd\"), pick an accent colour, list pages to skip, such as home and contact, or switch to plain text that your theme styles itself. The panel also shows how many pages have been counted and which one is the longest.\n\nThe published page gets no JavaScript and makes no third-party requests. The badge adds under 600 bytes of inline CSS, and its clock icon is hidden from screen readers, so assistive technology reads just \"4 min read\". The label you type is escaped before it goes into the page.\n\nThe only permission it asks for is storage, to keep its settings and the per-page word counts. If you refuse it, every page still gets a reading time with the default settings.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: a quiet \"3 min read\" badge under the title, in the page's own colours."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close-up with a custom accent colour. The clock is decorative; screen readers hear just the time."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Every option in Site settings: speed, label, style, accent colour and pages to skip."
+      }
+    ],
+    "categories": [
+      "content"
+    ],
+    "accent": "#14B8A6"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "manifest": {
+    "description": "An accessible GDPR cookie banner in Dutch or English, with accept, reject and per-category settings. It remembers the choice and tells other scripts through a data attribute and a DOM event.",
+    "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/cookie-consent",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "cookie-consent",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Cookie Consent",
+    "panels": [
+      {
+        "description": "The cookie banner shown to visitors who have not made a choice yet. Dutch pages get the Dutch text, every other page the English one.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show the cookie banner"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Floating card",
+                  "value": "card"
+                },
+                {
+                  "title": "Full-width bar",
+                  "value": "bar"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "layout",
+            "title": "Layout"
+          },
+          {
+            "description": "Leave it empty for the default text.",
+            "kind": {
+              "maxLength": 600,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "message-en",
+            "title": "Text (English)"
+          },
+          {
+            "description": "Shown on pages whose language is Dutch. Leave it empty for the default text.",
+            "kind": {
+              "maxLength": 600,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "message-nl",
+            "title": "Text (Dutch)"
+          },
+          {
+            "description": "A path such as /privacy or a full https:// address. Leave it empty to show no link.",
+            "kind": {
+              "maxLength": 300,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "policy-url",
+            "title": "Privacy policy link"
+          },
+          {
+            "kind": {
+              "type": "color"
+            },
+            "name": "background",
+            "title": "Background colour"
+          },
+          {
+            "kind": {
+              "type": "color"
+            },
+            "name": "foreground",
+            "title": "Text colour"
+          },
+          {
+            "description": "The button text turns dark or light by itself to stay readable.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "accent",
+            "title": "Button colour"
+          },
+          {
+            "description": "Lets visitors change their mind. You can also add data-cookie-settings to any link or button of your own.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "reopen",
+            "title": "Show a small \"Cookies\" button after a choice"
+          }
+        ],
+        "id": "cookie-consent",
+        "placement": "site-settings",
+        "title": "Cookie consent"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "449274676a10017ba689b0d34cc869e8ca891cb93d4094a54a321d23200f6a1f",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "d26ace259fa294923f4da32c98f64a1b5952bb5478a37c7a19f84925e86ca097",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "33e4054027dfbf76ca589cf577052f603605c5d37f68dfb662e0806c53ced706c657da06ecaf74ee33fc7eedbb6a51dc37bc8a0f71bb3ddc56a8e1da8cfdff03",
+    "size": 180357,
+    "sourceCommit": "0302c03b015a91bf039f562c2af40ffc5e865fcd",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
+  "store": {
+    "tagline": "An accessible GDPR cookie banner in Dutch or English, with no third parties",
+    "longDescription": "Cookie Consent adds a clean, accessible cookie banner to every published page. Visitors can accept everything, reject everything with one equally prominent click, or open the settings and choose per category: necessary, analytics and marketing.\n\nThe banner speaks the page's language: Dutch pages get Dutch text, all others English. Write your own text for either language, link your privacy policy, pick a floating card or a full-width bar, and set the background, text and button colours. Button text stays readable on any colour you choose.\n\nThe choice is remembered for 180 days in a first-party cookie, so returning visitors never see the banner flash. A small Cookie settings button, or any element with data-cookie-settings, lets visitors change their mind.\n\nOther scripts can wait for consent: the html element carries data-cookie-consent (for example \"necessary analytics\"), a stride:consent event fires on document with the choice, and window.StrideConsent offers get() and open().\n\nEverything is inline and about 4 KB. No external requests, no tracking of its own. It needs only the storage permission for its settings, and still shows its default banner if that permission is refused.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A floating card on a live page, with Accept all and Reject all given equal weight"
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Settings lets visitors choose analytics and marketing cookies one by one"
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Text, privacy link, layout and colours are set from the site settings"
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "On a Dutch page the banner speaks Dutch; here as a light full-width bar"
+      }
+    ],
+    "categories": [
+      "privacy"
+    ],
+    "accent": "#0EA5E9"
+  }
+}

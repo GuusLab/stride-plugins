@@ -1,0 +1,44 @@
+{
+  "manifestVersion": 1,
+  "id": "social-share",
+  "name": "Social Share",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Adds share buttons for X, LinkedIn, Facebook, WhatsApp, e-mail and copy link under your articles. Plain links and inline icons: no third-party scripts, no tracking.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/social-share",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render", "on_publish"],
+  "panels": [
+    {
+      "id": "social-share",
+      "title": "Share buttons",
+      "description": "The row of share buttons under your articles. Every button is a plain link; nothing loads from another site.",
+      "placement": "site-settings",
+      "fields": [
+        { "name": "enabled", "title": "Show share buttons", "description": "Show share buttons. Turn this off to leave every page exactly as it was rendered.", "kind": { "type": "boolean" } },
+        { "name": "heading", "title": "Heading", "description": "The line above the buttons. Leave it empty for no heading.", "kind": { "type": "text", "maxLength": 60, "multiline": false } },
+        { "name": "style", "title": "Style", "description": "How the buttons look.", "kind": { "type": "enum", "choices": [
+          { "value": "brand", "title": "Brand colours, with labels" },
+          { "value": "outline", "title": "Outlined, with labels" },
+          { "value": "icons", "title": "Round brand icons" },
+          { "value": "minimal", "title": "Minimal icons in the accent colour" }
+        ] } },
+        { "name": "accent", "title": "Accent colour", "description": "Used by the copy-link button, the minimal style and the keyboard focus ring.", "kind": { "type": "color" } },
+        { "name": "align", "title": "Alignment", "description": "Where the row sits.", "kind": { "type": "enum", "choices": [
+          { "value": "left", "title": "Left" },
+          { "value": "center", "title": "Centre" }
+        ] } },
+        { "name": "x", "title": "X", "description": "A button to post the article on X.", "kind": { "type": "boolean" } },
+        { "name": "linkedin", "title": "LinkedIn", "description": "A button to share it on LinkedIn.", "kind": { "type": "boolean" } },
+        { "name": "facebook", "title": "Facebook", "description": "A button to share it on Facebook.", "kind": { "type": "boolean" } },
+        { "name": "whatsapp", "title": "WhatsApp", "description": "A button to send it in WhatsApp.", "kind": { "type": "boolean" } },
+        { "name": "email", "title": "E-mail", "description": "A button that opens a new e-mail with the title and link.", "kind": { "type": "boolean" } },
+        { "name": "copy", "title": "Copy link", "description": "A copy-link button. It needs JavaScript in the reader's browser and stays hidden without it.", "kind": { "type": "boolean" } },
+        { "name": "only", "title": "Only on pages starting with", "description": "Slugs or prefixes, separated by commas, e.g. \"blog, news\". Empty means every page.", "kind": { "type": "text", "maxLength": 200, "multiline": false } },
+        { "name": "exclude", "title": "Never on", "description": "Slugs separated by commas. A trailing * matches a prefix. \"home\" by default.", "kind": { "type": "text", "maxLength": 200, "multiline": false } },
+        { "name": "site-address", "title": "Site address", "description": "e.g. https://example.com. Optional: learned on publish when the site has a domain, and read from the browser otherwise.", "kind": { "type": "text", "maxLength": 200, "multiline": false } }
+      ]
+    }
+  ]
+}

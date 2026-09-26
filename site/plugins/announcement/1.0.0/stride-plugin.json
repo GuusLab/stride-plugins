@@ -1,0 +1,66 @@
+{
+  "manifestVersion": 1,
+  "id": "announcement",
+  "name": "Announcement Bar",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "One announcement bar at the top of every page: a short message, an optional link, four styles and an optional close button. Edited in the site settings, no third-party requests.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/announcement",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "announcement",
+      "title": "Announcement bar",
+      "description": "One line shown at the top of every page on this site.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "message",
+          "title": "Message",
+          "description": "Leave it empty to show nothing.",
+          "kind": { "type": "text", "maxLength": 160, "multiline": false }
+        },
+        {
+          "name": "link-text",
+          "title": "Link text",
+          "description": "Optional, such as \"Read more\". Shown after the message.",
+          "kind": { "type": "text", "maxLength": 40, "multiline": false }
+        },
+        {
+          "name": "link-url",
+          "title": "Link address",
+          "description": "An https:// address or a path on this site such as /shop. Without link text the whole message becomes the link.",
+          "kind": { "type": "text", "maxLength": 500, "multiline": false }
+        },
+        {
+          "name": "tone",
+          "title": "Style",
+          "description": "How the bar looks.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "quiet", "title": "Quiet (dark)" },
+              { "value": "loud", "title": "Loud (blue)" },
+              { "value": "warm", "title": "Warm (orange)" },
+              { "value": "custom", "title": "My own colour" }
+            ]
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Bar colour",
+          "description": "Used with the style \"My own colour\". The text turns dark or light by itself to stay readable.",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "dismissible",
+          "title": "Visitors can close it",
+          "description": "Adds a close button. A closed bar stays closed for that visitor until you change the message.",
+          "kind": { "type": "boolean" }
+        }
+      ]
+    }
+  ]
+}

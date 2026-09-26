@@ -1,0 +1,169 @@
+{
+  "manifest": {
+    "description": "Builds a linked table of contents from the h2 and h3 headings of a page, gives every heading an anchor id, and puts it at the top of the article, boxed or as a sticky sidebar. No JavaScript.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "table-of-contents",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Table of Contents",
+    "panels": [
+      {
+        "description": "The list of sections shown at the top of long pages on this site. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show a table of contents"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Sections and subsections (h2 and h3)",
+                  "value": "h2-h3"
+                },
+                {
+                  "title": "Sections only (h2)",
+                  "value": "h2"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "levels",
+            "title": "Headings to list"
+          },
+          {
+            "description": "Pages with fewer listed headings get no table of contents. 3 by default.",
+            "kind": {
+              "maximum": 20,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "name": "min-headings",
+            "title": "Minimum number of headings"
+          },
+          {
+            "description": "Shown above the list. \"On this page\" by default.",
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "title",
+            "title": "Title"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Box at the top of the article",
+                  "value": "box"
+                },
+                {
+                  "title": "Sticky sidebar on wide screens",
+                  "value": "sidebar"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "style",
+            "title": "Style"
+          },
+          {
+            "description": "1, 2, 3 for sections and a, b, c for subsections. Off by default.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "numbered",
+            "title": "Number the sections"
+          },
+          {
+            "description": "The side rule and the hover colour. Leave empty to use the text colour of the page.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "accent",
+            "title": "Accent colour"
+          },
+          {
+            "description": "Slugs, separated by commas, that never get a table of contents. For example: home, contact",
+            "kind": {
+              "maxLength": 400,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "exclude",
+            "title": "Pages to skip"
+          }
+        ],
+        "id": "table-of-contents",
+        "placement": "site-settings",
+        "title": "Table of contents"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "7d102b960a41cee730f07bdcbb198865dc9d260f52e52bbc74c2cbda183f0e2d",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "4aa55643fd0434e68747938605b0877146c30f1ceef08ad6d87b2af27ea96cfc",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "9867da25f076ef2dcbfda4203d6961735ff8fa66148d4b8cd826046b31aba67439c21f1b737df6cc03ce145540363e725857376d97b4152f6f76b97c116a360b",
+    "size": 195267,
+    "sourceCommit": "78361c4e2cf1f81090e8eb07a251d5db92d82a5e",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
+  "store": {
+    "tagline": "A linked table of contents for long pages, built from your headings.",
+    "longDescription": "Table of Contents reads the h2 and h3 headings of a page, gives each one a clean anchor id and puts a linked, nested list of them at the top of the article, in the same column as your text. Readers can see what a long page covers and jump straight to the part they came for. Every heading also gets a shareable link, like /guide#what-a-drawing-is-for.\n\nIt needs no setup. Pages with at least three headings get a quiet box titled \"On this page\" in your site's own fonts and colours. Short pages, the header and the footer are left alone. Headings that already have an id keep it, and duplicate headings get unique anchors.\n\nPrefer it out of the way? Switch to the sticky sidebar style. On wide screens the list stays in the left margin while the reader scrolls, and on smaller screens it falls back to the box. You can also number the sections, list only h2 headings, change the title, pick an accent colour, set the minimum number of headings and skip pages by slug.\n\nThe published page gets no JavaScript and makes no third-party requests. The links are plain anchors, the styling is about 1.5 KB of inline CSS, and smooth scrolling only happens for visitors who have not asked for reduced motion. The markup is an accessible nav landmark with a label and visible focus styles.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: an \"On this page\" box at the top of the article, in the site's own type."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Sections and subsections, nested, each one a plain anchor link. No JavaScript."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Sidebar style: numbered, with a custom accent, and sticky in the margin while you read."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "Every option in Settings: headings, minimum count, title, style, numbering, accent and skipped pages."
+      }
+    ],
+    "categories": [
+      "content",
+      "seo"
+    ],
+    "accent": "#8B5CF6"
+  }
+}

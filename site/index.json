@@ -1,0 +1,681 @@
+{
+  "formatVersion": 1,
+  "registry": "https://guuslab.github.io/stride-plugins",
+  "generatedAt": "2026-09-26T09:40:43Z",
+  "plugins": [
+    {
+      "id": "announcement",
+      "name": "Announcement Bar",
+      "description": "One announcement bar at the top of every page: a short message, an optional link, four styles and an optional close button. Edited in the site settings, no third-party requests.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "marketing"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/announcement",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "537ce0e9a8ac40d76a2608343f5e38be28934dabbc61e4b9a8bd3c8c0978a18f",
+          "manifestHash": "8fee1786cd08fddd57f806767f209e5bdb5538e4683cb4030fa567303ae63dce",
+          "size": 185362,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/announcement/1.0.0/plugin.wasm",
+          "signature": "bfe9c870b8f2af46fa97744ed026f44fa93499a21f59cdf576eee8134b8d24924379070daa990f415082e698df6fe6966c90995ceb7f1354b4a835c0f453b003",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "63b0b4f5404204069d976a723aceb2429d035d02",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/announcement/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "One clear announcement bar at the top of every page",
+      "longDescription": "Announcement Bar puts one short message at the very top of every published page: a sale, a holiday closing, a new product or an event. Type it in the site settings and it is live; empty the message and the bar is gone.\n\nAdd an optional link, such as \"Shop the roast\", to a page on your site or any https address. Pick a style that suits your theme: Quiet (dark), Loud (blue), Warm (orange) or your own colour, with text that switches between light and dark by itself to stay readable.\n\nLet visitors close it if you like. A closed bar stays closed in that visitor's browser until you change the message, so a new announcement always gets seen.\n\nIt is small and respectful: a few lines of CSS, a tiny script only when closing is enabled, no fonts, images, tracking or third-party requests. The bar is a labelled region with a real, keyboard-focusable close button and escaped text.\n\nIt needs only the storage permission, for its settings. Without it, pages are served unchanged.",
+      "accent": "#f97316",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/announcement/icon.png",
+        "sha256": "e06e8d2e53eebf7f78d111ec04aae0f7e9368477c3d7880253ff4a65c8534c18",
+        "size": 133380
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/announcement/screenshots/01.png",
+          "sha256": "3f972410b99f55173c617ac768448cc37e01d7604ebc26760849d25575fc9a9e",
+          "size": 177888,
+          "caption": "A warm announcement bar with a link above a live page"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/announcement/screenshots/02.png",
+          "sha256": "f2c6d571e20fa278bf2e419ed6584f413c2d98d87bd7741d3b44603a149103b2",
+          "size": 155735,
+          "caption": "Close-up: message, link and a close button visitors can use"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/announcement/screenshots/03.png",
+          "sha256": "098d7b4083f32057bdef5bac5502c154424e920a4e702d2aa619926936d089cb",
+          "size": 86328,
+          "caption": "Message, link, style, colour and close option in the site settings"
+        }
+      ]
+    },
+    {
+      "id": "cookie-consent",
+      "name": "Cookie Consent",
+      "description": "An accessible GDPR cookie banner in Dutch or English, with accept, reject and per-category settings. It remembers the choice and tells other scripts through a data attribute and a DOM event.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "privacy"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/cookie-consent",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "449274676a10017ba689b0d34cc869e8ca891cb93d4094a54a321d23200f6a1f",
+          "manifestHash": "d26ace259fa294923f4da32c98f64a1b5952bb5478a37c7a19f84925e86ca097",
+          "size": 180357,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/1.0.0/plugin.wasm",
+          "signature": "33e4054027dfbf76ca589cf577052f603605c5d37f68dfb662e0806c53ced706c657da06ecaf74ee33fc7eedbb6a51dc37bc8a0f71bb3ddc56a8e1da8cfdff03",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "0302c03b015a91bf039f562c2af40ffc5e865fcd",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "An accessible GDPR cookie banner in Dutch or English, with no third parties",
+      "longDescription": "Cookie Consent adds a clean, accessible cookie banner to every published page. Visitors can accept everything, reject everything with one equally prominent click, or open the settings and choose per category: necessary, analytics and marketing.\n\nThe banner speaks the page's language: Dutch pages get Dutch text, all others English. Write your own text for either language, link your privacy policy, pick a floating card or a full-width bar, and set the background, text and button colours. Button text stays readable on any colour you choose.\n\nThe choice is remembered for 180 days in a first-party cookie, so returning visitors never see the banner flash. A small Cookie settings button, or any element with data-cookie-settings, lets visitors change their mind.\n\nOther scripts can wait for consent: the html element carries data-cookie-consent (for example \"necessary analytics\"), a stride:consent event fires on document with the choice, and window.StrideConsent offers get() and open().\n\nEverything is inline and about 4 KB. No external requests, no tracking of its own. It needs only the storage permission for its settings, and still shows its default banner if that permission is refused.",
+      "accent": "#0ea5e9",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/icon.png",
+        "sha256": "cd4db3c80e538f3dad4ca7405e021c9c21e51a6c5501334cb2729b0899edb4a4",
+        "size": 101143
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/screenshots/01.png",
+          "sha256": "714112f58acf72a67c8d139559dd8208677ce2971d59b6ca4630fec3cd62c0cf",
+          "size": 123166,
+          "caption": "A floating card on a live page, with Accept all and Reject all given equal weight"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/screenshots/02.png",
+          "sha256": "b8616011de222ea1774c33a89f38a124efb32f1eb8b55892e7a7c855232f7762",
+          "size": 138836,
+          "caption": "Settings lets visitors choose analytics and marketing cookies one by one"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/screenshots/03.png",
+          "sha256": "6ec60f6fd1c9dd1960133a2c3da5d9bfb27ec8075ff1274efe40a4e3cc3df8de",
+          "size": 81569,
+          "caption": "Text, privacy link, layout and colours are set from the site settings"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/screenshots/04.png",
+          "sha256": "88bfffbfaa5b7f78d5f9359bce756adec34382c6df7b301cf086d0afcaf12779",
+          "size": 115951,
+          "caption": "On a Dutch page the banner speaks Dutch; here as a light full-width bar"
+        }
+      ]
+    },
+    {
+      "id": "maintenance-mode",
+      "name": "Maintenance Mode",
+      "description": "Shows visitors a polished coming-soon or maintenance page while you build, with an optional launch countdown and contact line. Signed-in editors still see the real site.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "utilities"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/maintenance-mode",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "09b9f2dd2febc4c6a08bcd6194e865f51f85ab1e533d76c7f396fd5398cb04dd",
+          "manifestHash": "db33061307358aa7f816f57677aae05166e8ba479c28c7bf032375e0231595f8",
+          "size": 184396,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/1.0.0/plugin.wasm",
+          "signature": "f011b6b2b320f548669a82ac6c6941dae76d4b6de5ee2cf4dbeeb45d775d993abee4ae6a7da19dd6d7fb5ba951c675d9286a51bb6876a7c41ef6dafbb9634b01",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "0c61860d869e633b7704bdbca62641987bdd4116",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "A polished coming-soon page for visitors while editors see the real site",
+      "longDescription": "Maintenance Mode puts a clean, full-screen coming-soon or maintenance page in front of your site while you build it. Visitors see the placeholder; you and your editors, signed in to Stride, keep seeing the real pages, with a small badge reminding you that the curtain is up.\n\nIt works with zero configuration. Optionally add your site name, your own headline and message, a launch date with a live countdown, and a contact line. An e-mail address becomes a link. Choose a dark or light look and an accent colour; text keeps its contrast whatever you pick. Dutch pages get Dutch default text.\n\nIt fails closed: the page is hidden before any script runs, so visitors without JavaScript never see the site. A noindex tag keeps search engines from indexing the placeholder. The countdown is accessible, animation respects reduced motion, and nothing is loaded from third parties.\n\nIt needs only the storage permission, for its settings. Refuse it and the default maintenance page still shows. Note that this hides the site, it does not lock it: the real HTML is still in the page source.",
+      "accent": "#64748b",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/icon.png",
+        "sha256": "ee66a1eb1132b153b18794e798c4c56aad189a6d25255cad3ec0ec27ba26c8f9",
+        "size": 121717
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/screenshots/01.png",
+          "sha256": "3e833fe20cf21c989c24ecf70f51a9e4adb95913a23bdd65df18524a197323f8",
+          "size": 165105,
+          "caption": "Visitors see a dark coming-soon page with the launch date, a live countdown and a contact link"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/screenshots/02.png",
+          "sha256": "d0840cd6a97f60886ea25a17f13bcfef575e65da2af97f2e8df7c2eab335a845",
+          "size": 85703,
+          "caption": "Signed-in editors keep seeing the real site, with a small reminder badge"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/screenshots/03.png",
+          "sha256": "2382ba50bb70f4d91057777a16466b61d1f13e1720dfb8a31ec04e1ea4c10da5",
+          "size": 463755,
+          "caption": "The light maintenance look with a custom accent, on desktop and phone"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/screenshots/04.png",
+          "sha256": "874cc9c9991ff087347d6abd77d2d66cfbb079f3b46d91e945ec269f2d28b1d5",
+          "size": 124306,
+          "caption": "Headline, message, launch date, contact line and look are set from the site settings"
+        }
+      ]
+    },
+    {
+      "id": "reading-progress",
+      "name": "Reading Progress",
+      "description": "A thin reading progress bar at the top of long pages, plus an optional back-to-top button. Pure CSS scroll-driven animation with a tiny JavaScript fallback.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "design"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "4ebfaeb2c42cb757738bed11994a4abc55cb8d31cd5cd143e035d6466346398e",
+          "manifestHash": "b679c47213791f3ec0a24336ebfccc1f129976a5563e11559fd3dbc5317a51b6",
+          "size": 178093,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/1.0.0/plugin.wasm",
+          "signature": "2a2970db9672396507f0c0a3dc4ae79e594dabc44a957fa9b73340f28c05f4a6eff02828e2928e13c1e99731d927cec7211b5a3bef6fe0365c2be8f26da3c604",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "42c2679b79ecfe19942df9590db93228c8de3c5a",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "A slim reading progress bar and a back-to-top button for long pages.",
+      "longDescription": "Reading Progress puts a thin bar across the top of every long page that fills as the reader scrolls, so they always know how much is left. Once they are half a screen down, a round back-to-top button fades in the corner and takes them back up with one click.\n\nIt needs no setup. Out of the box you get a 3 px rose bar and a button in the bottom right. Short pages that barely scroll get no bar. In the site settings you can pick your own colour, make the bar thin, medium or bold, move the button to the left, turn the button off, or skip pages by slug.\n\nIt is built to be light. The bar runs on a native CSS scroll-driven animation, so modern browsers do not run any code on scroll. Older browsers get the same result from a tiny inline script. There are no third-party requests, fonts or images: about 2 KB in total.\n\nIt is accessible by default. The bar is decorative and hidden from screen readers. The button is a real link with an accessible name, a 44 px target and a visible focus ring. It picks a white or dark arrow to stay readable on your colour, scrolls smoothly only for visitors who have not asked for reduced motion, and is hidden when printing.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",
+      "accent": "#f43f5e",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/icon.png",
+        "sha256": "c244b435bfd5250d707268bdcb73db4dca20b42745d63a6056822f4b53bf7c85",
+        "size": 148639
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/screenshots/01.png",
+          "sha256": "a6fad3d4678daf53008ce5679fe6bdad92b4cf688d16874d3a63f13a81d9d990",
+          "size": 199964,
+          "caption": "Zero configuration: a slim rose bar at the top and a back-to-top button in the corner."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/screenshots/02.png",
+          "sha256": "9dadddd5a3607d86d856b9c91097656d86b1abcbafb4caee5977a2e8124cfe83",
+          "size": 222956,
+          "caption": "Close up: the bar tracks how far the reader is; the button fades in half a screen down."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/screenshots/03.png",
+          "sha256": "9906bfb526f497df08ae1527b4f562d835db905e23d904f258b15611fe0279e7",
+          "size": 199977,
+          "caption": "Your colour, a bold 8 px bar and the button on the left."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/screenshots/04.png",
+          "sha256": "50db3a1f615d69e24d29032cf1ab0b454ba5b656e78f8a33453eb0191dbb22ce",
+          "size": 103547,
+          "caption": "Every option in Settings: colour, thickness, back-to-top button, its position and pages to skip."
+        }
+      ]
+    },
+    {
+      "id": "reading-time",
+      "name": "Reading Time",
+      "description": "Shows an estimated reading time, like \"4 min read\", under the first heading of every page, and keeps a per-page word count an editor can see in the site settings.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "content"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "24296b2ee8af73bf50b01327aebfa1bd024c25621b1cbd64b3113525d79f2d0f",
+          "manifestHash": "9eaf9f61ae03c59534550f65b4b61e2a9f06bc2a6ffb65a04a42a674fadee5e4",
+          "size": 186378,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/1.0.0/plugin.wasm",
+          "signature": "f45f85d7feebb67e1aa8cceb44589a5adfdefe467c19c303f48917541455fd9b518eb19639184c37a7b005669c4dd0e8a7dc593be99b916c8be6676a86baf100",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "f11ca743e0f8f80dac992311193b53608d5877a3",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/reading-time/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "Shows readers how long a page takes, like \"4 min read\", under the title.",
+      "longDescription": "Reading Time counts the words on each page and shows an estimate like \"4 min read\" right under the first heading. Readers see at a glance how long a guide, article or case study will take before they start.\n\nThere is nothing to set up. With the default settings you get a small pill with a clock icon. It uses the page's own text colour, so it suits any theme. Only the prose in the article is counted: scripts, styles, navigation, footers and asides are skipped. The estimate is rounded up to whole minutes and is never less than one.\n\nIn Site settings you can set the reading speed (200 words a minute by default), change the label (for example to \"minuten leestijd\"), pick an accent colour, list pages to skip, such as home and contact, or switch to plain text that your theme styles itself. The panel also shows how many pages have been counted and which one is the longest.\n\nThe published page gets no JavaScript and makes no third-party requests. The badge adds under 600 bytes of inline CSS, and its clock icon is hidden from screen readers, so assistive technology reads just \"4 min read\". The label you type is escaped before it goes into the page.\n\nThe only permission it asks for is storage, to keep its settings and the per-page word counts. If you refuse it, every page still gets a reading time with the default settings.",
+      "accent": "#14b8a6",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/icon.png",
+        "sha256": "0763552969fbcf10ec4e15bd837f0b78f03d2e4a87af0c4146578ed0df73eab8",
+        "size": 157772
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/screenshots/01.png",
+          "sha256": "2102dca48c280f8f787f546c405df2b63cce08ab1239dbbb73fede0ad16d226a",
+          "size": 171759,
+          "caption": "Zero configuration: a quiet \"3 min read\" badge under the title, in the page's own colours."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/screenshots/02.png",
+          "sha256": "8e52a486758e5c366beeb867c659951c35bba3b6f5c8f2061c528922318d588e",
+          "size": 143843,
+          "caption": "Close-up with a custom accent colour. The clock is decorative; screen readers hear just the time."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/screenshots/03.png",
+          "sha256": "fc9c56e29111f71d39e2d1d7b9d076b2ac61676288b6defe57f88a2adf77d66f",
+          "size": 111660,
+          "caption": "Every option in Site settings: speed, label, style, accent colour and pages to skip."
+        }
+      ]
+    },
+    {
+      "id": "schema-markup",
+      "name": "Schema Markup",
+      "description": "Adds JSON-LD structured data to every published page: your Organization or LocalBusiness (address, opening hours, phone), the WebSite, and a BlogPosting for posts, so Google can show rich results.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "seo"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/schema-markup",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "a0d6dbff389d49c52261f4adf7d456ed0d40265a88eb0c117dd422b6d924bb6d",
+          "manifestHash": "f44d9f6c9e0b9a56a739b5183d0d829bb9ea7099b1b9602bc034f4c4355123c4",
+          "size": 199520,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/1.0.0/plugin.wasm",
+          "signature": "e8c4ebb9186473a6cb612f810ebe16664b450f1b157704d0c3d84eacdad73c7ca8ab08c289f58b32efb65c431805d079721cdc49958eb6b6a130834de176e40b",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "0f20355bae4f500995d81b27b56d6a2a49468a5e",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "JSON-LD for your business, website and blog posts, ready for Google rich results",
+      "longDescription": "Schema Markup adds structured data to every published page, in the JSON-LD format Google, Bing and other search engines read. Visitors see nothing; search engines get a clear description of who you are and what each page is.\n\nDescribe your organization once in the site settings: name, logo, phone, email, address and social profiles. Choose Local business, Shop, Restaurant or Professional service to add opening hours such as \"Mo-Fr 09:00-17:30\" and a price range, which is what makes you eligible for local business results.\n\nEvery page also gets a WebSite entry. Blog posts, the pages whose address starts with blog or news, get a BlogPosting with the headline, description, social image, language, word count, author and publisher. The plugin takes these from the page itself, so there is nothing to fill in per post.\n\nIt works with no setup: the site name comes from your page titles and the site address from the canonical link. Every value is escaped, so nothing you type can break out of the script. It makes no external requests, adds no visible markup, and needs only the storage permission for its settings. If that permission is refused, it keeps working with the defaults.",
+      "accent": "#f59e0b",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/icon.png",
+        "sha256": "a769c1aad231571b3aabdff8f18d0de9d7f45e412b697dd308d1d6554fa1e7f7",
+        "size": 123099
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/screenshots/01.png",
+          "sha256": "3928e88cb6c8e9580b9498d1fa8999a55b5e1a9ab304812c7a0a477fa28a83a4",
+          "size": 244061,
+          "caption": "A published blog post and the WebSite and BlogPosting data the plugin added to its head"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/screenshots/02.png",
+          "sha256": "816b253d26975de3e86bb922149e5034d43e2b70ef565dd11423205442093abd",
+          "size": 139923,
+          "caption": "A shop with address, opening hours, phone and social profiles, on every page"
+        }
+      ]
+    },
+    {
+      "id": "seo-inspector",
+      "name": "SEO Inspector",
+      "description": "Checks every page when it is saved: title length, meta description, image alt text, headings, thin content and long URLs. Shows a 0-100 score and the warnings per page in the site settings.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "seo",
+        "content"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/seo-inspector",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage",
+            "write-pages"
+          ],
+          "hooks": [
+            "on_document_save"
+          ],
+          "contentHash": "7d37eebe353d23f0c59d3685051eeba911806ab0fae98eb147d72d21e6facb3b",
+          "manifestHash": "86641408f09874d6b41e66a2618444edb73f05aeeb7d4075416c2abaea06d473",
+          "size": 186376,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/1.0.0/plugin.wasm",
+          "signature": "0d908c8d31eec5f9abe53455fab005e4e81230f44ad182da34f353c34d50f284abb629bd0911cfe6c2ef434ee493f8ab77d21b9e4fd7adddd77fba1f37a74106",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "6b8e088fb9c78fc0d5875dcb5f2dc8b736d73442",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "A 0-100 SEO score and clear warnings for every page, checked on save.",
+      "longDescription": "SEO Inspector checks each page the moment it is saved and gives it a score from 0 to 100, with a plain list of what to fix.\n\nIt looks at what search engines and screen readers notice first: a missing or too short meta description, an SEO title that is too short or will be cut off in search results, images without alt text, pages with no h1 or more than one, skipped heading levels such as h2 followed by h4, thin content and long URLs.\n\nAll reports live in Site settings under SEO Inspector, worst page first, so you always know which page to fix next. The limits for thin content, title length and URL length are adjustable, and the defaults follow the usual rules of thumb.\n\nIt never changes a page and adds nothing to your published site: no scripts, no styles, no requests to anyone.",
+      "accent": "#22c55e",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/icon.png",
+        "sha256": "06dbb993d01d32c50c14a9214ee010ed00deb5704d16105bc9df8e3d8cffc53e",
+        "size": 120764
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/screenshots/01.png",
+          "sha256": "5af325aa5ff5b6a3449df40b6eff02fe0e3c35d475fd34b94b29174034194667",
+          "size": 134007,
+          "caption": "Every page with its score and warnings, worst first."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/screenshots/02.png",
+          "sha256": "d065e0dccdfdf6f64d3672207ac1b1ae558b8ee19820aee0565b723fdb6ffefd",
+          "size": 100284,
+          "caption": "The panel in Site settings, with the thresholds you can adjust."
+        }
+      ]
+    },
+    {
+      "id": "social-share",
+      "name": "Social Share",
+      "description": "Adds share buttons for X, LinkedIn, Facebook, WhatsApp, e-mail and copy link under your articles. Plain links and inline icons: no third-party scripts, no tracking.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "social",
+        "privacy"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/social-share",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render",
+            "on_publish"
+          ],
+          "contentHash": "76e113b8788035924e7bb11b6f33c0f7012fbb01056cb584a09d6be9344270c3",
+          "manifestHash": "4f9e26633d832e5e97fb3e72ba852961bb420563b23e9ed52ba3d2be738e2f78",
+          "size": 193068,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/1.0.0/plugin.wasm",
+          "signature": "4dc05a1e6d2c86ebfdd38d767bff2b139a36346ed19b39a1b8935e750fc8e68a9b23d67bdeca15cfbad11df2ba33efbc5c051cc6e93e4e1af830fa2aaf57730e",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "7c33d54acb2c2fb35739eabd5d595f45999cf425",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/social-share/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "Privacy-friendly share buttons under every article. No trackers.",
+      "longDescription": "Social Share adds a tidy row of share buttons under your articles: X, LinkedIn, Facebook, WhatsApp, e-mail and copy link.\n\nEvery button is a plain link with an inline icon. Nothing loads from Facebook, X or anyone else, so there are no third-party scripts, no cookies and no tracking. A reader's browser only talks to a network when the reader clicks its button.\n\nIt looks good straight away. Pick from four styles in the site settings: brand colours with labels, outlined, round brand icons, or minimal icons in your own accent colour. You can also change the heading, centre the row, switch off any network, and choose which pages show it, for example only pages under blog or news.\n\nIt is built to be accessible: descriptive labels for screen readers, a visible keyboard focus ring, a spoken \"Link copied\" confirmation, and no motion for readers who prefer reduced motion.\n\nIt asks for one permission, storage, to keep its settings. Refuse it and the plugin still shows the default buttons.",
+      "accent": "#ec4899",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/icon.png",
+        "sha256": "b1a7c628a1142c68bfc94917ba172feb6ed7df0d1c75ff584c1fb4c7176f8b33",
+        "size": 133022
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/screenshots/01.png",
+          "sha256": "be414f997ebebf06816bcfaf30fa814b3e114ec8af6713dbd2fa573ce35a64fd",
+          "size": 159740,
+          "caption": "Share buttons under a journal article, in the default brand-colour style."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/screenshots/02.png",
+          "sha256": "3f673143c7c67ad89e0a509c23afbcd5acfc7374f051dbc4629a769cd20516d7",
+          "size": 143810,
+          "caption": "Close-up: X, LinkedIn, Facebook, WhatsApp, e-mail and copy link, all plain links with inline icons."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/screenshots/03.png",
+          "sha256": "d15c798abb18007c2711132664f4bc94f77fdf58e1c4a2d0e3db38af019537c8",
+          "size": 88834,
+          "caption": "All options in the site settings: heading, style, accent colour, alignment and networks."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/screenshots/04.png",
+          "sha256": "836fcea0293919a657c4c36ed7deb41422c991aae7a7381b7be050c386787a11",
+          "size": 134070,
+          "caption": "The round-icon style, centred, with a custom heading."
+        }
+      ]
+    },
+    {
+      "id": "table-of-contents",
+      "name": "Table of Contents",
+      "description": "Builds a linked table of contents from the h2 and h3 headings of a page, gives every heading an anchor id, and puts it at the top of the article, boxed or as a sticky sidebar. No JavaScript.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "content",
+        "seo"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "7d102b960a41cee730f07bdcbb198865dc9d260f52e52bbc74c2cbda183f0e2d",
+          "manifestHash": "4aa55643fd0434e68747938605b0877146c30f1ceef08ad6d87b2af27ea96cfc",
+          "size": 195267,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/1.0.0/plugin.wasm",
+          "signature": "9867da25f076ef2dcbfda4203d6961735ff8fa66148d4b8cd826046b31aba67439c21f1b737df6cc03ce145540363e725857376d97b4152f6f76b97c116a360b",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "78361c4e2cf1f81090e8eb07a251d5db92d82a5e",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "A linked table of contents for long pages, built from your headings.",
+      "longDescription": "Table of Contents reads the h2 and h3 headings of a page, gives each one a clean anchor id and puts a linked, nested list of them at the top of the article, in the same column as your text. Readers can see what a long page covers and jump straight to the part they came for. Every heading also gets a shareable link, like /guide#what-a-drawing-is-for.\n\nIt needs no setup. Pages with at least three headings get a quiet box titled \"On this page\" in your site's own fonts and colours. Short pages, the header and the footer are left alone. Headings that already have an id keep it, and duplicate headings get unique anchors.\n\nPrefer it out of the way? Switch to the sticky sidebar style. On wide screens the list stays in the left margin while the reader scrolls, and on smaller screens it falls back to the box. You can also number the sections, list only h2 headings, change the title, pick an accent colour, set the minimum number of headings and skip pages by slug.\n\nThe published page gets no JavaScript and makes no third-party requests. The links are plain anchors, the styling is about 1.5 KB of inline CSS, and smooth scrolling only happens for visitors who have not asked for reduced motion. The markup is an accessible nav landmark with a label and visible focus styles.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",
+      "accent": "#8b5cf6",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/icon.png",
+        "sha256": "1b7d0fd9689b276f399272b191e946b59a04a3418afbeb54e9ab664338a1fd26",
+        "size": 153557
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/screenshots/01.png",
+          "sha256": "daf7ab0582f72af8f374ce6a571ca2e218d37d99010b21e2ee040bac42049247",
+          "size": 126259,
+          "caption": "Zero configuration: an \"On this page\" box at the top of the article, in the site's own type."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/screenshots/02.png",
+          "sha256": "acde318db3cc723246d14b54bfb853fb21ac1165cfde024215deb20972c07bcd",
+          "size": 135546,
+          "caption": "Sections and subsections, nested, each one a plain anchor link. No JavaScript."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/screenshots/03.png",
+          "sha256": "7623094376ba926a113273a3c03099a0046bd057ec81658d80b4adc0a6613425",
+          "size": 202980,
+          "caption": "Sidebar style: numbered, with a custom accent, and sticky in the margin while you read."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/screenshots/04.png",
+          "sha256": "06922b444b5ad74b1cb76e4f6360e0551b7ec764e53e6efdfae2534a23ab4ca5",
+          "size": 97559,
+          "caption": "Every option in Settings: headings, minimum count, title, style, numbering, accent and skipped pages."
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-chat",
+      "name": "WhatsApp Chat",
+      "description": "A floating WhatsApp chat button with a preset message, left or right placement, your own colour and optional opening hours. Accessible, CSS-only animation, no third-party scripts.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "marketing"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/whatsapp-chat",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "387159e973626203f12a509b820a1ffe0d7ff8b6058afd9722823544fefc4a57",
+          "manifestHash": "89bdc5ab5b1f84ef0a0c53916fc331c9627426ff287319cc534fdb615224e2ad",
+          "size": 181173,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/plugin.wasm",
+          "signature": "bff866e1189ef78337682090783e27de2fd7e01f11eb65075cae897b87700da00d3b7ca8301fe04c147387618cb2875b2bd9b52aa223d8ca03a6f5a8cff3fd0a",
+          "publishedAt": "2026-09-26T09:40:43Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "93f4e25c78f228e79102ef9b150403d5e952c0cf",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "A floating WhatsApp button with a preset message and opening hours",
+      "longDescription": "WhatsApp Chat adds a round WhatsApp button to the corner of every published page. One tap opens a chat with your number, with a message already typed that the visitor can still change.\n\nPlace it bottom right or bottom left, keep WhatsApp green or use your own colour, and add a short label such as \"Questions? Chat with us\". On phones the label hides itself so the button never covers your content.\n\nOptionally show the button only during opening hours: choose the days, the times and your time zone, and visitors outside those hours simply see no button.\n\nIt is built to be light and respectful: a plain link to wa.me, no WhatsApp scripts, no tracking and no third-party requests. The pulse and hover animations are pure CSS and switch off for visitors who prefer reduced motion. The button is a real, keyboard-focusable link with a clear accessible name and a contrast-checked icon.\n\nIt needs only the storage permission, for its settings.",
+      "accent": "#25d366",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/icon.png",
+        "sha256": "ef61c6eca0b7b9865dfaaea96834aec1c97f97a7633aa3fa6a5523462e65eb26",
+        "size": 132005
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/screenshots/01.png",
+          "sha256": "8958eca62082820a0ea5d41963b516d8015dab55150f69a9ec6ab7b244a4a981",
+          "size": 103081,
+          "caption": "A WhatsApp button with a short label in the corner of a live page"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/screenshots/02.png",
+          "sha256": "18fdac0c8842d88015a6f0279e79e89fa52a89e6fa5660c9a836bd08daa0ad9c",
+          "size": 383612,
+          "caption": "On a phone the label steps aside and only the round button remains"
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/screenshots/03.png",
+          "sha256": "5d1609a5cb5cfc2d6d3aaae8f363f3109114463de84e993c0952d7ff01feb896",
+          "size": 116010,
+          "caption": "Number, preset message, label, position, colour and hours in the site settings"
+        }
+      ]
+    }
+  ],
+  "signature": "14301339cf2a48ceb63d5fe50ec2e5b78bbcc91528bb8a43219ae2e043dcce18861dadb9bd5a98d1baa536914fdaa3050e9c26a7807feec80c2c25eaa4832d00"
+}

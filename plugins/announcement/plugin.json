@@ -1,0 +1,148 @@
+{
+  "manifest": {
+    "description": "One announcement bar at the top of every page: a short message, an optional link, four styles and an optional close button. Edited in the site settings, no third-party requests.",
+    "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/announcement",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "announcement",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Announcement Bar",
+    "panels": [
+      {
+        "description": "One line shown at the top of every page on this site.",
+        "fields": [
+          {
+            "description": "Leave it empty to show nothing.",
+            "kind": {
+              "maxLength": 160,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "message",
+            "title": "Message"
+          },
+          {
+            "description": "Optional, such as \"Read more\". Shown after the message.",
+            "kind": {
+              "maxLength": 40,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "link-text",
+            "title": "Link text"
+          },
+          {
+            "description": "An https:// address or a path on this site such as /shop. Without link text the whole message becomes the link.",
+            "kind": {
+              "maxLength": 500,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "link-url",
+            "title": "Link address"
+          },
+          {
+            "description": "How the bar looks.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Quiet (dark)",
+                  "value": "quiet"
+                },
+                {
+                  "title": "Loud (blue)",
+                  "value": "loud"
+                },
+                {
+                  "title": "Warm (orange)",
+                  "value": "warm"
+                },
+                {
+                  "title": "My own colour",
+                  "value": "custom"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "tone",
+            "title": "Style"
+          },
+          {
+            "description": "Used with the style \"My own colour\". The text turns dark or light by itself to stay readable.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Bar colour"
+          },
+          {
+            "description": "Adds a close button. A closed bar stays closed for that visitor until you change the message.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "dismissible",
+            "title": "Visitors can close it"
+          }
+        ],
+        "id": "announcement",
+        "placement": "site-settings",
+        "title": "Announcement bar"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "537ce0e9a8ac40d76a2608343f5e38be28934dabbc61e4b9a8bd3c8c0978a18f",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "8fee1786cd08fddd57f806767f209e5bdb5538e4683cb4030fa567303ae63dce",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/announcement/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "bfe9c870b8f2af46fa97744ed026f44fa93499a21f59cdf576eee8134b8d24924379070daa990f415082e698df6fe6966c90995ceb7f1354b4a835c0f453b003",
+    "size": 185362,
+    "sourceCommit": "63b0b4f5404204069d976a723aceb2429d035d02",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/announcement/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
+  "store": {
+    "tagline": "One clear announcement bar at the top of every page",
+    "longDescription": "Announcement Bar puts one short message at the very top of every published page: a sale, a holiday closing, a new product or an event. Type it in the site settings and it is live; empty the message and the bar is gone.\n\nAdd an optional link, such as \"Shop the roast\", to a page on your site or any https address. Pick a style that suits your theme: Quiet (dark), Loud (blue), Warm (orange) or your own colour, with text that switches between light and dark by itself to stay readable.\n\nLet visitors close it if you like. A closed bar stays closed in that visitor's browser until you change the message, so a new announcement always gets seen.\n\nIt is small and respectful: a few lines of CSS, a tiny script only when closing is enabled, no fonts, images, tracking or third-party requests. The bar is a labelled region with a real, keyboard-focusable close button and escaped text.\n\nIt needs only the storage permission, for its settings. Without it, pages are served unchanged.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A warm announcement bar with a link above a live page"
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close-up: message, link and a close button visitors can use"
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Message, link, style, colour and close option in the site settings"
+      }
+    ],
+    "categories": [
+      "marketing"
+    ],
+    "accent": "#F97316"
+  }
+}

@@ -57,9 +57,16 @@ for (const id of await dirs(join(root, 'sources'))) {
   const hash = createHash('sha256').update(await readFile(wasm)).digest('hex');
   if (hash !== latest.contentHash) fail(`sources/${id}: rebuilt ${hash} != contentHash ${latest.contentHash} (${latest.version})`);
   else console.log(`ok   sources/${id} ${latest.version} ${hash}`);
-  const manifest = await readFile(join(root, 'sources', id, 'stride-plugin.json'));
-  const mh = createHash('sha256').update(manifest).digest('hex');
-  if (latest.manifestHash && mh !== latest.manifestHash) fail(`sources/${id}: stride-plugin.json ${mh} != manifestHash ${latest.manifestHash}`);
+  // manifestHash is over Stride's canonical form of the manifest, not the file's
+  // bytes, so it is checked by Stride on install. Here: the published copies
+  // under site/ must be exactly the source's files.
+  for (const f of ['plugin.wasm', 'stride-plugin.json']) {
+    const pub = join(root, 'site', 'plugins', id, latest.version, f);
+    if (!existsSync(pub)) { fail(`site/plugins/${id}/${latest.version}/${f}: missing`); continue; }
+    const a = createHash('sha256').update(await readFile(pub)).digest('hex');
+    const b = createHash('sha256').update(await readFile(join(root, 'sources', id, f))).digest('hex');
+    if (a !== b) fail(`site/plugins/${id}/${latest.version}/${f} differs from sources/${id}/${f}`);
+  }
 }
 
 // 2. Store metadata and images.

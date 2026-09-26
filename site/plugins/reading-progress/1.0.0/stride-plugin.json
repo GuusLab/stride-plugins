@@ -1,0 +1,69 @@
+{
+  "manifestVersion": 1,
+  "id": "reading-progress",
+  "name": "Reading Progress",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A thin reading progress bar at the top of long pages, plus an optional back-to-top button. Pure CSS scroll-driven animation with a tiny JavaScript fallback.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "reading-progress",
+      "title": "Reading progress",
+      "description": "The progress bar at the top of long pages and the back-to-top button. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show a reading progress bar",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "color",
+          "title": "Colour",
+          "description": "The bar and the button. Leave empty for rose (#f43f5e).",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "thickness",
+          "title": "Thickness",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "thin", "title": "Thin (3 px)" },
+              { "value": "medium", "title": "Medium (5 px)" },
+              { "value": "bold", "title": "Bold (8 px)" }
+            ]
+          }
+        },
+        {
+          "name": "back-to-top",
+          "title": "Show a back-to-top button",
+          "description": "A round button in the corner that appears once the reader has scrolled half a screen down.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "button-side",
+          "title": "Button position",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "right", "title": "Bottom right" },
+              { "value": "left", "title": "Bottom left" }
+            ]
+          }
+        },
+        {
+          "name": "exclude",
+          "title": "Pages to skip",
+          "description": "Slugs, separated by commas, that never get the bar or the button. For example: home, contact",
+          "kind": { "type": "text", "maxLength": 400, "multiline": false }
+        }
+      ]
+    }
+  ]
+}

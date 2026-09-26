@@ -1,0 +1,80 @@
+{
+  "manifestVersion": 1,
+  "id": "table-of-contents",
+  "name": "Table of Contents",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Builds a linked table of contents from the h2 and h3 headings of a page, gives every heading an anchor id, and puts it at the top of the article, boxed or as a sticky sidebar. No JavaScript.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "table-of-contents",
+      "title": "Table of contents",
+      "description": "The list of sections shown at the top of long pages on this site. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show a table of contents",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "levels",
+          "title": "Headings to list",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "h2-h3", "title": "Sections and subsections (h2 and h3)" },
+              { "value": "h2", "title": "Sections only (h2)" }
+            ]
+          }
+        },
+        {
+          "name": "min-headings",
+          "title": "Minimum number of headings",
+          "description": "Pages with fewer listed headings get no table of contents. 3 by default.",
+          "kind": { "type": "integer", "minimum": 1, "maximum": 20 }
+        },
+        {
+          "name": "title",
+          "title": "Title",
+          "description": "Shown above the list. \"On this page\" by default.",
+          "kind": { "type": "text", "maxLength": 60, "multiline": false }
+        },
+        {
+          "name": "style",
+          "title": "Style",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "box", "title": "Box at the top of the article" },
+              { "value": "sidebar", "title": "Sticky sidebar on wide screens" }
+            ]
+          }
+        },
+        {
+          "name": "numbered",
+          "title": "Number the sections",
+          "description": "1, 2, 3 for sections and a, b, c for subsections. Off by default.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "accent",
+          "title": "Accent colour",
+          "description": "The side rule and the hover colour. Leave empty to use the text colour of the page.",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "exclude",
+          "title": "Pages to skip",
+          "description": "Slugs, separated by commas, that never get a table of contents. For example: home, contact",
+          "kind": { "type": "text", "maxLength": 400, "multiline": false }
+        }
+      ]
+    }
+  ]
+}

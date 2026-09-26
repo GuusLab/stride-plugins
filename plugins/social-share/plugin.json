@@ -1,0 +1,231 @@
+{
+  "manifest": {
+    "description": "Adds share buttons for X, LinkedIn, Facebook, WhatsApp, e-mail and copy link under your articles. Plain links and inline icons: no third-party scripts, no tracking.",
+    "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/social-share",
+    "hooks": [
+      "on_page_render",
+      "on_publish"
+    ],
+    "id": "social-share",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Social Share",
+    "panels": [
+      {
+        "description": "The row of share buttons under your articles. Every button is a plain link; nothing loads from another site.",
+        "fields": [
+          {
+            "description": "Show share buttons. Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show share buttons"
+          },
+          {
+            "description": "The line above the buttons. Leave it empty for no heading.",
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "heading",
+            "title": "Heading"
+          },
+          {
+            "description": "How the buttons look.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Brand colours, with labels",
+                  "value": "brand"
+                },
+                {
+                  "title": "Outlined, with labels",
+                  "value": "outline"
+                },
+                {
+                  "title": "Round brand icons",
+                  "value": "icons"
+                },
+                {
+                  "title": "Minimal icons in the accent colour",
+                  "value": "minimal"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "style",
+            "title": "Style"
+          },
+          {
+            "description": "Used by the copy-link button, the minimal style and the keyboard focus ring.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "accent",
+            "title": "Accent colour"
+          },
+          {
+            "description": "Where the row sits.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Left",
+                  "value": "left"
+                },
+                {
+                  "title": "Centre",
+                  "value": "center"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "align",
+            "title": "Alignment"
+          },
+          {
+            "description": "A button to post the article on X.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "x",
+            "title": "X"
+          },
+          {
+            "description": "A button to share it on LinkedIn.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "linkedin",
+            "title": "LinkedIn"
+          },
+          {
+            "description": "A button to share it on Facebook.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "facebook",
+            "title": "Facebook"
+          },
+          {
+            "description": "A button to send it in WhatsApp.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "whatsapp",
+            "title": "WhatsApp"
+          },
+          {
+            "description": "A button that opens a new e-mail with the title and link.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "email",
+            "title": "E-mail"
+          },
+          {
+            "description": "A copy-link button. It needs JavaScript in the reader's browser and stays hidden without it.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "copy",
+            "title": "Copy link"
+          },
+          {
+            "description": "Slugs or prefixes, separated by commas, e.g. \"blog, news\". Empty means every page.",
+            "kind": {
+              "maxLength": 200,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "only",
+            "title": "Only on pages starting with"
+          },
+          {
+            "description": "Slugs separated by commas. A trailing * matches a prefix. \"home\" by default.",
+            "kind": {
+              "maxLength": 200,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "exclude",
+            "title": "Never on"
+          },
+          {
+            "description": "e.g. https://example.com. Optional: learned on publish when the site has a domain, and read from the browser otherwise.",
+            "kind": {
+              "maxLength": 200,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "site-address",
+            "title": "Site address"
+          }
+        ],
+        "id": "social-share",
+        "placement": "site-settings",
+        "title": "Share buttons"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "76e113b8788035924e7bb11b6f33c0f7012fbb01056cb584a09d6be9344270c3",
+    "hooks": [
+      "on_page_render",
+      "on_publish"
+    ],
+    "manifestHash": "4f9e26633d832e5e97fb3e72ba852961bb420563b23e9ed52ba3d2be738e2f78",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/social-share/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "4dc05a1e6d2c86ebfdd38d767bff2b139a36346ed19b39a1b8935e750fc8e68a9b23d67bdeca15cfbad11df2ba33efbc5c051cc6e93e4e1af830fa2aaf57730e",
+    "size": 193068,
+    "sourceCommit": "7c33d54acb2c2fb35739eabd5d595f45999cf425",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
+  "store": {
+    "tagline": "Privacy-friendly share buttons under every article. No trackers.",
+    "longDescription": "Social Share adds a tidy row of share buttons under your articles: X, LinkedIn, Facebook, WhatsApp, e-mail and copy link.\n\nEvery button is a plain link with an inline icon. Nothing loads from Facebook, X or anyone else, so there are no third-party scripts, no cookies and no tracking. A reader's browser only talks to a network when the reader clicks its button.\n\nIt looks good straight away. Pick from four styles in the site settings: brand colours with labels, outlined, round brand icons, or minimal icons in your own accent colour. You can also change the heading, centre the row, switch off any network, and choose which pages show it, for example only pages under blog or news.\n\nIt is built to be accessible: descriptive labels for screen readers, a visible keyboard focus ring, a spoken \"Link copied\" confirmation, and no motion for readers who prefer reduced motion.\n\nIt asks for one permission, storage, to keep its settings. Refuse it and the plugin still shows the default buttons.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Share buttons under a journal article, in the default brand-colour style."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close-up: X, LinkedIn, Facebook, WhatsApp, e-mail and copy link, all plain links with inline icons."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "All options in the site settings: heading, style, accent colour, alignment and networks."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "The round-icon style, centred, with a custom heading."
+      }
+    ],
+    "categories": [
+      "social",
+      "privacy"
+    ],
+    "accent": "#EC4899"
+  }
+}

@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stride Plugins</title>
+<meta name="description" content="The official plugin store for Stride: sandboxed, signed WebAssembly plugins, rebuilt from source.">
+<style>
+:root { --bg:#f8fafc; --card:#fff; --text:#0f172a; --muted:#475569; --line:#e2e8f0; --link:#1d4ed8; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0b1120; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#1f2937; --link:#93c5fd; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color:var(--link); }
+.wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
+.top { padding:48px 0 24px; }
+.top h1 { font-size:clamp(28px,5vw,40px); margin:0 0 8px; letter-spacing:-.02em; }
+.top p { color:var(--muted); margin:0 0 8px; max-width:62ch; }
+.plugin { background:var(--card); border:1px solid var(--line); border-top:4px solid var(--accent); border-radius:16px; padding:20px; margin:0 0 20px; }
+.plugin header { display:flex; gap:16px; align-items:center; }
+.icon { width:72px; height:72px; border-radius:18px; flex:none; }
+.tile { display:grid; place-items:center; background:var(--accent); color:#fff; font-size:32px; font-weight:700; }
+h2 { margin:0; font-size:22px; }
+.tagline { margin:2px 0 6px; }
+.meta { margin:0; color:var(--muted); font-size:14px; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.chip { border:1px solid var(--line); border-radius:999px; padding:0 10px; }
+.shots { display:flex; gap:12px; overflow-x:auto; padding:16px 0 8px; scroll-snap-type:x mandatory; }
+.shots figure { margin:0; flex:0 0 min(420px, 80%); scroll-snap-align:start; }
+.shots img { width:100%; height:auto; border-radius:10px; border:1px solid var(--line); display:block; }
+figcaption { font-size:13px; color:var(--muted); margin-top:6px; }
+details summary { cursor:pointer; font-weight:600; padding:6px 0; }
+dl { display:grid; grid-template-columns:max-content 1fr; gap:4px 16px; font-size:14px; }
+dt { color:var(--muted); } dd { margin:0; min-width:0; }
+.hash { word-break:break-all; }
+footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
+@media (max-width:520px) { .icon { width:56px; height:56px; } dl { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <h1>Stride Plugins</h1>
+    <p>The official plugin store for <a href="https://github.com/GuusLab/stride">Stride</a>. Every plugin is WebAssembly, sandboxed, permission-scoped, signed, and rebuilt from source byte for byte before it is listed.</p>
+    <p>Install them from <strong>Plugins</strong> in the Stride editor. 10 plugins · <a href="index.json">index.json</a> · <a href="https://github.com/GuusLab/stride-plugins">GitHub</a> · <a href="https://github.com/GuusLab/stride-plugins#submitting-a-plugin">Submit a plugin</a></p>
+  </div>
+
+    <article class="plugin" id="announcement" style="--accent:#f97316">
+      <header>
+        <img class="icon" src="plugins/announcement/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Announcement Bar</h2>
+          <p class="tagline">One clear announcement bar at the top of every page</p>
+          <p class="meta">
+            <span class="chip">marketing</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/announcement/screenshots/01.png"><img src="plugins/announcement/screenshots/01.png" alt="A warm announcement bar with a link above a live page" width="1600" height="1000" loading="lazy"></a><figcaption>A warm announcement bar with a link above a live page</figcaption></figure>
+          <figure><a href="plugins/announcement/screenshots/02.png"><img src="plugins/announcement/screenshots/02.png" alt="Close-up: message, link and a close button visitors can use" width="1600" height="1000" loading="lazy"></a><figcaption>Close-up: message, link and a close button visitors can use</figcaption></figure>
+          <figure><a href="plugins/announcement/screenshots/03.png"><img src="plugins/announcement/screenshots/03.png" alt="Message, link, style, colour and close option in the site settings" width="1600" height="1000" loading="lazy"></a><figcaption>Message, link, style, colour and close option in the site settings</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Announcement Bar</summary>
+        <p>Announcement Bar puts one short message at the very top of every published page: a sale, a holiday closing, a new product or an event. Type it in the site settings and it is live; empty the message and the bar is gone.</p><p>Add an optional link, such as &quot;Shop the roast&quot;, to a page on your site or any https address. Pick a style that suits your theme: Quiet (dark), Loud (blue), Warm (orange) or your own colour, with text that switches between light and dark by itself to stay readable.</p><p>Let visitors close it if you like. A closed bar stays closed in that visitor&#39;s browser until you change the message, so a new announcement always gets seen.</p><p>It is small and respectful: a few lines of CSS, a tiny script only when closing is enabled, no fonts, images, tracking or third-party requests. The bar is a labelled region with a real, keyboard-focusable close button and escaped text.</p><p>It needs only the storage permission, for its settings. Without it, pages are served unchanged.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/announcement/1.0.0/plugin.wasm">plugin.wasm</a>, 181 KB, SHA-256 <code class="hash">537ce0e9a8ac40d76a2608343f5e38be28934dabbc61e4b9a8bd3c8c0978a18f</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/63b0b4f5404204069d976a723aceb2429d035d02/sources/announcement">sources/announcement</a> at <code>63b0b4f</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="cookie-consent" style="--accent:#0ea5e9">
+      <header>
+        <img class="icon" src="plugins/cookie-consent/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Cookie Consent</h2>
+          <p class="tagline">An accessible GDPR cookie banner in Dutch or English, with no third parties</p>
+          <p class="meta">
+            <span class="chip">privacy</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/cookie-consent/screenshots/01.png"><img src="plugins/cookie-consent/screenshots/01.png" alt="A floating card on a live page, with Accept all and Reject all given equal weight" width="1600" height="1000" loading="lazy"></a><figcaption>A floating card on a live page, with Accept all and Reject all given equal weight</figcaption></figure>
+          <figure><a href="plugins/cookie-consent/screenshots/02.png"><img src="plugins/cookie-consent/screenshots/02.png" alt="Settings lets visitors choose analytics and marketing cookies one by one" width="1600" height="1000" loading="lazy"></a><figcaption>Settings lets visitors choose analytics and marketing cookies one by one</figcaption></figure>
+          <figure><a href="plugins/cookie-consent/screenshots/03.png"><img src="plugins/cookie-consent/screenshots/03.png" alt="Text, privacy link, layout and colours are set from the site settings" width="1600" height="1000" loading="lazy"></a><figcaption>Text, privacy link, layout and colours are set from the site settings</figcaption></figure>
+          <figure><a href="plugins/cookie-consent/screenshots/04.png"><img src="plugins/cookie-consent/screenshots/04.png" alt="On a Dutch page the banner speaks Dutch; here as a light full-width bar" width="1600" height="1000" loading="lazy"></a><figcaption>On a Dutch page the banner speaks Dutch; here as a light full-width bar</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Cookie Consent</summary>
+        <p>Cookie Consent adds a clean, accessible cookie banner to every published page. Visitors can accept everything, reject everything with one equally prominent click, or open the settings and choose per category: necessary, analytics and marketing.</p><p>The banner speaks the page&#39;s language: Dutch pages get Dutch text, all others English. Write your own text for either language, link your privacy policy, pick a floating card or a full-width bar, and set the background, text and button colours. Button text stays readable on any colour you choose.</p><p>The choice is remembered for 180 days in a first-party cookie, so returning visitors never see the banner flash. A small Cookie settings button, or any element with data-cookie-settings, lets visitors change their mind.</p><p>Other scripts can wait for consent: the html element carries data-cookie-consent (for example &quot;necessary analytics&quot;), a stride:consent event fires on document with the choice, and window.StrideConsent offers get() and open().</p><p>Everything is inline and about 4 KB. No external requests, no tracking of its own. It needs only the storage permission for its settings, and still shows its default banner if that permission is refused.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/cookie-consent/1.0.0/plugin.wasm">plugin.wasm</a>, 176 KB, SHA-256 <code class="hash">449274676a10017ba689b0d34cc869e8ca891cb93d4094a54a321d23200f6a1f</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/0302c03b015a91bf039f562c2af40ffc5e865fcd/sources/cookie-consent">sources/cookie-consent</a> at <code>0302c03</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="maintenance-mode" style="--accent:#64748b">
+      <header>
+        <img class="icon" src="plugins/maintenance-mode/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Maintenance Mode</h2>
+          <p class="tagline">A polished coming-soon page for visitors while editors see the real site</p>
+          <p class="meta">
+            <span class="chip">utilities</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/maintenance-mode/screenshots/01.png"><img src="plugins/maintenance-mode/screenshots/01.png" alt="Visitors see a dark coming-soon page with the launch date, a live countdown and a contact link" width="1600" height="1000" loading="lazy"></a><figcaption>Visitors see a dark coming-soon page with the launch date, a live countdown and a contact link</figcaption></figure>
+          <figure><a href="plugins/maintenance-mode/screenshots/02.png"><img src="plugins/maintenance-mode/screenshots/02.png" alt="Signed-in editors keep seeing the real site, with a small reminder badge" width="1600" height="1000" loading="lazy"></a><figcaption>Signed-in editors keep seeing the real site, with a small reminder badge</figcaption></figure>
+          <figure><a href="plugins/maintenance-mode/screenshots/03.png"><img src="plugins/maintenance-mode/screenshots/03.png" alt="The light maintenance look with a custom accent, on desktop and phone" width="1600" height="1000" loading="lazy"></a><figcaption>The light maintenance look with a custom accent, on desktop and phone</figcaption></figure>
+          <figure><a href="plugins/maintenance-mode/screenshots/04.png"><img src="plugins/maintenance-mode/screenshots/04.png" alt="Headline, message, launch date, contact line and look are set from the site settings" width="1600" height="1000" loading="lazy"></a><figcaption>Headline, message, launch date, contact line and look are set from the site settings</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Maintenance Mode</summary>
+        <p>Maintenance Mode puts a clean, full-screen coming-soon or maintenance page in front of your site while you build it. Visitors see the placeholder; you and your editors, signed in to Stride, keep seeing the real pages, with a small badge reminding you that the curtain is up.</p><p>It works with zero configuration. Optionally add your site name, your own headline and message, a launch date with a live countdown, and a contact line. An e-mail address becomes a link. Choose a dark or light look and an accent colour; text keeps its contrast whatever you pick. Dutch pages get Dutch default text.</p><p>It fails closed: the page is hidden before any script runs, so visitors without JavaScript never see the site. A noindex tag keeps search engines from indexing the placeholder. The countdown is accessible, animation respects reduced motion, and nothing is loaded from third parties.</p><p>It needs only the storage permission, for its settings. Refuse it and the default maintenance page still shows. Note that this hides the site, it does not lock it: the real HTML is still in the page source.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/maintenance-mode/1.0.0/plugin.wasm">plugin.wasm</a>, 180 KB, SHA-256 <code class="hash">09b9f2dd2febc4c6a08bcd6194e865f51f85ab1e533d76c7f396fd5398cb04dd</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/0c61860d869e633b7704bdbca62641987bdd4116/sources/maintenance-mode">sources/maintenance-mode</a> at <code>0c61860</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="reading-progress" style="--accent:#f43f5e">
+      <header>
+        <img class="icon" src="plugins/reading-progress/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Reading Progress</h2>
+          <p class="tagline">A slim reading progress bar and a back-to-top button for long pages.</p>
+          <p class="meta">
+            <span class="chip">design</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/reading-progress/screenshots/01.png"><img src="plugins/reading-progress/screenshots/01.png" alt="Zero configuration: a slim rose bar at the top and a back-to-top button in the corner." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: a slim rose bar at the top and a back-to-top button in the corner.</figcaption></figure>
+          <figure><a href="plugins/reading-progress/screenshots/02.png"><img src="plugins/reading-progress/screenshots/02.png" alt="Close up: the bar tracks how far the reader is; the button fades in half a screen down." width="1600" height="1000" loading="lazy"></a><figcaption>Close up: the bar tracks how far the reader is; the button fades in half a screen down.</figcaption></figure>
+          <figure><a href="plugins/reading-progress/screenshots/03.png"><img src="plugins/reading-progress/screenshots/03.png" alt="Your colour, a bold 8 px bar and the button on the left." width="1600" height="1000" loading="lazy"></a><figcaption>Your colour, a bold 8 px bar and the button on the left.</figcaption></figure>
+          <figure><a href="plugins/reading-progress/screenshots/04.png"><img src="plugins/reading-progress/screenshots/04.png" alt="Every option in Settings: colour, thickness, back-to-top button, its position and pages to skip." width="1600" height="1000" loading="lazy"></a><figcaption>Every option in Settings: colour, thickness, back-to-top button, its position and pages to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Reading Progress</summary>
+        <p>Reading Progress puts a thin bar across the top of every long page that fills as the reader scrolls, so they always know how much is left. Once they are half a screen down, a round back-to-top button fades in the corner and takes them back up with one click.</p><p>It needs no setup. Out of the box you get a 3 px rose bar and a button in the bottom right. Short pages that barely scroll get no bar. In the site settings you can pick your own colour, make the bar thin, medium or bold, move the button to the left, turn the button off, or skip pages by slug.</p><p>It is built to be light. The bar runs on a native CSS scroll-driven animation, so modern browsers do not run any code on scroll. Older browsers get the same result from a tiny inline script. There are no third-party requests, fonts or images: about 2 KB in total.</p><p>It is accessible by default. The bar is decorative and hidden from screen readers. The button is a real link with an accessible name, a 44 px target and a visible focus ring. It picks a white or dark arrow to stay readable on your colour, scrolls smoothly only for visitors who have not asked for reduced motion, and is hidden when printing.</p><p>The only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/reading-progress/1.0.0/plugin.wasm">plugin.wasm</a>, 174 KB, SHA-256 <code class="hash">4ebfaeb2c42cb757738bed11994a4abc55cb8d31cd5cd143e035d6466346398e</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/42c2679b79ecfe19942df9590db93228c8de3c5a/sources/reading-progress">sources/reading-progress</a> at <code>42c2679</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="reading-time" style="--accent:#14b8a6">
+      <header>
+        <img class="icon" src="plugins/reading-time/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Reading Time</h2>
+          <p class="tagline">Shows readers how long a page takes, like &quot;4 min read&quot;, under the title.</p>
+          <p class="meta">
+            <span class="chip">content</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/reading-time/screenshots/01.png"><img src="plugins/reading-time/screenshots/01.png" alt="Zero configuration: a quiet &quot;3 min read&quot; badge under the title, in the page&#39;s own colours." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: a quiet &quot;3 min read&quot; badge under the title, in the page&#39;s own colours.</figcaption></figure>
+          <figure><a href="plugins/reading-time/screenshots/02.png"><img src="plugins/reading-time/screenshots/02.png" alt="Close-up with a custom accent colour. The clock is decorative; screen readers hear just the time." width="1600" height="1000" loading="lazy"></a><figcaption>Close-up with a custom accent colour. The clock is decorative; screen readers hear just the time.</figcaption></figure>
+          <figure><a href="plugins/reading-time/screenshots/03.png"><img src="plugins/reading-time/screenshots/03.png" alt="Every option in Site settings: speed, label, style, accent colour and pages to skip." width="1600" height="1000" loading="lazy"></a><figcaption>Every option in Site settings: speed, label, style, accent colour and pages to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Reading Time</summary>
+        <p>Reading Time counts the words on each page and shows an estimate like &quot;4 min read&quot; right under the first heading. Readers see at a glance how long a guide, article or case study will take before they start.</p><p>There is nothing to set up. With the default settings you get a small pill with a clock icon. It uses the page&#39;s own text colour, so it suits any theme. Only the prose in the article is counted: scripts, styles, navigation, footers and asides are skipped. The estimate is rounded up to whole minutes and is never less than one.</p><p>In Site settings you can set the reading speed (200 words a minute by default), change the label (for example to &quot;minuten leestijd&quot;), pick an accent colour, list pages to skip, such as home and contact, or switch to plain text that your theme styles itself. The panel also shows how many pages have been counted and which one is the longest.</p><p>The published page gets no JavaScript and makes no third-party requests. The badge adds under 600 bytes of inline CSS, and its clock icon is hidden from screen readers, so assistive technology reads just &quot;4 min read&quot;. The label you type is escaped before it goes into the page.</p><p>The only permission it asks for is storage, to keep its settings and the per-page word counts. If you refuse it, every page still gets a reading time with the default settings.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/reading-time/1.0.0/plugin.wasm">plugin.wasm</a>, 182 KB, SHA-256 <code class="hash">24296b2ee8af73bf50b01327aebfa1bd024c25621b1cbd64b3113525d79f2d0f</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/f11ca743e0f8f80dac992311193b53608d5877a3/sources/reading-time">sources/reading-time</a> at <code>f11ca74</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="schema-markup" style="--accent:#f59e0b">
+      <header>
+        <img class="icon" src="plugins/schema-markup/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Schema Markup</h2>
+          <p class="tagline">JSON-LD for your business, website and blog posts, ready for Google rich results</p>
+          <p class="meta">
+            <span class="chip">seo</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/schema-markup/screenshots/01.png"><img src="plugins/schema-markup/screenshots/01.png" alt="A published blog post and the WebSite and BlogPosting data the plugin added to its head" width="1600" height="1000" loading="lazy"></a><figcaption>A published blog post and the WebSite and BlogPosting data the plugin added to its head</figcaption></figure>
+          <figure><a href="plugins/schema-markup/screenshots/02.png"><img src="plugins/schema-markup/screenshots/02.png" alt="A shop with address, opening hours, phone and social profiles, on every page" width="1600" height="1000" loading="lazy"></a><figcaption>A shop with address, opening hours, phone and social profiles, on every page</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Schema Markup</summary>
+        <p>Schema Markup adds structured data to every published page, in the JSON-LD format Google, Bing and other search engines read. Visitors see nothing; search engines get a clear description of who you are and what each page is.</p><p>Describe your organization once in the site settings: name, logo, phone, email, address and social profiles. Choose Local business, Shop, Restaurant or Professional service to add opening hours such as &quot;Mo-Fr 09:00-17:30&quot; and a price range, which is what makes you eligible for local business results.</p><p>Every page also gets a WebSite entry. Blog posts, the pages whose address starts with blog or news, get a BlogPosting with the headline, description, social image, language, word count, author and publisher. The plugin takes these from the page itself, so there is nothing to fill in per post.</p><p>It works with no setup: the site name comes from your page titles and the site address from the canonical link. Every value is escaped, so nothing you type can break out of the script. It makes no external requests, adds no visible markup, and needs only the storage permission for its settings. If that permission is refused, it keeps working with the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/schema-markup/1.0.0/plugin.wasm">plugin.wasm</a>, 195 KB, SHA-256 <code class="hash">a0d6dbff389d49c52261f4adf7d456ed0d40265a88eb0c117dd422b6d924bb6d</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/0f20355bae4f500995d81b27b56d6a2a49468a5e/sources/schema-markup">sources/schema-markup</a> at <code>0f20355</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="seo-inspector" style="--accent:#22c55e">
+      <header>
+        <img class="icon" src="plugins/seo-inspector/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>SEO Inspector</h2>
+          <p class="tagline">A 0-100 SEO score and clear warnings for every page, checked on save.</p>
+          <p class="meta">
+            <span class="chip">seo</span><span class="chip">content</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/seo-inspector/screenshots/01.png"><img src="plugins/seo-inspector/screenshots/01.png" alt="Every page with its score and warnings, worst first." width="1600" height="1000" loading="lazy"></a><figcaption>Every page with its score and warnings, worst first.</figcaption></figure>
+          <figure><a href="plugins/seo-inspector/screenshots/02.png"><img src="plugins/seo-inspector/screenshots/02.png" alt="The panel in Site settings, with the thresholds you can adjust." width="1600" height="1000" loading="lazy"></a><figcaption>The panel in Site settings, with the thresholds you can adjust.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About SEO Inspector</summary>
+        <p>SEO Inspector checks each page the moment it is saved and gives it a score from 0 to 100, with a plain list of what to fix.</p><p>It looks at what search engines and screen readers notice first: a missing or too short meta description, an SEO title that is too short or will be cut off in search results, images without alt text, pages with no h1 or more than one, skipped heading levels such as h2 followed by h4, thin content and long URLs.</p><p>All reports live in Site settings under SEO Inspector, worst page first, so you always know which page to fix next. The limits for thin content, title length and URL length are adjustable, and the defaults follow the usual rules of thumb.</p><p>It never changes a page and adds nothing to your published site: no scripts, no styles, no requests to anyone.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code> <code>write-pages</code></dd>
+          <dt>Hooks</dt><dd><code>on_document_save</code></dd>
+          <dt>Module</dt><dd><a href="plugins/seo-inspector/1.0.0/plugin.wasm">plugin.wasm</a>, 182 KB, SHA-256 <code class="hash">7d37eebe353d23f0c59d3685051eeba911806ab0fae98eb147d72d21e6facb3b</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/6b8e088fb9c78fc0d5875dcb5f2dc8b736d73442/sources/seo-inspector">sources/seo-inspector</a> at <code>6b8e088</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="social-share" style="--accent:#ec4899">
+      <header>
+        <img class="icon" src="plugins/social-share/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Social Share</h2>
+          <p class="tagline">Privacy-friendly share buttons under every article. No trackers.</p>
+          <p class="meta">
+            <span class="chip">social</span><span class="chip">privacy</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/social-share/screenshots/01.png"><img src="plugins/social-share/screenshots/01.png" alt="Share buttons under a journal article, in the default brand-colour style." width="1600" height="1000" loading="lazy"></a><figcaption>Share buttons under a journal article, in the default brand-colour style.</figcaption></figure>
+          <figure><a href="plugins/social-share/screenshots/02.png"><img src="plugins/social-share/screenshots/02.png" alt="Close-up: X, LinkedIn, Facebook, WhatsApp, e-mail and copy link, all plain links with inline icons." width="1600" height="1000" loading="lazy"></a><figcaption>Close-up: X, LinkedIn, Facebook, WhatsApp, e-mail and copy link, all plain links with inline icons.</figcaption></figure>
+          <figure><a href="plugins/social-share/screenshots/03.png"><img src="plugins/social-share/screenshots/03.png" alt="All options in the site settings: heading, style, accent colour, alignment and networks." width="1600" height="1000" loading="lazy"></a><figcaption>All options in the site settings: heading, style, accent colour, alignment and networks.</figcaption></figure>
+          <figure><a href="plugins/social-share/screenshots/04.png"><img src="plugins/social-share/screenshots/04.png" alt="The round-icon style, centred, with a custom heading." width="1600" height="1000" loading="lazy"></a><figcaption>The round-icon style, centred, with a custom heading.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Social Share</summary>
+        <p>Social Share adds a tidy row of share buttons under your articles: X, LinkedIn, Facebook, WhatsApp, e-mail and copy link.</p><p>Every button is a plain link with an inline icon. Nothing loads from Facebook, X or anyone else, so there are no third-party scripts, no cookies and no tracking. A reader&#39;s browser only talks to a network when the reader clicks its button.</p><p>It looks good straight away. Pick from four styles in the site settings: brand colours with labels, outlined, round brand icons, or minimal icons in your own accent colour. You can also change the heading, centre the row, switch off any network, and choose which pages show it, for example only pages under blog or news.</p><p>It is built to be accessible: descriptive labels for screen readers, a visible keyboard focus ring, a spoken &quot;Link copied&quot; confirmation, and no motion for readers who prefer reduced motion.</p><p>It asks for one permission, storage, to keep its settings. Refuse it and the plugin still shows the default buttons.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code> <code>on_publish</code></dd>
+          <dt>Module</dt><dd><a href="plugins/social-share/1.0.0/plugin.wasm">plugin.wasm</a>, 189 KB, SHA-256 <code class="hash">76e113b8788035924e7bb11b6f33c0f7012fbb01056cb584a09d6be9344270c3</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/7c33d54acb2c2fb35739eabd5d595f45999cf425/sources/social-share">sources/social-share</a> at <code>7c33d54</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="table-of-contents" style="--accent:#8b5cf6">
+      <header>
+        <img class="icon" src="plugins/table-of-contents/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Table of Contents</h2>
+          <p class="tagline">A linked table of contents for long pages, built from your headings.</p>
+          <p class="meta">
+            <span class="chip">content</span><span class="chip">seo</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/table-of-contents/screenshots/01.png"><img src="plugins/table-of-contents/screenshots/01.png" alt="Zero configuration: an &quot;On this page&quot; box at the top of the article, in the site&#39;s own type." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: an &quot;On this page&quot; box at the top of the article, in the site&#39;s own type.</figcaption></figure>
+          <figure><a href="plugins/table-of-contents/screenshots/02.png"><img src="plugins/table-of-contents/screenshots/02.png" alt="Sections and subsections, nested, each one a plain anchor link. No JavaScript." width="1600" height="1000" loading="lazy"></a><figcaption>Sections and subsections, nested, each one a plain anchor link. No JavaScript.</figcaption></figure>
+          <figure><a href="plugins/table-of-contents/screenshots/03.png"><img src="plugins/table-of-contents/screenshots/03.png" alt="Sidebar style: numbered, with a custom accent, and sticky in the margin while you read." width="1600" height="1000" loading="lazy"></a><figcaption>Sidebar style: numbered, with a custom accent, and sticky in the margin while you read.</figcaption></figure>
+          <figure><a href="plugins/table-of-contents/screenshots/04.png"><img src="plugins/table-of-contents/screenshots/04.png" alt="Every option in Settings: headings, minimum count, title, style, numbering, accent and skipped pages." width="1600" height="1000" loading="lazy"></a><figcaption>Every option in Settings: headings, minimum count, title, style, numbering, accent and skipped pages.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Table of Contents</summary>
+        <p>Table of Contents reads the h2 and h3 headings of a page, gives each one a clean anchor id and puts a linked, nested list of them at the top of the article, in the same column as your text. Readers can see what a long page covers and jump straight to the part they came for. Every heading also gets a shareable link, like /guide#what-a-drawing-is-for.</p><p>It needs no setup. Pages with at least three headings get a quiet box titled &quot;On this page&quot; in your site&#39;s own fonts and colours. Short pages, the header and the footer are left alone. Headings that already have an id keep it, and duplicate headings get unique anchors.</p><p>Prefer it out of the way? Switch to the sticky sidebar style. On wide screens the list stays in the left margin while the reader scrolls, and on smaller screens it falls back to the box. You can also number the sections, list only h2 headings, change the title, pick an accent colour, set the minimum number of headings and skip pages by slug.</p><p>The published page gets no JavaScript and makes no third-party requests. The links are plain anchors, the styling is about 1.5 KB of inline CSS, and smooth scrolling only happens for visitors who have not asked for reduced motion. The markup is an accessible nav landmark with a label and visible focus styles.</p><p>The only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/table-of-contents/1.0.0/plugin.wasm">plugin.wasm</a>, 191 KB, SHA-256 <code class="hash">7d102b960a41cee730f07bdcbb198865dc9d260f52e52bbc74c2cbda183f0e2d</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/78361c4e2cf1f81090e8eb07a251d5db92d82a5e/sources/table-of-contents">sources/table-of-contents</a> at <code>78361c4</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="whatsapp-chat" style="--accent:#25d366">
+      <header>
+        <img class="icon" src="plugins/whatsapp-chat/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>WhatsApp Chat</h2>
+          <p class="tagline">A floating WhatsApp button with a preset message and opening hours</p>
+          <p class="meta">
+            <span class="chip">marketing</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/whatsapp-chat/screenshots/01.png"><img src="plugins/whatsapp-chat/screenshots/01.png" alt="A WhatsApp button with a short label in the corner of a live page" width="1600" height="1000" loading="lazy"></a><figcaption>A WhatsApp button with a short label in the corner of a live page</figcaption></figure>
+          <figure><a href="plugins/whatsapp-chat/screenshots/02.png"><img src="plugins/whatsapp-chat/screenshots/02.png" alt="On a phone the label steps aside and only the round button remains" width="1600" height="1000" loading="lazy"></a><figcaption>On a phone the label steps aside and only the round button remains</figcaption></figure>
+          <figure><a href="plugins/whatsapp-chat/screenshots/03.png"><img src="plugins/whatsapp-chat/screenshots/03.png" alt="Number, preset message, label, position, colour and hours in the site settings" width="1600" height="1000" loading="lazy"></a><figcaption>Number, preset message, label, position, colour and hours in the site settings</figcaption></figure>
+      </div>
+      <details>
+        <summary>About WhatsApp Chat</summary>
+        <p>WhatsApp Chat adds a round WhatsApp button to the corner of every published page. One tap opens a chat with your number, with a message already typed that the visitor can still change.</p><p>Place it bottom right or bottom left, keep WhatsApp green or use your own colour, and add a short label such as &quot;Questions? Chat with us&quot;. On phones the label hides itself so the button never covers your content.</p><p>Optionally show the button only during opening hours: choose the days, the times and your time zone, and visitors outside those hours simply see no button.</p><p>It is built to be light and respectful: a plain link to wa.me, no WhatsApp scripts, no tracking and no third-party requests. The pulse and hover animations are pure CSS and switch off for visitors who prefer reduced motion. The button is a real, keyboard-focusable link with a clear accessible name and a contrast-checked icon.</p><p>It needs only the storage permission, for its settings.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/whatsapp-chat/1.0.0/plugin.wasm">plugin.wasm</a>, 177 KB, SHA-256 <code class="hash">387159e973626203f12a509b820a1ffe0d7ff8b6058afd9722823544fefc4a57</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/93f4e25c78f228e79102ef9b150403d5e952c0cf/sources/whatsapp-chat">sources/whatsapp-chat</a> at <code>93f4e25</code></dd>
+        </dl>
+      </details>
+    </article>
+  <footer>Index generated 2026-09-26T09:40:43Z, signed by the registry key. Source and submissions: <a href="https://github.com/GuusLab/stride-plugins">github.com/GuusLab/stride-plugins</a>.</footer>
+</main>
+</body>
+</html>
