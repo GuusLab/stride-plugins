@@ -1,0 +1,130 @@
+{
+  "manifest": {
+    "description": "Lets visitors click an image to see it large, with the caption underneath and arrows to browse every image on the page. Works with the keyboard and on phones.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "image-lightbox",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Image Lightbox",
+    "panels": [
+      {
+        "description": "How images open when a visitor clicks them. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Open images in a lightbox"
+          },
+          {
+            "description": "Images inside a link, the header, the menu or the footer never open, so logos and buttons keep working.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Only images shown smaller than they are",
+                  "value": "large"
+                },
+                {
+                  "title": "Every image in the page content",
+                  "value": "all"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "which",
+            "title": "Which images"
+          },
+          {
+            "description": "Uses the description (alt text) you gave the image.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "captions",
+            "title": "Show the image description as a caption"
+          },
+          {
+            "description": "Visitors can also use the arrow keys or swipe on a phone.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "arrows",
+            "title": "Show arrows to browse the other images"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Dark",
+                  "value": "dark"
+                },
+                {
+                  "title": "Light",
+                  "value": "light"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "backdrop",
+            "title": "Background"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: home, shop/*. A * at the end means every page under it.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-pages",
+            "title": "Skip these pages"
+          }
+        ],
+        "id": "image-lightbox",
+        "placement": "site-settings",
+        "title": "Image lightbox"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Click any image to see it large, with captions, arrows and swipe.",
+    "longDescription": "Image Lightbox lets visitors click an image on your site to see it big, on a dark or light background, with its description as a caption. Arrows, the arrow keys and a swipe on a phone step through the other images on the page, with a counter such as 2 / 4.\n\nIt is built on the browser's own dialog, so it works with the keyboard and with screen readers: images that can be enlarged are announced as buttons, Escape closes the viewer, and focus returns to the image you came from. Animations are left out for visitors who ask their device for less motion.\n\nIt is careful about what it touches. By default only images shown smaller than they really are can be enlarged, so small icons and decorations are left alone. Images inside a link, the header, the menu or the footer never open, so logos and buttons keep working. You can skip pages, such as your shop.\n\nNo libraries and nothing loaded from elsewhere: a small inline script and stylesheet, added only to pages that have images. The plugin asks for one permission, storage, to keep its settings; refused, it simply uses the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Click an image and it opens large, with its caption and arrows to the next one."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "A light background suits a bright, airy site. The counter shows where you are."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "On phones, swipe to the next image and tap to close."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "The settings: which images, captions, arrows, background and pages to skip."
+      }
+    ],
+    "categories": [
+      "design",
+      "content"
+    ],
+    "accent": "#D97706"
+  }
+}

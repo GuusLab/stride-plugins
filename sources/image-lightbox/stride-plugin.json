@@ -1,0 +1,69 @@
+{
+  "manifestVersion": 1,
+  "id": "image-lightbox",
+  "name": "Image Lightbox",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Lets visitors click an image to see it large, with the caption underneath and arrows to browse every image on the page. Works with the keyboard and on phones.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "image-lightbox",
+      "title": "Image lightbox",
+      "description": "How images open when a visitor clicks them. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Open images in a lightbox",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "which",
+          "title": "Which images",
+          "description": "Images inside a link, the header, the menu or the footer never open, so logos and buttons keep working.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "large", "title": "Only images shown smaller than they are" },
+              { "value": "all", "title": "Every image in the page content" }
+            ]
+          }
+        },
+        {
+          "name": "captions",
+          "title": "Show the image description as a caption",
+          "description": "Uses the description (alt text) you gave the image.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "arrows",
+          "title": "Show arrows to browse the other images",
+          "description": "Visitors can also use the arrow keys or swipe on a phone.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "backdrop",
+          "title": "Background",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "dark", "title": "Dark" },
+              { "value": "light", "title": "Light" }
+            ]
+          }
+        },
+        {
+          "name": "skip-pages",
+          "title": "Skip these pages",
+          "description": "Page addresses separated by commas, for example: home, shop/*. A * at the end means every page under it.",
+          "kind": { "type": "text", "maxLength": 1000, "multiline": false }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Pinned, because the registry rebuilds this module and compares its SHA-256
+# byte for byte with the one published. See docs/plugin-registry.md, check 4.
+[toolchain]
+channel = "1.98.1"
+targets = ["wasm32-unknown-unknown"]
