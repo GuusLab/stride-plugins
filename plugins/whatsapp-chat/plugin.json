@@ -145,33 +145,54 @@
       "storage"
     ],
     "publisher": "guuslab",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "publisher": {
     "id": "guuslab",
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
-  "release": {
-    "contentHash": "c3048d9b52b3b13f8c83fde93a9e8ac398a506718171969b40adf705e32b7d8d",
-    "hooks": [
-      "on_page_render"
-    ],
-    "manifestHash": "89bdc5ab5b1f84ef0a0c53916fc331c9627426ff287319cc534fdb615224e2ad",
-    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/stride-plugin.json",
-    "permissions": [
-      "storage"
-    ],
-    "publishedAt": "",
-    "signature": "273e31d49532317ea1665ad2327edeef67328c6e066f6ba749a0086d8bfef2c4b1b626ba619099322f7bb2ac450a32503474be9a0d88fab08654bffe6a509c0c",
-    "size": 181127,
-    "sourceCommit": "93f4e25c78f228e79102ef9b150403d5e952c0cf",
-    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
-    "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/plugin.wasm",
-    "version": "1.0.0",
-    "yanked": false,
-    "yankedReason": ""
-  },
+  "releases": [
+    {
+      "contentHash": "4d1f2f1bcf7cbcd22f1c432a75f5c33f564c46dd119d8f7275d8dd22dd8e8769",
+      "hooks": [
+        "on_page_render"
+      ],
+      "manifestHash": "d68b6a5eeffa36776d7022ab3b10eb4be92eea06dd86b28f03149079983e3551",
+      "permissions": [
+        "storage"
+      ],
+      "publishedAt": "",
+      "signature": "92b6ebd6e042ffc73d69ec020aeb8f2640c9cbba442c04c79186b7e14628f9023768715bf37d822211b363cf667465efe213fbcc35e8944e3ae11325f93cc007",
+      "size": 181787,
+      "sourceCommit": "6ab80198786c32028e91e55622649cd1a2c2d69e",
+      "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+      "url": "",
+      "version": "1.1.0",
+      "yanked": false,
+      "yankedReason": ""
+    },
+    {
+      "contentHash": "c3048d9b52b3b13f8c83fde93a9e8ac398a506718171969b40adf705e32b7d8d",
+      "hooks": [
+        "on_page_render"
+      ],
+      "manifestHash": "89bdc5ab5b1f84ef0a0c53916fc331c9627426ff287319cc534fdb615224e2ad",
+      "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/stride-plugin.json",
+      "permissions": [
+        "storage"
+      ],
+      "publishedAt": "",
+      "signature": "273e31d49532317ea1665ad2327edeef67328c6e066f6ba749a0086d8bfef2c4b1b626ba619099322f7bb2ac450a32503474be9a0d88fab08654bffe6a509c0c",
+      "size": 181127,
+      "sourceCommit": "93f4e25c78f228e79102ef9b150403d5e952c0cf",
+      "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+      "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/plugin.wasm",
+      "version": "1.0.0",
+      "yanked": false,
+      "yankedReason": ""
+    }
+  ],
   "store": {
     "tagline": "A floating WhatsApp button with a preset message and opening hours",
     "longDescription": "WhatsApp Chat adds a round WhatsApp button to the corner of every published page. One tap opens a chat with your number, with a message already typed that the visitor can still change.\n\nPlace it bottom right or bottom left, keep WhatsApp green or use your own colour, and add a short label such as \"Questions? Chat with us\". On phones the label hides itself so the button never covers your content.\n\nOptionally show the button only during opening hours: choose the days, the times and your time zone, and visitors outside those hours simply see no button.\n\nIt is built to be light and respectful: a plain link to wa.me, no WhatsApp scripts, no tracking and no third-party requests. The pulse and hover animations are pure CSS and switch off for visitors who prefer reduced motion. The button is a real, keyboard-focusable link with a clear accessible name and a contrast-checked icon.\n\nIt needs only the storage permission, for its settings.",

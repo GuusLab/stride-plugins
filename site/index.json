@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "registry": "https://guuslab.github.io/stride-plugins",
-  "generatedAt": "2026-09-26T09:48:47Z",
+  "generatedAt": "2026-09-26T11:43:04Z",
   "plugins": [
     {
       "id": "announcement",
@@ -31,7 +31,7 @@
           "size": 185316,
           "url": "https://guuslab.github.io/stride-plugins/plugins/announcement/1.0.0/plugin.wasm",
           "signature": "4800b0bbb97dce767badfcca23be156e55e50676c15b2c04457246443ecff71775207dccab574359980324f27b2ff0827028f34649ed93089a2e84092f63f400",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "63b0b4f5404204069d976a723aceb2429d035d02",
           "yanked": false,
@@ -96,7 +96,7 @@
           "size": 180323,
           "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/1.0.0/plugin.wasm",
           "signature": "cd693108b463afdfb61270d37a328d29cc894e9cc484de94d848a92deb09b082ed2b3a2abe6f1bb056e8b1bf313622aa265e9247b4389846abf969f89d566509",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "0302c03b015a91bf039f562c2af40ffc5e865fcd",
           "yanked": false,
@@ -167,7 +167,7 @@
           "size": 184266,
           "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/1.0.0/plugin.wasm",
           "signature": "9e789fa48ae83ae5117d853e2d37e73be5c1966024ce1fd2a4cccafa427d3c941697242fb7f7298aed4f68f8945df925eb6217db5801b0664ca997c577bcc103",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "0c61860d869e633b7704bdbca62641987bdd4116",
           "yanked": false,
@@ -238,7 +238,7 @@
           "size": 178118,
           "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/1.0.0/plugin.wasm",
           "signature": "d4ab4332baee8255b3ceaf52bb8850df83c3f9409968aa81a536c17a48f73073da65124c806507b377caa074420b01c765d473ca708c060a2e5b02acdb1e4803",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "42c2679b79ecfe19942df9590db93228c8de3c5a",
           "yanked": false,
@@ -309,7 +309,7 @@
           "size": 186004,
           "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/1.0.0/plugin.wasm",
           "signature": "2a467c14a7d192aa0ae07bc9c36d57a3c4b473f2ff5df55ebdfa0e666621e2fb0faa915c1559ba9045fffc1964cb3c2fb93fca6ca9224bf78ae257845bf5980e",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "f11ca743e0f8f80dac992311193b53608d5877a3",
           "yanked": false,
@@ -374,7 +374,7 @@
           "size": 199718,
           "url": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/1.0.0/plugin.wasm",
           "signature": "a241c64130a2650ea2299c28f4aed7be907e3bfd433fd61fc1d6bbe4ddc82715fb44a5f1bdc3381c3a50193a76a609ba45d3eabcbcc740dab8711e21e424320e",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "0f20355bae4f500995d81b27b56d6a2a49468a5e",
           "yanked": false,
@@ -435,7 +435,7 @@
           "size": 186074,
           "url": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/1.0.0/plugin.wasm",
           "signature": "2e27ce8c1ef42cabbc06096b1da5c48c8baf58d1b08fcd9395ee41a89c0ac83f1a4df2c4be3590d261284e225597f720548bb29042319df658bd4df3b8362b04",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "6b8e088fb9c78fc0d5875dcb5f2dc8b736d73442",
           "yanked": false,
@@ -496,7 +496,7 @@
           "size": 192872,
           "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/1.0.0/plugin.wasm",
           "signature": "9f643e14e1779fb5ca74f016a5637de75c17b85b05cb07c1878578689ce5f66847ad85d152c3137d338aafcc4fe6185772aca7d66a994902d218aab12b59580f",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "7c33d54acb2c2fb35739eabd5d595f45999cf425",
           "yanked": false,
@@ -568,7 +568,7 @@
           "size": 194994,
           "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/1.0.0/plugin.wasm",
           "signature": "83e15a75e1a776caa243e10da381850a051b48165afbb6aab64866eff1ceea4bd92de4834b9f5fc1eff46daaacb3599699309228f459c5f37e0e4dc8a16c540b",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "78361c4e2cf1f81090e8eb07a251d5db92d82a5e",
           "yanked": false,
@@ -624,8 +624,28 @@
         "marketing"
       ],
       "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/whatsapp-chat",
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "releases": [
+        {
+          "version": "1.1.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "4d1f2f1bcf7cbcd22f1c432a75f5c33f564c46dd119d8f7275d8dd22dd8e8769",
+          "manifestHash": "d68b6a5eeffa36776d7022ab3b10eb4be92eea06dd86b28f03149079983e3551",
+          "size": 181787,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.1.0/plugin.wasm",
+          "signature": "92b6ebd6e042ffc73d69ec020aeb8f2640c9cbba442c04c79186b7e14628f9023768715bf37d822211b363cf667465efe213fbcc35e8944e3ae11325f93cc007",
+          "publishedAt": "2026-09-26T11:43:04Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "6ab80198786c32028e91e55622649cd1a2c2d69e",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.1.0/stride-plugin.json"
+        },
         {
           "version": "1.0.0",
           "permissions": [
@@ -639,7 +659,7 @@
           "size": 181127,
           "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/plugin.wasm",
           "signature": "273e31d49532317ea1665ad2327edeef67328c6e066f6ba749a0086d8bfef2c4b1b626ba619099322f7bb2ac450a32503474be9a0d88fab08654bffe6a509c0c",
-          "publishedAt": "2026-09-26T09:48:47Z",
+          "publishedAt": "2026-09-26T11:43:04Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "93f4e25c78f228e79102ef9b150403d5e952c0cf",
           "yanked": false,
@@ -652,30 +672,30 @@
       "accent": "#25d366",
       "icon": {
         "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/icon.png",
-        "sha256": "ef61c6eca0b7b9865dfaaea96834aec1c97f97a7633aa3fa6a5523462e65eb26",
-        "size": 132005
+        "sha256": "1472f10263a682954f3126aca34e678cd4ae3929fdd35f1c22a7e126a57f49db",
+        "size": 29096
       },
       "screenshots": [
         {
           "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/screenshots/01.png",
-          "sha256": "8958eca62082820a0ea5d41963b516d8015dab55150f69a9ec6ab7b244a4a981",
-          "size": 103081,
+          "sha256": "fbd407601f6154800e897e1b7c9986225c9cd8a5777d9650157a3587beab2238",
+          "size": 104099,
           "caption": "A WhatsApp button with a short label in the corner of a live page"
         },
         {
           "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/screenshots/02.png",
-          "sha256": "18fdac0c8842d88015a6f0279e79e89fa52a89e6fa5660c9a836bd08daa0ad9c",
-          "size": 383612,
+          "sha256": "5a3c734bcbb71b273a83577c787a1dc61bb9eaceeed5b527aeedad78bf6f25be",
+          "size": 392024,
           "caption": "On a phone the label steps aside and only the round button remains"
         },
         {
           "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/screenshots/03.png",
-          "sha256": "5d1609a5cb5cfc2d6d3aaae8f363f3109114463de84e993c0952d7ff01feb896",
-          "size": 116010,
+          "sha256": "629c48c31994bc2c210fc89f650fd88343d3338ad0874459eeba84e6cb23cc7a",
+          "size": 100793,
           "caption": "Number, preset message, label, position, colour and hours in the site settings"
         }
       ]
     }
   ],
-  "signature": "c79e9e57883d61098b066044559ee340af0445210e473ce568a7cebe4a20fb83a59bf7b1cffbba83ba15ba41e7710329ac6c35647bca12a37d67bbd982771c08"
+  "signature": "6d2283cdd7e65fd498ed4da7d9f24eaca3746f29320ea54ff8efd16bb70c552546770803edd17e8058097d32a6305985bae56d266d21484819e955eaec436b0b"
 }

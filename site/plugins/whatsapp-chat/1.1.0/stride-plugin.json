@@ -1,0 +1,99 @@
+{
+  "manifestVersion": 1,
+  "id": "whatsapp-chat",
+  "name": "WhatsApp Chat",
+  "version": "1.1.0",
+  "publisher": "guuslab",
+  "description": "A floating WhatsApp chat button with a preset message, left or right placement, your own colour and optional opening hours. Accessible, CSS-only animation, no third-party scripts.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/whatsapp-chat",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "whatsapp-chat",
+      "title": "WhatsApp chat",
+      "description": "A round WhatsApp button in the corner of every page. It opens a chat with your number, with a message already typed.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "phone",
+          "title": "WhatsApp number",
+          "description": "In international format, such as +31 6 12345678. The button is hidden until you enter one.",
+          "kind": { "type": "text", "maxLength": 32, "multiline": false }
+        },
+        {
+          "name": "message",
+          "title": "Preset message",
+          "description": "Typed into the chat for the visitor; they can still change it. Leave it empty for a friendly default.",
+          "kind": { "type": "text", "maxLength": 300, "multiline": true }
+        },
+        {
+          "name": "label",
+          "title": "Label next to the button",
+          "description": "A short line such as \"Chat with us\". Leave it empty for a round button only.",
+          "kind": { "type": "text", "maxLength": 40, "multiline": false }
+        },
+        {
+          "name": "position",
+          "title": "Position",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "right", "title": "Bottom right" },
+              { "value": "left", "title": "Bottom left" }
+            ]
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Button colour",
+          "description": "The icon turns dark or light by itself to stay readable.",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "pulse",
+          "title": "Gentle pulse animation",
+          "description": "A soft ring that draws the eye. Always off for visitors who ask for reduced motion.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "hours",
+          "title": "Only show during opening hours",
+          "description": "Only show the button during the opening hours below, in your time zone. Visitors outside those hours see no button.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "days",
+          "title": "Open on",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "weekdays", "title": "Monday to Friday" },
+              { "value": "mon-sat", "title": "Monday to Saturday" },
+              { "value": "all", "title": "Every day" }
+            ]
+          }
+        },
+        {
+          "name": "open",
+          "title": "Opens at",
+          "description": "24-hour time, such as 09:00.",
+          "kind": { "type": "text", "maxLength": 5, "multiline": false }
+        },
+        {
+          "name": "close",
+          "title": "Closes at",
+          "description": "24-hour time, such as 17:30.",
+          "kind": { "type": "text", "maxLength": 5, "multiline": false }
+        },
+        {
+          "name": "timezone",
+          "title": "Time zone",
+          "description": "The zone your opening hours are in, such as Europe/Amsterdam.",
+          "kind": { "type": "text", "maxLength": 48, "multiline": false }
+        }
+      ]
+    }
+  ]
+}
