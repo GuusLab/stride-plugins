@@ -108,10 +108,14 @@ tools/               build, render, demo and verification scripts
 | `node tools/install-local.mjs <port> <sourceDir>` | sideload, grant and enable a plugin on that server |
 | `node tools/verify.mjs` | what CI runs: rebuild and compare hashes, check images and the published copies under `site/` |
 | `node tools/gallery.mjs` | render `site/index.html` and this README's plugin table from `site/index.json` |
+| `node tools/preview.mjs <id> <page.html> <out.html> [values.json]` | run a plugin's page hook over a page, with its settings seeded from a JSON file |
+| `node tools/publish-new.mjs [<id>...]` | reference-build, sign and lay out every unsigned submission, then sign the index |
 
 Run `npm install` once for the Node tools.
 
-Publishing (maintainers): after merging a submission, copy the module and
+Publishing (maintainers): `node tools/publish-new.mjs` signs every submission
+that has no release yet and does all of the steps below; see the comment at its
+top for the keys and tools it needs. By hand: after merging a submission, copy the module and
 manifest to `site/plugins/<id>/<version>/` and the images to `site/plugins/<id>/`,
 then run `stride plugin index . --key ~/.stride/stride-registry.key --base-url
 https://guuslab.github.io/stride-plugins` and `node tools/gallery.mjs`, and push.

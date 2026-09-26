@@ -28,12 +28,22 @@ tools/            build, verify, render and demo scripts
 - `node tools/verify.mjs`: what CI runs. Rebuilds every source, compares hashes,
   checks store images and the published copies under `site/`.
 - `node tools/gallery.mjs`: regenerates `site/index.html` and the README plugin table.
-- The reference build host is x86_64 Linux. A macOS build can differ by a few
-  bytes; publish the modules from the verify workflow's `rebuilt-modules` artifact.
+- The reference build host is x86_64 Linux, checked out at
+  `/home/runner/work/stride-plugins/stride-plugins`: the vendored PDK's path is
+  part of Cargo's crate metadata, so a build at any other path differs by a few
+  bytes. `tools/publish-new.mjs` reproduces that path in a linux/amd64 container.
+- `node tools/preview.mjs <id> <page.html> <out.html> [values.json] [slug]` runs a
+  plugin's `on_page_render` over a page with storage seeded from a JSON file.
+  Use it for store screenshots; `stride plugin test <dir>` is still the check.
 - On small machines, limit Cargo: `CARGO_BUILD_JOBS=3`.
 
 ## Publishing and signing
 
+- A new plugin can land on `main` before it is signed: its `plugins/<id>/plugin.json`
+  holds `manifest`, `publisher` and `store` but no `release`, and verify skips its
+  source. `stride plugin index` refuses such a submission, so sign it before the
+  next index: `node tools/publish-new.mjs [<id>...]` builds the reference modules,
+  signs the releases, lays out `site/`, signs the index and runs verify.
 - Anything under `plugins/*/plugin.json` or `site/index.json` is signed. Changing
   a manifest, release or store field means re-signing: rebuild the index with
   `stride plugin index . --key ~/.stride/stride-registry.key --base-url https://guuslab.github.io/stride-plugins`,
