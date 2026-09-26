@@ -1,0 +1,45 @@
+{
+  "manifestVersion": 1,
+  "id": "schema-markup",
+  "name": "Schema Markup",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Adds JSON-LD structured data to every published page: your Organization or LocalBusiness (address, opening hours, phone), the WebSite, and a BlogPosting for posts, so Google can show rich results.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/schema-markup",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "schema-markup",
+      "title": "Schema Markup",
+      "description": "Structured data for search engines. It is added to the head of every published page and is invisible to visitors.",
+      "placement": "site-settings",
+      "fields": [
+        { "name": "enabled", "title": "Add structured data", "description": "Turn this off to leave every page exactly as it was rendered.", "kind": { "type": "boolean" } },
+        { "name": "type", "title": "What you are", "description": "A local business adds address, opening hours and a map-ready listing.", "kind": { "type": "enum", "choices": [
+          { "value": "organization", "title": "Organization" },
+          { "value": "local-business", "title": "Local business" },
+          { "value": "store", "title": "Shop" },
+          { "value": "restaurant", "title": "Restaurant or cafe" },
+          { "value": "professional-service", "title": "Professional service" },
+          { "value": "person", "title": "Person (personal site)" }
+        ] } },
+        { "name": "name", "title": "Name", "description": "Leave empty to use the name in your home page title.", "kind": { "type": "text", "maxLength": 120, "multiline": false } },
+        { "name": "site-url", "title": "Site address", "description": "For example https://example.com. Leave empty to use each page's canonical address.", "kind": { "type": "text", "maxLength": 200, "multiline": false } },
+        { "name": "logo", "title": "Logo URL", "description": "A square or wide image, at least 112 pixels. A path like /media/logo.png works when the site address is set.", "kind": { "type": "text", "maxLength": 300, "multiline": false } },
+        { "name": "phone", "title": "Phone", "description": "With country code, for example +31 20 123 4567.", "kind": { "type": "text", "maxLength": 40, "multiline": false } },
+        { "name": "email", "title": "Email", "kind": { "type": "text", "maxLength": 120, "multiline": false } },
+        { "name": "street", "title": "Street and number", "kind": { "type": "text", "maxLength": 120, "multiline": false } },
+        { "name": "postal-code", "title": "Postal code", "kind": { "type": "text", "maxLength": 20, "multiline": false } },
+        { "name": "city", "title": "City", "kind": { "type": "text", "maxLength": 80, "multiline": false } },
+        { "name": "country", "title": "Country", "description": "Two-letter code, for example NL or US.", "kind": { "type": "text", "maxLength": 2, "multiline": false } },
+        { "name": "hours", "title": "Opening hours", "description": "One line per range, for example \"Mo-Fr 09:00-17:30\" or \"Sa 10:00-16:00\". Days: Mo Tu We Th Fr Sa Su.", "kind": { "type": "text", "maxLength": 400, "multiline": true } },
+        { "name": "price-range", "title": "Price range", "description": "For example €€. Only used for local businesses.", "kind": { "type": "text", "maxLength": 10, "multiline": false } },
+        { "name": "same-as", "title": "Social profiles", "description": "One address per line: your LinkedIn, Instagram, Facebook or other official pages.", "kind": { "type": "text", "maxLength": 1200, "multiline": true } },
+        { "name": "post-paths", "title": "Posts live under", "description": "Pages whose address starts with one of these, comma-separated, are marked up as blog posts. \"blog\" matches blog-my-first-post; the page called blog itself is not a post.", "kind": { "type": "text", "maxLength": 200, "multiline": false } },
+        { "name": "author", "title": "Default author", "description": "Named as the author of posts. Leave empty to credit the organization.", "kind": { "type": "text", "maxLength": 120, "multiline": false } }
+      ]
+    }
+  ]
+}
