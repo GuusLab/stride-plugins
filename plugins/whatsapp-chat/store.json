@@ -1,0 +1,12 @@
+{
+  "tagline": "A floating WhatsApp button with a preset message and opening hours",
+  "longDescription": "WhatsApp Chat adds a round WhatsApp button to the corner of every published page. One tap opens a chat with your number, with a message already typed that the visitor can still change.\n\nPlace it bottom right or bottom left, keep WhatsApp green or use your own colour, and add a short label such as \"Questions? Chat with us\". On phones the label hides itself so the button never covers your content.\n\nOptionally show the button only during opening hours: choose the days, the times and your time zone, and visitors outside those hours simply see no button.\n\nIt is built to be light and respectful: a plain link to wa.me, no WhatsApp scripts, no tracking and no third-party requests. The pulse and hover animations are pure CSS and switch off for visitors who prefer reduced motion. The button is a real, keyboard-focusable link with a clear accessible name and a contrast-checked icon.\n\nIt needs only the storage permission, for its settings.",
+  "icon": "icon.png",
+  "screenshots": [
+    { "file": "screenshots/01.png", "caption": "A WhatsApp button with a short label in the corner of a live page" },
+    { "file": "screenshots/02.png", "caption": "On a phone the label steps aside and only the round button remains" },
+    { "file": "screenshots/03.png", "caption": "Number, preset message, label, position, colour and hours in the site settings" }
+  ],
+  "categories": ["marketing"],
+  "accent": "#25D366"
+}
