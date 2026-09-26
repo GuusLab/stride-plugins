@@ -23,12 +23,18 @@ rebuilt from source byte for byte before it is listed.
 3. Click **Install**, review the permission screen and untick anything you do
    not want to grant. A plugin that is refused a permission is told "no" at
    run time; it never gets to ask again behind your back.
-4. **Enable** it. Plugins are always installed disabled.
+4. Tick **Turn it on after installing**, or **Enable** it later. Left
+   unticked, a plugin is installed switched off.
+
+| The store | A plugin page | The result on a published page |
+| --- | --- | --- |
+| ![The plugin store in Stride: featured plugins and category chips](docs/store-grid.png) | ![The Announcement Bar store page with screenshots and permissions](docs/store-detail.png) | ![A published page with the Announcement Bar installed from the store](docs/store-result.png) |
 
 Your server downloads the module itself, checks its SHA-256 against the signed
 index and its publisher's signature, and refuses anything that does not match.
 
-For self-hosted installations, point Stride at this registry:
+Stride trusts this registry by default and fetches it the first time you open
+**Plugins**. To set it explicitly, or on an older Stride:
 
 ```sh
 STRIDE_PLUGIN_REGISTRY_URL=https://guuslab.github.io/stride-plugins/index.json
