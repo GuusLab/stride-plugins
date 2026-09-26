@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C8BA1"/>
+      <stop offset="1" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".16"/>
+      <stop offset=".5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="stripes">
+      <rect width="512" height="512" fill="#fff"/>
+      <path d="M160 238 H352 V270 H160 Z M136 318 H376 V350 H136 Z" fill="#000"/>
+    </mask>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#sheen)"/>
+  <g fill="#FFFFFF">
+    <path mask="url(#stripes)" d="M232 104 Q256 88 280 104 L352 392 H160 Z" stroke="#FFFFFF" stroke-width="16" stroke-linejoin="round"/>
+    <rect x="104" y="384" width="304" height="40" rx="20"/>
+  </g>
+</svg>

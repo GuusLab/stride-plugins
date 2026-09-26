@@ -1,0 +1,13 @@
+{
+  "tagline": "A polished coming-soon page for visitors while editors see the real site",
+  "longDescription": "Maintenance Mode puts a clean, full-screen coming-soon or maintenance page in front of your site while you build it. Visitors see the placeholder; you and your editors, signed in to Stride, keep seeing the real pages, with a small badge reminding you that the curtain is up.\n\nIt works with zero configuration. Optionally add your site name, your own headline and message, a launch date with a live countdown, and a contact line. An e-mail address becomes a link. Choose a dark or light look and an accent colour; text keeps its contrast whatever you pick. Dutch pages get Dutch default text.\n\nIt fails closed: the page is hidden before any script runs, so visitors without JavaScript never see the site. A noindex tag keeps search engines from indexing the placeholder. The countdown is accessible, animation respects reduced motion, and nothing is loaded from third parties.\n\nIt needs only the storage permission, for its settings. Refuse it and the default maintenance page still shows. Note that this hides the site, it does not lock it: the real HTML is still in the page source.",
+  "icon": "icon.png",
+  "screenshots": [
+    { "file": "screenshots/01.png", "caption": "Visitors see a dark coming-soon page with the launch date, a live countdown and a contact link" },
+    { "file": "screenshots/02.png", "caption": "Signed-in editors keep seeing the real site, with a small reminder badge" },
+    { "file": "screenshots/03.png", "caption": "The light maintenance look with a custom accent, on desktop and phone" },
+    { "file": "screenshots/04.png", "caption": "Headline, message, launch date, contact line and look are set from the site settings" }
+  ],
+  "categories": ["utilities"],
+  "accent": "#64748B"
+}

@@ -1,0 +1,92 @@
+{
+  "manifestVersion": 1,
+  "id": "maintenance-mode",
+  "name": "Maintenance Mode",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Shows visitors a polished coming-soon or maintenance page while you build, with an optional launch countdown and contact line. Signed-in editors still see the real site.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/maintenance-mode",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "maintenance-mode",
+      "title": "Maintenance mode",
+      "description": "While this is on, visitors see a coming-soon or maintenance page instead of the site. Editors signed in to this Stride still see the real pages, with a small badge. Dutch pages get Dutch default text.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show the maintenance page to visitors",
+          "description": "Turn this off to open the site to everyone.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "mode",
+          "title": "Kind of page",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "coming-soon", "title": "Coming soon (new site)" },
+              { "value": "maintenance", "title": "Maintenance (back shortly)" }
+            ]
+          }
+        },
+        {
+          "name": "site-name",
+          "title": "Site name",
+          "description": "Shown small above the headline. Leave it empty to show none.",
+          "kind": { "type": "text", "maxLength": 60, "multiline": false }
+        },
+        {
+          "name": "headline",
+          "title": "Headline",
+          "description": "Leave it empty for the default, which fits the kind of page.",
+          "kind": { "type": "text", "maxLength": 90, "multiline": false }
+        },
+        {
+          "name": "message",
+          "title": "Message",
+          "description": "Leave it empty for the default. A blank line starts a new paragraph.",
+          "kind": { "type": "text", "maxLength": 600, "multiline": true }
+        },
+        {
+          "name": "launch",
+          "title": "Launch date",
+          "description": "Such as 2026-11-01 or 2026-11-01 09:00, in the visitor's local time. Shows the date and a live countdown. Leave it empty for neither.",
+          "kind": { "type": "text", "maxLength": 16, "multiline": false }
+        },
+        {
+          "name": "contact",
+          "title": "Contact line",
+          "description": "An e-mail address becomes a link; anything else, such as a phone number, is shown as written. Leave it empty to show none.",
+          "kind": { "type": "text", "maxLength": 160, "multiline": false }
+        },
+        {
+          "name": "theme",
+          "title": "Look",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "dark", "title": "Dark" },
+              { "value": "light", "title": "Light" }
+            ]
+          }
+        },
+        {
+          "name": "accent",
+          "title": "Accent colour",
+          "description": "Used for the background glow, the status dot and link underlines. Text colours stay readable whatever you pick.",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "badge",
+          "title": "Remind editors that maintenance mode is on",
+          "description": "Signed-in editors see a small badge in the corner of every page.",
+          "kind": { "type": "boolean" }
+        }
+      ]
+    }
+  ]
+}
