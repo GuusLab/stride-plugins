@@ -1,0 +1,142 @@
+{
+  "manifest": {
+    "description": "A burst of confetti on your thank-you pages, after an order, sign-up or booking, and on any link to #celebrate. Visitors who prefer less motion see none.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "celebrate",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Celebrate",
+    "panels": [
+      {
+        "description": "Confetti for the happy moments on your site. It lasts three seconds and never gets in the way of a click. Changes show on your pages right away.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Celebrate"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: thanks, order-complete, welcome. A link to #celebrate anywhere also gives confetti on click.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "pages",
+            "title": "Pages that open with confetti"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Confetti",
+                  "value": "confetti"
+                },
+                {
+                  "title": "Hearts",
+                  "value": "hearts"
+                },
+                {
+                  "title": "Stars",
+                  "value": "stars"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "shapes",
+            "title": "Shapes"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Party",
+                  "value": "party"
+                },
+                {
+                  "title": "Gold",
+                  "value": "gold"
+                },
+                {
+                  "title": "Pastel",
+                  "value": "pastel"
+                },
+                {
+                  "title": "My own colour",
+                  "value": "brand"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "palette",
+            "title": "Colours"
+          },
+          {
+            "description": "Used with the colours option My own colour.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "My own colour"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "A cheerful burst",
+                  "value": "some"
+                },
+                {
+                  "title": "A proper party",
+                  "value": "lots"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "amount",
+            "title": "How much"
+          }
+        ],
+        "id": "celebrate",
+        "placement": "site-settings",
+        "title": "Celebrate"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Confetti for your thank-you pages, after an order, sign-up or booking.",
+    "longDescription": "Celebrate adds a burst of confetti to the happy moments on your site: the thank-you page after an order, a sign-up or a booking, a welcome page, a launch. List the pages that should open with confetti, and any link that points to #celebrate gives a burst when it is clicked.\n\nPick confetti, hearts or stars, in party colours, gold, pastel or your own colour, and choose a cheerful burst or a proper party. It lasts three seconds, is drawn on a layer that never gets in the way of a click, and then disappears.\n\nVisitors who ask their device for less motion see no animation at all. It is a little over a kilobyte of script, added only to the pages that use it.\n\nThe plugin asks for one permission, storage, to keep its settings; refused, it celebrates on pages called thanks, thank-you and bedankt.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "The booking page opens with a burst of confetti."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "The settings: which pages, shapes, colours and how much."
+      }
+    ],
+    "categories": [
+      "marketing",
+      "design"
+    ],
+    "accent": "#CA8A04"
+  }
+}

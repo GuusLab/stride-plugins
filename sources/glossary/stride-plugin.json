@@ -1,0 +1,68 @@
+{
+  "manifestVersion": 1,
+  "id": "glossary",
+  "name": "Glossary",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Explain your jargon where it appears. Terms you list get a dotted underline, and pointing at or tapping one shows what it means. No other setup.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "glossary",
+      "title": "Glossary",
+      "description": "Words your visitors may not know, explained where they appear in your pages. Headings, links, buttons, the menu and the footer are left alone. Changes show on your pages right away.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Explain terms in the page text",
+          "description": "Turn this off to leave every page exactly as it was rendered, without losing your terms.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "terms",
+          "title": "Terms",
+          "description": "One per line: the term, a colon, then the explanation. For example: SEO: making your site easy to find in search engines. Separate other spellings with |, like SEO | search engine optimisation.",
+          "kind": {
+            "type": "text",
+            "maxLength": 8192,
+            "multiline": true
+          }
+        },
+        {
+          "name": "every",
+          "title": "Mark every mention, not just the first on each page",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Underline colour",
+          "kind": {
+            "type": "color"
+          }
+        },
+        {
+          "name": "skip-pages",
+          "title": "Skip these pages",
+          "description": "Page addresses separated by commas, for example: home, legal/*. A * at the end means every page under it.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "manifestVersion": 1,
+  "id": "listen",
+  "name": "Listen",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A Listen button under the title of long pages. The page is read aloud with the visitor's own device voices, highlighting each paragraph. Nothing is sent anywhere.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "listen",
+      "title": "Listen",
+      "description": "A button that reads long pages aloud with the voices built into your visitor's phone or computer. It only shows when the device has a voice for the page's language. Changes show on your pages right away.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show a Listen button",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "min-words",
+          "title": "Only on pages with at least this many words",
+          "description": "250 words is about a minute and a half of listening.",
+          "kind": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5000
+          }
+        },
+        {
+          "name": "highlight",
+          "title": "Highlight the paragraph being read",
+          "description": "And keep it in view while reading.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Button colour",
+          "description": "The text colour is chosen for you so it stays readable.",
+          "kind": {
+            "type": "color"
+          }
+        },
+        {
+          "name": "language",
+          "title": "Language of the button",
+          "description": "The voice always follows the language of the page.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "auto",
+                "title": "The language of the page"
+              },
+              {
+                "value": "en",
+                "title": "English"
+              },
+              {
+                "value": "nl",
+                "title": "Nederlands"
+              },
+              {
+                "value": "de",
+                "title": "Deutsch"
+              },
+              {
+                "value": "fr",
+                "title": "Français"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pages",
+          "title": "Pages",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "except",
+                "title": "Every page except those listed below"
+              },
+              {
+                "value": "all",
+                "title": "Every page"
+              },
+              {
+                "value": "only",
+                "title": "Only the pages listed below"
+              }
+            ]
+          }
+        },
+        {
+          "name": "page-list",
+          "title": "Page list",
+          "description": "Page addresses separated by commas, for example: home, contact, blog/*. A * at the end means every page under it.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}

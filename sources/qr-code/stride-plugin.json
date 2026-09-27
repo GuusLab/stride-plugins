@@ -1,0 +1,117 @@
+{
+  "manifestVersion": 1,
+  "id": "qr-code",
+  "name": "QR Code",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A QR code for every page: a button to show and download it, [qr-code] to place it on a page, and in the corner of printed pages. Made on your server.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render",
+    "on_publish"
+  ],
+  "panels": [
+    {
+      "id": "qr-code",
+      "title": "QR codes",
+      "description": "QR codes that lead to your pages, for menus, flyers, posters and printed recipes. Type [qr-code] on a page to place one there. Changes show on your pages right away.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Make QR codes",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "button",
+          "title": "Show a QR code button on every page",
+          "description": "Visitors can show the code to someone else, or download it.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "print",
+          "title": "Print the code in the corner of every page",
+          "description": "A printed page then leads back to the page online.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "site-address",
+          "title": "Site address",
+          "description": "For example https://example.com. Leave empty to use the address your site is published at, once it has a domain.",
+          "kind": {
+            "type": "text",
+            "maxLength": 200,
+            "multiline": false
+          }
+        },
+        {
+          "name": "track",
+          "title": "Add ?ref=qr to the address",
+          "description": "So you can see in your analytics how many visitors came from a scan.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Colour of the code",
+          "description": "Keep it dark: phones read dark codes on a light background best.",
+          "kind": {
+            "type": "color"
+          }
+        },
+        {
+          "name": "language",
+          "title": "Language",
+          "description": "For the button and the window that shows the code.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "auto",
+                "title": "The language of the page"
+              },
+              {
+                "value": "en",
+                "title": "English"
+              },
+              {
+                "value": "nl",
+                "title": "Nederlands"
+              },
+              {
+                "value": "de",
+                "title": "Deutsch"
+              },
+              {
+                "value": "fr",
+                "title": "Français"
+              }
+            ]
+          }
+        },
+        {
+          "name": "skip-pages",
+          "title": "No button or print code on these pages",
+          "description": "Page addresses separated by commas, for example: home, checkout. A * at the end means every page under it. [qr-code] still works there.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}

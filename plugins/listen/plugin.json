@@ -1,0 +1,148 @@
+{
+  "manifest": {
+    "description": "A Listen button under the title of long pages. The page is read aloud with the visitor's own device voices, highlighting each paragraph. Nothing is sent anywhere.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "listen",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Listen",
+    "panels": [
+      {
+        "description": "A button that reads long pages aloud with the voices built into your visitor's phone or computer. It only shows when the device has a voice for the page's language. Changes show on your pages right away.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show a Listen button"
+          },
+          {
+            "description": "250 words is about a minute and a half of listening.",
+            "kind": {
+              "maximum": 5000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "name": "min-words",
+            "title": "Only on pages with at least this many words"
+          },
+          {
+            "description": "And keep it in view while reading.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "highlight",
+            "title": "Highlight the paragraph being read"
+          },
+          {
+            "description": "The text colour is chosen for you so it stays readable.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Button colour"
+          },
+          {
+            "description": "The voice always follows the language of the page.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "The language of the page",
+                  "value": "auto"
+                },
+                {
+                  "title": "English",
+                  "value": "en"
+                },
+                {
+                  "title": "Nederlands",
+                  "value": "nl"
+                },
+                {
+                  "title": "Deutsch",
+                  "value": "de"
+                },
+                {
+                  "title": "Français",
+                  "value": "fr"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "language",
+            "title": "Language of the button"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Every page except those listed below",
+                  "value": "except"
+                },
+                {
+                  "title": "Every page",
+                  "value": "all"
+                },
+                {
+                  "title": "Only the pages listed below",
+                  "value": "only"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "pages",
+            "title": "Pages"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: home, contact, blog/*. A * at the end means every page under it.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "page-list",
+            "title": "Page list"
+          }
+        ],
+        "id": "listen",
+        "placement": "site-settings",
+        "title": "Listen"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "A Listen button that reads long pages aloud, highlighting each paragraph.",
+    "longDescription": "Listen puts a small \"Listen · 4 min\" button under the title of your longer pages. Press it and the page is read aloud, paragraph by paragraph, with the paragraph being read highlighted and kept in view. Pause, carry on, stop, or change the speed.\n\nIt uses the voices built into your visitor's phone or computer, so there is no service to pay for and nothing is sent anywhere. The button only appears when the device has a voice for the language of the page, so nobody gets English read in a French accent.\n\nIt reads what matters: headings, paragraphs, lists and quotes in the main part of the page, not the menu, header or footer. Long sentences are spoken in short pieces, which keeps some browsers from stopping halfway.\n\nChoose how long a page must be before it gets the button, and which pages to skip. The button colour and language are yours to set. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Reading the story page aloud: the paragraph being read is highlighted and kept in view."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "The settings: which pages get the button, highlighting, colour and language."
+      }
+    ],
+    "categories": [
+      "content",
+      "utilities"
+    ],
+    "accent": "#0891B2"
+  }
+}

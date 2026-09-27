@@ -1,0 +1,117 @@
+{
+  "manifestVersion": 1,
+  "id": "site-search",
+  "name": "Site Search",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A search box for your whole site. Visitors press ⌘K or click Search and find pages by title and text as they type. No outside service.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage",
+    "read-pages"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "site-search",
+      "title": "Site search",
+      "description": "A search box that finds your published pages as visitors type. Every page can be found by its title straight away; its text is added the first time someone opens it. Members-only content is never searchable. Best for sites of up to a few hundred pages.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show a search box",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "placement",
+          "title": "Search button",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "header",
+                "title": "In the page header, beside the menu"
+              },
+              {
+                "value": "floating",
+                "title": "Floating in the bottom corner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "shortcut",
+          "title": "Open with ⌘K, Ctrl+K or /",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "language",
+          "title": "Language",
+          "description": "For the words on the button and in the box.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "auto",
+                "title": "The language of the page"
+              },
+              {
+                "value": "en",
+                "title": "English"
+              },
+              {
+                "value": "nl",
+                "title": "Nederlands"
+              },
+              {
+                "value": "de",
+                "title": "Deutsch"
+              },
+              {
+                "value": "fr",
+                "title": "Français"
+              }
+            ]
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Colour",
+          "description": "For the selected result and the floating button.",
+          "kind": {
+            "type": "color"
+          }
+        },
+        {
+          "name": "text-length",
+          "title": "Text searched per page (characters)",
+          "description": "More finds more, but makes every page a little heavier.",
+          "kind": {
+            "type": "integer",
+            "minimum": 100,
+            "maximum": 2000
+          }
+        },
+        {
+          "name": "skip-pages",
+          "title": "Leave these pages out",
+          "description": "Page addresses separated by commas, for example: 404, thanks, legal/*. A * at the end means every page under it.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}

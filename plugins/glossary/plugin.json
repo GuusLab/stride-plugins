@@ -1,0 +1,95 @@
+{
+  "manifest": {
+    "description": "Explain your jargon where it appears. Terms you list get a dotted underline, and pointing at or tapping one shows what it means. No other setup.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "glossary",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Glossary",
+    "panels": [
+      {
+        "description": "Words your visitors may not know, explained where they appear in your pages. Headings, links, buttons, the menu and the footer are left alone. Changes show on your pages right away.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered, without losing your terms.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Explain terms in the page text"
+          },
+          {
+            "description": "One per line: the term, a colon, then the explanation. For example: SEO: making your site easy to find in search engines. Separate other spellings with |, like SEO | search engine optimisation.",
+            "kind": {
+              "maxLength": 8192,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "terms",
+            "title": "Terms"
+          },
+          {
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "every",
+            "title": "Mark every mention, not just the first on each page"
+          },
+          {
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Underline colour"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: home, legal/*. A * at the end means every page under it.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-pages",
+            "title": "Skip these pages"
+          }
+        ],
+        "id": "glossary",
+        "placement": "site-settings",
+        "title": "Glossary"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Explain jargon where it appears: dotted underlines that show a definition.",
+    "longDescription": "Glossary explains the words your visitors might not know, right where they read them. List your terms once, each with a short explanation, and they get a dotted underline in your pages. Pointing at one, tapping it or tabbing to it shows the explanation in a small bubble.\n\nIt only touches running text. Headings, links, buttons, code, the menu, header and footer are left exactly as they are, and so is anything inside a tag. By default only the first mention of each term on a page is marked, so a page does not turn into a sea of underlines; you can mark every mention if you prefer.\n\nTerms can have other spellings, like \"SEO | search engine optimisation\", and the longest match wins. The bubbles work with a mouse, a finger and the keyboard, close with Escape, and flip below the word when there is no room above.\n\nThe plugin asks for one permission, storage, to keep your terms.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A menu that explains itself: tap or point at sourdough to see what it means."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "The settings: one term per line, then choose how often to mark it and the colour."
+      }
+    ],
+    "categories": [
+      "content",
+      "seo"
+    ],
+    "accent": "#A21CAF"
+  }
+}

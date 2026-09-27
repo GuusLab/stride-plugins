@@ -1,0 +1,153 @@
+{
+  "manifest": {
+    "description": "Readers select a sentence and share it as a quote on X, Bluesky, WhatsApp or by email, or copy a link that opens your page with that sentence highlighted.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "quote-share",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Quote Share",
+    "panels": [
+      {
+        "description": "A small bar that appears when a reader selects text in an article. Nothing loads from any network until a reader clicks, and nobody is tracked. Changes show on your pages right away.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show the share bar on selected text"
+          },
+          {
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "x",
+            "title": "X"
+          },
+          {
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "bluesky",
+            "title": "Bluesky"
+          },
+          {
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "whatsapp",
+            "title": "WhatsApp"
+          },
+          {
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "email",
+            "title": "Email"
+          },
+          {
+            "description": "The link opens your page with the quoted sentence highlighted, in browsers that support it.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "copy",
+            "title": "Copy quote with link"
+          },
+          {
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Bar colour"
+          },
+          {
+            "description": "For the button labels screen readers hear.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "The language of the page",
+                  "value": "auto"
+                },
+                {
+                  "title": "English",
+                  "value": "en"
+                },
+                {
+                  "title": "Nederlands",
+                  "value": "nl"
+                },
+                {
+                  "title": "Deutsch",
+                  "value": "de"
+                },
+                {
+                  "title": "Français",
+                  "value": "fr"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "language",
+            "title": "Language"
+          },
+          {
+            "kind": {
+              "maximum": 5000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "name": "min-words",
+            "title": "Only on pages with at least this many words"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: home, shop/*. A * at the end means every page under it.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-pages",
+            "title": "Skip these pages"
+          }
+        ],
+        "id": "quote-share",
+        "placement": "site-settings",
+        "title": "Quote sharing"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Select a sentence and share it as a quote. Links open with it highlighted.",
+    "longDescription": "Quote Share turns your best sentences into shareable quotes. When a reader selects text in an article, a small bar appears above it: share the quote on X, Bluesky or WhatsApp, send it by email, or copy it with a link.\n\nThe copied link is special: in browsers that support it, it opens your page scrolled to that very sentence, highlighted. It is a standard of the web (text fragments), so it needs nothing from you.\n\nNothing loads from X, Bluesky or anyone else until a reader clicks, there are no cookies and nobody is tracked. Choose which buttons to show, the colour of the bar and on which pages it appears; by default it skips short pages and the home page.\n\nButton labels come in English, Dutch, German and French for screen readers. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Select a sentence and the bar appears: X, Bluesky, WhatsApp, email or copy with link."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "The settings: which buttons, colour, language and where the bar appears."
+      }
+    ],
+    "categories": [
+      "social",
+      "marketing"
+    ],
+    "accent": "#4D7C0F"
+  }
+}
