@@ -1,0 +1,148 @@
+{
+  "manifest": {
+    "description": "A search box for your whole site. Visitors press ⌘K or click Search and find pages by title and text as they type. No outside service.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "site-search",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Site Search",
+    "panels": [
+      {
+        "description": "A search box that finds your published pages as visitors type. Every page can be found by its title straight away; its text is added the first time someone opens it. Members-only content is never searchable. Best for sites of up to a few hundred pages.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show a search box"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "In the page header, beside the menu",
+                  "value": "header"
+                },
+                {
+                  "title": "Floating in the bottom corner",
+                  "value": "floating"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "placement",
+            "title": "Search button"
+          },
+          {
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "shortcut",
+            "title": "Open with ⌘K, Ctrl+K or /"
+          },
+          {
+            "description": "For the words on the button and in the box.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "The language of the page",
+                  "value": "auto"
+                },
+                {
+                  "title": "English",
+                  "value": "en"
+                },
+                {
+                  "title": "Nederlands",
+                  "value": "nl"
+                },
+                {
+                  "title": "Deutsch",
+                  "value": "de"
+                },
+                {
+                  "title": "Français",
+                  "value": "fr"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "language",
+            "title": "Language"
+          },
+          {
+            "description": "For the selected result and the floating button.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Colour"
+          },
+          {
+            "description": "More finds more, but makes every page a little heavier.",
+            "kind": {
+              "maximum": 2000,
+              "minimum": 100,
+              "type": "integer"
+            },
+            "name": "text-length",
+            "title": "Text searched per page (characters)"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: 404, thanks, legal/*. A * at the end means every page under it.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-pages",
+            "title": "Leave these pages out"
+          }
+        ],
+        "id": "site-search",
+        "placement": "site-settings",
+        "title": "Site search"
+      }
+    ],
+    "permissions": [
+      "storage",
+      "read-pages"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "A search box for your whole site. Press ⌘K and find any page as you type.",
+    "longDescription": "Site Search adds a search box to your site. Visitors click Search in the page header, or press ⌘K, Ctrl+K or / anywhere, and find pages by title and text as they type. The matching words are marked, the arrow keys move through the results and Enter opens one.\n\nThere is no outside search service and nothing to set up. Every published page can be found by its title straight away, and a page's text joins the search the first time someone opens it. The search itself runs in the visitor's browser, so it is instant and works the same on every host.\n\nIt is careful with what it shows. Only published pages are in it, and text that only signed-in members may see is never searchable: a page with members-only blocks, in the page itself or in any component it uses, can be found by its title only.\n\nIt suits sites of up to a few hundred pages. The box speaks English, Dutch, German or French, following the language of the page by default. It needs two permissions: storage, to keep what each page contributes, and read pages, to know which pages are published.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Search on a restaurant site: results appear as you type, with the matching words marked."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "On a phone the Search button sits in the header and the results fill the screen."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "The settings: where the button goes, the shortcut, language, colour and pages to leave out."
+      }
+    ],
+    "categories": [
+      "utilities",
+      "content"
+    ],
+    "accent": "#2563EB"
+  }
+}
