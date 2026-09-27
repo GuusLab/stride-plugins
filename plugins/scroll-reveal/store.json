@@ -1,0 +1,29 @@
+{
+  "store": {
+    "tagline": "Content fades and slides into place as visitors scroll to it.",
+    "longDescription": "Scroll Reveal gives your pages a little life. As visitors scroll, headings, text, images and cards fade and slide gently into place, so a long page feels like it unfolds instead of just sitting there.\n\nIt needs no setup. Out of the box every block inside the page content fades up 40 px as it comes into view. Anything already on screen when the page opens stays exactly where it is, and the header, menu and footer are never touched. In the site settings you can pick fade up, fade in, slide in from the left or right, or zoom in; choose a small, medium or large distance; reveal whole sections at once instead of block by block; or skip pages by slug.\n\nIt is built to be light. Modern browsers run it as a native CSS scroll-driven animation, so no code runs while visitors scroll. Other browsers get the same look from a tiny inline script. There are no third-party requests, fonts or images: about 1.5 KB in total.\n\nIt respects your visitors. Anyone who has asked their device for reduced motion sees a normal page with nothing moving. Nothing is ever hidden from visitors without JavaScript, from screen readers or search engines, or when printing, and jumping straight to the end of a page never leaves content invisible.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: the work below the fold fades up into place as the visitor scrolls."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up: blocks already on screen stay put while the next one rises in."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Whole sections sliding in from the left, with a large distance."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "Every option in the plugin's settings: effect, distance, what to reveal and pages to skip."
+      }
+    ],
+    "categories": [
+      "design"
+    ],
+    "accent": "#DB2777"
+  }
+}

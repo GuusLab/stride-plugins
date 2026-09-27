@@ -1,0 +1,146 @@
+{
+  "manifest": {
+    "description": "Page content fades and slides into place as visitors scroll to it. Native CSS scroll-driven animations with a tiny fallback, and nothing moves for visitors who prefer reduced motion.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "scroll-reveal",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Scroll Reveal",
+    "panels": [
+      {
+        "description": "How page content appears as visitors scroll. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Reveal content on scroll"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Fade up",
+                  "value": "fade-up"
+                },
+                {
+                  "title": "Fade in",
+                  "value": "fade"
+                },
+                {
+                  "title": "Slide in from the left",
+                  "value": "slide-left"
+                },
+                {
+                  "title": "Slide in from the right",
+                  "value": "slide-right"
+                },
+                {
+                  "title": "Zoom in",
+                  "value": "zoom"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "effect",
+            "title": "Effect"
+          },
+          {
+            "description": "How far content travels on its way in; for zoom in, how much it grows. Fade in does not move.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "Small (16 px)",
+                  "value": "small"
+                },
+                {
+                  "title": "Medium (40 px)",
+                  "value": "medium"
+                },
+                {
+                  "title": "Large (80 px)",
+                  "value": "large"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "distance",
+            "title": "Distance"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Headings, text, images and cards, one by one",
+                  "value": "blocks"
+                },
+                {
+                  "title": "Whole sections at once",
+                  "value": "sections"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "targets",
+            "title": "What to reveal"
+          },
+          {
+            "description": "Slugs, separated by commas, that never get the effect. For example: home, contact",
+            "kind": {
+              "maxLength": 400,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "exclude",
+            "title": "Pages to skip"
+          }
+        ],
+        "id": "scroll-reveal",
+        "placement": "site-settings",
+        "title": "Scroll reveal"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Content fades and slides into place as visitors scroll to it.",
+    "longDescription": "Scroll Reveal gives your pages a little life. As visitors scroll, headings, text, images and cards fade and slide gently into place, so a long page feels like it unfolds instead of just sitting there.\n\nIt needs no setup. Out of the box every block inside the page content fades up 40 px as it comes into view. Anything already on screen when the page opens stays exactly where it is, and the header, menu and footer are never touched. In the site settings you can pick fade up, fade in, slide in from the left or right, or zoom in; choose a small, medium or large distance; reveal whole sections at once instead of block by block; or skip pages by slug.\n\nIt is built to be light. Modern browsers run it as a native CSS scroll-driven animation, so no code runs while visitors scroll. Other browsers get the same look from a tiny inline script. There are no third-party requests, fonts or images: about 1.5 KB in total.\n\nIt respects your visitors. Anyone who has asked their device for reduced motion sees a normal page with nothing moving. Nothing is ever hidden from visitors without JavaScript, from screen readers or search engines, or when printing, and jumping straight to the end of a page never leaves content invisible.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: the work below the fold fades up into place as the visitor scrolls."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up: blocks already on screen stay put while the next one rises in."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Whole sections sliding in from the left, with a large distance."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "Every option in the plugin's settings: effect, distance, what to reveal and pages to skip."
+      }
+    ],
+    "categories": [
+      "design"
+    ],
+    "accent": "#DB2777"
+  }
+}

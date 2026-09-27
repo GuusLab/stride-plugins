@@ -1,0 +1,72 @@
+{
+  "manifestVersion": 1,
+  "id": "scroll-reveal",
+  "name": "Scroll Reveal",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Page content fades and slides into place as visitors scroll to it. Native CSS scroll-driven animations with a tiny fallback, and nothing moves for visitors who prefer reduced motion.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "scroll-reveal",
+      "title": "Scroll reveal",
+      "description": "How page content appears as visitors scroll. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Reveal content on scroll",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "effect",
+          "title": "Effect",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "fade-up", "title": "Fade up" },
+              { "value": "fade", "title": "Fade in" },
+              { "value": "slide-left", "title": "Slide in from the left" },
+              { "value": "slide-right", "title": "Slide in from the right" },
+              { "value": "zoom", "title": "Zoom in" }
+            ]
+          }
+        },
+        {
+          "name": "distance",
+          "title": "Distance",
+          "description": "How far content travels on its way in; for zoom in, how much it grows. Fade in does not move.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "small", "title": "Small (16 px)" },
+              { "value": "medium", "title": "Medium (40 px)" },
+              { "value": "large", "title": "Large (80 px)" }
+            ]
+          }
+        },
+        {
+          "name": "targets",
+          "title": "What to reveal",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "blocks", "title": "Headings, text, images and cards, one by one" },
+              { "value": "sections", "title": "Whole sections at once" }
+            ]
+          }
+        },
+        {
+          "name": "exclude",
+          "title": "Pages to skip",
+          "description": "Slugs, separated by commas, that never get the effect. For example: home, contact",
+          "kind": { "type": "text", "maxLength": 400, "multiline": false }
+        }
+      ]
+    }
+  ]
+}
