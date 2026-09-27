@@ -16,8 +16,9 @@
 // diff, commit and push.
 //
 // Needs a pushed, clean checkout (the release names the commit its source is
-// in), a `stride` built with the plugin host (STRIDE_BIN, default `stride` on
-// PATH), and Docker unless this is x86_64 Linux. Keys are read where they
+// in), the stride CLI (`npm i -g @guuslab/stride`; override with STRIDE_BIN,
+// e.g. STRIDE_BIN="$(command -v stride)"), and Docker unless this is x86_64
+// Linux. Keys are read where they
 // are and never copied:
 //   PUBLISHER_KEY  default ~/.stride/guuslab.key
 //   REGISTRY_KEY   default ~/.stride/stride-registry.key
@@ -51,7 +52,7 @@ for (const [name, path] of [['PUBLISHER_KEY', PUBLISHER_KEY], ['REGISTRY_KEY', R
   if (!existsSync(path)) die(`${name} not found at ${path}. Set ${name}=/path/to/key.`);
 }
 try { run(STRIDE, ['plugin'], { stdio: 'pipe' }); } catch (e) {
-  if (!String(e.stderr ?? '').includes('plugin')) die(`"${STRIDE}" does not run. Set STRIDE_BIN to a stride built with the plugin host.`);
+  if (!String(e.stderr ?? '').includes('plugin')) die(`"${STRIDE}" does not run. Install the CLI with "npm i -g @guuslab/stride", or set STRIDE_BIN to a stride with the plugin host.`);
 }
 if (run('git', ['status', '--porcelain']).trim()) die('The working tree has changes. Commit or stash them first.');
 run('git', ['fetch', '--quiet', 'origin', 'main']);

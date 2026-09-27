@@ -4,7 +4,9 @@ Guide for AI coding agents working in this repository.
 
 ## What this is
 
-The official plugin registry and store for [Stride](https://github.com/guuslab/stride).
+The official plugin registry and store for [Stride](https://www.npmjs.com/package/@guuslab/stride).
+Author-facing docs: `README.md` (quick start, submitting, running your own store)
+and `CONTRIBUTING.md` (the full submission recipe). Keep both in step with the tools.
 GitHub Pages serves `site/`: a signed `index.json`, the WebAssembly modules,
 store images and a gallery page. Every listed plugin is rebuilt from source in
 CI and must match its published SHA-256 byte for byte.
@@ -13,7 +15,7 @@ CI and must match its published SHA-256 byte for byte.
 
 ```
 plugins/<id>/     submissions: plugin.json (publisher, manifest, release, store), icon, screenshots
-sources/<id>/     first-party plugin sources (Rust, wasm32-unknown-unknown)
+sources/<id>/     source of every listed plugin (Rust, wasm32-unknown-unknown)
 pdk-rust/         vendored Stride Rust PDK
 publishers/       publisher records
 site/             what GitHub Pages serves (index.json, modules, images, index.html)
@@ -23,7 +25,20 @@ tools/            build, verify, render and demo scripts
 
 ## Build and test
 
-- `npm install` once for the Node tools.
+- The `stride` CLI comes from npm: `npm i -g @guuslab/stride` (or `npx @guuslab/stride ...`).
+  It is the release build with the plugin host, themes and the editor; there is no
+  need to build Stride from source. `stride --version` should list `plugins`.
+- Scripts that run Stride (`tools/demo-server.sh`, `tools/publish-new.mjs`) use
+  `stride` on `PATH`; override with `STRIDE_BIN`, e.g. `STRIDE_BIN="$(command -v stride)"`.
+  `tools/demo-server.sh` still reads the editor bundle from a Stride checkout
+  (`STRIDE_REPO`, default `../Stride`).
+- `npm install` once for the Node tools (`icon.mjs`, `preview.mjs`).
+- New plugin source: `stride plugin new <id> --dir sources/<id> --pdk ../../pdk-rust`,
+  then copy `tools/rust-toolchain.toml` into it and commit a `Cargo.lock`
+  (`cargo generate-lockfile`); the build runs with `--locked`.
+- `stride plugin dev sources/<id>`: runs every hook and panel in the sandbox and prints the result.
+- `stride plugin test sources/<id>`: the registry's checks (manifest, exports,
+  hooks with all permissions and with none). Run it after every build.
 - `tools/build-plugin.sh <id>`: reproducible release build; prints SHA-256 and size.
 - `node tools/verify.mjs`: what CI runs. Rebuilds every source, compares hashes,
   checks store images and the published copies under `site/`.
@@ -35,6 +50,9 @@ tools/            build, verify, render and demo scripts
 - `node tools/preview.mjs <id> <page.html> <out.html> [values.json] [slug]` runs a
   plugin's `on_page_render` over a page with storage seeded from a JSON file.
   Use it for store screenshots; `stride plugin test <dir>` is still the check.
+- The store lists Rust plugins only: the reference build is Rust. `stride plugin new --lang ts`
+  scaffolds a TypeScript plugin (imports `@guuslab/stride/pdk`, needs extism-js and
+  Binaryen), fine for private stores but not for `sources/` here.
 - On small machines, limit Cargo: `CARGO_BUILD_JOBS=3`.
 
 ## Publishing and signing
@@ -43,7 +61,8 @@ tools/            build, verify, render and demo scripts
   holds `manifest`, `publisher` and `store` but no `release`, and verify skips its
   source. `stride plugin index` refuses such a submission, so sign it before the
   next index: `node tools/publish-new.mjs [<id>...]` builds the reference modules,
-  signs the releases, lays out `site/`, signs the index and runs verify.
+  signs the releases, lays out `site/`, signs the index and runs verify. It needs a
+  pushed, clean checkout, Docker unless on x86_64 Linux, and the keys below.
 - Anything under `plugins/*/plugin.json` or `site/index.json` is signed. Changing
   a manifest, release or store field means re-signing: rebuild the index with
   `stride plugin index . --key ~/.stride/stride-registry.key --base-url https://guuslab.github.io/stride-plugins`,

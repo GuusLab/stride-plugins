@@ -8,9 +8,12 @@
 # Owner login: demo@stride.test / stride-demo-password-2026
 # Log: <workdir>/stride.log
 #
-# Override the binary with STRIDE_BIN=... (default: stride on PATH, else
-# $STRIDE_REPO/target/debug/stride) and the Stride checkout with STRIDE_REPO=...
-# (default: ../Stride next to this repository).
+# The binary is `stride` on PATH: install it with `npm i -g @guuslab/stride`.
+# Override it with STRIDE_BIN=... (e.g. STRIDE_BIN="$(command -v stride)";
+# without stride on PATH the default is $STRIDE_REPO/target/debug/stride).
+# The editor is served from a Stride checkout's apps/editor/dist, built here
+# if missing: STRIDE_REPO=... (default: ../Stride next to this repository).
+# For trying a plugin without any of this, `stride plugin dev <dir>` is enough.
 set -eu
 [ $# -eq 2 ] || { echo "usage: $0 <port> <workdir>" >&2; exit 2; }
 port=$1
