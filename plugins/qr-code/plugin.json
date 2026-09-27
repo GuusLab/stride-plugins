@@ -1,0 +1,148 @@
+{
+  "manifest": {
+    "description": "A QR code for every page: a button to show and download it, [qr-code] to place it on a page, and in the corner of printed pages. Made on your server.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render",
+      "on_publish"
+    ],
+    "id": "qr-code",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "QR Code",
+    "panels": [
+      {
+        "description": "QR codes that lead to your pages, for menus, flyers, posters and printed recipes. Type [qr-code] on a page to place one there. Changes show on your pages right away.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Make QR codes"
+          },
+          {
+            "description": "Visitors can show the code to someone else, or download it.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "button",
+            "title": "Show a QR code button on every page"
+          },
+          {
+            "description": "A printed page then leads back to the page online.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "print",
+            "title": "Print the code in the corner of every page"
+          },
+          {
+            "description": "For example https://example.com. Leave empty to use the address your site is published at, once it has a domain.",
+            "kind": {
+              "maxLength": 200,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "site-address",
+            "title": "Site address"
+          },
+          {
+            "description": "So you can see in your analytics how many visitors came from a scan.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "track",
+            "title": "Add ?ref=qr to the address"
+          },
+          {
+            "description": "Keep it dark: phones read dark codes on a light background best.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "colour",
+            "title": "Colour of the code"
+          },
+          {
+            "description": "For the button and the window that shows the code.",
+            "kind": {
+              "choices": [
+                {
+                  "title": "The language of the page",
+                  "value": "auto"
+                },
+                {
+                  "title": "English",
+                  "value": "en"
+                },
+                {
+                  "title": "Nederlands",
+                  "value": "nl"
+                },
+                {
+                  "title": "Deutsch",
+                  "value": "de"
+                },
+                {
+                  "title": "Français",
+                  "value": "fr"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "language",
+            "title": "Language"
+          },
+          {
+            "description": "Page addresses separated by commas, for example: home, checkout. A * at the end means every page under it. [qr-code] still works there.",
+            "kind": {
+              "maxLength": 1000,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-pages",
+            "title": "No button or print code on these pages"
+          }
+        ],
+        "id": "qr-code",
+        "placement": "site-settings",
+        "title": "QR codes"
+      }
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "A QR code for every page, for menus, flyers, posters and printed recipes.",
+    "longDescription": "QR Code makes a QR code for every page of your site. Visitors can open it from a small button to show the page to someone else or download it, you can place it on a page by typing [qr-code], and printed pages carry it in a corner, so a printed menu, flyer or recipe leads straight back to the page online.\n\nThe codes are drawn on your own server as sharp vector images. Nothing is fetched from a QR service, and no visitor is tracked. If you want to know how many people came from a scan, switch on \"Add ?ref=qr\" and look for it in your analytics.\n\nThe codes point to your site's address. Fill it in, or let the plugin pick up the address your site is published at once it has a domain. Without an address it shows nothing, rather than a code that goes nowhere.\n\nThe words come in English, Dutch, German and French. The plugin asks for one permission, storage, to keep its settings.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "The QR code of the menu page, ready to scan or download."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Printed, every page carries its own code in the corner."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "The settings: button, print, site address, scan tracking, colour and language."
+      }
+    ],
+    "categories": [
+      "marketing",
+      "utilities"
+    ],
+    "accent": "#334155"
+  }
+}
