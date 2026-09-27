@@ -1,0 +1,161 @@
+{
+  "manifest": {
+    "description": "A Related reading block at the end of articles and posts, with the pages that share the most topics or title words. Cards or a list, built when the page is published.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "related-pages",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Related Pages",
+    "panels": [
+      {
+        "description": "The Related reading block at the end of articles and posts. Changes apply to a page the next time it is published; publish the whole site to refresh every block.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show related pages"
+          },
+          {
+            "description": "Leave empty for \"Related reading\".",
+            "kind": {
+              "maxLength": 60,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "heading",
+            "title": "Heading"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Cards",
+                  "value": "cards"
+                },
+                {
+                  "title": "List",
+                  "value": "list"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "style",
+            "title": "Style"
+          },
+          {
+            "description": "Between 1 and 6. Fewer are shown when fewer pages are related.",
+            "kind": {
+              "maximum": 6,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "name": "count",
+            "title": "How many pages"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Articles and posts",
+                  "value": "articles"
+                },
+                {
+                  "title": "Every page except the home page",
+                  "value": "all"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "show-on",
+            "title": "Show on"
+          },
+          {
+            "description": "Optional. Folders, separated by commas, that hold your articles, for example: blog, writing. Only pages in them get the block or are suggested.",
+            "kind": {
+              "maxLength": 200,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "folders",
+            "title": "Only in these folders"
+          },
+          {
+            "description": "Optional. One page per line: its slug, a colon, then topics separated by commas. For example: blog/sourdough-starter: baking, bread. Pages that share a topic are suggested first.",
+            "kind": {
+              "maxLength": 8000,
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "topics",
+            "title": "Topics"
+          },
+          {
+            "description": "Topic labels and the hover line. Leave empty for violet (#6d28d9).",
+            "kind": {
+              "type": "color"
+            },
+            "name": "color",
+            "title": "Accent colour"
+          },
+          {
+            "description": "Slugs, separated by commas, that never get the block and are never suggested. For example: contact, privacy",
+            "kind": {
+              "maxLength": 400,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "exclude",
+            "title": "Pages to skip"
+          }
+        ],
+        "id": "related-pages",
+        "placement": "site-settings",
+        "title": "Related pages"
+      }
+    ],
+    "permissions": [
+      "read-pages",
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "accent": "#7C3AED",
+    "categories": [
+      "content"
+    ],
+    "icon": "icon.png",
+    "longDescription": "Related Pages ends your articles and posts with a short Related reading block: the pages on your site that have the most in common with the one just read. Readers who reach the end get somewhere to go next instead of a dead end.\n\nIt needs no setup. Out of the box it shows up to three cards, matched on the words in page titles and on the folder a page sits in, and it only appears on article-like pages, so your about and contact pages stay as they are. Pages with nothing in common are never suggested.\n\nIn the site settings you can switch to a compact list, show one to six pages, change the heading and accent colour, limit it to folders such as blog, skip pages, or show it on every page. Add topics per page and pages that share a topic are suggested first, with the topic shown above the title.\n\nIt is built to be light: about 2 KB of CSS, no JavaScript, no fonts, no images and no third-party requests. The block is an aside with a heading and a real list of links, it follows your theme's font and text colour, has a visible focus ring, respects reduced motion and is hidden when printing.\n\nIt asks for two permissions. Read pages lets it list your published pages and their titles; it reads nothing else and changes nothing. Storage keeps its settings. Refuse storage and it runs with the defaults; refuse read pages and it leaves your pages untouched. The block is built when a page is published, so publish the site again after adding new articles.",
+    "screenshots": [
+      {
+        "caption": "Related articles as cards at the end of the page, labelled by shared topic.",
+        "file": "screenshots/01.png"
+      },
+      {
+        "caption": "Close up: the shared topic above each title, and a violet border on hover.",
+        "file": "screenshots/02.png"
+      },
+      {
+        "caption": "The list style, with your own heading.",
+        "file": "screenshots/03.png"
+      },
+      {
+        "caption": "Every option in Settings: style, count, where it shows, folders, topics, colour and pages to skip.",
+        "file": "screenshots/04.png"
+      }
+    ],
+    "tagline": "Related reading at the end of every article, matched on topics and titles."
+  }
+}

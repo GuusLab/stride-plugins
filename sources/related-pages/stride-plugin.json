@@ -1,0 +1,86 @@
+{
+  "manifestVersion": 1,
+  "id": "related-pages",
+  "name": "Related Pages",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A Related reading block at the end of articles and posts, with the pages that share the most topics or title words. Cards or a list, built when the page is published.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["read-pages", "storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "related-pages",
+      "title": "Related pages",
+      "description": "The Related reading block at the end of articles and posts. Changes apply to a page the next time it is published; publish the whole site to refresh every block.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show related pages",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "heading",
+          "title": "Heading",
+          "description": "Leave empty for \"Related reading\".",
+          "kind": { "type": "text", "maxLength": 60, "multiline": false }
+        },
+        {
+          "name": "style",
+          "title": "Style",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "cards", "title": "Cards" },
+              { "value": "list", "title": "List" }
+            ]
+          }
+        },
+        {
+          "name": "count",
+          "title": "How many pages",
+          "description": "Between 1 and 6. Fewer are shown when fewer pages are related.",
+          "kind": { "type": "integer", "minimum": 1, "maximum": 6 }
+        },
+        {
+          "name": "show-on",
+          "title": "Show on",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "articles", "title": "Articles and posts" },
+              { "value": "all", "title": "Every page except the home page" }
+            ]
+          }
+        },
+        {
+          "name": "folders",
+          "title": "Only in these folders",
+          "description": "Optional. Folders, separated by commas, that hold your articles, for example: blog, writing. Only pages in them get the block or are suggested.",
+          "kind": { "type": "text", "maxLength": 200, "multiline": false }
+        },
+        {
+          "name": "topics",
+          "title": "Topics",
+          "description": "Optional. One page per line: its slug, a colon, then topics separated by commas. For example: blog/sourdough-starter: baking, bread. Pages that share a topic are suggested first.",
+          "kind": { "type": "text", "maxLength": 8000, "multiline": true }
+        },
+        {
+          "name": "color",
+          "title": "Accent colour",
+          "description": "Topic labels and the hover line. Leave empty for violet (#6d28d9).",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "exclude",
+          "title": "Pages to skip",
+          "description": "Slugs, separated by commas, that never get the block and are never suggested. For example: contact, privacy",
+          "kind": { "type": "text", "maxLength": 400, "multiline": false }
+        }
+      ]
+    }
+  ]
+}
