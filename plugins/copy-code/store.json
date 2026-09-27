@@ -1,0 +1,25 @@
+{
+  "store": {
+    "tagline": "A copy button on every code block, with a language label and line numbers.",
+    "longDescription": "Copy Code puts a small toolbar on every code block on your site: the language on the left and a Copy button on the right. One click copies the code, and the button says Copied with a check mark so visitors know it worked.\n\nIt works with Stride's text blocks. Write your code between two lines of three backticks, with the language after the first, like ```bash, and it is published as a real code block. Code blocks from your theme or another plugin get the button too.\n\nIt needs no setup. Out of the box you get a clean dark code block with a language label. In the site settings you can switch to a clean light style, or keep your theme's own style and only add the button. You can turn on line numbers, change the button text for a site in another language, or skip pages by slug.\n\nIt is built to be light. There is no highlighting library, no web font and no third-party request: a few kilobytes of inline CSS and JavaScript, and only on pages that have code.\n\nIt is accessible by default. The button is a real button with a visible label and focus ring, and screen readers hear Copied. Line numbers are never read out or copied. If the browser blocks the clipboard, the code is selected and the button says which keys to press. Without JavaScript, visitors see the plain code block.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: clean dark code blocks with the language and a Copy button that says Copied."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up: the clean light style with line numbers, which are never copied."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Every option in Settings: style, language label, line numbers, button text and pages to skip."
+      }
+    ],
+    "categories": [
+      "developer"
+    ],
+    "accent": "#0F172A"
+  }
+}
