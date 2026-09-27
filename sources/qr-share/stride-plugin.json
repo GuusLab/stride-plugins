@@ -1,0 +1,37 @@
+{
+  "manifestVersion": 1,
+  "id": "qr-share",
+  "name": "QR Share",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A QR code of every page's address, behind a small button or as a card at the bottom, and on printed pages. Generated on your server as inline SVG: no image service, no tracking.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/qr-share",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render", "on_publish"],
+  "panels": [
+    {
+      "id": "qr-share",
+      "title": "QR code",
+      "description": "A QR code that opens the current page on a phone. It is made on your server; nothing loads from another site.",
+      "placement": "site-settings",
+      "fields": [
+        { "name": "enabled", "title": "Show QR codes", "description": "Turn this off to leave every page exactly as it was rendered.", "kind": { "type": "boolean" } },
+        { "name": "placement", "title": "Where", "description": "A round button that opens the code, or a card at the bottom of every page.", "kind": { "type": "enum", "choices": [
+          { "value": "button", "title": "Button in the corner" },
+          { "value": "footer", "title": "Card at the bottom of the page" }
+        ] } },
+        { "name": "side", "title": "Button side", "description": "Which bottom corner the button sits in.", "kind": { "type": "enum", "choices": [
+          { "value": "right", "title": "Right" },
+          { "value": "left", "title": "Left" }
+        ] } },
+        { "name": "heading", "title": "Heading", "description": "The line next to the code. Leave it empty for no heading.", "kind": { "type": "text", "maxLength": 60, "multiline": false } },
+        { "name": "accent", "title": "Button colour", "description": "The round button and the download button. The code itself is always black on white, so every phone can read it.", "kind": { "type": "color" } },
+        { "name": "print", "title": "Print the code", "description": "With the button, also print the code at the bottom of printed pages. Handy for posters and menus.", "kind": { "type": "boolean" } },
+        { "name": "download", "title": "Download button", "description": "Lets visitors save the code as an SVG file, sharp at any size.", "kind": { "type": "boolean" } },
+        { "name": "exclude", "title": "Never on", "description": "Slugs separated by commas. A trailing * matches a prefix, e.g. \"legal/*\".", "kind": { "type": "text", "maxLength": 200, "multiline": false } },
+        { "name": "site-address", "title": "Site address", "description": "e.g. https://example.com. Optional: learned when you publish on a domain. Without an address pages are left as they are.", "kind": { "type": "text", "maxLength": 200, "multiline": false } }
+      ]
+    }
+  ]
+}

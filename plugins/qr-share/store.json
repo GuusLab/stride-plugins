@@ -1,0 +1,29 @@
+{
+  "store": {
+    "tagline": "A QR code of every page, for phones, posters and menus. Made on your server.",
+    "longDescription": "QR Share gives every page a QR code of its own address, so a visitor can open it on their phone in one scan.\n\nBy default a small round button sits in the bottom corner. A click opens a card with the code, the address and a Download QR code button. Print the page and the code is at the bottom of the paper, which turns any page into a poster, a flyer, a menu or a price card that leads back to your site. Prefer it always visible? Show it as a card at the bottom of every page instead.\n\nThe code is made by the plugin on your own server, as a sharp inline SVG. There is no QR image service, no script from another site and no tracking: nothing is fetched from anyone else, before or after a visitor clicks.\n\nIt needs no setup on a site with a domain: the address is learned when you publish. You can also set it yourself, and a page's own canonical link always wins. The code is black on white with error correction that survives a smudge, and uses the smallest size that fits.\n\nIt is accessible: a real keyboard-friendly button that works without JavaScript, Escape to close, a visible focus ring, the code labelled with the address it opens and that address shown as text.\n\nIt asks for one permission, storage, to keep its settings and your site's address. Refuse it and pages with a full canonical link still get their code.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: a round button in the corner opens the page's QR code."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up: the code, the address it opens and a button to download it as SVG."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Printed, the page ends with its QR code. Ideal for posters, flyers and menus."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "Every option in Settings: button or card, side, heading, colour, print and download."
+      }
+    ],
+    "categories": [
+      "social"
+    ],
+    "accent": "#16A34A"
+  }
+}

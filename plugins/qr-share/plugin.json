@@ -1,0 +1,159 @@
+{
+  "manifest": {
+    "manifestVersion": 1,
+    "id": "qr-share",
+    "name": "QR Share",
+    "version": "1.0.0",
+    "publisher": "guuslab",
+    "description": "A QR code of every page's address, behind a small button or as a card at the bottom, and on printed pages. Generated on your server as inline SVG: no image service, no tracking.",
+    "license": "MIT",
+    "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/qr-share",
+    "permissions": [
+      "storage"
+    ],
+    "hooks": [
+      "on_page_render",
+      "on_publish"
+    ],
+    "panels": [
+      {
+        "id": "qr-share",
+        "title": "QR code",
+        "description": "A QR code that opens the current page on a phone. It is made on your server; nothing loads from another site.",
+        "placement": "site-settings",
+        "fields": [
+          {
+            "name": "enabled",
+            "title": "Show QR codes",
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "placement",
+            "title": "Where",
+            "description": "A round button that opens the code, or a card at the bottom of every page.",
+            "kind": {
+              "type": "enum",
+              "choices": [
+                {
+                  "value": "button",
+                  "title": "Button in the corner"
+                },
+                {
+                  "value": "footer",
+                  "title": "Card at the bottom of the page"
+                }
+              ]
+            }
+          },
+          {
+            "name": "side",
+            "title": "Button side",
+            "description": "Which bottom corner the button sits in.",
+            "kind": {
+              "type": "enum",
+              "choices": [
+                {
+                  "value": "right",
+                  "title": "Right"
+                },
+                {
+                  "value": "left",
+                  "title": "Left"
+                }
+              ]
+            }
+          },
+          {
+            "name": "heading",
+            "title": "Heading",
+            "description": "The line next to the code. Leave it empty for no heading.",
+            "kind": {
+              "type": "text",
+              "maxLength": 60,
+              "multiline": false
+            }
+          },
+          {
+            "name": "accent",
+            "title": "Button colour",
+            "description": "The round button and the download button. The code itself is always black on white, so every phone can read it.",
+            "kind": {
+              "type": "color"
+            }
+          },
+          {
+            "name": "print",
+            "title": "Print the code",
+            "description": "With the button, also print the code at the bottom of printed pages. Handy for posters and menus.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "download",
+            "title": "Download button",
+            "description": "Lets visitors save the code as an SVG file, sharp at any size.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "exclude",
+            "title": "Never on",
+            "description": "Slugs separated by commas. A trailing * matches a prefix, e.g. \"legal/*\".",
+            "kind": {
+              "type": "text",
+              "maxLength": 200,
+              "multiline": false
+            }
+          },
+          {
+            "name": "site-address",
+            "title": "Site address",
+            "description": "e.g. https://example.com. Optional: learned when you publish on a domain. Without an address pages are left as they are.",
+            "kind": {
+              "type": "text",
+              "maxLength": 200,
+              "multiline": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "A QR code of every page, for phones, posters and menus. Made on your server.",
+    "longDescription": "QR Share gives every page a QR code of its own address, so a visitor can open it on their phone in one scan.\n\nBy default a small round button sits in the bottom corner. A click opens a card with the code, the address and a Download QR code button. Print the page and the code is at the bottom of the paper, which turns any page into a poster, a flyer, a menu or a price card that leads back to your site. Prefer it always visible? Show it as a card at the bottom of every page instead.\n\nThe code is made by the plugin on your own server, as a sharp inline SVG. There is no QR image service, no script from another site and no tracking: nothing is fetched from anyone else, before or after a visitor clicks.\n\nIt needs no setup on a site with a domain: the address is learned when you publish. You can also set it yourself, and a page's own canonical link always wins. The code is black on white with error correction that survives a smudge, and uses the smallest size that fits.\n\nIt is accessible: a real keyboard-friendly button that works without JavaScript, Escape to close, a visible focus ring, the code labelled with the address it opens and that address shown as text.\n\nIt asks for one permission, storage, to keep its settings and your site's address. Refuse it and pages with a full canonical link still get their code.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: a round button in the corner opens the page's QR code."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up: the code, the address it opens and a button to download it as SVG."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Printed, the page ends with its QR code. Ideal for posters, flyers and menus."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "Every option in Settings: button or card, side, heading, colour, print and download."
+      }
+    ],
+    "categories": [
+      "social"
+    ],
+    "accent": "#16A34A"
+  }
+}
