@@ -1,0 +1,65 @@
+{
+  "manifestVersion": 1,
+  "id": "last-updated",
+  "name": "Last Updated",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Shows \"Last updated on 27 September 2026\" on pages and posts, in Dutch or English to match the page. The date is the day the page was last published with new edits, taken from Stride's own records.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/last-updated",
+  "permissions": ["storage", "read-pages"],
+  "hooks": ["on_page_render", "on_publish"],
+  "panels": [
+    {
+      "id": "last-updated",
+      "title": "Last updated",
+      "description": "A short line with the date a page last changed. Dates are recorded when a page is published with new edits; publish the site once to record them all.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show the date",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "position",
+          "title": "Position",
+          "description": "Right under the page title, or at the end of the content.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "below-title", "title": "Under the title" },
+              { "value": "end", "title": "End of the content" }
+            ]
+          }
+        },
+        {
+          "name": "format",
+          "title": "Date format",
+          "description": "Month names follow the page language: Dutch for nl pages, English for the rest.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "long", "title": "27 September 2026" },
+              { "value": "short", "title": "27 Sep 2026" },
+              { "value": "numeric", "title": "27-09-2026 (Dutch) or 2026-09-27 (English)" }
+            ]
+          }
+        },
+        {
+          "name": "label",
+          "title": "Label",
+          "description": "The words before the date. Leave it empty for \"Last updated on\", or \"Laatst bijgewerkt op\" on Dutch pages.",
+          "kind": { "type": "text", "maxLength": 40, "multiline": false }
+        },
+        {
+          "name": "skip-pages",
+          "title": "Pages to skip",
+          "description": "Addresses without a date, separated by commas, such as home, contact. The home page is home.",
+          "kind": { "type": "text", "maxLength": 2000, "multiline": false }
+        }
+      ]
+    }
+  ]
+}

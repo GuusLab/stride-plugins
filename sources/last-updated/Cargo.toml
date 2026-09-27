@@ -1,0 +1,25 @@
+# Standalone on purpose: this crate builds for wasm32-unknown-unknown.
+[workspace]
+
+[package]
+name = "last-updated"
+version = "1.0.0"
+edition = "2024"
+license = "MIT"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[dependencies]
+# `plugin_fn` comes from extism-pdk: it is what turns a Rust function
+# into a WebAssembly export.
+extism-pdk = "1.4.1"
+stride-pdk = { path = "../../pdk-rust" }

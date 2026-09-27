@@ -1,0 +1,29 @@
+{
+  "store": {
+    "tagline": "Shows when each page last changed, in Dutch or English, under the title.",
+    "longDescription": "Last Updated adds one quiet line to your pages and posts: \"Last updated on 27 September 2026\". Readers see at a glance that a guide, price list or article is still current, and you never have to type a date by hand again.\n\nThe language follows the page. Dutch pages read \"Laatst bijgewerkt op 27 september 2026\", every other page gets English. The date is recorded when a page is published with new edits, so re-publishing the whole site does not make every page look freshly updated. Right after installing, publish the site once and every page gets its date.\n\nIn Site settings you can put the line under the title or at the end of the content, choose a long, short or numeric date, write your own label and list pages that should never show a date. The home page is skipped by default.\n\nThe line is plain, accessible HTML with a real <time> element. It inherits your theme's font and colour, adds about 450 bytes of inline CSS and a small icon that screen readers skip. No JavaScript and no third-party requests.\n\nIt asks for storage, to keep its settings and the dates, and read-pages, to read the list of pages when one is published: a plugin has no clock of its own, so the date comes from Stride's own records. It never reads page content. If either permission is refused, pages are simply left as they are.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: a quiet date under the title of an article, in the theme's own font and colour."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close-up: the date sits between the title and the byline, as a real <time> element."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Dutch pages get Dutch automatically: \"Laatst bijgewerkt op 27 september 2026\"."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "Site settings: position, date format, your own label and pages to skip."
+      }
+    ],
+    "categories": [
+      "content"
+    ],
+    "accent": "#475569"
+  }
+}
