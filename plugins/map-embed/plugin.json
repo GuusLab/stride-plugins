@@ -1,0 +1,142 @@
+{
+  "manifest": {
+    "manifestVersion": 1,
+    "id": "map-embed",
+    "name": "Privacy Map",
+    "version": "1.0.0",
+    "publisher": "guuslab",
+    "description": "An OpenStreetMap of your location that loads only after a visitor clicks Show map. Until then it is your address on a placeholder, and nothing is fetched from another site.",
+    "license": "MIT",
+    "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/map-embed",
+    "permissions": [
+      "storage"
+    ],
+    "hooks": [
+      "on_page_render"
+    ],
+    "panels": [
+      {
+        "id": "map-embed",
+        "title": "Privacy map",
+        "description": "Type [map] on a page where the map should go, or pick a page below to add it at the end. The map comes from OpenStreetMap and loads only when a visitor clicks Show map. Changes apply to a page the next time it is published.",
+        "placement": "site-settings",
+        "fields": [
+          {
+            "name": "enabled",
+            "title": "Show the map",
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "name",
+            "title": "Place name",
+            "description": "The heading on the map, like your business name. Optional.",
+            "kind": {
+              "type": "text",
+              "maxLength": 80,
+              "multiline": false
+            }
+          },
+          {
+            "name": "address",
+            "title": "Address",
+            "description": "Shown on the placeholder, one line per line of the address.",
+            "kind": {
+              "type": "text",
+              "maxLength": 240,
+              "multiline": true
+            }
+          },
+          {
+            "name": "location",
+            "title": "Location on the map",
+            "description": "Paste a link from openstreetmap.org, or coordinates like 52.3731, 4.8922. On openstreetmap.org, right-click your place and choose Show address to find them.",
+            "kind": {
+              "type": "text",
+              "maxLength": 300,
+              "multiline": false
+            }
+          },
+          {
+            "name": "zoom",
+            "title": "Zoom",
+            "description": "From 3 (a country) to 19 (a single building). 16 shows the streets around you.",
+            "kind": {
+              "type": "integer",
+              "minimum": 3,
+              "maximum": 19
+            }
+          },
+          {
+            "name": "height",
+            "title": "Height in pixels",
+            "kind": {
+              "type": "integer",
+              "minimum": 200,
+              "maximum": 720
+            }
+          },
+          {
+            "name": "page",
+            "title": "Also add it at the end of this page",
+            "description": "A page's slug, like contact. Leave it empty to show the map only where you type [map].",
+            "kind": {
+              "type": "text",
+              "maxLength": 120,
+              "multiline": false
+            }
+          },
+          {
+            "name": "remember",
+            "title": "Remember the visitor's choice",
+            "description": "After a visitor shows a map once, show maps straight away on their next visits. The choice is kept in their own browser only.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "colour",
+            "title": "Button colour",
+            "kind": {
+              "type": "color"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "An OpenStreetMap that loads only when a visitor asks for it.",
+    "longDescription": "Privacy Map shows where you are without handing your visitors to a map company the moment they open a page.\n\nUntil somebody clicks Show map, the map is a placeholder drawn by the page itself: your place name, your address and a button. No iframe, image, script or font comes from another site, so there is nothing to ask consent for. One click loads the real OpenStreetMap, with your pin, zoom controls and the usual attribution. A short note under the button says what happens next.\n\nType [map] on any page where the map should go, or pick a page, such as contact, and the map is added at the end of it. Set the location by pasting a link from openstreetmap.org or coordinates like 52.3731, 4.8922, then choose a zoom and a height. The button takes a colour of your choice.\n\nIf you like, the plugin can remember a visitor's choice in their own browser, so maps show straight away on their next visit. It is off by default.\n\nIt is accessible and light: a real link that still leads to the map without JavaScript, a keyboard-friendly button with a visible focus ring, a labelled map frame, and well under a kilobyte of script.\n\nIt asks for one permission, storage, to keep its settings. Without it no map is shown, because there is no location to show.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Before a click: your address on a placeholder, and nothing loaded from another site."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up: place name, address, a Show map button and a note on what it loads."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "One click later: the real OpenStreetMap with your pin, on the same page."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "The settings: place name, address, location, zoom, height and the page to add it to."
+      }
+    ],
+    "categories": [
+      "marketing"
+    ],
+    "accent": "#EA580C"
+  }
+}

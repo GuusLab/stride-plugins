@@ -1,0 +1,15 @@
+{
+  "store": {
+    "tagline": "An OpenStreetMap that loads only when a visitor asks for it.",
+    "longDescription": "Privacy Map shows where you are without handing your visitors to a map company the moment they open a page.\n\nUntil somebody clicks Show map, the map is a placeholder drawn by the page itself: your place name, your address and a button. No iframe, image, script or font comes from another site, so there is nothing to ask consent for. One click loads the real OpenStreetMap, with your pin, zoom controls and the usual attribution. A short note under the button says what happens next.\n\nType [map] on any page where the map should go, or pick a page, such as contact, and the map is added at the end of it. Set the location by pasting a link from openstreetmap.org or coordinates like 52.3731, 4.8922, then choose a zoom and a height. The button takes a colour of your choice.\n\nIf you like, the plugin can remember a visitor's choice in their own browser, so maps show straight away on their next visit. It is off by default.\n\nIt is accessible and light: a real link that still leads to the map without JavaScript, a keyboard-friendly button with a visible focus ring, a labelled map frame, and well under a kilobyte of script.\n\nIt asks for one permission, storage, to keep its settings. Without it no map is shown, because there is no location to show.",
+    "icon": "icon.png",
+    "screenshots": [
+      { "file": "screenshots/01.png", "caption": "Before a click: your address on a placeholder, and nothing loaded from another site." },
+      { "file": "screenshots/02.png", "caption": "Close up: place name, address, a Show map button and a note on what it loads." },
+      { "file": "screenshots/03.png", "caption": "One click later: the real OpenStreetMap with your pin, on the same page." },
+      { "file": "screenshots/04.png", "caption": "The settings: place name, address, location, zoom, height and the page to add it to." }
+    ],
+    "categories": ["marketing"],
+    "accent": "#EA580C"
+  }
+}
