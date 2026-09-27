@@ -96,6 +96,27 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "3f0a329f12b356b29849558141c5f0d7ac2e73bd4cbf47b035b85a3f468db3bc",
+    "hooks": [
+      "on_page_render",
+      "on_publish"
+    ],
+    "manifestHash": "d06370111e310be8e40229a670559b43a66201c5197e64507e2e782ed50dff53",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/external-links/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "c1b5f531b8e5a5802ff749c64731864e3baee6fe614c0494858756584151c7f6d1fd392ad4ef17d4ff9ae5cd061961e5a273b771a2293760648e52fde6385f0c",
+    "size": 188383,
+    "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/external-links/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Links to other sites open in a new tab, safely, with a small arrow.",
     "longDescription": "External Links takes care of every link on your site that points to another website. It opens them in a new tab, so visitors do not lose your page, and adds rel=\"noopener noreferrer\" so the other site cannot reach back into yours.\n\nA small arrow after the link shows readers they are about to leave, and screen readers hear \"opens in a new tab\". You can also ask search engines not to follow the links (nofollow), or mark them as paid or affiliate links (sponsored).\n\nYour own pages are never touched: links within your site are left as they are, and the plugin picks up your site's domain when you publish. You can also list your other domains, such as a separate shop, so they count as your own. Links you already set to open in a certain way keep that, and domains you name, such as youtube.com, are left completely alone.\n\nEverything happens once, when a page is published: there is no JavaScript on your pages. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",

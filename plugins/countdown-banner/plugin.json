@@ -223,6 +223,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "121f10876d855c330c98f6715d43d10993718989fe7f44ba26eccf200cd8eaad",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "d649ac45942d77774904d5c4647bc2fd110277fe21c318d178da87bf920519aa",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/countdown-banner/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "890d55be8cc71f5bd1f67f17cd9a14b64ad8f13ea7cd2a41a369fe1a1ddc45b356635ff356734b73e14f08d1a56c08e581e8926d82ffd6d1f7dc0010aec43603",
+    "size": 186947,
+    "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/countdown-banner/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Count down to your sale, launch or order deadline, then step aside.",
     "longDescription": "Countdown Banner shows a bar that counts down the days, hours, minutes and seconds to a moment you choose: the end of a sale, a product launch, the last day to order before the holidays. Add a button, such as Shop the sale, and pick a colour; the text colour is chosen for you so it stays readable.\n\nPut it at the top of every page, or let it float at the bottom of the screen. The words are available in English, Dutch, German and French. Set the time in your own time zone, and every visitor sees the right countdown wherever they are, summer time included.\n\nWhen the time is up the bar hides itself, or shows a closing message such as The sale has ended. The clock runs in the visitor's browser, so it stays right without publishing again. Without JavaScript, visitors still see the message and the date it ends.\n\nThe plugin asks for one permission, storage, to keep the countdown. You can skip pages, such as your checkout.",

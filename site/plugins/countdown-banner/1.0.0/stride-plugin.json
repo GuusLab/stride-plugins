@@ -1,0 +1,219 @@
+{
+  "manifestVersion": 1,
+  "id": "countdown-banner",
+  "name": "Countdown Banner",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A bar that counts down the days, hours and minutes to your sale, launch or order deadline, with a button, and hides itself when the time is up.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "countdown-banner",
+      "title": "Countdown banner",
+      "description": "A countdown shown on every page of this site. The clock runs in the visitor's browser, so it stays right without publishing again. Other changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show the countdown",
+          "description": "Turn this off to hide it without losing your settings.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "message",
+          "title": "Message",
+          "description": "For example: Summer sale ends in. Leave it empty to show nothing.",
+          "kind": {
+            "type": "text",
+            "maxLength": 120,
+            "multiline": false
+          }
+        },
+        {
+          "name": "ends",
+          "title": "Ends at",
+          "description": "Year-month-day and time, for example 2026-12-24 18:00. A date alone ends at 23:59.",
+          "kind": {
+            "type": "text",
+            "maxLength": 16,
+            "multiline": false
+          }
+        },
+        {
+          "name": "timezone",
+          "title": "Time zone of that time",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "europe-amsterdam",
+                "title": "Amsterdam, Brussels, Berlin, Paris"
+              },
+              {
+                "value": "europe-london",
+                "title": "London, Dublin, Lisbon"
+              },
+              {
+                "value": "europe-helsinki",
+                "title": "Helsinki, Athens, Kyiv"
+              },
+              {
+                "value": "europe-istanbul",
+                "title": "Istanbul"
+              },
+              {
+                "value": "utc",
+                "title": "UTC"
+              },
+              {
+                "value": "america-new-york",
+                "title": "New York, Toronto"
+              },
+              {
+                "value": "america-chicago",
+                "title": "Chicago, Mexico City"
+              },
+              {
+                "value": "america-denver",
+                "title": "Denver"
+              },
+              {
+                "value": "america-los-angeles",
+                "title": "Los Angeles, Vancouver"
+              },
+              {
+                "value": "asia-dubai",
+                "title": "Dubai"
+              },
+              {
+                "value": "asia-singapore",
+                "title": "Singapore, Hong Kong"
+              },
+              {
+                "value": "australia-sydney",
+                "title": "Sydney, Melbourne"
+              }
+            ]
+          }
+        },
+        {
+          "name": "link-text",
+          "title": "Button text",
+          "description": "For example: Shop the sale. Leave empty for no button.",
+          "kind": {
+            "type": "text",
+            "maxLength": 40,
+            "multiline": false
+          }
+        },
+        {
+          "name": "link-url",
+          "title": "Button link",
+          "description": "A page on your site such as /shop, or a full address.",
+          "kind": {
+            "type": "text",
+            "maxLength": 500,
+            "multiline": false
+          }
+        },
+        {
+          "name": "after",
+          "title": "When the time is up",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "hide",
+                "title": "Hide the bar"
+              },
+              {
+                "value": "message",
+                "title": "Show the message below"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ended-message",
+          "title": "Message after the end",
+          "description": "For example: The sale has ended. Thanks for shopping with us.",
+          "kind": {
+            "type": "text",
+            "maxLength": 120,
+            "multiline": false
+          }
+        },
+        {
+          "name": "language",
+          "title": "Language of the clock",
+          "description": "For the words days, hours and the end date.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "en",
+                "title": "English"
+              },
+              {
+                "value": "nl",
+                "title": "Nederlands"
+              },
+              {
+                "value": "de",
+                "title": "Deutsch"
+              },
+              {
+                "value": "fr",
+                "title": "Français"
+              }
+            ]
+          }
+        },
+        {
+          "name": "position",
+          "title": "Position",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "top",
+                "title": "A bar at the top of the page"
+              },
+              {
+                "value": "bottom",
+                "title": "Floating at the bottom of the screen"
+              }
+            ]
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Colour",
+          "description": "The text colour is chosen for you so it stays readable.",
+          "kind": {
+            "type": "color"
+          }
+        },
+        {
+          "name": "skip-pages",
+          "title": "Skip these pages",
+          "description": "Page addresses separated by commas, for example: checkout, blog/*. A * at the end means every page under it.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}

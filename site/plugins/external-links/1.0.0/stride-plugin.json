@@ -1,0 +1,92 @@
+{
+  "manifestVersion": 1,
+  "id": "external-links",
+  "name": "External Links",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Opens links to other sites in a new tab, adds a small arrow so readers know they are leaving, and sets noopener and optional nofollow for you. No JavaScript.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render",
+    "on_publish"
+  ],
+  "panels": [
+    {
+      "id": "external-links",
+      "title": "External links",
+      "description": "How links to other websites behave on this site. Links to your own pages never change. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Handle links to other sites",
+          "description": "Turn this off to leave every link exactly as it was.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "new-tab",
+          "title": "Open them in a new tab",
+          "description": "A link you already set to open in a certain way keeps that. Screen readers hear \"opens in a new tab\".",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "icon",
+          "title": "Show a small arrow after the link",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "nofollow",
+          "title": "Search engines",
+          "description": "Nofollow asks search engines not to pass your ranking on to the sites you link to.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "none",
+                "title": "Let them follow the links"
+              },
+              {
+                "value": "nofollow",
+                "title": "Ask them not to follow (nofollow)"
+              },
+              {
+                "value": "sponsored",
+                "title": "Mark them as paid or affiliate links (sponsored)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "own-domains",
+          "title": "Your other domains",
+          "description": "Domains that also count as your own, separated by commas, for example: shop.example.com, example.nl. Your site's own domain is picked up when you publish.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        },
+        {
+          "name": "skip-domains",
+          "title": "Leave these domains alone",
+          "description": "Links to these domains are never changed, for example: youtube.com.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}

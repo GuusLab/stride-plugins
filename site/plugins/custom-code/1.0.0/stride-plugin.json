@@ -1,0 +1,64 @@
+{
+  "manifestVersion": 1,
+  "id": "custom-code",
+  "name": "Custom Code",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Adds your own code to the head or body of every page: analytics, a verification tag, a chat widget or a font. Choose which pages get it. No theme edits needed.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "custom-code",
+      "title": "Custom code",
+      "description": "Code added to the published pages of this site, exactly as you paste it. Only paste code from people you trust: it runs for every visitor. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Add the code to pages",
+          "description": "Turn this off to leave every page exactly as it was rendered, without losing your code.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "head",
+          "title": "In the head",
+          "description": "For analytics, verification meta tags, fonts and stylesheets. Placed just before </head>.",
+          "kind": { "type": "text", "maxLength": 8192, "multiline": true }
+        },
+        {
+          "name": "body-start",
+          "title": "At the start of the body",
+          "description": "For code a service asks to place \"right after <body>\", such as a tag manager's noscript part.",
+          "kind": { "type": "text", "maxLength": 8192, "multiline": true }
+        },
+        {
+          "name": "body-end",
+          "title": "At the end of the body",
+          "description": "For chat widgets and scripts that should load after the page. Placed just before </body>.",
+          "kind": { "type": "text", "maxLength": 8192, "multiline": true }
+        },
+        {
+          "name": "pages",
+          "title": "Pages",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "all", "title": "Every page" },
+              { "value": "only", "title": "Only the pages listed below" },
+              { "value": "except", "title": "Every page except those listed below" }
+            ]
+          }
+        },
+        {
+          "name": "page-list",
+          "title": "Page list",
+          "description": "Page addresses separated by commas, for example: home, contact, blog/*. A * at the end means every page under it.",
+          "kind": { "type": "text", "maxLength": 1000, "multiline": false }
+        }
+      ]
+    }
+  ]
+}

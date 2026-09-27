@@ -40,7 +40,7 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
   <div class="top">
     <h1>Stride Plugins</h1>
     <p>The official plugin store for <a href="https://github.com/GuusLab/stride">Stride</a>. Every plugin is WebAssembly, sandboxed, permission-scoped, signed, and rebuilt from source byte for byte before it is listed.</p>
-    <p>Install them from <strong>Plugins</strong> in the Stride editor. 10 plugins · <a href="index.json">index.json</a> · <a href="https://github.com/GuusLab/stride-plugins">GitHub</a> · <a href="https://github.com/GuusLab/stride-plugins#submitting-a-plugin">Submit a plugin</a></p>
+    <p>Install them from <strong>Plugins</strong> in the Stride editor. 18 plugins · <a href="index.json">index.json</a> · <a href="https://github.com/GuusLab/stride-plugins">GitHub</a> · <a href="https://github.com/GuusLab/stride-plugins#submitting-a-plugin">Submit a plugin</a></p>
   </div>
 
     <article class="plugin" id="announcement" style="--accent:#f97316">
@@ -102,6 +102,150 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
       </details>
     </article>
 
+    <article class="plugin" id="countdown-banner" style="--accent:#e11d48">
+      <header>
+        <img class="icon" src="plugins/countdown-banner/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Countdown Banner</h2>
+          <p class="tagline">Count down to your sale, launch or order deadline, then step aside.</p>
+          <p class="meta">
+            <span class="chip">marketing</span><span class="chip">commerce</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/countdown-banner/screenshots/01.png"><img src="plugins/countdown-banner/screenshots/01.png" alt="A countdown bar at the top of every page, with a button to the sale." width="1600" height="1000" loading="lazy"></a><figcaption>A countdown bar at the top of every page, with a button to the sale.</figcaption></figure>
+          <figure><a href="plugins/countdown-banner/screenshots/02.png"><img src="plugins/countdown-banner/screenshots/02.png" alt="Floating at the bottom of the screen, here in Dutch on a phone." width="1600" height="1000" loading="lazy"></a><figcaption>Floating at the bottom of the screen, here in Dutch on a phone.</figcaption></figure>
+          <figure><a href="plugins/countdown-banner/screenshots/03.png"><img src="plugins/countdown-banner/screenshots/03.png" alt="The settings: message, end time, time zone, button, language, position and colour." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: message, end time, time zone, button, language, position and colour.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Countdown Banner</summary>
+        <p>Countdown Banner shows a bar that counts down the days, hours, minutes and seconds to a moment you choose: the end of a sale, a product launch, the last day to order before the holidays. Add a button, such as Shop the sale, and pick a colour; the text colour is chosen for you so it stays readable.</p><p>Put it at the top of every page, or let it float at the bottom of the screen. The words are available in English, Dutch, German and French. Set the time in your own time zone, and every visitor sees the right countdown wherever they are, summer time included.</p><p>When the time is up the bar hides itself, or shows a closing message such as The sale has ended. The clock runs in the visitor&#39;s browser, so it stays right without publishing again. Without JavaScript, visitors still see the message and the date it ends.</p><p>The plugin asks for one permission, storage, to keep the countdown. You can skip pages, such as your checkout.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/countdown-banner/1.0.0/plugin.wasm">plugin.wasm</a>, 183 KB, SHA-256 <code class="hash">121f10876d855c330c98f6715d43d10993718989fe7f44ba26eccf200cd8eaad</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/countdown-banner">sources/countdown-banner</a> at <code>ac74e21</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="custom-code" style="--accent:#4f46e5">
+      <header>
+        <img class="icon" src="plugins/custom-code/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Custom Code</h2>
+          <p class="tagline">Add analytics, verification tags and widgets to every page. No theme edits.</p>
+          <p class="meta">
+            <span class="chip">developer</span><span class="chip">analytics</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/custom-code/screenshots/01.png"><img src="plugins/custom-code/screenshots/01.png" alt="Snippets land exactly where they belong, and each one is labelled in the page source." width="1600" height="1000" loading="lazy"></a><figcaption>Snippets land exactly where they belong, and each one is labelled in the page source.</figcaption></figure>
+          <figure><a href="plugins/custom-code/screenshots/02.png"><img src="plugins/custom-code/screenshots/02.png" alt="The settings: code for the head and the body, and which pages get it." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: code for the head and the body, and which pages get it.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Custom Code</summary>
+        <p>Custom Code puts your own snippets into the published pages of your site: in the head, right after the opening body tag, or at the end of the body. It is the easy way to add a privacy-friendly analytics script, a search engine verification tag, a web font, a tag manager or a chat widget.</p><p>Choose which pages get the code: every page, only the pages you list, or every page except those. A * at the end of an address covers every page under it, so blog/* means all your posts under blog.</p><p>Your code is inserted exactly as you paste it, and each snippet is labelled in the page source, so you always know where it came from. Before saving, the plugin checks for the mistakes that break a page: an unclosed script tag, a whole page pasted in by accident, or code that is too long.</p><p>Only paste code from people you trust: it runs for every visitor. The plugin asks for one permission, storage, to keep your snippets. Changes apply to a page the next time it is published.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/custom-code/1.0.0/plugin.wasm">plugin.wasm</a>, 169 KB, SHA-256 <code class="hash">f3a140d31714190f818f23df4cd5bc5331b60148f21b07f531dc828ccd386ab4</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/custom-code">sources/custom-code</a> at <code>ac74e21</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="external-links" style="--accent:#0284c7">
+      <header>
+        <img class="icon" src="plugins/external-links/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>External Links</h2>
+          <p class="tagline">Links to other sites open in a new tab, safely, with a small arrow.</p>
+          <p class="meta">
+            <span class="chip">seo</span><span class="chip">utilities</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/external-links/screenshots/01.png"><img src="plugins/external-links/screenshots/01.png" alt="A reading list where every outside link gets a small arrow and opens in a new tab." width="1600" height="1000" loading="lazy"></a><figcaption>A reading list where every outside link gets a small arrow and opens in a new tab.</figcaption></figure>
+          <figure><a href="plugins/external-links/screenshots/02.png"><img src="plugins/external-links/screenshots/02.png" alt="What changes in the page: new tab, noopener, nofollow and a hidden note for screen readers." width="1600" height="1000" loading="lazy"></a><figcaption>What changes in the page: new tab, noopener, nofollow and a hidden note for screen readers.</figcaption></figure>
+          <figure><a href="plugins/external-links/screenshots/03.png"><img src="plugins/external-links/screenshots/03.png" alt="The settings: new tab, arrow, nofollow or sponsored, and your other domains." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: new tab, arrow, nofollow or sponsored, and your other domains.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About External Links</summary>
+        <p>External Links takes care of every link on your site that points to another website. It opens them in a new tab, so visitors do not lose your page, and adds rel=&quot;noopener noreferrer&quot; so the other site cannot reach back into yours.</p><p>A small arrow after the link shows readers they are about to leave, and screen readers hear &quot;opens in a new tab&quot;. You can also ask search engines not to follow the links (nofollow), or mark them as paid or affiliate links (sponsored).</p><p>Your own pages are never touched: links within your site are left as they are, and the plugin picks up your site&#39;s domain when you publish. You can also list your other domains, such as a separate shop, so they count as your own. Links you already set to open in a certain way keep that, and domains you name, such as youtube.com, are left completely alone.</p><p>Everything happens once, when a page is published: there is no JavaScript on your pages. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code> <code>on_publish</code></dd>
+          <dt>Module</dt><dd><a href="plugins/external-links/1.0.0/plugin.wasm">plugin.wasm</a>, 184 KB, SHA-256 <code class="hash">3f0a329f12b356b29849558141c5f0d7ac2e73bd4cbf47b035b85a3f468db3bc</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/external-links">sources/external-links</a> at <code>ac74e21</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="image-lightbox" style="--accent:#d97706">
+      <header>
+        <img class="icon" src="plugins/image-lightbox/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Image Lightbox</h2>
+          <p class="tagline">Click any image to see it large, with captions, arrows and swipe.</p>
+          <p class="meta">
+            <span class="chip">design</span><span class="chip">content</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/image-lightbox/screenshots/01.png"><img src="plugins/image-lightbox/screenshots/01.png" alt="Click an image and it opens large, with its caption and arrows to the next one." width="1600" height="1000" loading="lazy"></a><figcaption>Click an image and it opens large, with its caption and arrows to the next one.</figcaption></figure>
+          <figure><a href="plugins/image-lightbox/screenshots/02.png"><img src="plugins/image-lightbox/screenshots/02.png" alt="A light background suits a bright, airy site. The counter shows where you are." width="1600" height="1000" loading="lazy"></a><figcaption>A light background suits a bright, airy site. The counter shows where you are.</figcaption></figure>
+          <figure><a href="plugins/image-lightbox/screenshots/03.png"><img src="plugins/image-lightbox/screenshots/03.png" alt="On phones, swipe to the next image and tap to close." width="1600" height="1000" loading="lazy"></a><figcaption>On phones, swipe to the next image and tap to close.</figcaption></figure>
+          <figure><a href="plugins/image-lightbox/screenshots/04.png"><img src="plugins/image-lightbox/screenshots/04.png" alt="The settings: which images, captions, arrows, background and pages to skip." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: which images, captions, arrows, background and pages to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Image Lightbox</summary>
+        <p>Image Lightbox lets visitors click an image on your site to see it big, on a dark or light background, with its description as a caption. Arrows, the arrow keys and a swipe on a phone step through the other images on the page, with a counter such as 2 / 4.</p><p>It is built on the browser&#39;s own dialog, so it works with the keyboard and with screen readers: images that can be enlarged are announced as buttons, Escape closes the viewer, and focus returns to the image you came from. Animations are left out for visitors who ask their device for less motion.</p><p>It is careful about what it touches. By default only images shown smaller than they really are can be enlarged, so small icons and decorations are left alone. Images inside a link, the header, the menu or the footer never open, so logos and buttons keep working. You can skip pages, such as your shop.</p><p>No libraries and nothing loaded from elsewhere: a small inline script and stylesheet, added only to pages that have images. The plugin asks for one permission, storage, to keep its settings; refused, it simply uses the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/image-lightbox/1.0.0/plugin.wasm">plugin.wasm</a>, 171 KB, SHA-256 <code class="hash">5619090639fbd7057dc0c770dfe3ca790e09d6f5c05d67f95480af13965dd610</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/image-lightbox">sources/image-lightbox</a> at <code>ac74e21</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="instant-pages" style="--accent:#ea580c">
+      <header>
+        <img class="icon" src="plugins/instant-pages/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Instant Pages</h2>
+          <p class="tagline">Pages load while visitors point at a link, and fade in smoothly.</p>
+          <p class="meta">
+            <span class="chip">utilities</span><span class="chip">design</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/instant-pages/screenshots/01.png"><img src="plugins/instant-pages/screenshots/01.png" alt="Point, prepare, click: the next page is ready before the visitor clicks." width="1600" height="1000" loading="lazy"></a><figcaption>Point, prepare, click: the next page is ready before the visitor clicks.</figcaption></figure>
+          <figure><a href="plugins/instant-pages/screenshots/02.png"><img src="plugins/instant-pages/screenshots/02.png" alt="The settings: when to load, how much, the change between pages and what to skip." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: when to load, how much, the change between pages and what to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Instant Pages</summary>
+        <p>Instant Pages makes moving around your site feel instant. When a visitor rests the pointer on a link, the browser quietly prepares that page; when they click, it is already there. Pages then fade into each other instead of flashing white.</p><p>It uses two features built into modern browsers, Speculation Rules and View Transitions, declared in two small tags. No script of ours runs and nothing is sent to anyone. Browsers without these features simply work as before.</p><p>It is careful. Addresses that do something when visited, such as signing out, checkout, the admin and the API, are never loaded early, and neither are links that open in a new tab, download a file or carry a search query. You can add your own addresses to that list, and choose to start loading only when a link is pressed, to save data.</p><p>Visitors who ask their device for less motion get a plain change between pages. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/instant-pages/1.0.0/plugin.wasm">plugin.wasm</a>, 168 KB, SHA-256 <code class="hash">ae6f0abf114227f852f60b82e1e99b3d32bec3372d9dce0c1481d32730402b92</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/instant-pages">sources/instant-pages</a> at <code>ac74e21</code></dd>
+        </dl>
+      </details>
+    </article>
+
     <article class="plugin" id="maintenance-mode" style="--accent:#64748b">
       <header>
         <img class="icon" src="plugins/maintenance-mode/icon.png" alt="" width="96" height="96">
@@ -128,6 +272,93 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
           <dt>Hooks</dt><dd><code>on_page_render</code></dd>
           <dt>Module</dt><dd><a href="plugins/maintenance-mode/1.0.0/plugin.wasm">plugin.wasm</a>, 180 KB, SHA-256 <code class="hash">6cc3971b08529cf289d32ebc453f65746db624198fdd83d097aa5f53daf70fc9</code></dd>
           <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/0c61860d869e633b7704bdbca62641987bdd4116/sources/maintenance-mode">sources/maintenance-mode</a> at <code>0c61860</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="mobile-action-bar" style="--accent:#0d9488">
+      <header>
+        <img class="icon" src="plugins/mobile-action-bar/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Mobile Action Bar</h2>
+          <p class="tagline">Call, email, directions and booking, one tap away on phones.</p>
+          <p class="meta">
+            <span class="chip">marketing</span><span class="chip">commerce</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/mobile-action-bar/screenshots/01.png"><img src="plugins/mobile-action-bar/screenshots/01.png" alt="On a phone: call, email, directions and your own button, always within reach." width="1600" height="1000" loading="lazy"></a><figcaption>On a phone: call, email, directions and your own button, always within reach.</figcaption></figure>
+          <figure><a href="plugins/mobile-action-bar/screenshots/02.png"><img src="plugins/mobile-action-bar/screenshots/02.png" alt="Shown on every screen, it floats at the bottom like a small dock. Here in Dutch." width="1600" height="1000" loading="lazy"></a><figcaption>Shown on every screen, it floats at the bottom like a small dock. Here in Dutch.</figcaption></figure>
+          <figure><a href="plugins/mobile-action-bar/screenshots/03.png"><img src="plugins/mobile-action-bar/screenshots/03.png" alt="The settings: phone, email, address, your own button, language, colour and screens." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: phone, email, address, your own button, language, colour and screens.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Mobile Action Bar</summary>
+        <p>Mobile Action Bar adds a bar to the bottom of the screen for visitors on a phone, with the buttons a local business needs most: Call, Email, Directions and a main button of your own, such as Book a table or Order now.</p><p>Fill in only what you want to show. Your phone number becomes a tap-to-call button, your address opens in Google Maps, and your own button can point to any page. The labels come in English, Dutch, German and French, and your colour is used for the icons and the main button.</p><p>It is plain links and icons, with no JavaScript. The page gets a little space at the bottom so the bar never covers your content, and the bar respects the rounded corners and home indicator of modern phones. You can also show it on every screen, where it floats at the bottom like a small dock.</p><p>The plugin asks for one permission, storage, to keep your details. You can skip pages, such as your checkout.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/mobile-action-bar/1.0.0/plugin.wasm">plugin.wasm</a>, 178 KB, SHA-256 <code class="hash">2e1d0f94c0a087427822e20c011c18135bab550d71dca49a31820a66a715299c</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/mobile-action-bar">sources/mobile-action-bar</a> at <code>ac74e21</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="opening-hours" style="--accent:#16a34a">
+      <header>
+        <img class="icon" src="plugins/opening-hours/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Opening Hours</h2>
+          <p class="tagline">Your opening hours as a neat table, with a live Open now badge.</p>
+          <p class="meta">
+            <span class="chip">content</span><span class="chip">marketing</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/opening-hours/screenshots/01.png"><img src="plugins/opening-hours/screenshots/01.png" alt="A visit page with the week&#39;s hours, today highlighted, and the Open now badge." width="1600" height="1000" loading="lazy"></a><figcaption>A visit page with the week&#39;s hours, today highlighted, and the Open now badge.</figcaption></figure>
+          <figure><a href="plugins/opening-hours/screenshots/02.png"><img src="plugins/opening-hours/screenshots/02.png" alt="In Dutch on a phone, on a Sunday evening: closed, and when you open again." width="1600" height="1000" loading="lazy"></a><figcaption>In Dutch on a phone, on a Sunday evening: closed, and when you open again.</figcaption></figure>
+          <figure><a href="plugins/opening-hours/screenshots/03.png"><img src="plugins/opening-hours/screenshots/03.png" alt="The settings: hours for each day, a note, your time zone, language and footer." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: hours for each day, a note, your time zone, language and footer.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Opening Hours</summary>
+        <p>Opening Hours shows when you are open, the way visitors want to know it: a clear table for the week, today highlighted, and a badge that says Open now · closes at 17:00, or Closed now · opens tomorrow at 09:00.</p><p>Type [opening-hours] on any page for the table, or [open-now] for the badge alone, and publish. You can also show the badge or the table in the footer of every page.</p><p>Enter each day like 09:00-17:00, add a lunch break with a second range, or write closed. Choose your time zone, so the badge is right for visitors abroad too, and a language for the day names: English, Dutch, German or French. A short note, such as Closed on public holidays, goes under the table.</p><p>The table is plain HTML and works without JavaScript. Whether you are open right now is worked out when a visitor looks, not when the page was published, by a few hundred bytes of script. The plugin asks for one permission, storage, to keep your hours.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/opening-hours/1.0.0/plugin.wasm">plugin.wasm</a>, 191 KB, SHA-256 <code class="hash">0e81b9bbde22886f5db4b8b58ba23fba5bd6acaabf2e2e11d613c5d395cdce78</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/opening-hours">sources/opening-hours</a> at <code>ac74e21</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="promo-popup" style="--accent:#7c3aed">
+      <header>
+        <img class="icon" src="plugins/promo-popup/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Promo Popup</h2>
+          <p class="tagline">One friendly popup for a sale or newsletter. Never pushy.</p>
+          <p class="meta">
+            <span class="chip">marketing</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/promo-popup/screenshots/01.png"><img src="plugins/promo-popup/screenshots/01.png" alt="A workshop invitation with an image and a button, in the middle of the screen." width="1600" height="1000" loading="lazy"></a><figcaption>A workshop invitation with an image and a button, in the middle of the screen.</figcaption></figure>
+          <figure><a href="plugins/promo-popup/screenshots/02.png"><img src="plugins/promo-popup/screenshots/02.png" alt="Or small in the corner, where it does not get in the way of reading." width="1600" height="1000" loading="lazy"></a><figcaption>Or small in the corner, where it does not get in the way of reading.</figcaption></figure>
+          <figure><a href="plugins/promo-popup/screenshots/03.png"><img src="plugins/promo-popup/screenshots/03.png" alt="The settings: text, image, button, when to show it, how often, look and pages." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: text, image, button, when to show it, how often, look and pages.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Promo Popup</summary>
+        <p>Promo Popup shows one popup to your visitors: a sale, a newsletter, a workshop, a new product. Give it a title, a short text, an optional image and a button, and choose when it appears: after a few seconds, after scrolling down the page, or when a visitor is about to leave.</p><p>It is polite by design. Each visitor sees it once, and then not again for as many days as you choose, or only once per visit, or only ever once. Change the text and it counts as a new popup, shown again. It can sit in the middle of the screen or slide in small in a corner, and you can keep it off pages such as your checkout.</p><p>It uses the browser&#39;s own dialog, so Escape, the close button and screen readers all work, and animations are left out for visitors who prefer less motion. Whether a visitor has seen it is remembered in their own browser; nothing is sent anywhere and nobody is tracked.</p><p>The plugin asks for one permission, storage, to keep the popup.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/promo-popup/1.0.0/plugin.wasm">plugin.wasm</a>, 179 KB, SHA-256 <code class="hash">f743669bbfc65bd2a38033c28cf761e4fdade4f1241e02a504aab1be31004934</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/promo-popup">sources/promo-popup</a> at <code>ac74e21</code></dd>
         </dl>
       </details>
     </article>
@@ -335,7 +566,7 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
         </dl>
       </details>
     </article>
-  <footer>Index generated 2026-09-26T11:43:04Z, signed by the registry key. Source and submissions: <a href="https://github.com/GuusLab/stride-plugins">github.com/GuusLab/stride-plugins</a>.</footer>
+  <footer>Index generated 2026-09-27T07:22:40Z, signed by the registry key. Source and submissions: <a href="https://github.com/GuusLab/stride-plugins">github.com/GuusLab/stride-plugins</a>.</footer>
 </main>
 </body>
 </html>

@@ -99,6 +99,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "f3a140d31714190f818f23df4cd5bc5331b60148f21b07f531dc828ccd386ab4",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "d3ac1dee1e4bd6daa490653a1c0d55864686cbc76b0a2579b74cc25c44c7faa7",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/custom-code/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "1c7259bfc325875e98da33866a7987d7c9072cb64a7354f050c79ccbb205cf650a17dc099cb8236650edbc418b127410158a5542efec45de1662bda1330ab702",
+    "size": 172949,
+    "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/custom-code/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Add analytics, verification tags and widgets to every page. No theme edits.",
     "longDescription": "Custom Code puts your own snippets into the published pages of your site: in the head, right after the opening body tag, or at the end of the body. It is the easy way to add a privacy-friendly analytics script, a search engine verification tag, a web font, a tag manager or a chat widget.\n\nChoose which pages get the code: every page, only the pages you list, or every page except those. A * at the end of an address covers every page under it, so blog/* means all your posts under blog.\n\nYour code is inserted exactly as you paste it, and each snippet is labelled in the page source, so you always know where it came from. Before saving, the plugin checks for the mistakes that break a page: an unclosed script tag, a whole page pasted in by accident, or code that is too long.\n\nOnly paste code from people you trust: it runs for every visitor. The plugin asks for one permission, storage, to keep your snippets. Changes apply to a page the next time it is published.",

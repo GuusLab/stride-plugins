@@ -99,6 +99,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "5619090639fbd7057dc0c770dfe3ca790e09d6f5c05d67f95480af13965dd610",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "3713d800e6f65351ab4aec484b72097711a1db121db2f05b0c6ef1eb83ea162b",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/image-lightbox/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "98bafc43226deeb3f9b74e7ed50ca3efd3deecbbfe5d8cf1e6a0acf1b4b24b3af0b99f5692e1aa5d7c54f36d51d8ae8f42e4fb74ab5c60fd6dd16dd127869e07",
+    "size": 174702,
+    "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/image-lightbox/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Click any image to see it large, with captions, arrows and swipe.",
     "longDescription": "Image Lightbox lets visitors click an image on your site to see it big, on a dark or light background, with its description as a caption. Arrows, the arrow keys and a swipe on a phone step through the other images on the page, with a counter such as 2 / 4.\n\nIt is built on the browser's own dialog, so it works with the keyboard and with screen readers: images that can be enlarged are announced as buttons, Escape closes the viewer, and focus returns to the image you came from. Animations are left out for visitors who ask their device for less motion.\n\nIt is careful about what it touches. By default only images shown smaller than they really are can be enlarged, so small icons and decorations are left alone. Images inside a link, the header, the menu or the footer never open, so logos and buttons keep working. You can skip pages, such as your shop.\n\nNo libraries and nothing loaded from elsewhere: a small inline script and stylesheet, added only to pages that have images. The plugin asks for one permission, storage, to keep its settings; refused, it simply uses the defaults.",

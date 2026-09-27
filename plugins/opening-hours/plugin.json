@@ -208,6 +208,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "0e81b9bbde22886f5db4b8b58ba23fba5bd6acaabf2e2e11d613c5d395cdce78",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "8716ce6515856a668bccf20f3264bd0b0f4750b0e78bd5c648af8e712568e3e8",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/opening-hours/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "36020ca57e0e7f3648dbd6776102a720a08c4ab305e2d36944facdfe5e2cceaf07a459289d81a52fcf71335a5bbab8a4b632a2bb59e584874776506058567a0d",
+    "size": 195619,
+    "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/opening-hours/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Your opening hours as a neat table, with a live Open now badge.",
     "longDescription": "Opening Hours shows when you are open, the way visitors want to know it: a clear table for the week, today highlighted, and a badge that says Open now · closes at 17:00, or Closed now · opens tomorrow at 09:00.\n\nType [opening-hours] on any page for the table, or [open-now] for the badge alone, and publish. You can also show the badge or the table in the footer of every page.\n\nEnter each day like 09:00-17:00, add a lunch break with a second range, or write closed. Choose your time zone, so the badge is right for visitors abroad too, and a language for the day names: English, Dutch, German or French. A short note, such as Closed on public holidays, goes under the table.\n\nThe table is plain HTML and works without JavaScript. Whether you are open right now is worked out when a visitor looks, not when the page was published, by a few hundred bytes of script. The plugin asks for one permission, storage, to keep your hours.",

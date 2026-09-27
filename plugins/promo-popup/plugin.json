@@ -223,6 +223,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "f743669bbfc65bd2a38033c28cf761e4fdade4f1241e02a504aab1be31004934",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "006ea965899a704597b2647b010960f2a8a1197c9edcfd1a675f4cc2c037dd96",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/promo-popup/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "e01702877269d411194b8fdde12c44a72b15580dcc7a7b11eec60fe877d81917f07010acd8b0b07a1a4e1abcd2eb38a1cea920a6a24f9e524587047ed2512002",
+    "size": 183442,
+    "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/promo-popup/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "One friendly popup for a sale or newsletter. Never pushy.",
     "longDescription": "Promo Popup shows one popup to your visitors: a sale, a newsletter, a workshop, a new product. Give it a title, a short text, an optional image and a button, and choose when it appears: after a few seconds, after scrolling down the page, or when a visitor is about to leave.\n\nIt is polite by design. Each visitor sees it once, and then not again for as many days as you choose, or only once per visit, or only ever once. Change the text and it counts as a new popup, shown again. It can sit in the middle of the screen or slide in small in a corner, and you can keep it off pages such as your checkout.\n\nIt uses the browser's own dialog, so Escape, the close button and screen readers all work, and animations are left out for visitors who prefer less motion. Whether a visitor has seen it is remembered in their own browser; nothing is sent anywhere and nobody is tracked.\n\nThe plugin asks for one permission, storage, to keep the popup.",

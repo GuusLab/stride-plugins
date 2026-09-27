@@ -149,6 +149,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "2e1d0f94c0a087427822e20c011c18135bab550d71dca49a31820a66a715299c",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "ee0be262de5a53d890f0a2da175d4a00551a0ef646f183ff4dd2a5df7a967bf4",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/mobile-action-bar/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "ef74aaedd8bcf73898efc376e324cea034d1aa493f077c0ec5bd86aee512cda6671b0e75911ef643b644010d017afe9173c3a15a975eaccbd8bf1ea288b5d609",
+    "size": 181822,
+    "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/mobile-action-bar/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Call, email, directions and booking, one tap away on phones.",
     "longDescription": "Mobile Action Bar adds a bar to the bottom of the screen for visitors on a phone, with the buttons a local business needs most: Call, Email, Directions and a main button of your own, such as Book a table or Order now.\n\nFill in only what you want to show. Your phone number becomes a tap-to-call button, your address opens in Google Maps, and your own button can point to any page. The labels come in English, Dutch, German and French, and your colour is used for the icons and the main button.\n\nIt is plain links and icons, with no JavaScript. The page gets a little space at the bottom so the bar never covers your content, and the bar respects the rounded corners and home indicator of modern phones. You can also show it on every screen, where it floats at the bottom like a small dock.\n\nThe plugin asks for one permission, storage, to keep your details. You can skip pages, such as your checkout.",

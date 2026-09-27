@@ -105,6 +105,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "ae6f0abf114227f852f60b82e1e99b3d32bec3372d9dce0c1481d32730402b92",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "c498d0d9660f0e2825f32fa4c2edd2f4aee26c9eb0b70a8f77d8244571bac947",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/instant-pages/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "5e3fd8d93feb0c617e3750aeb625bfbb7acdddd337f1b31b78cfdea142aad2433aad25fd126c2fc418cf1b739d71e8375f6c776dea1bc5a98415e48268580e03",
+    "size": 172077,
+    "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/instant-pages/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Pages load while visitors point at a link, and fade in smoothly.",
     "longDescription": "Instant Pages makes moving around your site feel instant. When a visitor rests the pointer on a link, the browser quietly prepares that page; when they click, it is already there. Pages then fade into each other instead of flashing white.\n\nIt uses two features built into modern browsers, Speculation Rules and View Transitions, declared in two small tags. No script of ours runs and nothing is sent to anyone. Browsers without these features simply work as before.\n\nIt is careful. Addresses that do something when visited, such as signing out, checkout, the admin and the API, are never loaded early, and neither are links that open in a new tab, download a file or carry a search query. You can add your own addresses to that list, and choose to start loading only when a link is pressed, to save data.\n\nVisitors who ask their device for less motion get a plain change between pages. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",

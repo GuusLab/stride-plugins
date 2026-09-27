@@ -1,0 +1,101 @@
+{
+  "manifestVersion": 1,
+  "id": "instant-pages",
+  "name": "Instant Pages",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Makes clicking around your site feel instant: pages start loading while a visitor points at a link, and fade smoothly into each other. No scripts.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "instant-pages",
+      "title": "Instant pages",
+      "description": "Loads the next page early and smooths the change between pages, using features built into modern browsers. Other browsers work exactly as before. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Make pages feel instant",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "eagerness",
+          "title": "Start loading a page",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "moderate",
+                "title": "When the pointer rests on a link (fastest)"
+              },
+              {
+                "value": "conservative",
+                "title": "When a link is pressed (uses the least data)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mode",
+          "title": "How much to load ahead",
+          "description": "Preparing the whole page makes it appear at once; downloading only saves the wait for the network.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "prerender",
+                "title": "Prepare the whole page"
+              },
+              {
+                "value": "prefetch",
+                "title": "Only download it"
+              }
+            ]
+          }
+        },
+        {
+          "name": "transition",
+          "title": "Change between pages",
+          "description": "Visitors who ask their device for less motion always get a plain change.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "fade",
+                "title": "Cross-fade"
+              },
+              {
+                "value": "slide",
+                "title": "Fade and slide"
+              },
+              {
+                "value": "none",
+                "title": "No animation"
+              }
+            ]
+          }
+        },
+        {
+          "name": "skip-links",
+          "title": "Never load these ahead",
+          "description": "Addresses separated by commas, for example /shop/cart, /downloads/*. Sign-in, checkout, admin and similar addresses are always skipped.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}
