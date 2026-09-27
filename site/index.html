@@ -40,7 +40,7 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
   <div class="top">
     <h1>Stride Plugins</h1>
     <p>The official plugin store for <a href="https://github.com/GuusLab/stride">Stride</a>. Every plugin is WebAssembly, sandboxed, permission-scoped, signed, and rebuilt from source byte for byte before it is listed.</p>
-    <p>Install them from <strong>Plugins</strong> in the Stride editor. 18 plugins · <a href="index.json">index.json</a> · <a href="https://github.com/GuusLab/stride-plugins">GitHub</a> · <a href="https://github.com/GuusLab/stride-plugins#submitting-a-plugin">Submit a plugin</a></p>
+    <p>Install them from <strong>Plugins</strong> in the Stride editor. 24 plugins · <a href="index.json">index.json</a> · <a href="https://github.com/GuusLab/stride-plugins">GitHub</a> · <a href="https://github.com/GuusLab/stride-plugins#submitting-a-plugin">Submit a plugin</a></p>
   </div>
 
     <article class="plugin" id="announcement" style="--accent:#f97316">
@@ -68,6 +68,34 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
           <dt>Hooks</dt><dd><code>on_page_render</code></dd>
           <dt>Module</dt><dd><a href="plugins/announcement/1.0.0/plugin.wasm">plugin.wasm</a>, 181 KB, SHA-256 <code class="hash">513451d0631ef24aea5579c70602805958a0d3194966422ea827e86deaf0dd93</code></dd>
           <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/63b0b4f5404204069d976a723aceb2429d035d02/sources/announcement">sources/announcement</a> at <code>63b0b4f</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="celebrate" style="--accent:#ca8a04">
+      <header>
+        <img class="icon" src="plugins/celebrate/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Celebrate</h2>
+          <p class="tagline">Confetti for your thank-you pages, after an order, sign-up or booking.</p>
+          <p class="meta">
+            <span class="chip">marketing</span><span class="chip">design</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/celebrate/screenshots/01.png"><img src="plugins/celebrate/screenshots/01.png" alt="The booking page opens with a burst of confetti." width="1600" height="1000" loading="lazy"></a><figcaption>The booking page opens with a burst of confetti.</figcaption></figure>
+          <figure><a href="plugins/celebrate/screenshots/02.png"><img src="plugins/celebrate/screenshots/02.png" alt="The settings: which pages, shapes, colours and how much." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: which pages, shapes, colours and how much.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Celebrate</summary>
+        <p>Celebrate adds a burst of confetti to the happy moments on your site: the thank-you page after an order, a sign-up or a booking, a welcome page, a launch. List the pages that should open with confetti, and any link that points to #celebrate gives a burst when it is clicked.</p><p>Pick confetti, hearts or stars, in party colours, gold, pastel or your own colour, and choose a cheerful burst or a proper party. It lasts three seconds, is drawn on a layer that never gets in the way of a click, and then disappears.</p><p>Visitors who ask their device for less motion see no animation at all. It is a little over a kilobyte of script, added only to the pages that use it.</p><p>The plugin asks for one permission, storage, to keep its settings; refused, it celebrates on pages called thanks, thank-you and bedankt.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/celebrate/1.0.0/plugin.wasm">plugin.wasm</a>, 169 KB, SHA-256 <code class="hash">91da0c56831b7c9ee62f0e1f33413ce4dd959ef08cd9b41048ac0d6b1bd4dfa4</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/d6ae66c2492072dd37496ac5e786d8f6866d300c/sources/celebrate">sources/celebrate</a> at <code>d6ae66c</code></dd>
         </dl>
       </details>
     </article>
@@ -188,6 +216,34 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
       </details>
     </article>
 
+    <article class="plugin" id="glossary" style="--accent:#a21caf">
+      <header>
+        <img class="icon" src="plugins/glossary/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Glossary</h2>
+          <p class="tagline">Explain jargon where it appears: dotted underlines that show a definition.</p>
+          <p class="meta">
+            <span class="chip">content</span><span class="chip">seo</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/glossary/screenshots/01.png"><img src="plugins/glossary/screenshots/01.png" alt="A menu that explains itself: tap or point at sourdough to see what it means." width="1600" height="1000" loading="lazy"></a><figcaption>A menu that explains itself: tap or point at sourdough to see what it means.</figcaption></figure>
+          <figure><a href="plugins/glossary/screenshots/02.png"><img src="plugins/glossary/screenshots/02.png" alt="The settings: one term per line, then choose how often to mark it and the colour." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: one term per line, then choose how often to mark it and the colour.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Glossary</summary>
+        <p>Glossary explains the words your visitors might not know, right where they read them. List your terms once, each with a short explanation, and they get a dotted underline in your pages. Pointing at one, tapping it or tabbing to it shows the explanation in a small bubble.</p><p>It only touches running text. Headings, links, buttons, code, the menu, header and footer are left exactly as they are, and so is anything inside a tag. By default only the first mention of each term on a page is marked, so a page does not turn into a sea of underlines; you can mark every mention if you prefer.</p><p>Terms can have other spellings, like &quot;SEO | search engine optimisation&quot;, and the longest match wins. The bubbles work with a mouse, a finger and the keyboard, close with Escape, and flip below the word when there is no room above.</p><p>The plugin asks for one permission, storage, to keep your terms.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/glossary/1.0.0/plugin.wasm">plugin.wasm</a>, 193 KB, SHA-256 <code class="hash">835df3d030669d25c5b2bd05438d97762b88171d13ad299575b1f25e0a02728d</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/d6ae66c2492072dd37496ac5e786d8f6866d300c/sources/glossary">sources/glossary</a> at <code>d6ae66c</code></dd>
+        </dl>
+      </details>
+    </article>
+
     <article class="plugin" id="image-lightbox" style="--accent:#d97706">
       <header>
         <img class="icon" src="plugins/image-lightbox/icon.png" alt="" width="96" height="96">
@@ -242,6 +298,34 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
           <dt>Hooks</dt><dd><code>on_page_render</code></dd>
           <dt>Module</dt><dd><a href="plugins/instant-pages/1.0.0/plugin.wasm">plugin.wasm</a>, 168 KB, SHA-256 <code class="hash">ae6f0abf114227f852f60b82e1e99b3d32bec3372d9dce0c1481d32730402b92</code></dd>
           <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/instant-pages">sources/instant-pages</a> at <code>ac74e21</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="listen" style="--accent:#0891b2">
+      <header>
+        <img class="icon" src="plugins/listen/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Listen</h2>
+          <p class="tagline">A Listen button that reads long pages aloud, highlighting each paragraph.</p>
+          <p class="meta">
+            <span class="chip">content</span><span class="chip">utilities</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/listen/screenshots/01.png"><img src="plugins/listen/screenshots/01.png" alt="Reading the story page aloud: the paragraph being read is highlighted and kept in view." width="1600" height="1000" loading="lazy"></a><figcaption>Reading the story page aloud: the paragraph being read is highlighted and kept in view.</figcaption></figure>
+          <figure><a href="plugins/listen/screenshots/02.png"><img src="plugins/listen/screenshots/02.png" alt="The settings: which pages get the button, highlighting, colour and language." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: which pages get the button, highlighting, colour and language.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Listen</summary>
+        <p>Listen puts a small &quot;Listen · 4 min&quot; button under the title of your longer pages. Press it and the page is read aloud, paragraph by paragraph, with the paragraph being read highlighted and kept in view. Pause, carry on, stop, or change the speed.</p><p>It uses the voices built into your visitor&#39;s phone or computer, so there is no service to pay for and nothing is sent anywhere. The button only appears when the device has a voice for the language of the page, so nobody gets English read in a French accent.</p><p>It reads what matters: headings, paragraphs, lists and quotes in the main part of the page, not the menu, header or footer. Long sentences are spoken in short pieces, which keeps some browsers from stopping halfway.</p><p>Choose how long a page must be before it gets the button, and which pages to skip. The button colour and language are yours to set. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/listen/1.0.0/plugin.wasm">plugin.wasm</a>, 190 KB, SHA-256 <code class="hash">3664b3acd18f03f49546c1808b0d6b237b2a4d4cfac0b97869a46e1ea81849f0</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/d6ae66c2492072dd37496ac5e786d8f6866d300c/sources/listen">sources/listen</a> at <code>d6ae66c</code></dd>
         </dl>
       </details>
     </article>
@@ -363,6 +447,63 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
       </details>
     </article>
 
+    <article class="plugin" id="qr-code" style="--accent:#334155">
+      <header>
+        <img class="icon" src="plugins/qr-code/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>QR Code</h2>
+          <p class="tagline">A QR code for every page, for menus, flyers, posters and printed recipes.</p>
+          <p class="meta">
+            <span class="chip">marketing</span><span class="chip">utilities</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/qr-code/screenshots/01.png"><img src="plugins/qr-code/screenshots/01.png" alt="The QR code of the menu page, ready to scan or download." width="1600" height="1000" loading="lazy"></a><figcaption>The QR code of the menu page, ready to scan or download.</figcaption></figure>
+          <figure><a href="plugins/qr-code/screenshots/02.png"><img src="plugins/qr-code/screenshots/02.png" alt="Printed, every page carries its own code in the corner." width="1600" height="1000" loading="lazy"></a><figcaption>Printed, every page carries its own code in the corner.</figcaption></figure>
+          <figure><a href="plugins/qr-code/screenshots/03.png"><img src="plugins/qr-code/screenshots/03.png" alt="The settings: button, print, site address, scan tracking, colour and language." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: button, print, site address, scan tracking, colour and language.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About QR Code</summary>
+        <p>QR Code makes a QR code for every page of your site. Visitors can open it from a small button to show the page to someone else or download it, you can place it on a page by typing [qr-code], and printed pages carry it in a corner, so a printed menu, flyer or recipe leads straight back to the page online.</p><p>The codes are drawn on your own server as sharp vector images. Nothing is fetched from a QR service, and no visitor is tracked. If you want to know how many people came from a scan, switch on &quot;Add ?ref=qr&quot; and look for it in your analytics.</p><p>The codes point to your site&#39;s address. Fill it in, or let the plugin pick up the address your site is published at once it has a domain. Without an address it shows nothing, rather than a code that goes nowhere.</p><p>The words come in English, Dutch, German and French. The plugin asks for one permission, storage, to keep its settings.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code> <code>on_publish</code></dd>
+          <dt>Module</dt><dd><a href="plugins/qr-code/1.0.0/plugin.wasm">plugin.wasm</a>, 203 KB, SHA-256 <code class="hash">e3bd6b245a25024c133f03d5e75dcaecae8f79fa1443185e4f1d6f466a192d00</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/d6ae66c2492072dd37496ac5e786d8f6866d300c/sources/qr-code">sources/qr-code</a> at <code>d6ae66c</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="quote-share" style="--accent:#4d7c0f">
+      <header>
+        <img class="icon" src="plugins/quote-share/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Quote Share</h2>
+          <p class="tagline">Select a sentence and share it as a quote. Links open with it highlighted.</p>
+          <p class="meta">
+            <span class="chip">social</span><span class="chip">marketing</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/quote-share/screenshots/01.png"><img src="plugins/quote-share/screenshots/01.png" alt="Select a sentence and the bar appears: X, Bluesky, WhatsApp, email or copy with link." width="1600" height="1000" loading="lazy"></a><figcaption>Select a sentence and the bar appears: X, Bluesky, WhatsApp, email or copy with link.</figcaption></figure>
+          <figure><a href="plugins/quote-share/screenshots/02.png"><img src="plugins/quote-share/screenshots/02.png" alt="The settings: which buttons, colour, language and where the bar appears." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: which buttons, colour, language and where the bar appears.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Quote Share</summary>
+        <p>Quote Share turns your best sentences into shareable quotes. When a reader selects text in an article, a small bar appears above it: share the quote on X, Bluesky or WhatsApp, send it by email, or copy it with a link.</p><p>The copied link is special: in browsers that support it, it opens your page scrolled to that very sentence, highlighted. It is a standard of the web (text fragments), so it needs nothing from you.</p><p>Nothing loads from X, Bluesky or anyone else until a reader clicks, there are no cookies and nobody is tracked. Choose which buttons to show, the colour of the bar and on which pages it appears; by default it skips short pages and the home page.</p><p>Button labels come in English, Dutch, German and French for screen readers. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/quote-share/1.0.0/plugin.wasm">plugin.wasm</a>, 191 KB, SHA-256 <code class="hash">9329da5f0dd7c3f00440a6d4fe1ba6213f772162d9b508ac1e851edccc8470a5</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/d6ae66c2492072dd37496ac5e786d8f6866d300c/sources/quote-share">sources/quote-share</a> at <code>d6ae66c</code></dd>
+        </dl>
+      </details>
+    </article>
+
     <article class="plugin" id="reading-progress" style="--accent:#f43f5e">
       <header>
         <img class="icon" src="plugins/reading-progress/icon.png" alt="" width="96" height="96">
@@ -478,6 +619,35 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
       </details>
     </article>
 
+    <article class="plugin" id="site-search" style="--accent:#2563eb">
+      <header>
+        <img class="icon" src="plugins/site-search/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Site Search</h2>
+          <p class="tagline">A search box for your whole site. Press ⌘K and find any page as you type.</p>
+          <p class="meta">
+            <span class="chip">utilities</span><span class="chip">content</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/site-search/screenshots/01.png"><img src="plugins/site-search/screenshots/01.png" alt="Search on a restaurant site: results appear as you type, with the matching words marked." width="1600" height="1000" loading="lazy"></a><figcaption>Search on a restaurant site: results appear as you type, with the matching words marked.</figcaption></figure>
+          <figure><a href="plugins/site-search/screenshots/02.png"><img src="plugins/site-search/screenshots/02.png" alt="On a phone the Search button sits in the header and the results fill the screen." width="1600" height="1000" loading="lazy"></a><figcaption>On a phone the Search button sits in the header and the results fill the screen.</figcaption></figure>
+          <figure><a href="plugins/site-search/screenshots/03.png"><img src="plugins/site-search/screenshots/03.png" alt="The settings: where the button goes, the shortcut, language, colour and pages to leave out." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: where the button goes, the shortcut, language, colour and pages to leave out.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Site Search</summary>
+        <p>Site Search adds a search box to your site. Visitors click Search in the page header, or press ⌘K, Ctrl+K or / anywhere, and find pages by title and text as they type. The matching words are marked, the arrow keys move through the results and Enter opens one.</p><p>There is no outside search service and nothing to set up. Every published page can be found by its title straight away, and a page&#39;s text joins the search the first time someone opens it. The search itself runs in the visitor&#39;s browser, so it is instant and works the same on every host.</p><p>It is careful with what it shows. Only published pages are in it, and text that only signed-in members may see is never searchable: a page with members-only blocks, in the page itself or in any component it uses, can be found by its title only.</p><p>It suits sites of up to a few hundred pages. The box speaks English, Dutch, German or French, following the language of the page by default. It needs two permissions: storage, to keep what each page contributes, and read pages, to know which pages are published.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code> <code>read-pages</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/site-search/1.0.0/plugin.wasm">plugin.wasm</a>, 219 KB, SHA-256 <code class="hash">15ca05dd353cac61f8f42db7bb330de0a062960a3bd6929172eb636d28ea91b8</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/d6ae66c2492072dd37496ac5e786d8f6866d300c/sources/site-search">sources/site-search</a> at <code>d6ae66c</code></dd>
+        </dl>
+      </details>
+    </article>
+
     <article class="plugin" id="social-share" style="--accent:#ec4899">
       <header>
         <img class="icon" src="plugins/social-share/icon.png" alt="" width="96" height="96">
@@ -566,7 +736,7 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
         </dl>
       </details>
     </article>
-  <footer>Index generated 2026-09-27T07:22:40Z, signed by the registry key. Source and submissions: <a href="https://github.com/GuusLab/stride-plugins">github.com/GuusLab/stride-plugins</a>.</footer>
+  <footer>Index generated 2026-09-27T16:19:42Z, signed by the registry key. Source and submissions: <a href="https://github.com/GuusLab/stride-plugins">github.com/GuusLab/stride-plugins</a>.</footer>
 </main>
 </body>
 </html>

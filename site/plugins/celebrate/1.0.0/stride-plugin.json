@@ -1,0 +1,115 @@
+{
+  "manifestVersion": 1,
+  "id": "celebrate",
+  "name": "Celebrate",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A burst of confetti on your thank-you pages, after an order, sign-up or booking, and on any link to #celebrate. Visitors who prefer less motion see none.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "celebrate",
+      "title": "Celebrate",
+      "description": "Confetti for the happy moments on your site. It lasts three seconds and never gets in the way of a click. Changes show on your pages right away.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Celebrate",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "pages",
+          "title": "Pages that open with confetti",
+          "description": "Page addresses separated by commas, for example: thanks, order-complete, welcome. A link to #celebrate anywhere also gives confetti on click.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        },
+        {
+          "name": "shapes",
+          "title": "Shapes",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "confetti",
+                "title": "Confetti"
+              },
+              {
+                "value": "hearts",
+                "title": "Hearts"
+              },
+              {
+                "value": "stars",
+                "title": "Stars"
+              }
+            ]
+          }
+        },
+        {
+          "name": "palette",
+          "title": "Colours",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "party",
+                "title": "Party"
+              },
+              {
+                "value": "gold",
+                "title": "Gold"
+              },
+              {
+                "value": "pastel",
+                "title": "Pastel"
+              },
+              {
+                "value": "brand",
+                "title": "My own colour"
+              }
+            ]
+          }
+        },
+        {
+          "name": "colour",
+          "title": "My own colour",
+          "description": "Used with the colours option My own colour.",
+          "kind": {
+            "type": "color"
+          }
+        },
+        {
+          "name": "amount",
+          "title": "How much",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "some",
+                "title": "A cheerful burst"
+              },
+              {
+                "value": "lots",
+                "title": "A proper party"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

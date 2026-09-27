@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "registry": "https://guuslab.github.io/stride-plugins",
-  "generatedAt": "2026-09-27T07:22:40Z",
+  "generatedAt": "2026-09-27T16:19:42Z",
   "plugins": [
     {
       "id": "announcement",
@@ -31,7 +31,7 @@
           "size": 185316,
           "url": "https://guuslab.github.io/stride-plugins/plugins/announcement/1.0.0/plugin.wasm",
           "signature": "4800b0bbb97dce767badfcca23be156e55e50676c15b2c04457246443ecff71775207dccab574359980324f27b2ff0827028f34649ed93089a2e84092f63f400",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "63b0b4f5404204069d976a723aceb2429d035d02",
           "yanked": false,
@@ -69,6 +69,66 @@
       ]
     },
     {
+      "id": "celebrate",
+      "name": "Celebrate",
+      "description": "A burst of confetti on your thank-you pages, after an order, sign-up or booking, and on any link to #celebrate. Visitors who prefer less motion see none.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "marketing",
+        "design"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "91da0c56831b7c9ee62f0e1f33413ce4dd959ef08cd9b41048ac0d6b1bd4dfa4",
+          "manifestHash": "0cd41e820da14284825cf2d79dd764fa2044bc5e66415485e8d5295a0bc3c423",
+          "size": 173265,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/celebrate/1.0.0/plugin.wasm",
+          "signature": "48da0ba062b2e7fb5557a7ccac526c6413a7aee4881dcc04b368c772d5b1537b398657afa527e9d30fcdb9e90c85f7a6f774137df09f176b1f3ad3e90f6b6d05",
+          "publishedAt": "2026-09-27T16:19:42Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/celebrate/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "Confetti for your thank-you pages, after an order, sign-up or booking.",
+      "longDescription": "Celebrate adds a burst of confetti to the happy moments on your site: the thank-you page after an order, a sign-up or a booking, a welcome page, a launch. List the pages that should open with confetti, and any link that points to #celebrate gives a burst when it is clicked.\n\nPick confetti, hearts or stars, in party colours, gold, pastel or your own colour, and choose a cheerful burst or a proper party. It lasts three seconds, is drawn on a layer that never gets in the way of a click, and then disappears.\n\nVisitors who ask their device for less motion see no animation at all. It is a little over a kilobyte of script, added only to the pages that use it.\n\nThe plugin asks for one permission, storage, to keep its settings; refused, it celebrates on pages called thanks, thank-you and bedankt.",
+      "accent": "#ca8a04",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/celebrate/icon.png",
+        "sha256": "3315ef376e4c34434e7daaed8f3a5313230cf57261352354be0be83746d71f96",
+        "size": 135479
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/celebrate/screenshots/01.png",
+          "sha256": "060fa4aa2015664834d0f2764c8a7c7e51b18d0078aa4dd7400b03f21d12e74b",
+          "size": 1109946,
+          "caption": "The booking page opens with a burst of confetti."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/celebrate/screenshots/02.png",
+          "sha256": "2b85c13aa46034c58ccc9795f6a3e5ab199c0dcc8d346256fcf9ae8c23fd034a",
+          "size": 128740,
+          "caption": "The settings: which pages, shapes, colours and how much."
+        }
+      ]
+    },
+    {
       "id": "cookie-consent",
       "name": "Cookie Consent",
       "description": "An accessible GDPR cookie banner in Dutch or English, with accept, reject and per-category settings. It remembers the choice and tells other scripts through a data attribute and a DOM event.",
@@ -96,7 +156,7 @@
           "size": 180323,
           "url": "https://guuslab.github.io/stride-plugins/plugins/cookie-consent/1.0.0/plugin.wasm",
           "signature": "cd693108b463afdfb61270d37a328d29cc894e9cc484de94d848a92deb09b082ed2b3a2abe6f1bb056e8b1bf313622aa265e9247b4389846abf969f89d566509",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "0302c03b015a91bf039f562c2af40ffc5e865fcd",
           "yanked": false,
@@ -168,7 +228,7 @@
           "size": 186947,
           "url": "https://guuslab.github.io/stride-plugins/plugins/countdown-banner/1.0.0/plugin.wasm",
           "signature": "890d55be8cc71f5bd1f67f17cd9a14b64ad8f13ea7cd2a41a369fe1a1ddc45b356635ff356734b73e14f08d1a56c08e581e8926d82ffd6d1f7dc0010aec43603",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
           "yanked": false,
@@ -234,7 +294,7 @@
           "size": 172949,
           "url": "https://guuslab.github.io/stride-plugins/plugins/custom-code/1.0.0/plugin.wasm",
           "signature": "1c7259bfc325875e98da33866a7987d7c9072cb64a7354f050c79ccbb205cf650a17dc099cb8236650edbc418b127410158a5542efec45de1662bda1330ab702",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
           "yanked": false,
@@ -295,7 +355,7 @@
           "size": 188383,
           "url": "https://guuslab.github.io/stride-plugins/plugins/external-links/1.0.0/plugin.wasm",
           "signature": "c1b5f531b8e5a5802ff749c64731864e3baee6fe614c0494858756584151c7f6d1fd392ad4ef17d4ff9ae5cd061961e5a273b771a2293760648e52fde6385f0c",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
           "yanked": false,
@@ -333,6 +393,66 @@
       ]
     },
     {
+      "id": "glossary",
+      "name": "Glossary",
+      "description": "Explain your jargon where it appears. Terms you list get a dotted underline, and pointing at or tapping one shows what it means. No other setup.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "content",
+        "seo"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "835df3d030669d25c5b2bd05438d97762b88171d13ad299575b1f25e0a02728d",
+          "manifestHash": "3cd8769c2a6a4fcb41b2fcf6c76164b38b97f01d5b4a40f004864c6b5ce29d43",
+          "size": 197887,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/glossary/1.0.0/plugin.wasm",
+          "signature": "1d2ad5b18a98d7ed768b1a5a3a080bb32965e0c9676479b27fd59115cfbed8c98c060ba4c4c0862bc9fe72222a3b2b2b4553304cb1b84542c1badf29fe9ab403",
+          "publishedAt": "2026-09-27T16:19:42Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/glossary/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "Explain jargon where it appears: dotted underlines that show a definition.",
+      "longDescription": "Glossary explains the words your visitors might not know, right where they read them. List your terms once, each with a short explanation, and they get a dotted underline in your pages. Pointing at one, tapping it or tabbing to it shows the explanation in a small bubble.\n\nIt only touches running text. Headings, links, buttons, code, the menu, header and footer are left exactly as they are, and so is anything inside a tag. By default only the first mention of each term on a page is marked, so a page does not turn into a sea of underlines; you can mark every mention if you prefer.\n\nTerms can have other spellings, like \"SEO | search engine optimisation\", and the longest match wins. The bubbles work with a mouse, a finger and the keyboard, close with Escape, and flip below the word when there is no room above.\n\nThe plugin asks for one permission, storage, to keep your terms.",
+      "accent": "#a21caf",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/glossary/icon.png",
+        "sha256": "572b3d02b8a58ccf7516a0f78b1aa6cd0346c6ee2eaf3d0bd4b3b619b250af58",
+        "size": 127273
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/glossary/screenshots/01.png",
+          "sha256": "c07ac2e550f5aa9cfd3143800db519f8f5ce88cfd73c4f8c468897ec87f7130a",
+          "size": 143191,
+          "caption": "A menu that explains itself: tap or point at sourdough to see what it means."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/glossary/screenshots/02.png",
+          "sha256": "8871a2717889c793fe7e8e07fc7826c2dd745e9580ad7df33dceab8c8c0b2ac5",
+          "size": 143560,
+          "caption": "The settings: one term per line, then choose how often to mark it and the colour."
+        }
+      ]
+    },
+    {
       "id": "image-lightbox",
       "name": "Image Lightbox",
       "description": "Lets visitors click an image to see it large, with the caption underneath and arrows to browse every image on the page. Works with the keyboard and on phones.",
@@ -361,7 +481,7 @@
           "size": 174702,
           "url": "https://guuslab.github.io/stride-plugins/plugins/image-lightbox/1.0.0/plugin.wasm",
           "signature": "98bafc43226deeb3f9b74e7ed50ca3efd3deecbbfe5d8cf1e6a0acf1b4b24b3af0b99f5692e1aa5d7c54f36d51d8ae8f42e4fb74ab5c60fd6dd16dd127869e07",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
           "yanked": false,
@@ -433,7 +553,7 @@
           "size": 172077,
           "url": "https://guuslab.github.io/stride-plugins/plugins/instant-pages/1.0.0/plugin.wasm",
           "signature": "5e3fd8d93feb0c617e3750aeb625bfbb7acdddd337f1b31b78cfdea142aad2433aad25fd126c2fc418cf1b739d71e8375f6c776dea1bc5a98415e48268580e03",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
           "yanked": false,
@@ -465,6 +585,66 @@
       ]
     },
     {
+      "id": "listen",
+      "name": "Listen",
+      "description": "A Listen button under the title of long pages. The page is read aloud with the visitor's own device voices, highlighting each paragraph. Nothing is sent anywhere.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "content",
+        "utilities"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "3664b3acd18f03f49546c1808b0d6b237b2a4d4cfac0b97869a46e1ea81849f0",
+          "manifestHash": "66a0defd68bfd6a0a8bf02950b790a57d8b30eb9072b06b2c168d306078ef811",
+          "size": 194598,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/listen/1.0.0/plugin.wasm",
+          "signature": "9527b25db7c70f597e648f4bfd552d2fa83c1cc647b4eea22de60be822221ac94bcfc7317b176ad0d454c38d864f6694e5631df4ae171822baa550f064769c0c",
+          "publishedAt": "2026-09-27T16:19:42Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/listen/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "A Listen button that reads long pages aloud, highlighting each paragraph.",
+      "longDescription": "Listen puts a small \"Listen · 4 min\" button under the title of your longer pages. Press it and the page is read aloud, paragraph by paragraph, with the paragraph being read highlighted and kept in view. Pause, carry on, stop, or change the speed.\n\nIt uses the voices built into your visitor's phone or computer, so there is no service to pay for and nothing is sent anywhere. The button only appears when the device has a voice for the language of the page, so nobody gets English read in a French accent.\n\nIt reads what matters: headings, paragraphs, lists and quotes in the main part of the page, not the menu, header or footer. Long sentences are spoken in short pieces, which keeps some browsers from stopping halfway.\n\nChoose how long a page must be before it gets the button, and which pages to skip. The button colour and language are yours to set. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",
+      "accent": "#0891b2",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/listen/icon.png",
+        "sha256": "2f75d59b84cce9cbedf90ce327bd9bd411915745e122cdb51bdc05305366793b",
+        "size": 135300
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/listen/screenshots/01.png",
+          "sha256": "59650dd7f58c5f53845d3574856fd20bbb3ebab94a9a881eafff4345f757b987",
+          "size": 660119,
+          "caption": "Reading the story page aloud: the paragraph being read is highlighted and kept in view."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/listen/screenshots/02.png",
+          "sha256": "2b190b40b83521be29360fc742acd0fa732ab970280b6014e21e9929a13e497f",
+          "size": 143779,
+          "caption": "The settings: which pages get the button, highlighting, colour and language."
+        }
+      ]
+    },
+    {
       "id": "maintenance-mode",
       "name": "Maintenance Mode",
       "description": "Shows visitors a polished coming-soon or maintenance page while you build, with an optional launch countdown and contact line. Signed-in editors still see the real site.",
@@ -492,7 +672,7 @@
           "size": 184266,
           "url": "https://guuslab.github.io/stride-plugins/plugins/maintenance-mode/1.0.0/plugin.wasm",
           "signature": "9e789fa48ae83ae5117d853e2d37e73be5c1966024ce1fd2a4cccafa427d3c941697242fb7f7298aed4f68f8945df925eb6217db5801b0664ca997c577bcc103",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "0c61860d869e633b7704bdbca62641987bdd4116",
           "yanked": false,
@@ -564,7 +744,7 @@
           "size": 181822,
           "url": "https://guuslab.github.io/stride-plugins/plugins/mobile-action-bar/1.0.0/plugin.wasm",
           "signature": "ef74aaedd8bcf73898efc376e324cea034d1aa493f077c0ec5bd86aee512cda6671b0e75911ef643b644010d017afe9173c3a15a975eaccbd8bf1ea288b5d609",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
           "yanked": false,
@@ -630,7 +810,7 @@
           "size": 195619,
           "url": "https://guuslab.github.io/stride-plugins/plugins/opening-hours/1.0.0/plugin.wasm",
           "signature": "36020ca57e0e7f3648dbd6776102a720a08c4ab305e2d36944facdfe5e2cceaf07a459289d81a52fcf71335a5bbab8a4b632a2bb59e584874776506058567a0d",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
           "yanked": false,
@@ -695,7 +875,7 @@
           "size": 183442,
           "url": "https://guuslab.github.io/stride-plugins/plugins/promo-popup/1.0.0/plugin.wasm",
           "signature": "e01702877269d411194b8fdde12c44a72b15580dcc7a7b11eec60fe877d81917f07010acd8b0b07a1a4e1abcd2eb38a1cea920a6a24f9e524587047ed2512002",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "ac74e210f3522fa541dc409eadb5521a2d005d4a",
           "yanked": false,
@@ -733,6 +913,133 @@
       ]
     },
     {
+      "id": "qr-code",
+      "name": "QR Code",
+      "description": "A QR code for every page: a button to show and download it, [qr-code] to place it on a page, and in the corner of printed pages. Made on your server.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "marketing",
+        "utilities"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render",
+            "on_publish"
+          ],
+          "contentHash": "e3bd6b245a25024c133f03d5e75dcaecae8f79fa1443185e4f1d6f466a192d00",
+          "manifestHash": "ddcc6072b625e532391ede978d74228ffbe552f01aa806e09ddae778648a99c5",
+          "size": 208345,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/qr-code/1.0.0/plugin.wasm",
+          "signature": "2f29542fffdb925402c81cf7807e407800734b746845bd3120f35fd0d871b12cffce72c4482b9c1deab59e1572054686aa167ff96bb44418c4057df32f7d4800",
+          "publishedAt": "2026-09-27T16:19:42Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/qr-code/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "A QR code for every page, for menus, flyers, posters and printed recipes.",
+      "longDescription": "QR Code makes a QR code for every page of your site. Visitors can open it from a small button to show the page to someone else or download it, you can place it on a page by typing [qr-code], and printed pages carry it in a corner, so a printed menu, flyer or recipe leads straight back to the page online.\n\nThe codes are drawn on your own server as sharp vector images. Nothing is fetched from a QR service, and no visitor is tracked. If you want to know how many people came from a scan, switch on \"Add ?ref=qr\" and look for it in your analytics.\n\nThe codes point to your site's address. Fill it in, or let the plugin pick up the address your site is published at once it has a domain. Without an address it shows nothing, rather than a code that goes nowhere.\n\nThe words come in English, Dutch, German and French. The plugin asks for one permission, storage, to keep its settings.",
+      "accent": "#334155",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/qr-code/icon.png",
+        "sha256": "c46fa9c2a2b047b2346d02b93ffe8e3b0bf32bbc95cd3d17c2e3341e4d989a6d",
+        "size": 131481
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/qr-code/screenshots/01.png",
+          "sha256": "775c27f9df295ae9c5e04aa8d84a63cc78e756a1ad29e834f6932d69497341e6",
+          "size": 1117305,
+          "caption": "The QR code of the menu page, ready to scan or download."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/qr-code/screenshots/02.png",
+          "sha256": "e0ecf4621ddde11e1a46477d426a0dc221048fa9511da12ecf6e0715585f0129",
+          "size": 560308,
+          "caption": "Printed, every page carries its own code in the corner."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/qr-code/screenshots/03.png",
+          "sha256": "75742c4a5916bd7c2f82d1ff7348f7959bcf4b8f45439ff4f5f0ddb63b72a026",
+          "size": 154051,
+          "caption": "The settings: button, print, site address, scan tracking, colour and language."
+        }
+      ]
+    },
+    {
+      "id": "quote-share",
+      "name": "Quote Share",
+      "description": "Readers select a sentence and share it as a quote on X, Bluesky, WhatsApp or by email, or copy a link that opens your page with that sentence highlighted.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "social",
+        "marketing"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "9329da5f0dd7c3f00440a6d4fe1ba6213f772162d9b508ac1e851edccc8470a5",
+          "manifestHash": "c52cdd9b752023c2c7f0551c53ce6c77a523b13398d97f3c32b2bb38ce091526",
+          "size": 195951,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/quote-share/1.0.0/plugin.wasm",
+          "signature": "3fc1e78cd4e8884aef4375d4910aa23e04045cb7fd5d130047a59d38ad2a73443c1291c6361bd43e4cef90028f7f5fe7c601698e70d657fd9f3fceaebe7c0509",
+          "publishedAt": "2026-09-27T16:19:42Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/quote-share/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "Select a sentence and share it as a quote. Links open with it highlighted.",
+      "longDescription": "Quote Share turns your best sentences into shareable quotes. When a reader selects text in an article, a small bar appears above it: share the quote on X, Bluesky or WhatsApp, send it by email, or copy it with a link.\n\nThe copied link is special: in browsers that support it, it opens your page scrolled to that very sentence, highlighted. It is a standard of the web (text fragments), so it needs nothing from you.\n\nNothing loads from X, Bluesky or anyone else until a reader clicks, there are no cookies and nobody is tracked. Choose which buttons to show, the colour of the bar and on which pages it appears; by default it skips short pages and the home page.\n\nButton labels come in English, Dutch, German and French for screen readers. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",
+      "accent": "#4d7c0f",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/quote-share/icon.png",
+        "sha256": "7fadebe53addc14939486aa217fc48b754252db9cd9f8cbf367e2736227c21d4",
+        "size": 141221
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/quote-share/screenshots/01.png",
+          "sha256": "5794b2a9e6127d1fa0817078d371913e54af815c0b67ee3330ed9f07cdca705e",
+          "size": 665723,
+          "caption": "Select a sentence and the bar appears: X, Bluesky, WhatsApp, email or copy with link."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/quote-share/screenshots/02.png",
+          "sha256": "a14086a6756e7cb575c9b3e961a24ab18c8795b1687a1bcf511ff5997f5f0d79",
+          "size": 138588,
+          "caption": "The settings: which buttons, colour, language and where the bar appears."
+        }
+      ]
+    },
+    {
       "id": "reading-progress",
       "name": "Reading Progress",
       "description": "A thin reading progress bar at the top of long pages, plus an optional back-to-top button. Pure CSS scroll-driven animation with a tiny JavaScript fallback.",
@@ -760,7 +1067,7 @@
           "size": 178118,
           "url": "https://guuslab.github.io/stride-plugins/plugins/reading-progress/1.0.0/plugin.wasm",
           "signature": "d4ab4332baee8255b3ceaf52bb8850df83c3f9409968aa81a536c17a48f73073da65124c806507b377caa074420b01c765d473ca708c060a2e5b02acdb1e4803",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "42c2679b79ecfe19942df9590db93228c8de3c5a",
           "yanked": false,
@@ -831,7 +1138,7 @@
           "size": 186004,
           "url": "https://guuslab.github.io/stride-plugins/plugins/reading-time/1.0.0/plugin.wasm",
           "signature": "2a467c14a7d192aa0ae07bc9c36d57a3c4b473f2ff5df55ebdfa0e666621e2fb0faa915c1559ba9045fffc1964cb3c2fb93fca6ca9224bf78ae257845bf5980e",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "f11ca743e0f8f80dac992311193b53608d5877a3",
           "yanked": false,
@@ -896,7 +1203,7 @@
           "size": 199718,
           "url": "https://guuslab.github.io/stride-plugins/plugins/schema-markup/1.0.0/plugin.wasm",
           "signature": "a241c64130a2650ea2299c28f4aed7be907e3bfd433fd61fc1d6bbe4ddc82715fb44a5f1bdc3381c3a50193a76a609ba45d3eabcbcc740dab8711e21e424320e",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "0f20355bae4f500995d81b27b56d6a2a49468a5e",
           "yanked": false,
@@ -957,7 +1264,7 @@
           "size": 186074,
           "url": "https://guuslab.github.io/stride-plugins/plugins/seo-inspector/1.0.0/plugin.wasm",
           "signature": "2e27ce8c1ef42cabbc06096b1da5c48c8baf58d1b08fcd9395ee41a89c0ac83f1a4df2c4be3590d261284e225597f720548bb29042319df658bd4df3b8362b04",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "6b8e088fb9c78fc0d5875dcb5f2dc8b736d73442",
           "yanked": false,
@@ -985,6 +1292,73 @@
           "sha256": "d065e0dccdfdf6f64d3672207ac1b1ae558b8ee19820aee0565b723fdb6ffefd",
           "size": 100284,
           "caption": "The panel in Site settings, with the thresholds you can adjust."
+        }
+      ]
+    },
+    {
+      "id": "site-search",
+      "name": "Site Search",
+      "description": "A search box for your whole site. Visitors press ⌘K or click Search and find pages by title and text as they type. No outside service.",
+      "publisher": {
+        "id": "guuslab",
+        "name": "GuusLab",
+        "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+      },
+      "categories": [
+        "utilities",
+        "content"
+      ],
+      "homepage": "https://github.com/guuslab/stride-plugins",
+      "latest": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "permissions": [
+            "storage",
+            "read-pages"
+          ],
+          "hooks": [
+            "on_page_render"
+          ],
+          "contentHash": "15ca05dd353cac61f8f42db7bb330de0a062960a3bd6929172eb636d28ea91b8",
+          "manifestHash": "b0f99a04087e4da45df80398f9a0368cdc0f3e0f94e639ed1805391c899a0ffb",
+          "size": 224292,
+          "url": "https://guuslab.github.io/stride-plugins/plugins/site-search/1.0.0/plugin.wasm",
+          "signature": "3145fc87d4cbf07774136b544a4c25e179a6dc9aa687162ea76e3be5d86a72ca44f8691637f71dca1ad876a46a596cae157bbe3f759d048b20a3455c6283cc0d",
+          "publishedAt": "2026-09-27T16:19:42Z",
+          "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+          "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+          "yanked": false,
+          "yankedReason": "",
+          "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/site-search/1.0.0/stride-plugin.json"
+        }
+      ],
+      "tagline": "A search box for your whole site. Press ⌘K and find any page as you type.",
+      "longDescription": "Site Search adds a search box to your site. Visitors click Search in the page header, or press ⌘K, Ctrl+K or / anywhere, and find pages by title and text as they type. The matching words are marked, the arrow keys move through the results and Enter opens one.\n\nThere is no outside search service and nothing to set up. Every published page can be found by its title straight away, and a page's text joins the search the first time someone opens it. The search itself runs in the visitor's browser, so it is instant and works the same on every host.\n\nIt is careful with what it shows. Only published pages are in it, and text that only signed-in members may see is never searchable: a page with members-only blocks, in the page itself or in any component it uses, can be found by its title only.\n\nIt suits sites of up to a few hundred pages. The box speaks English, Dutch, German or French, following the language of the page by default. It needs two permissions: storage, to keep what each page contributes, and read pages, to know which pages are published.",
+      "accent": "#2563eb",
+      "icon": {
+        "url": "https://guuslab.github.io/stride-plugins/plugins/site-search/icon.png",
+        "sha256": "1e88e77ed0a383ab6ee7db0a5e63081446a04c6b02a30d9c1f3d30d5e225cb48",
+        "size": 139399
+      },
+      "screenshots": [
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/site-search/screenshots/01.png",
+          "sha256": "fbcc1161b8eff6ab5c1c0e3cd04543d56deb5ba4de15391d210c389c8976c1fd",
+          "size": 429739,
+          "caption": "Search on a restaurant site: results appear as you type, with the matching words marked."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/site-search/screenshots/02.png",
+          "sha256": "d7573da0891caa4005c9c35707619e449f68b3ac8a06bd7dfbb833c25a3c241c",
+          "size": 526732,
+          "caption": "On a phone the Search button sits in the header and the results fill the screen."
+        },
+        {
+          "url": "https://guuslab.github.io/stride-plugins/plugins/site-search/screenshots/03.png",
+          "sha256": "1fed8a9455b019b312fc197ebced876e9017bc8dca9b7d151d960b6209fa0d73",
+          "size": 141420,
+          "caption": "The settings: where the button goes, the shortcut, language, colour and pages to leave out."
         }
       ]
     },
@@ -1018,7 +1392,7 @@
           "size": 192872,
           "url": "https://guuslab.github.io/stride-plugins/plugins/social-share/1.0.0/plugin.wasm",
           "signature": "9f643e14e1779fb5ca74f016a5637de75c17b85b05cb07c1878578689ce5f66847ad85d152c3137d338aafcc4fe6185772aca7d66a994902d218aab12b59580f",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "7c33d54acb2c2fb35739eabd5d595f45999cf425",
           "yanked": false,
@@ -1090,7 +1464,7 @@
           "size": 194994,
           "url": "https://guuslab.github.io/stride-plugins/plugins/table-of-contents/1.0.0/plugin.wasm",
           "signature": "83e15a75e1a776caa243e10da381850a051b48165afbb6aab64866eff1ceea4bd92de4834b9f5fc1eff46daaacb3599699309228f459c5f37e0e4dc8a16c540b",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "78361c4e2cf1f81090e8eb07a251d5db92d82a5e",
           "yanked": false,
@@ -1161,7 +1535,7 @@
           "size": 181787,
           "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.1.0/plugin.wasm",
           "signature": "92b6ebd6e042ffc73d69ec020aeb8f2640c9cbba442c04c79186b7e14628f9023768715bf37d822211b363cf667465efe213fbcc35e8944e3ae11325f93cc007",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "6ab80198786c32028e91e55622649cd1a2c2d69e",
           "yanked": false,
@@ -1181,7 +1555,7 @@
           "size": 181127,
           "url": "https://guuslab.github.io/stride-plugins/plugins/whatsapp-chat/1.0.0/plugin.wasm",
           "signature": "273e31d49532317ea1665ad2327edeef67328c6e066f6ba749a0086d8bfef2c4b1b626ba619099322f7bb2ac450a32503474be9a0d88fab08654bffe6a509c0c",
-          "publishedAt": "2026-09-27T07:22:40Z",
+          "publishedAt": "2026-09-27T16:19:42Z",
           "sourceRepository": "https://github.com/GuusLab/stride-plugins",
           "sourceCommit": "93f4e25c78f228e79102ef9b150403d5e952c0cf",
           "yanked": false,
@@ -1219,5 +1593,5 @@
       ]
     }
   ],
-  "signature": "1efc3ccdf1b82660939ce91fce01955ef34dbc7fbe38d13366e47e5cb8f7cf86c66ccc4b1e11846b8ef59740664ff5dbf427a8a38344baf5debd806b8ce24a0e"
+  "signature": "da6d065a657b0f4a418dcabc425e30d2a0dc93e414a3aeeb51e1fefbfbdf749b6d86dd56d7c846bccf2079ad38c760aee3dfb38871696f2970090f1be9d5730e"
 }

@@ -72,6 +72,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "835df3d030669d25c5b2bd05438d97762b88171d13ad299575b1f25e0a02728d",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "3cd8769c2a6a4fcb41b2fcf6c76164b38b97f01d5b4a40f004864c6b5ce29d43",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/glossary/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "1d2ad5b18a98d7ed768b1a5a3a080bb32965e0c9676479b27fd59115cfbed8c98c060ba4c4c0862bc9fe72222a3b2b2b4553304cb1b84542c1badf29fe9ab403",
+    "size": 197887,
+    "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/glossary/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Explain jargon where it appears: dotted underlines that show a definition.",
     "longDescription": "Glossary explains the words your visitors might not know, right where they read them. List your terms once, each with a short explanation, and they get a dotted underline in your pages. Pointing at one, tapping it or tabbing to it shows the explanation in a small bubble.\n\nIt only touches running text. Headings, links, buttons, code, the menu, header and footer are left exactly as they are, and so is anything inside a tag. By default only the first mention of each term on a page is marked, so a page does not turn into a sea of underlines; you can mark every mention if you prefer.\n\nTerms can have other spellings, like \"SEO | search engine optimisation\", and the longest match wins. The bubbles work with a mouse, a finger and the keyboard, close with Escape, and flip below the word when there is no room above.\n\nThe plugin asks for one permission, storage, to keep your terms.",

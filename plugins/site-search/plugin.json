@@ -121,6 +121,27 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "15ca05dd353cac61f8f42db7bb330de0a062960a3bd6929172eb636d28ea91b8",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "b0f99a04087e4da45df80398f9a0368cdc0f3e0f94e639ed1805391c899a0ffb",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/site-search/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage",
+      "read-pages"
+    ],
+    "publishedAt": "",
+    "signature": "3145fc87d4cbf07774136b544a4c25e179a6dc9aa687162ea76e3be5d86a72ca44f8691637f71dca1ad876a46a596cae157bbe3f759d048b20a3455c6283cc0d",
+    "size": 224292,
+    "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/site-search/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "A search box for your whole site. Press ⌘K and find any page as you type.",
     "longDescription": "Site Search adds a search box to your site. Visitors click Search in the page header, or press ⌘K, Ctrl+K or / anywhere, and find pages by title and text as they type. The matching words are marked, the arrow keys move through the results and Enter opens one.\n\nThere is no outside search service and nothing to set up. Every published page can be found by its title straight away, and a page's text joins the search the first time someone opens it. The search itself runs in the visitor's browser, so it is instant and works the same on every host.\n\nIt is careful with what it shows. Only published pages are in it, and text that only signed-in members may see is never searchable: a page with members-only blocks, in the page itself or in any component it uses, can be found by its title only.\n\nIt suits sites of up to a few hundred pages. The box speaks English, Dutch, German or French, following the language of the page by default. It needs two permissions: storage, to keep what each page contributes, and read pages, to know which pages are published.",

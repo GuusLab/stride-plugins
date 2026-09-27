@@ -130,6 +130,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "9329da5f0dd7c3f00440a6d4fe1ba6213f772162d9b508ac1e851edccc8470a5",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "c52cdd9b752023c2c7f0551c53ce6c77a523b13398d97f3c32b2bb38ce091526",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/quote-share/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "3fc1e78cd4e8884aef4375d4910aa23e04045cb7fd5d130047a59d38ad2a73443c1291c6361bd43e4cef90028f7f5fe7c601698e70d657fd9f3fceaebe7c0509",
+    "size": 195951,
+    "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/quote-share/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Select a sentence and share it as a quote. Links open with it highlighted.",
     "longDescription": "Quote Share turns your best sentences into shareable quotes. When a reader selects text in an article, a small bar appears above it: share the quote on X, Bluesky or WhatsApp, send it by email, or copy it with a link.\n\nThe copied link is special: in browsers that support it, it opens your page scrolled to that very sentence, highlighted. It is a standard of the web (text fragments), so it needs nothing from you.\n\nNothing loads from X, Bluesky or anyone else until a reader clicks, there are no cookies and nobody is tracked. Choose which buttons to show, the colour of the bar and on which pages it appears; by default it skips short pages and the home page.\n\nButton labels come in English, Dutch, German and French for screen readers. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",

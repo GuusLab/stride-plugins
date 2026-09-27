@@ -125,6 +125,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "3664b3acd18f03f49546c1808b0d6b237b2a4d4cfac0b97869a46e1ea81849f0",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "66a0defd68bfd6a0a8bf02950b790a57d8b30eb9072b06b2c168d306078ef811",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/listen/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "9527b25db7c70f597e648f4bfd552d2fa83c1cc647b4eea22de60be822221ac94bcfc7317b176ad0d454c38d864f6694e5631df4ae171822baa550f064769c0c",
+    "size": 194598,
+    "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/listen/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "A Listen button that reads long pages aloud, highlighting each paragraph.",
     "longDescription": "Listen puts a small \"Listen · 4 min\" button under the title of your longer pages. Press it and the page is read aloud, paragraph by paragraph, with the paragraph being read highlighted and kept in view. Pause, carry on, stop, or change the speed.\n\nIt uses the voices built into your visitor's phone or computer, so there is no service to pay for and nothing is sent anywhere. The button only appears when the device has a voice for the language of the page, so nobody gets English read in a French accent.\n\nIt reads what matters: headings, paragraphs, lists and quotes in the main part of the page, not the menu, header or footer. Long sentences are spoken in short pieces, which keeps some browsers from stopping halfway.\n\nChoose how long a page must be before it gets the button, and which pages to skip. The button colour and language are yours to set. The plugin asks for one permission, storage, to keep its settings; refused, it uses the defaults.",

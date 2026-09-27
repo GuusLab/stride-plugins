@@ -119,6 +119,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "91da0c56831b7c9ee62f0e1f33413ce4dd959ef08cd9b41048ac0d6b1bd4dfa4",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "0cd41e820da14284825cf2d79dd764fa2044bc5e66415485e8d5295a0bc3c423",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/celebrate/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "48da0ba062b2e7fb5557a7ccac526c6413a7aee4881dcc04b368c772d5b1537b398657afa527e9d30fcdb9e90c85f7a6f774137df09f176b1f3ad3e90f6b6d05",
+    "size": 173265,
+    "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/celebrate/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Confetti for your thank-you pages, after an order, sign-up or booking.",
     "longDescription": "Celebrate adds a burst of confetti to the happy moments on your site: the thank-you page after an order, a sign-up or a booking, a welcome page, a launch. List the pages that should open with confetti, and any link that points to #celebrate gives a burst when it is clicked.\n\nPick confetti, hearts or stars, in party colours, gold, pastel or your own colour, and choose a cheerful burst or a proper party. It lasts three seconds, is drawn on a layer that never gets in the way of a click, and then disappears.\n\nVisitors who ask their device for less motion see no animation at all. It is a little over a kilobyte of script, added only to the pages that use it.\n\nThe plugin asks for one permission, storage, to keep its settings; refused, it celebrates on pages called thanks, thank-you and bedankt.",

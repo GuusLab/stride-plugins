@@ -121,6 +121,27 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "e3bd6b245a25024c133f03d5e75dcaecae8f79fa1443185e4f1d6f466a192d00",
+    "hooks": [
+      "on_page_render",
+      "on_publish"
+    ],
+    "manifestHash": "ddcc6072b625e532391ede978d74228ffbe552f01aa806e09ddae778648a99c5",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/qr-code/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "2f29542fffdb925402c81cf7807e407800734b746845bd3120f35fd0d871b12cffce72c4482b9c1deab59e1572054686aa167ff96bb44418c4057df32f7d4800",
+    "size": 208345,
+    "sourceCommit": "d6ae66c2492072dd37496ac5e786d8f6866d300c",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/qr-code/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "A QR code for every page, for menus, flyers, posters and printed recipes.",
     "longDescription": "QR Code makes a QR code for every page of your site. Visitors can open it from a small button to show the page to someone else or download it, you can place it on a page by typing [qr-code], and printed pages carry it in a corner, so a printed menu, flyer or recipe leads straight back to the page online.\n\nThe codes are drawn on your own server as sharp vector images. Nothing is fetched from a QR service, and no visitor is tracked. If you want to know how many people came from a scan, switch on \"Add ?ref=qr\" and look for it in your analytics.\n\nThe codes point to your site's address. Fill it in, or let the plugin pick up the address your site is published at once it has a domain. Without an address it shows nothing, rather than a code that goes nowhere.\n\nThe words come in English, Dutch, German and French. The plugin asks for one permission, storage, to keep its settings.",
