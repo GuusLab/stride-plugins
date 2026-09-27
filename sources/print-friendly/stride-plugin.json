@@ -1,0 +1,69 @@
+{
+  "manifestVersion": 1,
+  "id": "print-friendly",
+  "name": "Print Friendly",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A clean print stylesheet for every page: navigation, footers and banners hidden, link addresses shown, sensible page breaks. Plus an optional Print this page button.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "print-friendly",
+      "title": "Print friendly",
+      "description": "How pages look on paper and whether they get a print button. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Use the print stylesheet",
+          "description": "Turn this off to print pages exactly as the browser would.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "show-urls",
+          "title": "Print link addresses",
+          "description": "Writes the address of each link after its text, so readers of the paper copy can still find it.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "hide",
+          "title": "Also hide when printing",
+          "description": "CSS selectors, separated by commas, for anything else that should not be printed. For example: .newsletter, #comments",
+          "kind": { "type": "text", "maxLength": 400, "multiline": false }
+        },
+        {
+          "name": "button",
+          "title": "Show a Print this page button",
+          "description": "A button that opens the browser's print dialog. It is never printed itself.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "button-label",
+          "title": "Button text",
+          "description": "Leave empty for \"Print this page\".",
+          "kind": { "type": "text", "maxLength": 40, "multiline": false }
+        },
+        {
+          "name": "button-position",
+          "title": "Button position",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "end", "title": "After the content" },
+              { "value": "corner", "title": "Bottom right corner" }
+            ]
+          }
+        },
+        {
+          "name": "exclude",
+          "title": "Pages to skip",
+          "description": "Slugs, separated by commas, that print as the browser would and get no button. For example: home, contact",
+          "kind": { "type": "text", "maxLength": 400, "multiline": false }
+        }
+      ]
+    }
+  ]
+}

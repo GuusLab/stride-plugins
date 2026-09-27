@@ -1,0 +1,131 @@
+{
+  "manifest": {
+    "manifestVersion": 1,
+    "id": "print-friendly",
+    "name": "Print Friendly",
+    "version": "1.0.0",
+    "publisher": "guuslab",
+    "description": "A clean print stylesheet for every page: navigation, footers and banners hidden, link addresses shown, sensible page breaks. Plus an optional Print this page button.",
+    "license": "MIT",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "permissions": [
+      "storage"
+    ],
+    "hooks": [
+      "on_page_render"
+    ],
+    "panels": [
+      {
+        "id": "print-friendly",
+        "title": "Print friendly",
+        "description": "How pages look on paper and whether they get a print button. Changes apply to a page the next time it is published.",
+        "placement": "site-settings",
+        "fields": [
+          {
+            "name": "enabled",
+            "title": "Use the print stylesheet",
+            "description": "Turn this off to print pages exactly as the browser would.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "show-urls",
+            "title": "Print link addresses",
+            "description": "Writes the address of each link after its text, so readers of the paper copy can still find it.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "hide",
+            "title": "Also hide when printing",
+            "description": "CSS selectors, separated by commas, for anything else that should not be printed. For example: .newsletter, #comments",
+            "kind": {
+              "type": "text",
+              "maxLength": 400,
+              "multiline": false
+            }
+          },
+          {
+            "name": "button",
+            "title": "Show a Print this page button",
+            "description": "A button that opens the browser's print dialog. It is never printed itself.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "button-label",
+            "title": "Button text",
+            "description": "Leave empty for \"Print this page\".",
+            "kind": {
+              "type": "text",
+              "maxLength": 40,
+              "multiline": false
+            }
+          },
+          {
+            "name": "button-position",
+            "title": "Button position",
+            "kind": {
+              "type": "enum",
+              "choices": [
+                {
+                  "value": "end",
+                  "title": "After the content"
+                },
+                {
+                  "value": "corner",
+                  "title": "Bottom right corner"
+                }
+              ]
+            }
+          },
+          {
+            "name": "exclude",
+            "title": "Pages to skip",
+            "description": "Slugs, separated by commas, that print as the browser would and get no button. For example: home, contact",
+            "kind": {
+              "type": "text",
+              "maxLength": 400,
+              "multiline": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "Pages that print cleanly: no menus or banners, full link addresses, tidy breaks.",
+    "longDescription": "Print Friendly gives every page a proper print stylesheet, so a visitor who prints a recipe, a guide or an article, or saves it as a PDF, gets the content and nothing else. Navigation, the footer, sidebars, cookie and consent banners, dialogs, forms and embedded video are left off the paper. Text prints black on white, backgrounds and shadows are dropped to save ink, and a sticky header no longer covers the first lines of every page.\n\nLinks stay useful on paper. The full address is printed after each link, including links to your own pages, so a reader can still find them. Links whose text already is the address, email and phone links, and image links are left alone. Headings stay with the text that follows them, images, tables, code and quotes do not split across pages, table headers repeat, and closed details sections open for printing.\n\nIt needs no setup and changes nothing on screen. In the site settings you can turn off link addresses, hide more parts of your pages by CSS selector, skip pages by slug, and add a Print this page button after the content or in the corner, with your own label.\n\nIt is light and accessible. About 2 KB of inline CSS and a few hundred bytes of script, with no third-party requests. The button is a real button with a printer icon, a visible label, a 44 px target and a focus ring; it only appears once its script is running, and it never prints itself.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and pages still print cleanly with the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: the menu, footer and background stay on screen; the paper gets the article."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up on paper: every link is followed by its full address, including links to your own pages."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "The optional Print this page button after the content, with a visible focus ring."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "Every option in Settings: link addresses, extra parts to hide, the button, its text and position, pages to skip."
+      }
+    ],
+    "categories": [
+      "utilities"
+    ],
+    "accent": "#57534E"
+  }
+}
