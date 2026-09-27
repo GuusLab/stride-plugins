@@ -47,24 +47,34 @@ STRIDE_PLUGIN_REGISTRY_KEY=eb8b920592e7f58a9a76ab0e357e13e6492ddb37f7aff42a3d841
 | | Plugin | What it does | Permissions |
 |---|---|---|---|
 | <img src="plugins/announcement/icon.png" width="40" alt=""> | [**Announcement Bar**](sources/announcement) | One clear announcement bar at the top of every page | `storage` |
+| <img src="plugins/breadcrumbs/icon.png" width="40" alt=""> | [**Breadcrumbs**](sources/breadcrumbs) | A breadcrumb trail above every page, with structured data for Google. | `storage`, `read-pages` |
 | <img src="plugins/celebrate/icon.png" width="40" alt=""> | [**Celebrate**](sources/celebrate) | Confetti for your thank-you pages, after an order, sign-up or booking. | `storage` |
 | <img src="plugins/cookie-consent/icon.png" width="40" alt=""> | [**Cookie Consent**](sources/cookie-consent) | An accessible GDPR cookie banner in Dutch or English, with no third parties | `storage` |
+| <img src="plugins/copy-code/icon.png" width="40" alt=""> | [**Copy Code**](sources/copy-code) | A copy button on every code block, with a language label and line numbers. | `storage` |
 | <img src="plugins/countdown-banner/icon.png" width="40" alt=""> | [**Countdown Banner**](sources/countdown-banner) | Count down to your sale, launch or order deadline, then step aside. | `storage` |
 | <img src="plugins/custom-code/icon.png" width="40" alt=""> | [**Custom Code**](sources/custom-code) | Add analytics, verification tags and widgets to every page. No theme edits. | `storage` |
+| <img src="plugins/dark-mode-toggle/icon.png" width="40" alt=""> | [**Dark Mode Toggle**](sources/dark-mode-toggle) | A light and dark switch that follows the device and never flashes. | `storage` |
 | <img src="plugins/external-links/icon.png" width="40" alt=""> | [**External Links**](sources/external-links) | Links to other sites open in a new tab, safely, with a small arrow. | `storage` |
 | <img src="plugins/glossary/icon.png" width="40" alt=""> | [**Glossary**](sources/glossary) | Explain jargon where it appears: dotted underlines that show a definition. | `storage` |
+| <img src="plugins/heading-anchors/icon.png" width="40" alt=""> | [**Heading Anchors**](sources/heading-anchors) | A # link beside every heading. Click to copy a link to that section. | `storage` |
 | <img src="plugins/image-lightbox/icon.png" width="40" alt=""> | [**Image Lightbox**](sources/image-lightbox) | Click any image to see it large, with captions, arrows and swipe. | `storage` |
 | <img src="plugins/instant-pages/icon.png" width="40" alt=""> | [**Instant Pages**](sources/instant-pages) | Pages load while visitors point at a link, and fade in smoothly. | `storage` |
+| <img src="plugins/last-updated/icon.png" width="40" alt=""> | [**Last Updated**](sources/last-updated) | Shows when each page last changed, in Dutch or English, under the title. | `storage`, `read-pages` |
 | <img src="plugins/listen/icon.png" width="40" alt=""> | [**Listen**](sources/listen) | A Listen button that reads long pages aloud, highlighting each paragraph. | `storage` |
+| <img src="plugins/lite-video/icon.png" width="40" alt=""> | [**Lite Video**](sources/lite-video) | YouTube and Vimeo videos that load only when a visitor presses play. | `storage` |
 | <img src="plugins/maintenance-mode/icon.png" width="40" alt=""> | [**Maintenance Mode**](sources/maintenance-mode) | A polished coming-soon page for visitors while editors see the real site | `storage` |
+| <img src="plugins/map-embed/icon.png" width="40" alt=""> | [**Privacy Map**](sources/map-embed) | An OpenStreetMap that loads only when a visitor asks for it. | `storage` |
 | <img src="plugins/mobile-action-bar/icon.png" width="40" alt=""> | [**Mobile Action Bar**](sources/mobile-action-bar) | Call, email, directions and booking, one tap away on phones. | `storage` |
 | <img src="plugins/opening-hours/icon.png" width="40" alt=""> | [**Opening Hours**](sources/opening-hours) | Your opening hours as a neat table, with a live Open now badge. | `storage` |
+| <img src="plugins/print-friendly/icon.png" width="40" alt=""> | [**Print Friendly**](sources/print-friendly) | Pages that print cleanly: no menus or banners, full link addresses, tidy breaks. | `storage` |
 | <img src="plugins/promo-popup/icon.png" width="40" alt=""> | [**Promo Popup**](sources/promo-popup) | One friendly popup for a sale or newsletter. Never pushy. | `storage` |
 | <img src="plugins/qr-code/icon.png" width="40" alt=""> | [**QR Code**](sources/qr-code) | A QR code for every page, for menus, flyers, posters and printed recipes. | `storage` |
 | <img src="plugins/quote-share/icon.png" width="40" alt=""> | [**Quote Share**](sources/quote-share) | Select a sentence and share it as a quote. Links open with it highlighted. | `storage` |
 | <img src="plugins/reading-progress/icon.png" width="40" alt=""> | [**Reading Progress**](sources/reading-progress) | A slim reading progress bar and a back-to-top button for long pages. | `storage` |
 | <img src="plugins/reading-time/icon.png" width="40" alt=""> | [**Reading Time**](sources/reading-time) | Shows readers how long a page takes, like "4 min read", under the title. | `storage` |
+| <img src="plugins/related-pages/icon.png" width="40" alt=""> | [**Related Pages**](sources/related-pages) | Related reading at the end of every article, matched on topics and titles. | `read-pages`, `storage` |
 | <img src="plugins/schema-markup/icon.png" width="40" alt=""> | [**Schema Markup**](sources/schema-markup) | JSON-LD for your business, website and blog posts, ready for Google rich results | `storage` |
+| <img src="plugins/scroll-reveal/icon.png" width="40" alt=""> | [**Scroll Reveal**](sources/scroll-reveal) | Content fades and slides into place as visitors scroll to it. | `storage` |
 | <img src="plugins/seo-inspector/icon.png" width="40" alt=""> | [**SEO Inspector**](sources/seo-inspector) | A 0-100 SEO score and clear warnings for every page, checked on save. | `storage`, `write-pages` |
 | <img src="plugins/site-search/icon.png" width="40" alt=""> | [**Site Search**](sources/site-search) | A search box for your whole site. Press ⌘K and find any page as you type. | `storage`, `read-pages` |
 | <img src="plugins/social-share/icon.png" width="40" alt=""> | [**Social Share**](sources/social-share) | Privacy-friendly share buttons under every article. No trackers. | `storage` |

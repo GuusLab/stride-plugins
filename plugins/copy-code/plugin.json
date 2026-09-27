@@ -1,109 +1,129 @@
 {
   "manifest": {
-    "manifestVersion": 1,
-    "id": "copy-code",
-    "name": "Copy Code",
-    "version": "1.0.0",
-    "publisher": "guuslab",
     "description": "A copy button on every code block, with Copied feedback, a language label and optional line numbers. Clean CSS, no highlighting library, no third-party requests.",
-    "license": "MIT",
     "homepage": "https://github.com/guuslab/stride-plugins",
-    "permissions": [
-      "storage"
-    ],
     "hooks": [
       "on_page_render"
     ],
+    "id": "copy-code",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Copy Code",
     "panels": [
       {
-        "id": "copy-code",
-        "title": "Copy code",
         "description": "To add a code block, write it in a text block between two lines of three backticks, with the language after the first: ```bash. Changes apply to a page the next time it is published.",
-        "placement": "site-settings",
         "fields": [
           {
-            "name": "enabled",
-            "title": "Add a copy button to code blocks",
             "description": "Turn this off to leave every page exactly as it was rendered.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "enabled",
+            "title": "Add a copy button to code blocks"
           },
           {
-            "name": "look",
-            "title": "Code block style",
             "kind": {
-              "type": "enum",
               "choices": [
                 {
-                  "value": "dark",
-                  "title": "Clean dark"
+                  "title": "Clean dark",
+                  "value": "dark"
                 },
                 {
-                  "value": "light",
-                  "title": "Clean light"
+                  "title": "Clean light",
+                  "value": "light"
                 },
                 {
-                  "value": "theme",
-                  "title": "Keep my theme's style"
+                  "title": "Keep my theme's style",
+                  "value": "theme"
                 }
-              ]
-            }
+              ],
+              "type": "enum"
+            },
+            "name": "look",
+            "title": "Code block style"
           },
           {
-            "name": "language",
-            "title": "Show the language",
             "description": "A small label such as \"bash\" or \"python\", taken from the code block's language class.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "language",
+            "title": "Show the language"
           },
           {
-            "name": "line-numbers",
-            "title": "Show line numbers",
             "description": "Numbers in a gutter on the left. They are never copied.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "line-numbers",
+            "title": "Show line numbers"
           },
           {
-            "name": "copy-label",
-            "title": "Button text",
             "description": "Leave empty for \"Copy\".",
             "kind": {
-              "type": "text",
               "maxLength": 24,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "copy-label",
+            "title": "Button text"
           },
           {
-            "name": "copied-label",
-            "title": "Text after copying",
             "description": "Leave empty for \"Copied\".",
             "kind": {
-              "type": "text",
               "maxLength": 24,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "copied-label",
+            "title": "Text after copying"
           },
           {
-            "name": "exclude",
-            "title": "Pages to skip",
             "description": "Slugs, separated by commas, that are left alone. For example: home, contact",
             "kind": {
-              "type": "text",
               "maxLength": 400,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "exclude",
+            "title": "Pages to skip"
           }
-        ]
+        ],
+        "id": "copy-code",
+        "placement": "site-settings",
+        "title": "Copy code"
       }
-    ]
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
   },
   "publisher": {
     "id": "guuslab",
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "cc4ed2a50b3f37ab1a6ca4d91853d32e77b0cc163fc9e798c799bff24af352e4",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "12a6176c322379e6976543adb5084d63a5c54a6a3a479ccb0a37edcac4b18044",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/copy-code/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "c5f9a6c75469945601e0e82ea5382ffc91c43aa0f70e6be7dffb9f5531a32ada2005c016fe3dc1ad880182e35761a11ace7febf49dfd92ce9228e8f5501b7a05",
+    "size": 181767,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/copy-code/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
   },
   "store": {
     "tagline": "A copy button on every code block, with a language label and line numbers.",

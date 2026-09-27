@@ -1,116 +1,136 @@
 {
   "manifest": {
-    "manifestVersion": 1,
-    "id": "map-embed",
-    "name": "Privacy Map",
-    "version": "1.0.0",
-    "publisher": "guuslab",
     "description": "An OpenStreetMap of your location that loads only after a visitor clicks Show map. Until then it is your address on a placeholder, and nothing is fetched from another site.",
-    "license": "MIT",
     "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/map-embed",
-    "permissions": [
-      "storage"
-    ],
     "hooks": [
       "on_page_render"
     ],
+    "id": "map-embed",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Privacy Map",
     "panels": [
       {
-        "id": "map-embed",
-        "title": "Privacy map",
         "description": "Type [map] on a page where the map should go, or pick a page below to add it at the end. The map comes from OpenStreetMap and loads only when a visitor clicks Show map. Changes apply to a page the next time it is published.",
-        "placement": "site-settings",
         "fields": [
           {
-            "name": "enabled",
-            "title": "Show the map",
             "description": "Turn this off to leave every page exactly as it was rendered.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "enabled",
+            "title": "Show the map"
           },
           {
-            "name": "name",
-            "title": "Place name",
             "description": "The heading on the map, like your business name. Optional.",
             "kind": {
-              "type": "text",
               "maxLength": 80,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "name",
+            "title": "Place name"
           },
           {
-            "name": "address",
-            "title": "Address",
             "description": "Shown on the placeholder, one line per line of the address.",
             "kind": {
-              "type": "text",
               "maxLength": 240,
-              "multiline": true
-            }
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "address",
+            "title": "Address"
           },
           {
-            "name": "location",
-            "title": "Location on the map",
             "description": "Paste a link from openstreetmap.org, or coordinates like 52.3731, 4.8922. On openstreetmap.org, right-click your place and choose Show address to find them.",
             "kind": {
-              "type": "text",
               "maxLength": 300,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "location",
+            "title": "Location on the map"
           },
           {
-            "name": "zoom",
-            "title": "Zoom",
             "description": "From 3 (a country) to 19 (a single building). 16 shows the streets around you.",
             "kind": {
-              "type": "integer",
+              "maximum": 19,
               "minimum": 3,
-              "maximum": 19
-            }
+              "type": "integer"
+            },
+            "name": "zoom",
+            "title": "Zoom"
           },
           {
-            "name": "height",
-            "title": "Height in pixels",
             "kind": {
-              "type": "integer",
+              "maximum": 720,
               "minimum": 200,
-              "maximum": 720
-            }
+              "type": "integer"
+            },
+            "name": "height",
+            "title": "Height in pixels"
           },
           {
-            "name": "page",
-            "title": "Also add it at the end of this page",
             "description": "A page's slug, like contact. Leave it empty to show the map only where you type [map].",
             "kind": {
-              "type": "text",
               "maxLength": 120,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "page",
+            "title": "Also add it at the end of this page"
           },
           {
-            "name": "remember",
-            "title": "Remember the visitor's choice",
             "description": "After a visitor shows a map once, show maps straight away on their next visits. The choice is kept in their own browser only.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "remember",
+            "title": "Remember the visitor's choice"
           },
           {
-            "name": "colour",
-            "title": "Button colour",
             "kind": {
               "type": "color"
-            }
+            },
+            "name": "colour",
+            "title": "Button colour"
           }
-        ]
+        ],
+        "id": "map-embed",
+        "placement": "site-settings",
+        "title": "Privacy map"
       }
-    ]
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
   },
   "publisher": {
     "id": "guuslab",
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "c3a789ae035595dca1c28501bae82fa5091730b0994aff6af6fe75638a3ebb76",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "3c91a38587b2863b1cb5e407386bb8030c2415d705c4123da5671d5dffb8fa2b",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/map-embed/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "02c8c1370df4e79d25f5b25de7c424dd51da8fbaba23554bbdb585b4cbf5c1582c38eecc853cadf12376bdc140df05d046d35ba702869fc97e21559c0f39be02",
+    "size": 233912,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/map-embed/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
   },
   "store": {
     "tagline": "An OpenStreetMap that loads only when a visitor asks for it.",

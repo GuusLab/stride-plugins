@@ -133,6 +133,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "62aacbe2e41d81087aa560ae904d8ebb8d9e937f36bd19d357da2c4161dc3e96",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "367e0e7a81cdbf8462e63b45347159900fcbf451dc35dac7dc1131fbbf900ece",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/heading-anchors/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "8e61ed1fd06a4768fc9c00921fb02397ad5e6b134fc32aea788dc450bf0aba9e71c115afd14eca7d4fe4517eff0ee24b235c87d6d6bbeed8dba9360806776b0c",
+    "size": 196126,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/heading-anchors/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "A # link beside every heading. Click to copy a link to that section.",
     "longDescription": "Heading Anchors puts a small # beside every section heading on your pages. It stays out of the way until a reader points at the heading or tabs to it. One click scrolls smoothly to that section, puts it in the address bar and copies the link, with a short \"Link copied\" message. It is made for docs, guides and long articles that people want to share a specific part of.\n\nIt needs no setup. Out of the box H2 and H3 headings get a blue # after the text. Headings without an id get a stable one made from their text, so \"Choosing your paper\" becomes #choosing-your-paper, and links keep working when you publish again. The ids match the ones Table of Contents makes, and headings that already have an id keep it.\n\nIn the site settings you can link only H2 headings or go down to H4, pick a chain link icon or a section sign instead of #, move the symbol into the margin before the heading, choose your own colour, write your own copied message, turn copying off, or skip pages by slug.\n\nIt is accessible by default. Every symbol is a real link with a name like \"Link to section: Choosing your paper\", so it works without JavaScript and with screen readers. It shows on keyboard focus with a visible focus ring, and faintly on touch screens, which have no hover. The copied message is announced politely, smooth scrolling respects reduced motion, and sticky headers do not cover the section you land on.\n\nIt is light: about 2 KB of inline CSS and JavaScript, no third-party requests, fonts or images. The only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",

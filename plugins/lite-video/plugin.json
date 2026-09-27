@@ -1,73 +1,93 @@
 {
   "manifest": {
-    "manifestVersion": 1,
-    "id": "lite-video",
-    "name": "Lite Video",
-    "version": "1.0.0",
-    "publisher": "guuslab",
     "description": "YouTube and Vimeo videos appear as a light poster with a play button. The real player, from youtube-nocookie.com or Vimeo, loads only when a visitor presses play.",
-    "license": "MIT",
     "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/lite-video",
-    "permissions": [
-      "storage"
-    ],
     "hooks": [
       "on_page_render"
     ],
+    "id": "lite-video",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Lite Video",
     "panels": [
       {
-        "id": "lite-video",
-        "title": "Lite video",
         "description": "Every YouTube and Vimeo video on your pages becomes a poster with a play button. Nothing loads from YouTube or Vimeo until a visitor presses play. Changes apply to a page the next time it is published.",
-        "placement": "site-settings",
         "fields": [
           {
-            "name": "enabled",
-            "title": "Use lite videos",
             "description": "Turn this off to show the normal players again.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "enabled",
+            "title": "Use lite videos"
           },
           {
-            "name": "colour",
-            "title": "Play button colour",
             "kind": {
               "type": "color"
-            }
+            },
+            "name": "colour",
+            "title": "Play button colour"
           },
           {
-            "name": "note",
-            "title": "Explain what pressing play does",
             "description": "A short line on the poster saying the video plays from YouTube or Vimeo.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "note",
+            "title": "Explain what pressing play does"
           },
           {
-            "name": "thumbnails",
-            "title": "Show YouTube thumbnails",
             "description": "Use the video's own picture as the poster. The picture comes from YouTube, so YouTube sees each visitor even before they press play. Off by default.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "thumbnails",
+            "title": "Show YouTube thumbnails"
           },
           {
-            "name": "remember",
-            "title": "Remember the visitor's choice",
             "description": "After a visitor plays one video, load players straight away on their next visits. The choice is kept in their own browser only.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "remember",
+            "title": "Remember the visitor's choice"
           }
-        ]
+        ],
+        "id": "lite-video",
+        "placement": "site-settings",
+        "title": "Lite video"
       }
-    ]
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
   },
   "publisher": {
     "id": "guuslab",
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "28f94146fc4495d47a3bac0f5c75f7199c6d9504a406fed2f408ef2bc36b740b",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "5a99e195c02538ad74ed0280e1fcbc912179f424982067f0c2a7aa7b8b5229e0",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/lite-video/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "7b531c52ca74dfe12d1dfe1724d0ad29bbedc99a41dc0faa69c9b384ececb173016d9cff8c9f8697d6166e11c5571d2ad6ebcc9b8e20a162342d92a1379ffd00",
+    "size": 183295,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/lite-video/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
   },
   "store": {
     "tagline": "YouTube and Vimeo videos that load only when a visitor presses play.",

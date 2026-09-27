@@ -125,6 +125,27 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "40b5db35531f5b6e4a6ac302be4426387f0811d97a1c439d66dddf6390244ad2",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "725c8ccae69af08ce1cc5f9e45c6fcc96092642e35cee565dfc9e9e93171c18f",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/breadcrumbs/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage",
+      "read-pages"
+    ],
+    "publishedAt": "",
+    "signature": "91bce0c11b1afdb7b6a0fa3238b55d0336577ddbd175d266c4c26bd1b8230d72cc02c3b71e7b9465aa6096c20c39068eb6a4fe6403070e9b656501065d3a3105",
+    "size": 196377,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/breadcrumbs/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "A breadcrumb trail above every page, with structured data for Google.",
     "longDescription": "Breadcrumbs shows visitors where they are with a small trail above the page content, like Home › Writing › This post. Every step but the last is a link, so going one level up is one click away. The home page never gets a trail.\n\nThe trail is built from the page address and your own page titles. A page at journal/spring-menu under a page called Journal reads Home › Journal › Our spring menu. When a step is not a published page, it is shown as plain text instead of a link that goes nowhere.\n\nIt also adds BreadcrumbList structured data, so search engines can show the trail in results instead of a bare address. When your site has a domain, the links in it are full URLs. If another plugin already added breadcrumb data, it leaves that alone.\n\nIt needs no setup. Out of the box you get plain dark teal links with a › between them. In the site settings you can rename Home, pick a chevron, slash, arrow or dot, switch to rounded pills, choose your own link colour, hide the current page from the trail, turn the structured data off, or skip pages by slug.\n\nIt is light and accessible. There is no script at all, no fonts and no third-party requests: about 1 KB of CSS. The trail is a nav landmark named Breadcrumb with an ordered list, the current page is marked for screen readers, separators are not read aloud, links have a visible focus ring, and the default colour passes WCAG AA on a light page. It is hidden when printing.\n\nIt asks for two permissions. Storage keeps its settings; refuse it and it runs with the defaults. Read pages lets it use your page titles and check which pages exist; refuse it and each step is named after its address, as plain text.\n\nGood to know: Stride currently serves published pages at one-level addresses, so a trail has three or more steps only for pages whose slug has a slash in it.",

@@ -1,104 +1,126 @@
 {
   "manifest": {
-    "manifestVersion": 1,
-    "id": "last-updated",
-    "name": "Last Updated",
-    "version": "1.0.0",
-    "publisher": "guuslab",
     "description": "Shows \"Last updated on 27 September 2026\" on pages and posts, in Dutch or English to match the page. The date is the day the page was last published with new edits, taken from Stride's own records.",
-    "license": "MIT",
     "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/last-updated",
-    "permissions": [
-      "storage",
-      "read-pages"
-    ],
     "hooks": [
       "on_page_render",
       "on_publish"
     ],
+    "id": "last-updated",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Last Updated",
     "panels": [
       {
-        "id": "last-updated",
-        "title": "Last updated",
         "description": "A short line with the date a page last changed. Dates are recorded when a page is published with new edits; publish the site once to record them all.",
-        "placement": "site-settings",
         "fields": [
           {
-            "name": "enabled",
-            "title": "Show the date",
             "description": "Turn this off to leave every page exactly as it was rendered.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "enabled",
+            "title": "Show the date"
           },
           {
-            "name": "position",
-            "title": "Position",
             "description": "Right under the page title, or at the end of the content.",
             "kind": {
-              "type": "enum",
               "choices": [
                 {
-                  "value": "below-title",
-                  "title": "Under the title"
+                  "title": "Under the title",
+                  "value": "below-title"
                 },
                 {
-                  "value": "end",
-                  "title": "End of the content"
+                  "title": "End of the content",
+                  "value": "end"
                 }
-              ]
-            }
+              ],
+              "type": "enum"
+            },
+            "name": "position",
+            "title": "Position"
           },
           {
-            "name": "format",
-            "title": "Date format",
             "description": "Month names follow the page language: Dutch for nl pages, English for the rest.",
             "kind": {
-              "type": "enum",
               "choices": [
                 {
-                  "value": "long",
-                  "title": "27 September 2026"
+                  "title": "27 September 2026",
+                  "value": "long"
                 },
                 {
-                  "value": "short",
-                  "title": "27 Sep 2026"
+                  "title": "27 Sep 2026",
+                  "value": "short"
                 },
                 {
-                  "value": "numeric",
-                  "title": "27-09-2026 (Dutch) or 2026-09-27 (English)"
+                  "title": "27-09-2026 (Dutch) or 2026-09-27 (English)",
+                  "value": "numeric"
                 }
-              ]
-            }
+              ],
+              "type": "enum"
+            },
+            "name": "format",
+            "title": "Date format"
           },
           {
-            "name": "label",
-            "title": "Label",
             "description": "The words before the date. Leave it empty for \"Last updated on\", or \"Laatst bijgewerkt op\" on Dutch pages.",
             "kind": {
-              "type": "text",
               "maxLength": 40,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "label",
+            "title": "Label"
           },
           {
-            "name": "skip-pages",
-            "title": "Pages to skip",
             "description": "Addresses without a date, separated by commas, such as home, contact. The home page is home.",
             "kind": {
-              "type": "text",
               "maxLength": 2000,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "skip-pages",
+            "title": "Pages to skip"
           }
-        ]
+        ],
+        "id": "last-updated",
+        "placement": "site-settings",
+        "title": "Last updated"
       }
-    ]
+    ],
+    "permissions": [
+      "storage",
+      "read-pages"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
   },
   "publisher": {
     "id": "guuslab",
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "99aca8442891f2f902b7d96b52ca9acb07e96f660c80d944ee38e51b7a2e96ed",
+    "hooks": [
+      "on_page_render",
+      "on_publish"
+    ],
+    "manifestHash": "c495738d5ac8a7f81a0530e8a3a6a042390540468b8b16f646a8b47d1a343f23",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/last-updated/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage",
+      "read-pages"
+    ],
+    "publishedAt": "",
+    "signature": "5146d02709758aa6513d86b625a4dfd406fc5523ac7c53453410770942690cadf1cc2bab93b77be7fd30e43987fc932aa394187a418795b05d02d2a479f95509",
+    "size": 202348,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/last-updated/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
   },
   "store": {
     "tagline": "Shows when each page last changed, in Dutch or English, under the title.",

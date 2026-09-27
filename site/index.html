@@ -40,7 +40,7 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
   <div class="top">
     <h1>Stride Plugins</h1>
     <p>The official plugin store for <a href="https://github.com/GuusLab/stride">Stride</a>. Every plugin is WebAssembly, sandboxed, permission-scoped, signed, and rebuilt from source byte for byte before it is listed.</p>
-    <p>Install them from <strong>Plugins</strong> in the Stride editor. 24 plugins · <a href="index.json">index.json</a> · <a href="https://github.com/GuusLab/stride-plugins">GitHub</a> · <a href="https://github.com/GuusLab/stride-plugins#submitting-a-plugin">Submit a plugin</a></p>
+    <p>Install them from <strong>Plugins</strong> in the Stride editor. 34 plugins · <a href="index.json">index.json</a> · <a href="https://github.com/GuusLab/stride-plugins">GitHub</a> · <a href="https://github.com/GuusLab/stride-plugins#submitting-a-plugin">Submit a plugin</a></p>
   </div>
 
     <article class="plugin" id="announcement" style="--accent:#f97316">
@@ -68,6 +68,36 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
           <dt>Hooks</dt><dd><code>on_page_render</code></dd>
           <dt>Module</dt><dd><a href="plugins/announcement/1.0.0/plugin.wasm">plugin.wasm</a>, 181 KB, SHA-256 <code class="hash">513451d0631ef24aea5579c70602805958a0d3194966422ea827e86deaf0dd93</code></dd>
           <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/63b0b4f5404204069d976a723aceb2429d035d02/sources/announcement">sources/announcement</a> at <code>63b0b4f</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="breadcrumbs" style="--accent:#0d9488">
+      <header>
+        <img class="icon" src="plugins/breadcrumbs/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Breadcrumbs</h2>
+          <p class="tagline">A breadcrumb trail above every page, with structured data for Google.</p>
+          <p class="meta">
+            <span class="chip">seo</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/breadcrumbs/screenshots/01.png"><img src="plugins/breadcrumbs/screenshots/01.png" alt="Zero configuration: a quiet trail above the article, built from the address and your page titles." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: a quiet trail above the article, built from the address and your page titles.</figcaption></figure>
+          <figure><a href="plugins/breadcrumbs/screenshots/02.png"><img src="plugins/breadcrumbs/screenshots/02.png" alt="Close up: every step but the current page is a link, with a › between them." width="1600" height="1000" loading="lazy"></a><figcaption>Close up: every step but the current page is a link, with a › between them.</figcaption></figure>
+          <figure><a href="plugins/breadcrumbs/screenshots/03.png"><img src="plugins/breadcrumbs/screenshots/03.png" alt="Your own home name, arrow separators, rounded pills and your link colour." width="1600" height="1000" loading="lazy"></a><figcaption>Your own home name, arrow separators, rounded pills and your link colour.</figcaption></figure>
+          <figure><a href="plugins/breadcrumbs/screenshots/04.png"><img src="plugins/breadcrumbs/screenshots/04.png" alt="Every option in the plugin&#39;s settings: home name, separator, style, colour, current page, structured data." width="1600" height="1000" loading="lazy"></a><figcaption>Every option in the plugin&#39;s settings: home name, separator, style, colour, current page, structured data.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Breadcrumbs</summary>
+        <p>Breadcrumbs shows visitors where they are with a small trail above the page content, like Home › Writing › This post. Every step but the last is a link, so going one level up is one click away. The home page never gets a trail.</p><p>The trail is built from the page address and your own page titles. A page at journal/spring-menu under a page called Journal reads Home › Journal › Our spring menu. When a step is not a published page, it is shown as plain text instead of a link that goes nowhere.</p><p>It also adds BreadcrumbList structured data, so search engines can show the trail in results instead of a bare address. When your site has a domain, the links in it are full URLs. If another plugin already added breadcrumb data, it leaves that alone.</p><p>It needs no setup. Out of the box you get plain dark teal links with a › between them. In the site settings you can rename Home, pick a chevron, slash, arrow or dot, switch to rounded pills, choose your own link colour, hide the current page from the trail, turn the structured data off, or skip pages by slug.</p><p>It is light and accessible. There is no script at all, no fonts and no third-party requests: about 1 KB of CSS. The trail is a nav landmark named Breadcrumb with an ordered list, the current page is marked for screen readers, separators are not read aloud, links have a visible focus ring, and the default colour passes WCAG AA on a light page. It is hidden when printing.</p><p>It asks for two permissions. Storage keeps its settings; refuse it and it runs with the defaults. Read pages lets it use your page titles and check which pages exist; refuse it and each step is named after its address, as plain text.</p><p>Good to know: Stride currently serves published pages at one-level addresses, so a trail has three or more steps only for pages whose slug has a slash in it.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code> <code>read-pages</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/breadcrumbs/1.0.0/plugin.wasm">plugin.wasm</a>, 192 KB, SHA-256 <code class="hash">40b5db35531f5b6e4a6ac302be4426387f0811d97a1c439d66dddf6390244ad2</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/breadcrumbs">sources/breadcrumbs</a> at <code>5fecf73</code></dd>
         </dl>
       </details>
     </article>
@@ -130,6 +160,35 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
       </details>
     </article>
 
+    <article class="plugin" id="copy-code" style="--accent:#0f172a">
+      <header>
+        <img class="icon" src="plugins/copy-code/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Copy Code</h2>
+          <p class="tagline">A copy button on every code block, with a language label and line numbers.</p>
+          <p class="meta">
+            <span class="chip">developer</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/copy-code/screenshots/01.png"><img src="plugins/copy-code/screenshots/01.png" alt="Zero configuration: clean dark code blocks with the language and a Copy button that says Copied." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: clean dark code blocks with the language and a Copy button that says Copied.</figcaption></figure>
+          <figure><a href="plugins/copy-code/screenshots/02.png"><img src="plugins/copy-code/screenshots/02.png" alt="Close up: the clean light style with line numbers, which are never copied." width="1600" height="1000" loading="lazy"></a><figcaption>Close up: the clean light style with line numbers, which are never copied.</figcaption></figure>
+          <figure><a href="plugins/copy-code/screenshots/03.png"><img src="plugins/copy-code/screenshots/03.png" alt="Every option in Settings: style, language label, line numbers, button text and pages to skip." width="1600" height="1000" loading="lazy"></a><figcaption>Every option in Settings: style, language label, line numbers, button text and pages to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Copy Code</summary>
+        <p>Copy Code puts a small toolbar on every code block on your site: the language on the left and a Copy button on the right. One click copies the code, and the button says Copied with a check mark so visitors know it worked.</p><p>It works with Stride&#39;s text blocks. Write your code between two lines of three backticks, with the language after the first, like ```bash, and it is published as a real code block. Code blocks from your theme or another plugin get the button too.</p><p>It needs no setup. Out of the box you get a clean dark code block with a language label. In the site settings you can switch to a clean light style, or keep your theme&#39;s own style and only add the button. You can turn on line numbers, change the button text for a site in another language, or skip pages by slug.</p><p>It is built to be light. There is no highlighting library, no web font and no third-party request: a few kilobytes of inline CSS and JavaScript, and only on pages that have code.</p><p>It is accessible by default. The button is a real button with a visible label and focus ring, and screen readers hear Copied. Line numbers are never read out or copied. If the browser blocks the clipboard, the code is selected and the button says which keys to press. Without JavaScript, visitors see the plain code block.</p><p>The only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/copy-code/1.0.0/plugin.wasm">plugin.wasm</a>, 178 KB, SHA-256 <code class="hash">cc4ed2a50b3f37ab1a6ca4d91853d32e77b0cc163fc9e798c799bff24af352e4</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/copy-code">sources/copy-code</a> at <code>5fecf73</code></dd>
+        </dl>
+      </details>
+    </article>
+
     <article class="plugin" id="countdown-banner" style="--accent:#e11d48">
       <header>
         <img class="icon" src="plugins/countdown-banner/icon.png" alt="" width="96" height="96">
@@ -187,6 +246,35 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
       </details>
     </article>
 
+    <article class="plugin" id="dark-mode-toggle" style="--accent:#334155">
+      <header>
+        <img class="icon" src="plugins/dark-mode-toggle/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Dark Mode Toggle</h2>
+          <p class="tagline">A light and dark switch that follows the device and never flashes.</p>
+          <p class="meta">
+            <span class="chip">design</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/dark-mode-toggle/screenshots/01.png"><img src="plugins/dark-mode-toggle/screenshots/01.png" alt="Zero configuration: the dark version is derived from your own colours and follows the device." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: the dark version is derived from your own colours and follows the device.</figcaption></figure>
+          <figure><a href="plugins/dark-mode-toggle/screenshots/02.png"><img src="plugins/dark-mode-toggle/screenshots/02.png" alt="Close up: the switch at the end of the header menu, light and dark. The choice is remembered." width="1600" height="1000" loading="lazy"></a><figcaption>Close up: the switch at the end of the header menu, light and dark. The choice is remembered.</figcaption></figure>
+          <figure><a href="plugins/dark-mode-toggle/screenshots/03.png"><img src="plugins/dark-mode-toggle/screenshots/03.png" alt="The settings: when to start dark, where the switch goes, your own dark colours and overrides." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: when to start dark, where the switch goes, your own dark colours and overrides.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Dark Mode Toggle</summary>
+        <p>Dark Mode Toggle gives every page of your site a dark version and a small switch for visitors. Before anyone chooses, pages simply follow the light or dark setting of the visitor&#39;s device. One click on the switch changes it, and the choice is remembered on every page and every visit.</p><p>There is nothing to design. The dark colours are worked out from your own design colours when a page is published: your lightest colour becomes a deep background, your darkest becomes the text, and everything in between follows, so text stays as readable as it was and your hues stay recognisable. Want more control? Pick your own dark background and text colour, or override single colours by name.</p><p>There is no flash of white when a page loads in dark mode: a one-line script in the page head puts the remembered choice back before anything is drawn. Form controls and scrollbars switch with the page.</p><p>The switch is a real button with an accessible name, a pressed state screen readers announce, a large target and a visible focus ring. Put it floating in a corner or at the end of your header menu. It only appears once its script has run, so visitors without JavaScript never see a button that does nothing. It is hidden when printing.</p><p>It is light: no third-party requests, fonts or images, about 2.5 KB in total. The only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/dark-mode-toggle/1.0.0/plugin.wasm">plugin.wasm</a>, 186 KB, SHA-256 <code class="hash">9ce4070c68bc520fe0dea882515a2ad9f2ed64946589d596d361ffaaec26a20f</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/dark-mode-toggle">sources/dark-mode-toggle</a> at <code>5fecf73</code></dd>
+        </dl>
+      </details>
+    </article>
+
     <article class="plugin" id="external-links" style="--accent:#0284c7">
       <header>
         <img class="icon" src="plugins/external-links/icon.png" alt="" width="96" height="96">
@@ -240,6 +328,36 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
           <dt>Hooks</dt><dd><code>on_page_render</code></dd>
           <dt>Module</dt><dd><a href="plugins/glossary/1.0.0/plugin.wasm">plugin.wasm</a>, 193 KB, SHA-256 <code class="hash">835df3d030669d25c5b2bd05438d97762b88171d13ad299575b1f25e0a02728d</code></dd>
           <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/d6ae66c2492072dd37496ac5e786d8f6866d300c/sources/glossary">sources/glossary</a> at <code>d6ae66c</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="heading-anchors" style="--accent:#2563eb">
+      <header>
+        <img class="icon" src="plugins/heading-anchors/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Heading Anchors</h2>
+          <p class="tagline">A # link beside every heading. Click to copy a link to that section.</p>
+          <p class="meta">
+            <span class="chip">content</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/heading-anchors/screenshots/01.png"><img src="plugins/heading-anchors/screenshots/01.png" alt="Zero configuration: a # appears beside the heading you point at, and one click copies its link." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: a # appears beside the heading you point at, and one click copies its link.</figcaption></figure>
+          <figure><a href="plugins/heading-anchors/screenshots/02.png"><img src="plugins/heading-anchors/screenshots/02.png" alt="Close up: the link scrolls smoothly to the section and confirms the copy with a short message." width="1600" height="1000" loading="lazy"></a><figcaption>Close up: the link scrolls smoothly to the section and confirms the copy with a short message.</figcaption></figure>
+          <figure><a href="plugins/heading-anchors/screenshots/03.png"><img src="plugins/heading-anchors/screenshots/03.png" alt="A chain link icon in the margin, in your own colour, with your own copied message." width="1600" height="1000" loading="lazy"></a><figcaption>A chain link icon in the margin, in your own colour, with your own copied message.</figcaption></figure>
+          <figure><a href="plugins/heading-anchors/screenshots/04.png"><img src="plugins/heading-anchors/screenshots/04.png" alt="Every option in the plugin&#39;s settings: headings, symbol, position, colour, copying and pages to skip." width="1600" height="1000" loading="lazy"></a><figcaption>Every option in the plugin&#39;s settings: headings, symbol, position, colour, copying and pages to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Heading Anchors</summary>
+        <p>Heading Anchors puts a small # beside every section heading on your pages. It stays out of the way until a reader points at the heading or tabs to it. One click scrolls smoothly to that section, puts it in the address bar and copies the link, with a short &quot;Link copied&quot; message. It is made for docs, guides and long articles that people want to share a specific part of.</p><p>It needs no setup. Out of the box H2 and H3 headings get a blue # after the text. Headings without an id get a stable one made from their text, so &quot;Choosing your paper&quot; becomes #choosing-your-paper, and links keep working when you publish again. The ids match the ones Table of Contents makes, and headings that already have an id keep it.</p><p>In the site settings you can link only H2 headings or go down to H4, pick a chain link icon or a section sign instead of #, move the symbol into the margin before the heading, choose your own colour, write your own copied message, turn copying off, or skip pages by slug.</p><p>It is accessible by default. Every symbol is a real link with a name like &quot;Link to section: Choosing your paper&quot;, so it works without JavaScript and with screen readers. It shows on keyboard focus with a visible focus ring, and faintly on touch screens, which have no hover. The copied message is announced politely, smooth scrolling respects reduced motion, and sticky headers do not cover the section you land on.</p><p>It is light: about 2 KB of inline CSS and JavaScript, no third-party requests, fonts or images. The only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/heading-anchors/1.0.0/plugin.wasm">plugin.wasm</a>, 192 KB, SHA-256 <code class="hash">62aacbe2e41d81087aa560ae904d8ebb8d9e937f36bd19d357da2c4161dc3e96</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/heading-anchors">sources/heading-anchors</a> at <code>5fecf73</code></dd>
         </dl>
       </details>
     </article>
@@ -302,6 +420,36 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
       </details>
     </article>
 
+    <article class="plugin" id="last-updated" style="--accent:#475569">
+      <header>
+        <img class="icon" src="plugins/last-updated/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Last Updated</h2>
+          <p class="tagline">Shows when each page last changed, in Dutch or English, under the title.</p>
+          <p class="meta">
+            <span class="chip">content</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/last-updated/screenshots/01.png"><img src="plugins/last-updated/screenshots/01.png" alt="Zero configuration: a quiet date under the title of an article, in the theme&#39;s own font and colour." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: a quiet date under the title of an article, in the theme&#39;s own font and colour.</figcaption></figure>
+          <figure><a href="plugins/last-updated/screenshots/02.png"><img src="plugins/last-updated/screenshots/02.png" alt="Close-up: the date sits between the title and the byline, as a real &lt;time&gt; element." width="1600" height="1000" loading="lazy"></a><figcaption>Close-up: the date sits between the title and the byline, as a real &lt;time&gt; element.</figcaption></figure>
+          <figure><a href="plugins/last-updated/screenshots/03.png"><img src="plugins/last-updated/screenshots/03.png" alt="Dutch pages get Dutch automatically: &quot;Laatst bijgewerkt op 27 september 2026&quot;." width="1600" height="1000" loading="lazy"></a><figcaption>Dutch pages get Dutch automatically: &quot;Laatst bijgewerkt op 27 september 2026&quot;.</figcaption></figure>
+          <figure><a href="plugins/last-updated/screenshots/04.png"><img src="plugins/last-updated/screenshots/04.png" alt="Site settings: position, date format, your own label and pages to skip." width="1600" height="1000" loading="lazy"></a><figcaption>Site settings: position, date format, your own label and pages to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Last Updated</summary>
+        <p>Last Updated adds one quiet line to your pages and posts: &quot;Last updated on 27 September 2026&quot;. Readers see at a glance that a guide, price list or article is still current, and you never have to type a date by hand again.</p><p>The language follows the page. Dutch pages read &quot;Laatst bijgewerkt op 27 september 2026&quot;, every other page gets English. The date is recorded when a page is published with new edits, so re-publishing the whole site does not make every page look freshly updated. Right after installing, publish the site once and every page gets its date.</p><p>In Site settings you can put the line under the title or at the end of the content, choose a long, short or numeric date, write your own label and list pages that should never show a date. The home page is skipped by default.</p><p>The line is plain, accessible HTML with a real &lt;time&gt; element. It inherits your theme&#39;s font and colour, adds about 450 bytes of inline CSS and a small icon that screen readers skip. No JavaScript and no third-party requests.</p><p>It asks for storage, to keep its settings and the dates, and read-pages, to read the list of pages when one is published: a plugin has no clock of its own, so the date comes from Stride&#39;s own records. It never reads page content. If either permission is refused, pages are simply left as they are.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code> <code>read-pages</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code> <code>on_publish</code></dd>
+          <dt>Module</dt><dd><a href="plugins/last-updated/1.0.0/plugin.wasm">plugin.wasm</a>, 198 KB, SHA-256 <code class="hash">99aca8442891f2f902b7d96b52ca9acb07e96f660c80d944ee38e51b7a2e96ed</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/last-updated">sources/last-updated</a> at <code>5fecf73</code></dd>
+        </dl>
+      </details>
+    </article>
+
     <article class="plugin" id="listen" style="--accent:#0891b2">
       <header>
         <img class="icon" src="plugins/listen/icon.png" alt="" width="96" height="96">
@@ -326,6 +474,36 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
           <dt>Hooks</dt><dd><code>on_page_render</code></dd>
           <dt>Module</dt><dd><a href="plugins/listen/1.0.0/plugin.wasm">plugin.wasm</a>, 190 KB, SHA-256 <code class="hash">3664b3acd18f03f49546c1808b0d6b237b2a4d4cfac0b97869a46e1ea81849f0</code></dd>
           <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/d6ae66c2492072dd37496ac5e786d8f6866d300c/sources/listen">sources/listen</a> at <code>d6ae66c</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="lite-video" style="--accent:#dc2626">
+      <header>
+        <img class="icon" src="plugins/lite-video/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Lite Video</h2>
+          <p class="tagline">YouTube and Vimeo videos that load only when a visitor presses play.</p>
+          <p class="meta">
+            <span class="chip">utilities</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/lite-video/screenshots/01.png"><img src="plugins/lite-video/screenshots/01.png" alt="A video on a page before anybody presses play: a poster, and nothing loaded from YouTube." width="1600" height="1000" loading="lazy"></a><figcaption>A video on a page before anybody presses play: a poster, and nothing loaded from YouTube.</figcaption></figure>
+          <figure><a href="plugins/lite-video/screenshots/02.png"><img src="plugins/lite-video/screenshots/02.png" alt="Close up: the video&#39;s title, a play button with a clear focus ring and a note on where it plays from." width="1600" height="1000" loading="lazy"></a><figcaption>Close up: the video&#39;s title, a play button with a clear focus ring and a note on where it plays from.</figcaption></figure>
+          <figure><a href="plugins/lite-video/screenshots/03.png"><img src="plugins/lite-video/screenshots/03.png" alt="One press later: the real player, from youtube-nocookie.com, already playing." width="1600" height="1000" loading="lazy"></a><figcaption>One press later: the real player, from youtube-nocookie.com, already playing.</figcaption></figure>
+          <figure><a href="plugins/lite-video/screenshots/04.png"><img src="plugins/lite-video/screenshots/04.png" alt="The settings: button colour, the note, optional thumbnails and remembering the visitor&#39;s choice." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: button colour, the note, optional thumbnails and remembering the visitor&#39;s choice.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Lite Video</summary>
+        <p>Lite Video makes the videos on your pages lighter and more private.</p><p>A YouTube or Vimeo player normally loads the moment a page opens: about a megabyte of script, fonts and tracking, for every visitor, whether they watch or not. Lite Video puts a poster in its place instead, drawn by the page itself: the video&#39;s title and a round play button. Nothing is fetched from YouTube or Vimeo until somebody presses play, so there is nothing to ask consent for. One press loads the real player and starts the video straight away.</p><p>It works on its own. Every YouTube and Vimeo video you add is handled, with no codes to type. YouTube videos play from youtube-nocookie.com, which sets no cookies until the video plays. A short line on the poster says where the video comes from.</p><p>You can pick the play button colour, hide the note, and let the plugin remember a visitor&#39;s choice in their own browser, so players load straight away on their next visit. If you want the video&#39;s own picture as the poster, you can turn on YouTube thumbnails, with a clear note that YouTube then sees each visitor. Both are off by default.</p><p>It is accessible and tiny: the play button is a real link with a label that names the video, so it works with a keyboard, a screen reader and even without JavaScript. The script is about a kilobyte.</p><p>It asks for one permission, storage, to keep its settings. Without it, videos still load on click, with the default look.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/lite-video/1.0.0/plugin.wasm">plugin.wasm</a>, 179 KB, SHA-256 <code class="hash">28f94146fc4495d47a3bac0f5c75f7199c6d9504a406fed2f408ef2bc36b740b</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/lite-video">sources/lite-video</a> at <code>5fecf73</code></dd>
         </dl>
       </details>
     </article>
@@ -356,6 +534,36 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
           <dt>Hooks</dt><dd><code>on_page_render</code></dd>
           <dt>Module</dt><dd><a href="plugins/maintenance-mode/1.0.0/plugin.wasm">plugin.wasm</a>, 180 KB, SHA-256 <code class="hash">6cc3971b08529cf289d32ebc453f65746db624198fdd83d097aa5f53daf70fc9</code></dd>
           <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/0c61860d869e633b7704bdbca62641987bdd4116/sources/maintenance-mode">sources/maintenance-mode</a> at <code>0c61860</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="map-embed" style="--accent:#ea580c">
+      <header>
+        <img class="icon" src="plugins/map-embed/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Privacy Map</h2>
+          <p class="tagline">An OpenStreetMap that loads only when a visitor asks for it.</p>
+          <p class="meta">
+            <span class="chip">marketing</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/map-embed/screenshots/01.png"><img src="plugins/map-embed/screenshots/01.png" alt="Before a click: your address on a placeholder, and nothing loaded from another site." width="1600" height="1000" loading="lazy"></a><figcaption>Before a click: your address on a placeholder, and nothing loaded from another site.</figcaption></figure>
+          <figure><a href="plugins/map-embed/screenshots/02.png"><img src="plugins/map-embed/screenshots/02.png" alt="Close up: place name, address, a Show map button and a note on what it loads." width="1600" height="1000" loading="lazy"></a><figcaption>Close up: place name, address, a Show map button and a note on what it loads.</figcaption></figure>
+          <figure><a href="plugins/map-embed/screenshots/03.png"><img src="plugins/map-embed/screenshots/03.png" alt="One click later: the real OpenStreetMap with your pin, on the same page." width="1600" height="1000" loading="lazy"></a><figcaption>One click later: the real OpenStreetMap with your pin, on the same page.</figcaption></figure>
+          <figure><a href="plugins/map-embed/screenshots/04.png"><img src="plugins/map-embed/screenshots/04.png" alt="The settings: place name, address, location, zoom, height and the page to add it to." width="1600" height="1000" loading="lazy"></a><figcaption>The settings: place name, address, location, zoom, height and the page to add it to.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Privacy Map</summary>
+        <p>Privacy Map shows where you are without handing your visitors to a map company the moment they open a page.</p><p>Until somebody clicks Show map, the map is a placeholder drawn by the page itself: your place name, your address and a button. No iframe, image, script or font comes from another site, so there is nothing to ask consent for. One click loads the real OpenStreetMap, with your pin, zoom controls and the usual attribution. A short note under the button says what happens next.</p><p>Type [map] on any page where the map should go, or pick a page, such as contact, and the map is added at the end of it. Set the location by pasting a link from openstreetmap.org or coordinates like 52.3731, 4.8922, then choose a zoom and a height. The button takes a colour of your choice.</p><p>If you like, the plugin can remember a visitor&#39;s choice in their own browser, so maps show straight away on their next visit. It is off by default.</p><p>It is accessible and light: a real link that still leads to the map without JavaScript, a keyboard-friendly button with a visible focus ring, a labelled map frame, and well under a kilobyte of script.</p><p>It asks for one permission, storage, to keep its settings. Without it no map is shown, because there is no location to show.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/map-embed/1.0.0/plugin.wasm">plugin.wasm</a>, 228 KB, SHA-256 <code class="hash">c3a789ae035595dca1c28501bae82fa5091730b0994aff6af6fe75638a3ebb76</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/map-embed">sources/map-embed</a> at <code>5fecf73</code></dd>
         </dl>
       </details>
     </article>
@@ -414,6 +622,36 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
           <dt>Hooks</dt><dd><code>on_page_render</code></dd>
           <dt>Module</dt><dd><a href="plugins/opening-hours/1.0.0/plugin.wasm">plugin.wasm</a>, 191 KB, SHA-256 <code class="hash">0e81b9bbde22886f5db4b8b58ba23fba5bd6acaabf2e2e11d613c5d395cdce78</code></dd>
           <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/ac74e210f3522fa541dc409eadb5521a2d005d4a/sources/opening-hours">sources/opening-hours</a> at <code>ac74e21</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="print-friendly" style="--accent:#57534e">
+      <header>
+        <img class="icon" src="plugins/print-friendly/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Print Friendly</h2>
+          <p class="tagline">Pages that print cleanly: no menus or banners, full link addresses, tidy breaks.</p>
+          <p class="meta">
+            <span class="chip">utilities</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/print-friendly/screenshots/01.png"><img src="plugins/print-friendly/screenshots/01.png" alt="Zero configuration: the menu, footer and background stay on screen; the paper gets the article." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: the menu, footer and background stay on screen; the paper gets the article.</figcaption></figure>
+          <figure><a href="plugins/print-friendly/screenshots/02.png"><img src="plugins/print-friendly/screenshots/02.png" alt="Close up on paper: every link is followed by its full address, including links to your own pages." width="1600" height="1000" loading="lazy"></a><figcaption>Close up on paper: every link is followed by its full address, including links to your own pages.</figcaption></figure>
+          <figure><a href="plugins/print-friendly/screenshots/03.png"><img src="plugins/print-friendly/screenshots/03.png" alt="The optional Print this page button after the content, with a visible focus ring." width="1600" height="1000" loading="lazy"></a><figcaption>The optional Print this page button after the content, with a visible focus ring.</figcaption></figure>
+          <figure><a href="plugins/print-friendly/screenshots/04.png"><img src="plugins/print-friendly/screenshots/04.png" alt="Every option in Settings: link addresses, extra parts to hide, the button, its text and position, pages to skip." width="1600" height="1000" loading="lazy"></a><figcaption>Every option in Settings: link addresses, extra parts to hide, the button, its text and position, pages to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Print Friendly</summary>
+        <p>Print Friendly gives every page a proper print stylesheet, so a visitor who prints a recipe, a guide or an article, or saves it as a PDF, gets the content and nothing else. Navigation, the footer, sidebars, cookie and consent banners, dialogs, forms and embedded video are left off the paper. Text prints black on white, backgrounds and shadows are dropped to save ink, and a sticky header no longer covers the first lines of every page.</p><p>Links stay useful on paper. The full address is printed after each link, including links to your own pages, so a reader can still find them. Links whose text already is the address, email and phone links, and image links are left alone. Headings stay with the text that follows them, images, tables, code and quotes do not split across pages, table headers repeat, and closed details sections open for printing.</p><p>It needs no setup and changes nothing on screen. In the site settings you can turn off link addresses, hide more parts of your pages by CSS selector, skip pages by slug, and add a Print this page button after the content or in the corner, with your own label.</p><p>It is light and accessible. About 2 KB of inline CSS and a few hundred bytes of script, with no third-party requests. The button is a real button with a printer icon, a visible label, a 44 px target and a focus ring; it only appears once its script is running, and it never prints itself.</p><p>The only permission it asks for is storage, to keep its settings. Refuse it and pages still print cleanly with the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/print-friendly/1.0.0/plugin.wasm">plugin.wasm</a>, 176 KB, SHA-256 <code class="hash">4a05be452c7d599484fa58c45f1ebe8562ddd22b2ca1cc6bc488f3946361deca</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/print-friendly">sources/print-friendly</a> at <code>5fecf73</code></dd>
         </dl>
       </details>
     </article>
@@ -563,6 +801,36 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
       </details>
     </article>
 
+    <article class="plugin" id="related-pages" style="--accent:#7c3aed">
+      <header>
+        <img class="icon" src="plugins/related-pages/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Related Pages</h2>
+          <p class="tagline">Related reading at the end of every article, matched on topics and titles.</p>
+          <p class="meta">
+            <span class="chip">content</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/related-pages/screenshots/01.png"><img src="plugins/related-pages/screenshots/01.png" alt="Related articles as cards at the end of the page, labelled by shared topic." width="1600" height="1000" loading="lazy"></a><figcaption>Related articles as cards at the end of the page, labelled by shared topic.</figcaption></figure>
+          <figure><a href="plugins/related-pages/screenshots/02.png"><img src="plugins/related-pages/screenshots/02.png" alt="Close up: the shared topic above each title, and a violet border on hover." width="1600" height="1000" loading="lazy"></a><figcaption>Close up: the shared topic above each title, and a violet border on hover.</figcaption></figure>
+          <figure><a href="plugins/related-pages/screenshots/03.png"><img src="plugins/related-pages/screenshots/03.png" alt="The list style, with your own heading." width="1600" height="1000" loading="lazy"></a><figcaption>The list style, with your own heading.</figcaption></figure>
+          <figure><a href="plugins/related-pages/screenshots/04.png"><img src="plugins/related-pages/screenshots/04.png" alt="Every option in Settings: style, count, where it shows, folders, topics, colour and pages to skip." width="1600" height="1000" loading="lazy"></a><figcaption>Every option in Settings: style, count, where it shows, folders, topics, colour and pages to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Related Pages</summary>
+        <p>Related Pages ends your articles and posts with a short Related reading block: the pages on your site that have the most in common with the one just read. Readers who reach the end get somewhere to go next instead of a dead end.</p><p>It needs no setup. Out of the box it shows up to three cards, matched on the words in page titles and on the folder a page sits in, and it only appears on article-like pages, so your about and contact pages stay as they are. Pages with nothing in common are never suggested.</p><p>In the site settings you can switch to a compact list, show one to six pages, change the heading and accent colour, limit it to folders such as blog, skip pages, or show it on every page. Add topics per page and pages that share a topic are suggested first, with the topic shown above the title.</p><p>It is built to be light: about 2 KB of CSS, no JavaScript, no fonts, no images and no third-party requests. The block is an aside with a heading and a real list of links, it follows your theme&#39;s font and text colour, has a visible focus ring, respects reduced motion and is hidden when printing.</p><p>It asks for two permissions. Read pages lets it list your published pages and their titles; it reads nothing else and changes nothing. Storage keeps its settings. Refuse storage and it runs with the defaults; refuse read pages and it leaves your pages untouched. The block is built when a page is published, so publish the site again after adding new articles.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>read-pages</code> <code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/related-pages/1.0.0/plugin.wasm">plugin.wasm</a>, 210 KB, SHA-256 <code class="hash">fd9f89e29ffac061ac611e4b67a4c8d4649e56d70119da58fe25b2e3b0da7d8b</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/related-pages">sources/related-pages</a> at <code>5fecf73</code></dd>
+        </dl>
+      </details>
+    </article>
+
     <article class="plugin" id="schema-markup" style="--accent:#f59e0b">
       <header>
         <img class="icon" src="plugins/schema-markup/icon.png" alt="" width="96" height="96">
@@ -587,6 +855,36 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
           <dt>Hooks</dt><dd><code>on_page_render</code></dd>
           <dt>Module</dt><dd><a href="plugins/schema-markup/1.0.0/plugin.wasm">plugin.wasm</a>, 195 KB, SHA-256 <code class="hash">23da4b596e1c979b0d116887529af7b808b70833ccd3ec01088726426b3396f2</code></dd>
           <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/0f20355bae4f500995d81b27b56d6a2a49468a5e/sources/schema-markup">sources/schema-markup</a> at <code>0f20355</code></dd>
+        </dl>
+      </details>
+    </article>
+
+    <article class="plugin" id="scroll-reveal" style="--accent:#db2777">
+      <header>
+        <img class="icon" src="plugins/scroll-reveal/icon.png" alt="" width="96" height="96">
+        <div>
+          <h2>Scroll Reveal</h2>
+          <p class="tagline">Content fades and slides into place as visitors scroll to it.</p>
+          <p class="meta">
+            <span class="chip">design</span>
+            <span>v1.0.0</span> · <span>GuusLab</span>
+          </p>
+        </div>
+      </header>
+      <div class="shots">
+          <figure><a href="plugins/scroll-reveal/screenshots/01.png"><img src="plugins/scroll-reveal/screenshots/01.png" alt="Zero configuration: the work below the fold fades up into place as the visitor scrolls." width="1600" height="1000" loading="lazy"></a><figcaption>Zero configuration: the work below the fold fades up into place as the visitor scrolls.</figcaption></figure>
+          <figure><a href="plugins/scroll-reveal/screenshots/02.png"><img src="plugins/scroll-reveal/screenshots/02.png" alt="Close up: blocks already on screen stay put while the next one rises in." width="1600" height="1000" loading="lazy"></a><figcaption>Close up: blocks already on screen stay put while the next one rises in.</figcaption></figure>
+          <figure><a href="plugins/scroll-reveal/screenshots/03.png"><img src="plugins/scroll-reveal/screenshots/03.png" alt="Whole sections sliding in from the left, with a large distance." width="1600" height="1000" loading="lazy"></a><figcaption>Whole sections sliding in from the left, with a large distance.</figcaption></figure>
+          <figure><a href="plugins/scroll-reveal/screenshots/04.png"><img src="plugins/scroll-reveal/screenshots/04.png" alt="Every option in the plugin&#39;s settings: effect, distance, what to reveal and pages to skip." width="1600" height="1000" loading="lazy"></a><figcaption>Every option in the plugin&#39;s settings: effect, distance, what to reveal and pages to skip.</figcaption></figure>
+      </div>
+      <details>
+        <summary>About Scroll Reveal</summary>
+        <p>Scroll Reveal gives your pages a little life. As visitors scroll, headings, text, images and cards fade and slide gently into place, so a long page feels like it unfolds instead of just sitting there.</p><p>It needs no setup. Out of the box every block inside the page content fades up 40 px as it comes into view. Anything already on screen when the page opens stays exactly where it is, and the header, menu and footer are never touched. In the site settings you can pick fade up, fade in, slide in from the left or right, or zoom in; choose a small, medium or large distance; reveal whole sections at once instead of block by block; or skip pages by slug.</p><p>It is built to be light. Modern browsers run it as a native CSS scroll-driven animation, so no code runs while visitors scroll. Other browsers get the same look from a tiny inline script. There are no third-party requests, fonts or images: about 1.5 KB in total.</p><p>It respects your visitors. Anyone who has asked their device for reduced motion sees a normal page with nothing moving. Nothing is ever hidden from visitors without JavaScript, from screen readers or search engines, or when printing, and jumping straight to the end of a page never leaves content invisible.</p><p>The only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.</p>
+        <dl>
+          <dt>Permissions</dt><dd><code>storage</code></dd>
+          <dt>Hooks</dt><dd><code>on_page_render</code></dd>
+          <dt>Module</dt><dd><a href="plugins/scroll-reveal/1.0.0/plugin.wasm">plugin.wasm</a>, 169 KB, SHA-256 <code class="hash">c70e09f3033b07de41faab5d40410ef1cdaeb276ec359633a4163248d85ae5f1</code></dd>
+          <dt>Source</dt><dd><a href="https://github.com/GuusLab/stride-plugins/tree/5fecf734d2b33cf8406783f89f3bee5b9c8ef318/sources/scroll-reveal">sources/scroll-reveal</a> at <code>5fecf73</code></dd>
         </dl>
       </details>
     </article>
@@ -736,7 +1034,7 @@ footer { color:var(--muted); font-size:14px; padding:24px 0 48px; }
         </dl>
       </details>
     </article>
-  <footer>Index generated 2026-09-27T16:19:42Z, signed by the registry key. Source and submissions: <a href="https://github.com/GuusLab/stride-plugins">github.com/GuusLab/stride-plugins</a>.</footer>
+  <footer>Index generated 2026-09-27T16:34:33Z, signed by the registry key. Source and submissions: <a href="https://github.com/GuusLab/stride-plugins">github.com/GuusLab/stride-plugins</a>.</footer>
 </main>
 </body>
 </html>

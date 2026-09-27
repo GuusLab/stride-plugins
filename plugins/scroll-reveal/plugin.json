@@ -116,6 +116,26 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "c70e09f3033b07de41faab5d40410ef1cdaeb276ec359633a4163248d85ae5f1",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "5027b1bc9d8c9b4a05c146e15bd02d56336d5f4b073f068244014d52de85e2e2",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/scroll-reveal/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "a0841506be93ecd7487075f7a71c649be0e79b68a57d05fbed98f59a84f8544cb3d781ec9e8fdb08ee70a7216a7f66cc28802ae93572c82289f12b2003c21a00",
+    "size": 172986,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/scroll-reveal/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "tagline": "Content fades and slides into place as visitors scroll to it.",
     "longDescription": "Scroll Reveal gives your pages a little life. As visitors scroll, headings, text, images and cards fade and slide gently into place, so a long page feels like it unfolds instead of just sitting there.\n\nIt needs no setup. Out of the box every block inside the page content fades up 40 px as it comes into view. Anything already on screen when the page opens stays exactly where it is, and the header, menu and footer are never touched. In the site settings you can pick fade up, fade in, slide in from the left or right, or zoom in; choose a small, medium or large distance; reveal whole sections at once instead of block by block; or skip pages by slug.\n\nIt is built to be light. Modern browsers run it as a native CSS scroll-driven animation, so no code runs while visitors scroll. Other browsers get the same look from a tiny inline script. There are no third-party requests, fonts or images: about 1.5 KB in total.\n\nIt respects your visitors. Anyone who has asked their device for reduced motion sees a normal page with nothing moving. Nothing is ever hidden from visitors without JavaScript, from screen readers or search engines, or when printing, and jumping straight to the end of a page never leaves content invisible.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",

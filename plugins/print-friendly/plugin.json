@@ -1,105 +1,125 @@
 {
   "manifest": {
-    "manifestVersion": 1,
-    "id": "print-friendly",
-    "name": "Print Friendly",
-    "version": "1.0.0",
-    "publisher": "guuslab",
     "description": "A clean print stylesheet for every page: navigation, footers and banners hidden, link addresses shown, sensible page breaks. Plus an optional Print this page button.",
-    "license": "MIT",
     "homepage": "https://github.com/guuslab/stride-plugins",
-    "permissions": [
-      "storage"
-    ],
     "hooks": [
       "on_page_render"
     ],
+    "id": "print-friendly",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Print Friendly",
     "panels": [
       {
-        "id": "print-friendly",
-        "title": "Print friendly",
         "description": "How pages look on paper and whether they get a print button. Changes apply to a page the next time it is published.",
-        "placement": "site-settings",
         "fields": [
           {
-            "name": "enabled",
-            "title": "Use the print stylesheet",
             "description": "Turn this off to print pages exactly as the browser would.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "enabled",
+            "title": "Use the print stylesheet"
           },
           {
-            "name": "show-urls",
-            "title": "Print link addresses",
             "description": "Writes the address of each link after its text, so readers of the paper copy can still find it.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "show-urls",
+            "title": "Print link addresses"
           },
           {
-            "name": "hide",
-            "title": "Also hide when printing",
             "description": "CSS selectors, separated by commas, for anything else that should not be printed. For example: .newsletter, #comments",
             "kind": {
-              "type": "text",
               "maxLength": 400,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "hide",
+            "title": "Also hide when printing"
           },
           {
-            "name": "button",
-            "title": "Show a Print this page button",
             "description": "A button that opens the browser's print dialog. It is never printed itself.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "button",
+            "title": "Show a Print this page button"
           },
           {
-            "name": "button-label",
-            "title": "Button text",
             "description": "Leave empty for \"Print this page\".",
             "kind": {
-              "type": "text",
               "maxLength": 40,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "button-label",
+            "title": "Button text"
           },
           {
-            "name": "button-position",
-            "title": "Button position",
             "kind": {
-              "type": "enum",
               "choices": [
                 {
-                  "value": "end",
-                  "title": "After the content"
+                  "title": "After the content",
+                  "value": "end"
                 },
                 {
-                  "value": "corner",
-                  "title": "Bottom right corner"
+                  "title": "Bottom right corner",
+                  "value": "corner"
                 }
-              ]
-            }
+              ],
+              "type": "enum"
+            },
+            "name": "button-position",
+            "title": "Button position"
           },
           {
-            "name": "exclude",
-            "title": "Pages to skip",
             "description": "Slugs, separated by commas, that print as the browser would and get no button. For example: home, contact",
             "kind": {
-              "type": "text",
               "maxLength": 400,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "exclude",
+            "title": "Pages to skip"
           }
-        ]
+        ],
+        "id": "print-friendly",
+        "placement": "site-settings",
+        "title": "Print friendly"
       }
-    ]
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
   },
   "publisher": {
     "id": "guuslab",
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "4a05be452c7d599484fa58c45f1ebe8562ddd22b2ca1cc6bc488f3946361deca",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "80688a880b9f2f566121b36e53d4e68c72683338f4f888c9ae24e31a5eff172f",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/print-friendly/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "fa38de01df762978f50a632e48d1c2d9c71f4cc0e8393c885555c1b8c360b943ec25689d6652f83f94ac5e39c0bd8d83415911436127e2b3ee1c9bb71c397e0d",
+    "size": 179730,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/print-friendly/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
   },
   "store": {
     "tagline": "Pages that print cleanly: no menus or banners, full link addresses, tidy breaks.",

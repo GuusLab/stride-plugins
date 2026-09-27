@@ -1,0 +1,87 @@
+{
+  "manifestVersion": 1,
+  "id": "heading-anchors",
+  "name": "Heading Anchors",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A small # link beside every section heading that appears on hover or focus. One click copies a link straight to that section and scrolls to it smoothly. Stable ids from the heading text.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "heading-anchors",
+      "title": "Heading anchors",
+      "description": "The link that appears beside section headings. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show heading links",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "levels",
+          "title": "Headings",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "h2", "title": "Sections only (H2)" },
+              { "value": "h2-h3", "title": "Sections and subsections (H2 and H3)" },
+              { "value": "h2-h4", "title": "Down to H4" }
+            ]
+          }
+        },
+        {
+          "name": "symbol",
+          "title": "Symbol",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "hash", "title": "Hash (#)" },
+              { "value": "link", "title": "Chain link icon" },
+              { "value": "section", "title": "Section sign (§)" }
+            ]
+          }
+        },
+        {
+          "name": "position",
+          "title": "Position",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "after", "title": "After the heading" },
+              { "value": "before", "title": "In the margin before the heading" }
+            ]
+          }
+        },
+        {
+          "name": "color",
+          "title": "Colour",
+          "description": "The link and the copied message. Leave empty for blue (#2563eb).",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "copy",
+          "title": "Copy the link when clicked",
+          "description": "Clicking the symbol copies the full address of that section, ready to paste.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "copied-text",
+          "title": "Copied message",
+          "description": "Shown briefly after copying. Leave empty for \"Link copied\".",
+          "kind": { "type": "text", "maxLength": 60, "multiline": false }
+        },
+        {
+          "name": "exclude",
+          "title": "Pages to skip",
+          "description": "Slugs, separated by commas, that never get heading links. For example: home, contact",
+          "kind": { "type": "text", "maxLength": 400, "multiline": false }
+        }
+      ]
+    }
+  ]
+}

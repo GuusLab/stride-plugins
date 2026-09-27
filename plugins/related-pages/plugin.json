@@ -131,6 +131,27 @@
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
   },
+  "release": {
+    "contentHash": "fd9f89e29ffac061ac611e4b67a4c8d4649e56d70119da58fe25b2e3b0da7d8b",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "60d8d8977337d980ed4d3f63cef3f15b3736e7b8732ecdcd8369cc690cdb8405",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/related-pages/1.0.0/stride-plugin.json",
+    "permissions": [
+      "read-pages",
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "3c7e2fffd42b5ead9319ac14b8b286a1378a8d4d0659c2bcbd8bf965cd477d50c501edad4df2d32dde8d86e2dcc7b565b2edac476219c78bb1051603c21f450a",
+    "size": 215047,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/related-pages/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
+  },
   "store": {
     "accent": "#7C3AED",
     "categories": [

@@ -1,0 +1,31 @@
+{
+  "manifestVersion": 1,
+  "id": "map-embed",
+  "name": "Privacy Map",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "An OpenStreetMap of your location that loads only after a visitor clicks Show map. Until then it is your address on a placeholder, and nothing is fetched from another site.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/map-embed",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "map-embed",
+      "title": "Privacy map",
+      "description": "Type [map] on a page where the map should go, or pick a page below to add it at the end. The map comes from OpenStreetMap and loads only when a visitor clicks Show map. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        { "name": "enabled", "title": "Show the map", "description": "Turn this off to leave every page exactly as it was rendered.", "kind": { "type": "boolean" } },
+        { "name": "name", "title": "Place name", "description": "The heading on the map, like your business name. Optional.", "kind": { "type": "text", "maxLength": 80, "multiline": false } },
+        { "name": "address", "title": "Address", "description": "Shown on the placeholder, one line per line of the address.", "kind": { "type": "text", "maxLength": 240, "multiline": true } },
+        { "name": "location", "title": "Location on the map", "description": "Paste a link from openstreetmap.org, or coordinates like 52.3731, 4.8922. On openstreetmap.org, right-click your place and choose Show address to find them.", "kind": { "type": "text", "maxLength": 300, "multiline": false } },
+        { "name": "zoom", "title": "Zoom", "description": "From 3 (a country) to 19 (a single building). 16 shows the streets around you.", "kind": { "type": "integer", "minimum": 3, "maximum": 19 } },
+        { "name": "height", "title": "Height in pixels", "kind": { "type": "integer", "minimum": 200, "maximum": 720 } },
+        { "name": "page", "title": "Also add it at the end of this page", "description": "A page's slug, like contact. Leave it empty to show the map only where you type [map].", "kind": { "type": "text", "maxLength": 120, "multiline": false } },
+        { "name": "remember", "title": "Remember the visitor's choice", "description": "After a visitor shows a map once, show maps straight away on their next visits. The choice is kept in their own browser only.", "kind": { "type": "boolean" } },
+        { "name": "colour", "title": "Button colour", "kind": { "type": "color" } }
+      ]
+    }
+  ]
+}

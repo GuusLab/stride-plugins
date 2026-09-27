@@ -1,121 +1,141 @@
 {
   "manifest": {
-    "manifestVersion": 1,
-    "id": "dark-mode-toggle",
-    "name": "Dark Mode Toggle",
-    "version": "1.0.0",
-    "publisher": "guuslab",
     "description": "A light and dark switch for visitors. Follows the device setting, remembers the choice and never flashes on load. The dark colours are derived from your site's own colours.",
-    "license": "MIT",
     "homepage": "https://github.com/guuslab/stride-plugins",
-    "permissions": [
-      "storage"
-    ],
     "hooks": [
       "on_page_render"
     ],
+    "id": "dark-mode-toggle",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Dark Mode Toggle",
     "panels": [
       {
-        "id": "dark-mode",
-        "title": "Dark mode",
         "description": "The light and dark switch for visitors and the colours of the dark version. Changes apply to a page the next time it is published.",
-        "placement": "site-settings",
         "fields": [
           {
-            "name": "enabled",
-            "title": "Offer a dark version of the site",
             "description": "Turn this off to leave every page exactly as it was rendered.",
             "kind": {
               "type": "boolean"
-            }
+            },
+            "name": "enabled",
+            "title": "Offer a dark version of the site"
           },
           {
-            "name": "start",
-            "title": "Before a visitor chooses",
             "kind": {
-              "type": "enum",
               "choices": [
                 {
-                  "value": "system",
-                  "title": "Follow the visitor's device"
+                  "title": "Follow the visitor's device",
+                  "value": "system"
                 },
                 {
-                  "value": "light",
-                  "title": "Always start light"
+                  "title": "Always start light",
+                  "value": "light"
                 },
                 {
-                  "value": "dark",
-                  "title": "Always start dark"
+                  "title": "Always start dark",
+                  "value": "dark"
                 }
-              ]
-            }
+              ],
+              "type": "enum"
+            },
+            "name": "start",
+            "title": "Before a visitor chooses"
           },
           {
-            "name": "placement",
-            "title": "Switch position",
             "description": "In the header puts the switch at the end of the menu. Pages without a header get the floating switch.",
             "kind": {
-              "type": "enum",
               "choices": [
                 {
-                  "value": "bottom-right",
-                  "title": "Floating, bottom right"
+                  "title": "Floating, bottom right",
+                  "value": "bottom-right"
                 },
                 {
-                  "value": "bottom-left",
-                  "title": "Floating, bottom left"
+                  "title": "Floating, bottom left",
+                  "value": "bottom-left"
                 },
                 {
-                  "value": "header",
-                  "title": "In the header"
+                  "title": "In the header",
+                  "value": "header"
                 }
-              ]
-            }
+              ],
+              "type": "enum"
+            },
+            "name": "placement",
+            "title": "Switch position"
           },
           {
-            "name": "background",
-            "title": "Dark background",
             "description": "The darkest colour of the dark version. Leave empty to derive it from your colours.",
             "kind": {
               "type": "color"
-            }
+            },
+            "name": "background",
+            "title": "Dark background"
           },
           {
-            "name": "text",
-            "title": "Dark text",
             "description": "The lightest colour of the dark version, used for text. Leave empty to derive it from your colours.",
             "kind": {
               "type": "color"
-            }
+            },
+            "name": "text",
+            "title": "Dark text"
           },
           {
-            "name": "overrides",
-            "title": "Colour overrides",
             "description": "Optional. One design colour per line with its dark value, for example: surface.deep = #0f2a22",
             "kind": {
-              "type": "text",
               "maxLength": 2000,
-              "multiline": true
-            }
+              "multiline": true,
+              "type": "text"
+            },
+            "name": "overrides",
+            "title": "Colour overrides"
           },
           {
-            "name": "label",
-            "title": "Switch label",
             "description": "What screen readers announce. Leave empty for \"Dark mode\".",
             "kind": {
-              "type": "text",
               "maxLength": 40,
-              "multiline": false
-            }
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "label",
+            "title": "Switch label"
           }
-        ]
+        ],
+        "id": "dark-mode",
+        "placement": "site-settings",
+        "title": "Dark mode"
       }
-    ]
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
   },
   "publisher": {
     "id": "guuslab",
     "name": "GuusLab",
     "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "release": {
+    "contentHash": "9ce4070c68bc520fe0dea882515a2ad9f2ed64946589d596d361ffaaec26a20f",
+    "hooks": [
+      "on_page_render"
+    ],
+    "manifestHash": "79af01a6bcf77025387865acc203b96e6c37986596728357a1ceb8d962e05613",
+    "manifestUrl": "https://guuslab.github.io/stride-plugins/plugins/dark-mode-toggle/1.0.0/stride-plugin.json",
+    "permissions": [
+      "storage"
+    ],
+    "publishedAt": "",
+    "signature": "d345807078f68ed52a8435dc5358ad35b1d4820c00b7acba468bd824d278eddf89a2025c806d1c21b25545bab9c7fff7aa1bb7bcbdb537b0db60cac080c3fb05",
+    "size": 190853,
+    "sourceCommit": "5fecf734d2b33cf8406783f89f3bee5b9c8ef318",
+    "sourceRepository": "https://github.com/GuusLab/stride-plugins",
+    "url": "https://guuslab.github.io/stride-plugins/plugins/dark-mode-toggle/1.0.0/plugin.wasm",
+    "version": "1.0.0",
+    "yanked": false,
+    "yankedReason": ""
   },
   "store": {
     "tagline": "A light and dark switch that follows the device and never flashes.",
