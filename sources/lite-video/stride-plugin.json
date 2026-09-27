@@ -1,0 +1,27 @@
+{
+  "manifestVersion": 1,
+  "id": "lite-video",
+  "name": "Lite Video",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "YouTube and Vimeo videos appear as a light poster with a play button. The real player, from youtube-nocookie.com or Vimeo, loads only when a visitor presses play.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/lite-video",
+  "permissions": ["storage"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "lite-video",
+      "title": "Lite video",
+      "description": "Every YouTube and Vimeo video on your pages becomes a poster with a play button. Nothing loads from YouTube or Vimeo until a visitor presses play. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        { "name": "enabled", "title": "Use lite videos", "description": "Turn this off to show the normal players again.", "kind": { "type": "boolean" } },
+        { "name": "colour", "title": "Play button colour", "kind": { "type": "color" } },
+        { "name": "note", "title": "Explain what pressing play does", "description": "A short line on the poster saying the video plays from YouTube or Vimeo.", "kind": { "type": "boolean" } },
+        { "name": "thumbnails", "title": "Show YouTube thumbnails", "description": "Use the video's own picture as the poster. The picture comes from YouTube, so YouTube sees each visitor even before they press play. Off by default.", "kind": { "type": "boolean" } },
+        { "name": "remember", "title": "Remember the visitor's choice", "description": "After a visitor plays one video, load players straight away on their next visits. The choice is kept in their own browser only.", "kind": { "type": "boolean" } }
+      ]
+    }
+  ]
+}

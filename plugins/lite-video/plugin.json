@@ -1,0 +1,99 @@
+{
+  "manifest": {
+    "manifestVersion": 1,
+    "id": "lite-video",
+    "name": "Lite Video",
+    "version": "1.0.0",
+    "publisher": "guuslab",
+    "description": "YouTube and Vimeo videos appear as a light poster with a play button. The real player, from youtube-nocookie.com or Vimeo, loads only when a visitor presses play.",
+    "license": "MIT",
+    "homepage": "https://github.com/guuslab/stride-plugins/tree/main/sources/lite-video",
+    "permissions": [
+      "storage"
+    ],
+    "hooks": [
+      "on_page_render"
+    ],
+    "panels": [
+      {
+        "id": "lite-video",
+        "title": "Lite video",
+        "description": "Every YouTube and Vimeo video on your pages becomes a poster with a play button. Nothing loads from YouTube or Vimeo until a visitor presses play. Changes apply to a page the next time it is published.",
+        "placement": "site-settings",
+        "fields": [
+          {
+            "name": "enabled",
+            "title": "Use lite videos",
+            "description": "Turn this off to show the normal players again.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "colour",
+            "title": "Play button colour",
+            "kind": {
+              "type": "color"
+            }
+          },
+          {
+            "name": "note",
+            "title": "Explain what pressing play does",
+            "description": "A short line on the poster saying the video plays from YouTube or Vimeo.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "thumbnails",
+            "title": "Show YouTube thumbnails",
+            "description": "Use the video's own picture as the poster. The picture comes from YouTube, so YouTube sees each visitor even before they press play. Off by default.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "remember",
+            "title": "Remember the visitor's choice",
+            "description": "After a visitor plays one video, load players straight away on their next visits. The choice is kept in their own browser only.",
+            "kind": {
+              "type": "boolean"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "YouTube and Vimeo videos that load only when a visitor presses play.",
+    "longDescription": "Lite Video makes the videos on your pages lighter and more private.\n\nA YouTube or Vimeo player normally loads the moment a page opens: about a megabyte of script, fonts and tracking, for every visitor, whether they watch or not. Lite Video puts a poster in its place instead, drawn by the page itself: the video's title and a round play button. Nothing is fetched from YouTube or Vimeo until somebody presses play, so there is nothing to ask consent for. One press loads the real player and starts the video straight away.\n\nIt works on its own. Every YouTube and Vimeo video you add is handled, with no codes to type. YouTube videos play from youtube-nocookie.com, which sets no cookies until the video plays. A short line on the poster says where the video comes from.\n\nYou can pick the play button colour, hide the note, and let the plugin remember a visitor's choice in their own browser, so players load straight away on their next visit. If you want the video's own picture as the poster, you can turn on YouTube thumbnails, with a clear note that YouTube then sees each visitor. Both are off by default.\n\nIt is accessible and tiny: the play button is a real link with a label that names the video, so it works with a keyboard, a screen reader and even without JavaScript. The script is about a kilobyte.\n\nIt asks for one permission, storage, to keep its settings. Without it, videos still load on click, with the default look.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "A video on a page before anybody presses play: a poster, and nothing loaded from YouTube."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up: the video's title, a play button with a clear focus ring and a note on where it plays from."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "One press later: the real player, from youtube-nocookie.com, already playing."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "The settings: button colour, the note, optional thumbnails and remembering the visitor's choice."
+      }
+    ],
+    "categories": [
+      "utilities"
+    ],
+    "accent": "#DC2626"
+  }
+}
