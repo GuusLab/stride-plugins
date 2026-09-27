@@ -1,0 +1,131 @@
+{
+  "manifest": {
+    "manifestVersion": 1,
+    "id": "copy-code",
+    "name": "Copy Code",
+    "version": "1.0.0",
+    "publisher": "guuslab",
+    "description": "A copy button on every code block, with Copied feedback, a language label and optional line numbers. Clean CSS, no highlighting library, no third-party requests.",
+    "license": "MIT",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "permissions": [
+      "storage"
+    ],
+    "hooks": [
+      "on_page_render"
+    ],
+    "panels": [
+      {
+        "id": "copy-code",
+        "title": "Copy code",
+        "description": "To add a code block, write it in a text block between two lines of three backticks, with the language after the first: ```bash. Changes apply to a page the next time it is published.",
+        "placement": "site-settings",
+        "fields": [
+          {
+            "name": "enabled",
+            "title": "Add a copy button to code blocks",
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "look",
+            "title": "Code block style",
+            "kind": {
+              "type": "enum",
+              "choices": [
+                {
+                  "value": "dark",
+                  "title": "Clean dark"
+                },
+                {
+                  "value": "light",
+                  "title": "Clean light"
+                },
+                {
+                  "value": "theme",
+                  "title": "Keep my theme's style"
+                }
+              ]
+            }
+          },
+          {
+            "name": "language",
+            "title": "Show the language",
+            "description": "A small label such as \"bash\" or \"python\", taken from the code block's language class.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "line-numbers",
+            "title": "Show line numbers",
+            "description": "Numbers in a gutter on the left. They are never copied.",
+            "kind": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "copy-label",
+            "title": "Button text",
+            "description": "Leave empty for \"Copy\".",
+            "kind": {
+              "type": "text",
+              "maxLength": 24,
+              "multiline": false
+            }
+          },
+          {
+            "name": "copied-label",
+            "title": "Text after copying",
+            "description": "Leave empty for \"Copied\".",
+            "kind": {
+              "type": "text",
+              "maxLength": 24,
+              "multiline": false
+            }
+          },
+          {
+            "name": "exclude",
+            "title": "Pages to skip",
+            "description": "Slugs, separated by commas, that are left alone. For example: home, contact",
+            "kind": {
+              "type": "text",
+              "maxLength": 400,
+              "multiline": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "A copy button on every code block, with a language label and line numbers.",
+    "longDescription": "Copy Code puts a small toolbar on every code block on your site: the language on the left and a Copy button on the right. One click copies the code, and the button says Copied with a check mark so visitors know it worked.\n\nIt works with Stride's text blocks. Write your code between two lines of three backticks, with the language after the first, like ```bash, and it is published as a real code block. Code blocks from your theme or another plugin get the button too.\n\nIt needs no setup. Out of the box you get a clean dark code block with a language label. In the site settings you can switch to a clean light style, or keep your theme's own style and only add the button. You can turn on line numbers, change the button text for a site in another language, or skip pages by slug.\n\nIt is built to be light. There is no highlighting library, no web font and no third-party request: a few kilobytes of inline CSS and JavaScript, and only on pages that have code.\n\nIt is accessible by default. The button is a real button with a visible label and focus ring, and screen readers hear Copied. Line numbers are never read out or copied. If the browser blocks the clipboard, the code is selected and the button says which keys to press. Without JavaScript, visitors see the plain code block.\n\nThe only permission it asks for is storage, to keep its settings. Refuse it and the plugin still works with the defaults.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: clean dark code blocks with the language and a Copy button that says Copied."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up: the clean light style with line numbers, which are never copied."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Every option in Settings: style, language label, line numbers, button text and pages to skip."
+      }
+    ],
+    "categories": [
+      "developer"
+    ],
+    "accent": "#0F172A"
+  }
+}
