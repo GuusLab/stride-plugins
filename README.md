@@ -211,18 +211,18 @@ or plugins you do not want public.
    stride plugin keygen --out ~/.stride/my-registry.key   # prints the public key
    ```
 
-2. **Lay out a registry directory** like this one:
-   - `plugins/<id>/plugin.json` holds each submission.
-   - `publishers/<id>.json` holds each publisher.
-   - Sign each release with a publisher key (another
-     `stride plugin keygen`):
+2. **Lay out a registry directory** like this one, with one
+   `plugins/<id>/plugin.json` per plugin. Sign each release with a publisher
+   key (another `stride plugin keygen`):
 
-     ```sh
-     stride plugin publish path/to/plugin --key ~/.stride/publisher.key --base-url https://plugins.example.com
-     ```
+   ```sh
+   stride plugin publish path/to/plugin --key ~/.stride/publisher.key --base-url https://plugins.example.com
+   ```
 
-     This prints the submission, with a signed release. TypeScript plugins
-     are fine here.
+   This prints the submission: manifest, publisher and a signed release.
+   Save everything above the `# release digest` line as
+   `plugins/<id>/plugin.json`, and add a `store` object if you want one.
+   TypeScript plugins are fine here.
 
 3. **Build and sign the index:**
 

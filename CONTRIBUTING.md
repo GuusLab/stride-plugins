@@ -171,13 +171,18 @@ maintainer and never enter this repository.
 
 ## Updating a plugin
 
-Releases are immutable. To change a listed plugin:
+Releases are immutable, so a change is a new version:
 
-1. Bump `version` in `stride-plugin.json` and in the `manifest` in
-   `plugins/<id>/plugin.json`.
-2. Make the change and run `stride plugin test`.
-3. Open a pull request. It adds a new release next to the old one; it does
-   not replace it.
+1. Bump `version` in `sources/<id>/stride-plugin.json` and in the `manifest`
+   in `plugins/<id>/plugin.json`. Keep the two identical.
+2. Make the change, rebuild with `tools/build-plugin.sh <id>` and run
+   `stride plugin test sources/<id>`.
+3. Leave `release` alone and open a pull request.
+
+The verify workflow will fail on that pull request. It rebuilds your changed
+source and compares the result with the hash of the release that is signed
+now, and the two no longer match. That failure is expected. The maintainer
+publishes the new version, and verify passes again from then on.
 
 ## Keys
 
