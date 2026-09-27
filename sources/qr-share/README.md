@@ -31,6 +31,8 @@ applies.
 - The code uses error correction level M (it still scans with about 15% of it
   smudged or covered) and the smallest QR version that holds the address. It is
   always black on white with a quiet zone, whatever the theme.
+- Addresses longer than 331 characters are left alone: their codes would be
+  too dense to scan at the size shown. Real page addresses are far shorter.
 - Pages without a `<body>` are left alone, and running it twice changes nothing.
 
 ## Settings

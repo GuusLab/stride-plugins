@@ -614,6 +614,19 @@ mod tests {
     }
 
     #[test]
+    fn too_long_addresses_are_left_alone() {
+        let long = format!("https://a.example/{}", "x".repeat(313));
+        assert!(QrCode::encode(long.as_bytes()).is_some());
+        let longer = format!("{long}y");
+        assert!(QrCode::encode(longer.as_bytes()).is_none());
+        let page = PAGE.replace(
+            "<title>",
+            &format!("<link rel=\"canonical\" href=\"{longer}\"><title>"),
+        );
+        assert!(render(&page, "menu", &Settings::default(), None).is_none());
+    }
+
+    #[test]
     fn bad_values_fall_back() {
         let mut v = Map::new();
         v.insert("placement".into(), "evil".into());
@@ -642,12 +655,13 @@ mod tests {
                 case["bits"].as_str().unwrap(),
                 "v{version} m{mask} {data}"
             );
-            let auto = QrCode::encode(data.as_bytes()).unwrap();
-            assert_eq!(
-                auto.size,
-                case["minSize"].as_u64().unwrap() as usize,
-                "{data}"
-            );
+            let auto = QrCode::encode(data.as_bytes());
+            if version <= qr::MAX_VERSION {
+                let size = case["minSize"].as_u64().unwrap() as usize;
+                assert_eq!(auto.map(|c| c.size), Some(size), "{data}");
+            } else {
+                assert!(auto.is_none(), "{data}");
+            }
         }
     }
 }

@@ -18,6 +18,9 @@ const BLOCKS: [u8; 41] = [
     25, 26, 28, 29, 31, 33, 35, 37, 38, 40, 43, 45, 47, 49,
 ];
 
+/// The largest version `encode` picks.
+pub const MAX_VERSION: usize = 13;
+
 /// Level M in the format information.
 const FORMAT_M: u32 = 0;
 
@@ -33,9 +36,11 @@ impl QrCode {
     }
 
     /// Encode `data` in the smallest version that holds it, or `None` when it
-    /// is longer than version 40 allows (2,331 bytes).
+    /// needs more than version 13 (331 bytes). Bigger codes have modules too
+    /// small to scan at the sizes shown, and cost too much for a page hook.
     pub fn encode(data: &[u8]) -> Option<QrCode> {
-        let version = (1..=40).find(|&v| capacity_bits(v) >= needed_bits(v, data.len()))?;
+        let version =
+            (1..=MAX_VERSION).find(|&v| capacity_bits(v) >= needed_bits(v, data.len()))?;
         Some(Self::encode_version(data, version, None))
     }
 
