@@ -1,0 +1,126 @@
+{
+  "manifestVersion": 1,
+  "id": "quote-share",
+  "name": "Quote Share",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "Readers select a sentence and share it as a quote on X, Bluesky, WhatsApp or by email, or copy a link that opens your page with that sentence highlighted.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": [
+    "storage"
+  ],
+  "hooks": [
+    "on_page_render"
+  ],
+  "panels": [
+    {
+      "id": "quote-share",
+      "title": "Quote sharing",
+      "description": "A small bar that appears when a reader selects text in an article. Nothing loads from any network until a reader clicks, and nobody is tracked. Changes show on your pages right away.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show the share bar on selected text",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "x",
+          "title": "X",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "bluesky",
+          "title": "Bluesky",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "whatsapp",
+          "title": "WhatsApp",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "email",
+          "title": "Email",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "copy",
+          "title": "Copy quote with link",
+          "description": "The link opens your page with the quoted sentence highlighted, in browsers that support it.",
+          "kind": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "colour",
+          "title": "Bar colour",
+          "kind": {
+            "type": "color"
+          }
+        },
+        {
+          "name": "language",
+          "title": "Language",
+          "description": "For the button labels screen readers hear.",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              {
+                "value": "auto",
+                "title": "The language of the page"
+              },
+              {
+                "value": "en",
+                "title": "English"
+              },
+              {
+                "value": "nl",
+                "title": "Nederlands"
+              },
+              {
+                "value": "de",
+                "title": "Deutsch"
+              },
+              {
+                "value": "fr",
+                "title": "Français"
+              }
+            ]
+          }
+        },
+        {
+          "name": "min-words",
+          "title": "Only on pages with at least this many words",
+          "kind": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5000
+          }
+        },
+        {
+          "name": "skip-pages",
+          "title": "Skip these pages",
+          "description": "Page addresses separated by commas, for example: home, shop/*. A * at the end means every page under it.",
+          "kind": {
+            "type": "text",
+            "maxLength": 1000,
+            "multiline": false
+          }
+        }
+      ]
+    }
+  ]
+}
