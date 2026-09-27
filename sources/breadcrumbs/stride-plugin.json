@@ -1,0 +1,82 @@
+{
+  "manifestVersion": 1,
+  "id": "breadcrumbs",
+  "name": "Breadcrumbs",
+  "version": "1.0.0",
+  "publisher": "guuslab",
+  "description": "A breadcrumb trail above the page content, built from the page address and your page titles, with BreadcrumbList structured data for search engines. Hidden on the home page.",
+  "license": "MIT",
+  "homepage": "https://github.com/guuslab/stride-plugins",
+  "permissions": ["storage", "read-pages"],
+  "hooks": ["on_page_render"],
+  "panels": [
+    {
+      "id": "breadcrumbs",
+      "title": "Breadcrumbs",
+      "description": "The trail of links above your page content, like Home › Blog › This post. Changes apply to a page the next time it is published.",
+      "placement": "site-settings",
+      "fields": [
+        {
+          "name": "enabled",
+          "title": "Show breadcrumbs",
+          "description": "Turn this off to leave every page exactly as it was rendered.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "home-label",
+          "title": "Name of the home page",
+          "description": "The first link in the trail. Leave empty for Home.",
+          "kind": { "type": "text", "maxLength": 40, "multiline": false }
+        },
+        {
+          "name": "separator",
+          "title": "Separator",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "chevron", "title": "Chevron ›" },
+              { "value": "slash", "title": "Slash /" },
+              { "value": "arrow", "title": "Arrow →" },
+              { "value": "dot", "title": "Dot ·" }
+            ]
+          }
+        },
+        {
+          "name": "style",
+          "title": "Style",
+          "kind": {
+            "type": "enum",
+            "choices": [
+              { "value": "plain", "title": "Plain text links" },
+              { "value": "pills", "title": "Rounded pills" }
+            ]
+          }
+        },
+        {
+          "name": "color",
+          "title": "Link colour",
+          "description": "Leave empty for dark teal (#0f766e), which is easy to read on a light page.",
+          "kind": { "type": "color" }
+        },
+        {
+          "name": "show-current",
+          "title": "Show the current page at the end",
+          "description": "Its title, not a link, marked as the current page for screen readers.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "structured-data",
+          "title": "Add structured data for search engines",
+          "description": "BreadcrumbList JSON-LD, so Google can show the trail in search results.",
+          "kind": { "type": "boolean" }
+        },
+        {
+          "name": "exclude",
+          "title": "Pages to skip",
+          "description": "Slugs, separated by commas, that never get breadcrumbs. The home page never does; if yours has a slug other than home, add it here. For example: contact, thank-you",
+          "kind": { "type": "text", "maxLength": 400, "multiline": false }
+        }
+      ]
+    }
+  ]
+}

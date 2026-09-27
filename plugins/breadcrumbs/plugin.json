@@ -1,0 +1,155 @@
+{
+  "manifest": {
+    "description": "A breadcrumb trail above the page content, built from the page address and your page titles, with BreadcrumbList structured data for search engines. Hidden on the home page.",
+    "homepage": "https://github.com/guuslab/stride-plugins",
+    "hooks": [
+      "on_page_render"
+    ],
+    "id": "breadcrumbs",
+    "license": "MIT",
+    "manifestVersion": 1,
+    "name": "Breadcrumbs",
+    "panels": [
+      {
+        "description": "The trail of links above your page content, like Home › Blog › This post. Changes apply to a page the next time it is published.",
+        "fields": [
+          {
+            "description": "Turn this off to leave every page exactly as it was rendered.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "enabled",
+            "title": "Show breadcrumbs"
+          },
+          {
+            "description": "The first link in the trail. Leave empty for Home.",
+            "kind": {
+              "maxLength": 40,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "home-label",
+            "title": "Name of the home page"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Chevron ›",
+                  "value": "chevron"
+                },
+                {
+                  "title": "Slash /",
+                  "value": "slash"
+                },
+                {
+                  "title": "Arrow →",
+                  "value": "arrow"
+                },
+                {
+                  "title": "Dot ·",
+                  "value": "dot"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "separator",
+            "title": "Separator"
+          },
+          {
+            "kind": {
+              "choices": [
+                {
+                  "title": "Plain text links",
+                  "value": "plain"
+                },
+                {
+                  "title": "Rounded pills",
+                  "value": "pills"
+                }
+              ],
+              "type": "enum"
+            },
+            "name": "style",
+            "title": "Style"
+          },
+          {
+            "description": "Leave empty for dark teal (#0f766e), which is easy to read on a light page.",
+            "kind": {
+              "type": "color"
+            },
+            "name": "color",
+            "title": "Link colour"
+          },
+          {
+            "description": "Its title, not a link, marked as the current page for screen readers.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "show-current",
+            "title": "Show the current page at the end"
+          },
+          {
+            "description": "BreadcrumbList JSON-LD, so Google can show the trail in search results.",
+            "kind": {
+              "type": "boolean"
+            },
+            "name": "structured-data",
+            "title": "Add structured data for search engines"
+          },
+          {
+            "description": "Slugs, separated by commas, that never get breadcrumbs. The home page never does; if yours has a slug other than home, add it here. For example: contact, thank-you",
+            "kind": {
+              "maxLength": 400,
+              "multiline": false,
+              "type": "text"
+            },
+            "name": "exclude",
+            "title": "Pages to skip"
+          }
+        ],
+        "id": "breadcrumbs",
+        "placement": "site-settings",
+        "title": "Breadcrumbs"
+      }
+    ],
+    "permissions": [
+      "storage",
+      "read-pages"
+    ],
+    "publisher": "guuslab",
+    "version": "1.0.0"
+  },
+  "publisher": {
+    "id": "guuslab",
+    "name": "GuusLab",
+    "publicKey": "13b4051247c00f67a9efe7e1235ac46e49af00912c9806f33472bd38e31b1694"
+  },
+  "store": {
+    "tagline": "A breadcrumb trail above every page, with structured data for Google.",
+    "longDescription": "Breadcrumbs shows visitors where they are with a small trail above the page content, like Home › Writing › This post. Every step but the last is a link, so going one level up is one click away. The home page never gets a trail.\n\nThe trail is built from the page address and your own page titles. A page at journal/spring-menu under a page called Journal reads Home › Journal › Our spring menu. When a step is not a published page, it is shown as plain text instead of a link that goes nowhere.\n\nIt also adds BreadcrumbList structured data, so search engines can show the trail in results instead of a bare address. When your site has a domain, the links in it are full URLs. If another plugin already added breadcrumb data, it leaves that alone.\n\nIt needs no setup. Out of the box you get plain dark teal links with a › between them. In the site settings you can rename Home, pick a chevron, slash, arrow or dot, switch to rounded pills, choose your own link colour, hide the current page from the trail, turn the structured data off, or skip pages by slug.\n\nIt is light and accessible. There is no script at all, no fonts and no third-party requests: about 1 KB of CSS. The trail is a nav landmark named Breadcrumb with an ordered list, the current page is marked for screen readers, separators are not read aloud, links have a visible focus ring, and the default colour passes WCAG AA on a light page. It is hidden when printing.\n\nIt asks for two permissions. Storage keeps its settings; refuse it and it runs with the defaults. Read pages lets it use your page titles and check which pages exist; refuse it and each step is named after its address, as plain text.\n\nGood to know: Stride currently serves published pages at one-level addresses, so a trail has three or more steps only for pages whose slug has a slash in it.",
+    "icon": "icon.png",
+    "screenshots": [
+      {
+        "file": "screenshots/01.png",
+        "caption": "Zero configuration: a quiet trail above the article, built from the address and your page titles."
+      },
+      {
+        "file": "screenshots/02.png",
+        "caption": "Close up: every step but the current page is a link, with a › between them."
+      },
+      {
+        "file": "screenshots/03.png",
+        "caption": "Your own home name, arrow separators, rounded pills and your link colour."
+      },
+      {
+        "file": "screenshots/04.png",
+        "caption": "Every option in the plugin's settings: home name, separator, style, colour, current page, structured data."
+      }
+    ],
+    "categories": [
+      "seo"
+    ],
+    "accent": "#0D9488"
+  }
+}
